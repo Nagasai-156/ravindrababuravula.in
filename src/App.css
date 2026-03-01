@@ -1,0 +1,560 @@
+.hero-wrapper {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  /* Animated and dynamic grid with glowing orbs behind text */
+  background-image:
+    linear-gradient(to right, var(--bg-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-line) 1px, transparent 1px);
+  background-size: 100px 100px;
+  background-position: center top;
+  z-index: 1;
+}
+
+/* Base structural layout */
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 10;
+}
+
+/* ==================================
+             HEADER
+=================================== */
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  margin-top: 10px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Logo SVG placeholder area */
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style-type: none;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: var(--text-white);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-login {
+  background-color: var(--btn-dark);
+  color: var(--text-white);
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.btn-login:hover {
+  background-color: var(--btn-dark-hover);
+}
+
+.btn-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-circle.dark {
+  background-color: var(--btn-dark);
+  color: var(--text-white);
+}
+
+.btn-circle.dark:hover {
+  background-color: var(--btn-dark-hover);
+}
+
+/* ==================================
+             HERO CONTENT
+=================================== */
+.hero-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-pill-badge {
+  background-color: var(--pill-bg);
+  backdrop-filter: blur(8px);
+  padding: 8px 24px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 24px;
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: -2px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-white);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-white);
+  max-width: 800px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-enroll {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  padding: 18px 40px;
+  border-radius: 40px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enroll:hover {
+  background-color: var(--accent-yellow-hover);
+}
+
+.btn-circle-yellow {
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn-circle-yellow:hover {
+  background-color: var(--accent-yellow-hover);
+}
+
+/* ==================================
+             BOTTOM STAGE (THE CIRCLE)
+=================================== */
+.hero-bottom-stage {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+  margin-left: -50vw;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 0px;
+  /* Zero padding to end precisely under the image */
+  flex-grow: 1;
+}
+
+.hero-bottom-stage::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  /* Bring the curve lower so the photo shoots out of it more */
+  bottom: 0px;
+  /* Match the exact bottom of the section */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130vw;
+  /* Less than 150vw makes the curve more pronounced */
+  background-color: var(--bg-dark-circle);
+  /* Pure elliptical curve */
+  border-radius: 50% 50% 0 0 / 250px 250px 0 0;
+  z-index: 0;
+}
+
+.bottom-stage-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* Push everything flush to the bottom */
+}
+
+.stage-left,
+.stage-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0 20px 40px 20px;
+  /* Add some padding so widgets aren't glued to the edge */
+  z-index: 20;
+}
+
+.stage-center {
+  flex: 0 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* ensure the image is flat on the bottom */
+  margin-top: -80px;
+  z-index: 25;
+}
+
+/* Image container */
+.hero-image-wrapper {
+  position: relative;
+  width: 520px;
+  height: auto;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease-out;
+}
+
+.hero-image-wrapper:hover {
+  transform: scale(1.02) translateY(-10px);
+}
+
+.hero-person-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  /* Fix spacing below image */
+}
+
+/* Ensure the image blends smoothly if its background differs */
+.image-blend-mask {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* ==================================
+             BOTTOM WIDGETS (Flex Layout)
+=================================== */
+
+.widget-quote {
+  width: 100%;
+  max-width: 320px;
+  color: var(--text-white);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 24px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.widget-quote .quote-icon {
+  font-size: 3rem;
+  color: var(--text-white);
+  line-height: 1;
+  font-family: serif;
+  margin-bottom: 10px;
+}
+
+.widget-stats h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.widget-stats p {
+  color: var(--text-white);
+  font-size: 1.1rem;
+}
+
+.widget-review {
+  width: 100%;
+  max-width: 320px;
+  align-self: flex-end;
+  /* Align right */
+}
+
+.stars {
+  color: #ffb703;
+  /* Gold stars */
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+}
+
+.widget-review p {
+  color: var(--text-white);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.reviewer-avatar-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewer-info h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.reviewer-info span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Floating SVGs positioned inside Center layout */
+.icon-draw-arrow {
+  position: absolute;
+  left: -80px;
+  bottom: 0px;
+  width: 60px;
+  z-index: 10;
+}
+
+.icon-bulb {
+  position: absolute;
+  left: -40px;
+  top: 100px;
+  width: 45px;
+  z-index: 10;
+}
+
+.icon-pie {
+  position: absolute;
+  right: -60px;
+  top: 140px;
+  width: 45px;
+  z-index: 10;
+}
+
+.icon-target {
+  position: absolute;
+  right: -90px;
+  bottom: 60px;
+  width: 45px;
+  z-index: 10;
+}
+
+/* Utility to animate arrows or objects */
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float-slow {
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.float-med {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: floatY 3s ease-in-out infinite;
+}
+
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .stage-left,
+  .stage-right {
+    margin-top: 40px;
+  }
+
+  .widget-stats h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Wrap the grid for mobile/tablet */
+  .bottom-stage-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  /* Place image at the top of the dark section */
+  .stage-center {
+    order: -1;
+    margin-top: -60px;
+    transform: scale(0.9);
+  }
+
+  /* Stack the left/right widgets below the image */
+  .stage-left,
+  .stage-right {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 20px;
+    gap: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .widget-review {
+    align-self: center;
+  }
+
+  .reviewer {
+    justify-content: center;
+  }
+
+  /* Flatten the curve slightly on small screens */
+  .hero-bottom-stage::before {
+    border-radius: 50% 50% 0 0 / 5vw 5vw 0 0;
+  }
+
+  /* Hide decorative floating SVGs to save space on mobile */
+  .icon-draw-arrow,
+  .icon-bulb,
+  .icon-pie,
+  .icon-target,
+  .icon-gear {
+    display: none;
+  }
+}
+
+/* ==================================
+             ENTRY ANIMATIONS
+=================================== */
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-item {
+  opacity: 0;
+  animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-word {
+  opacity: 0;
+  animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideImageUp {
+  from {
+    opacity: 0;
+    transform: translateY(150px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-image-up {
+  opacity: 0;
+  animation: slideImageUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1s;
+  display: flex;
+  justify-content: center;
+}

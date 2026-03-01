@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-base: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --bg-primary: #34002b;
+  --bg-grid-line: rgba(255, 255, 255, 0.06);
+  --bg-dark-circle: #000000;
+
+  --accent-yellow: #FFD700;
+  --accent-yellow-hover: #ffea00;
+  --accent-pink: #ff2a85;
+  --accent-cyan: #00f0ff;
+  --accent-purple: #8a2be2;
+
+  --text-white: #ffffff;
+  --text-muted: #9aa5ce;
+  --text-dark: #000000;
+
+  --btn-dark: #1f2235;
+  --btn-dark-hover: #2a2e45;
+
+  --pill-bg: rgba(0, 0, 0, 0.3);
+  /* The dark pill badge */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--bg-primary);
+  color: var(--text-white);
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Base Utility Classes */
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
