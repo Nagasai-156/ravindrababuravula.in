@@ -1,190 +1,77 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
-import MainSections from "./sections/MainSections";
+import logoImg from "./assets/logo.png";
+import YoutuberPage from "./YoutuberPage";
+import EducatorPage from "./EducatorPage";
 
-// ----------------- SVGs -----------------
+const ITEMS = [
+  { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
+  { text: "Educator", img: "https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=150&q=80" },
+  { text: "Certified Financial Planner", img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=150&q=80" },
+  { text: "Fitness Trainer", img: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=150&q=80" },
+  { text: "Serial Entrepreneur", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" },
+  { text: "Vibe Coder", img: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=150&q=80" },
+  { text: "Corporate Trainer", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=150&q=80" },
+  { text: "Philanthropist", img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=150&q=80" },
+  { text: "Environmentalist", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=150&q=80" }
+];
 
-const ArrowUpRight = ({ width = "18", height = "18" }) => (
-  <svg
-    width={width}
-    height={height}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <line x1="7" y1="17" x2="17" y2="7"></line>
-    <polyline points="7 7 17 7 17 17"></polyline>
-  </svg>
-);
-
-const AnimatedText = ({ text, delayOffset = 0 }) => {
-  return text.split(" ").map((word, index) => (
-    <span key={index} style={{ display: "inline-block", whiteSpace: "pre" }}>
-      <span
-        className="animate-word"
-        style={{
-          display: "inline-block",
-          animationDelay: `${delayOffset + index * 0.1}s`,
-        }}
-      >
-        {word}
-      </span>
-      {index < text.split(" ").length - 1 ? " " : ""}
-    </span>
-  ));
-};
-
-function HeroSite() {
+function HomeContinuum() {
+  const navigate = useNavigate();
   return (
-    <>
-      <div className="hero-wrapper">
-        <div className="hero-container">
-          {/* Header Navigation */}
-          <header className="hero-header">
-            <div className="logo-area">
-              <img
-                src={logoImg}
-                alt="Logo"
-                className="logo-icon"
-                style={{ height: "36px", width: "auto" }}
-              />
-            </div>
+    <div className="continuum-wrapper">
+      <img src={logoImg} alt="Logo" className="top-logo" />
+      
+      <div className="lines-bg"></div>
 
-            <ul className="nav-links">
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Courses</a>
-              </li>
-              <li>
-                <a href="#">Shop</a>
-              </li>
-              <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-            </ul>
-
-            <div className="header-actions">
-              <button className="btn-login">Login</button>
-              <button className="btn-circle dark">
-                <ArrowUpRight width="20" height="20" />
-              </button>
-            </div>
-          </header>
-
-          {/* Hero Top Content */}
-          <main className="hero-main">
-            <div
-              className="hero-pill-badge animate-item"
-              style={{ animationDelay: "0s" }}
+      <div className="continuum-orbit">
+        {ITEMS.map((item, i) => {
+          const angle = (i * 360) / ITEMS.length;
+          return (
+            <div 
+              key={i} 
+              className="orbit-item"
+              style={{ transform: `rotate(${angle}deg) translateY(calc(var(--orbit-radius) * -1))` }}
             >
-              #1 E-Learning Platform 2025
-            </div>
-            <h1
-              className="hero-title"
-              style={{ maxWidth: "900px", lineHeight: "1.2" }}
-            >
-              <AnimatedText
-                text="Learn Computer Science with"
-                delayOffset={0.2}
-              />
-              <br />
-              <AnimatedText
-                text="Prof. RavindraBabu Ravula"
-                delayOffset={0.6}
-              />
-            </h1>
-            <p
-              className="hero-subtitle animate-item"
-              style={{
-                maxWidth: "800px",
-                fontSize: "1.2rem",
-                animationDelay: "1.0s",
-              }}
-            >
-              Most practical, Easiest and Structured way to learn everything
-              related to Computer Science from scratch. No prior knowledge is
-              needed.
-            </p>
-
-            <div
-              className="hero-cta animate-item"
-              style={{ animationDelay: "1.2s" }}
-            >
-              <button className="btn-enroll">Get started</button>
-              <button className="btn-circle-yellow">
-                <ArrowUpRight width="22" height="22" stroke="#000" />
-              </button>
-            </div>
-          </main>
-        </div>
-
-        {/* Hero Bottom Stage with Image and Widgets */}
-        <div className="hero-bottom-stage">
-          <div className="bottom-stage-content">
-            {/* Left Column Widgets */}
-            <div className="stage-left">
-              <div className="widget-quote">
-                <div className="quote-icon">“</div>
-                <p>
-                  From AI-enhanced lessons to real-world projects, our platform
-                  empowers you to learn.
-                </p>
-              </div>
-              <div className="widget-stats">
-                <h2>5000+</h2>
-                <p>Top Notch Courses</p>
-              </div>
-            </div>
-
-            {/* Center Column Image & Icons */}
-            <div className="stage-center">
-              <div
-                className="animate-image-up"
-                style={{ animationDelay: "1.4s" }}
+              <div 
+                className="orbit-item-angle-corrector" 
+                style={{ transform: `rotate(${-angle}deg)` }}
               >
-                <img
-                  src={heroPerson}
-                  alt="Prof. RavindraBabu Ravula"
-                  className="hero-person-img"
-                />
-              </div>
-            </div>
-
-            {/* Right Column Widgets */}
-            <div className="stage-right">
-              <div className="widget-review">
-                <div className="stars">★★★★★</div>
-                <p>
-                  "Modern, sleek, and focused on real skills. I loved the
-                  hands-on projects and their system"
-                </p>
-                <div className="reviewer">
-                  <div className="reviewer-avatar-placeholder">JK</div>
-                  <div className="reviewer-info">
-                    <h4>Jason Kim</h4>
-                    <span>UX Designer</span>
-                  </div>
+                <div 
+                  className="orbit-item-animator"
+                  onClick={() => {
+                    if (item.text === "Youtuber") {
+                      navigate("/youtuber");
+                    } else if (item.text === "Educator") {
+                      navigate("/educator");
+                    }
+                  }}
+                >
+                  <img src={item.img} alt={item.text} className="orbit-item-image" />
+                  <div className="orbit-item-text">{item.text}</div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
-      <MainSections />
-    </>
+
+      <div className="continuum-center">
+        <img src={heroPerson} alt="Prof. RBR" className="center-photo" />
+      </div>
+
+    </div>
   );
 }
 
 export default function App() {
-  return <HeroSite />;
+  return (
+    <Routes>
+      <Route path="/" element={<HomeContinuum />} />
+      <Route path="/youtuber" element={<YoutuberPage />} />
+      <Route path="/educator" element={<EducatorPage />} />
+    </Routes>
+  );
 }
