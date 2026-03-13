@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import heroPerson from "./assets/hero-person.png";
 import "./FinancialPlannerPage.css";
+import "./FinancialPlannerLayout.css";
 
 /* ── Icons ── */
 const ArrowUpRight = ({ size = 18 }) => (
@@ -22,6 +23,12 @@ const WalletIcon = () => (
 const StarIcon = () => (
   <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="20 6 9 17 4 12" />
   </svg>
 );
 
@@ -94,39 +101,38 @@ export default function FinancialPlannerPage() {
                 </div>
               </div>
 
-              <h1 className="p1-headline">
-                Achieving freedom<br />
-                through <em>disciplined</em><br />
-                planning.
+              <h1 className="p1-headline" style={{ fontSize: 'clamp(2.5rem, 3.5vw, 4.2rem)' }}>
+                Certified Financial Planner<br />for a <em>Secure</em> &<br /><em>Prosperous</em> Future.
               </h1>
 
               <div className="p1-cards-row">
-                <div className="cc dark">
+                <div className="cc dark" style={{ padding: 24 }}>
                   <Badge label="Financial Evolution" />
-                  <div className="cc-journey">
-                    <div className="journey-year">Earnings</div>
+                  <div className="cc-journey" style={{ marginTop: 'auto', gap: 16 }}>
+                    <div className="journey-year" style={{ fontSize: '1.4rem' }}>Earnings</div>
                     <div className="journey-arrow">→</div>
-                    <div className="journey-year accent">Wealth</div>
+                    <div className="journey-year accent" style={{ fontSize: '1.4rem' }}>Wealth</div>
                   </div>
-                  <div className="cc-lbl">Managing income effectively to build sustainable high-growth assets.</div>
-                  <div className="cc-prog">
+                  <div className="cc-lbl" style={{ marginTop: 8 }}>Managing income effectively to build sustainable high-growth assets.</div>
+                  <div className="cc-prog" style={{ marginTop: 16 }}>
                     <div className="cc-prog-fill" style={{ width: "100%" }} />
                   </div>
                   <div className="cc-prog-labels">
-                    <span>AMFI Certified Professional</span>
+                    <span>Strategic Planning</span>
                   </div>
                 </div>
 
-                <div className="cc gold" style={{ minHeight: 200, justifyContent: "space-between" }}>
+                <div className="cc gold" style={{ minHeight: 'auto', justifyContent: "space-between", padding: 24 }}>
                   <Badge label="Credentials" type="gold" />
-                  <div className="cc-val" style={{ marginTop: 'auto', marginBottom: 6, fontSize: '1.2rem', fontWeight: 600 }}>
+                  <div className="cc-val" style={{ marginTop: 'auto', marginBottom: 4, fontSize: '1.6rem', fontWeight: 600 }}>
                     ARN-354459
                   </div>
                   <div className="cc-lbl" style={{ color: '#333' }}>
-                    Authorized Mutual Fund Distributor ensuring adherence to industry standards and regulations.
+                    Authorized Mutual Fund Distributor ensuring adherence to industry standards.
                   </div>
                 </div>
               </div>
+
             </div>
 
             <div className="p1-right">
@@ -171,59 +177,62 @@ export default function FinancialPlannerPage() {
         <div className="fp-divider yp-divider" />
 
         {/* ══════════════════════════════════════════
-            CHAPTER 1: BEYOND INCOME
+            INTRODUCTION (Moved from Hero)
+        ══════════════════════════════════════════ */}
+        <section className="fp-intro-section" style={{ padding: '80px 40px', maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
+          <h2 className="panel-h2" style={{ whiteSpace: 'normal', fontSize: 'clamp(1.6rem, 2.5vw, 2.2rem)', marginBottom: 32, lineHeight: 1.4 }}>
+            True financial success comes not just from income, but from <span style={{ color: '#ffb703' }}>financial awareness, disciplined planning, and intelligent investment decisions.</span>
+          </h2>
+          <p className="panel-p" style={{ fontSize: '1.1rem', marginBottom: 24, marginInline: 'auto', maxWidth: '850px' }}>
+            In today’s rapidly evolving world, earning money alone is no longer enough to achieve true financial security. Many individuals work hard, earn well, and yet struggle to build sustainable wealth because they lack the knowledge and strategy needed to manage their finances effectively.
+          </p>
+          <p className="panel-p" style={{ fontSize: '1.1rem', marginInline: 'auto', maxWidth: '850px' }}>
+            Recognizing this challenge, Prof. Ravindrababu Ravula has expanded his mission beyond education and technology into the field of financial planning. Having achieved financial independence himself through disciplined planning and strategic investing, he is now on a mission to help millions of students and professionals achieve financial freedom. Through his structured financial planning framework, Prof. Ravindrababu Ravula helps individuals understand how to build wealth systematically, protect their finances from risks, and create long-term financial stability. Every financial plan he provides is carefully tailored to the individual’s goals, risk profile, and life priorities, ensuring that each person receives guidance that truly fits their needs.
+          </p>
+        </section>
+
+        <div className="fp-divider yp-divider" />
+
+        {/* ══════════════════════════════════════════
+            CHAPTER 1: CREDENTIALS & LITERACY
         ══════════════════════════════════════════ */}
         <section className="p2-section">
           <div className="p2-inner">
             <div className="p2-left">
               <p className="sec-label">Chapter 01</p>
-              <h2 className="panel-h2">Beyond Income: Financial Awareness & Literacy</h2>
+              <h2 className="panel-h2" style={{ whiteSpace: 'normal' }}>Certified Mutual Fund Distributor</h2>
               <p className="panel-p">
-                In today’s rapidly evolving world, earning money alone is no longer enough to achieve true financial security. Many work hard and earn well, yet struggle to build sustainable wealth due to a lack of knowledge and strategy. 
+                Adding credibility and professional certification to his financial guidance, Prof. Ravindrababu Ravula is also a certified Mutual Fund Distributor. His AMFI ARN (Association of Mutual Funds in India Registration Number) is ARN-354459, officially authorizing him to guide and distribute mutual fund investments in India.
               </p>
               <p className="panel-p">
-                True financial success comes not just from income, but from financial awareness, disciplined planning, and intelligent investment decisions. Prof. RBR has expanded his mission into financial planning to fill this critical gap left by formal education.
+                This certification ensures that his financial guidance is aligned with recognized industry standards and regulatory frameworks. It reflects both his professional commitment and his dedication to helping individuals make informed and responsible investment decisions.
               </p>
 
               <div className="img-card tall">
                 <img
-                  src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1200&q=80"
-                  alt="Financial graphs and planning"
+                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"
+                  alt="Financial analytics and certification"
                 />
               </div>
             </div>
 
             <div className="p2-right">
               <div className="dark-info-card">
-                <h3>A Mission for Freedom</h3>
+                <h3>A Mission to Spread Financial Literacy</h3>
                 <p>
-                  Schools and universities teach technical skills, but rarely teach money management. Driven by his own journey to financial independence, Prof. RBR simplifies the world of finance so that students and professionals can achieve freedom early in life.
+                  After achieving financial independence through careful planning and disciplined investing, Prof. Ravindrababu Ravula realized an important truth: most people are never taught how to manage money effectively.
                 </p>
                 <p>
-                  Just as he revolutionized computer science concepts, he now provides a structured roadmap for financial growth focused on long-term stability and wealth protection.
+                  Schools and universities teach technical knowledge and professional skills, but very few institutions teach students how to handle real-world financial decisions such as investing, saving taxes, building wealth, or managing credit responsibly.
+                </p>
+                <p>
+                  Driven by a desire to fill this gap, he began guiding individuals on financial literacy and structured wealth building. His mission is clear — to empower students and young professionals with the knowledge required to achieve financial freedom early in life.
                 </p>
               </div>
 
               <blockquote className="highlight-quote">
-                "Financial freedom is not a matter of luck or high income — it is the result of clear planning, disciplined investing, and informed decisions."
+                "Just as he simplified complex computer science concepts for lakhs of learners, he now simplifies the world of finance so that anyone can understand and benefit from it."
               </blockquote>
-
-              <div className="p2-mini-stats">
-                <div className="p2-mini-stat">
-                  <div className="p2-mini-val">SIP</div>
-                  <div className="p2-mini-lbl">Disciplined</div>
-                </div>
-                <div className="p2-mini-divider" />
-                <div className="p2-mini-stat">
-                  <div className="p2-mini-val">Wealth</div>
-                  <div className="p2-mini-lbl">Systematic</div>
-                </div>
-                <div className="p2-mini-divider" />
-                <div className="p2-mini-stat">
-                  <div className="p2-mini-val">Risk</div>
-                  <div className="p2-mini-lbl">Optimized</div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -231,183 +240,211 @@ export default function FinancialPlannerPage() {
         <div className="fp-divider yp-divider" />
 
         {/* ══════════════════════════════════════════
-            CHAPTER 2: CERTIFICATION (AMFI)
+            CHAPTER 2: A STRUCTURED ROADMAP (INTRO & GRID)
         ══════════════════════════════════════════ */}
         <section className="p3-section">
-          <div className="p3-inner">
-            <div className="p3-left">
-              <div className="big-chapter">02</div>
-              <h2 className="panel-h2">Professional Certification & Credibility</h2>
-              
-              <div className="note-row">
-                <div className="note-item">
-                  <div className="note-label">ARN NUMBER</div>
-                  <div className="note-value">ARN-354459</div>
-                </div>
-                <div className="note-item">
-                  <div className="note-label">RECOGNIZED</div>
-                  <div className="note-value">AMFI REGISTERED</div>
-                </div>
-              </div>
+          <div className="fp-roadmap-intro">
+            <p className="sec-label">Chapter 02</p>
+            <h2 className="panel-h2" style={{ whiteSpace: 'normal', fontSize: 'clamp(2rem, 3vw, 3.5rem)' }}>A Structured Roadmap for Financial Growth</h2>
+            <p className="panel-p">
+              Prof. Ravindrababu Ravula’s financial planning framework follows a structured roadmap designed to guide individuals step-by-step toward financial independence. This comprehensive framework covers the most critical aspects of personal finance. Each stage of the program is designed to ensure that individuals do not simply invest randomly but instead build wealth through informed, strategic, and disciplined financial decisions.
+            </p>
+            
+            <div className="fp-roadmap-chips">
+              {[
+                "Investment fundamentals",
+                "Choosing the right investments",
+                "Protection planning and insurance",
+                "Building a financial safety net",
+                "Tax planning and wealth creation",
+                "Responsible credit and loan management",
+                "Personalized investment strategies"
+              ].map(item => (
+                <div key={item} className="fp-chip">{item}</div>
+              ))}
+            </div>
+          </div>
 
-              <p className="panel-p">
-                Adding credibility to his financial guidance, Prof. Ravindrababu Ravula is a certified <strong>Mutual Fund Distributor</strong>. His AMFI registration number (ARN-354459) officially authorizes him to guide and distribute mutual fund investments in India.
+          <div className="fp-pillars">
+            {/* Pillar 1 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">01</div>
+              <h3 className="fp-pillar-title">Understanding the Foundations of Investment</h3>
+              <p className="fp-pillar-p">
+                The journey toward financial freedom begins with a strong understanding of investment fundamentals. Many people invest based on tips, emotions, or short-term trends without understanding the underlying principles. Prof. Ravindrababu Ravula believes that financial education must come before financial action. In this stage, individuals learn essential concepts such as:
               </p>
-              <p className="panel-p">
-                This certification ensures his guidance aligns with industry standards and regulatory frameworks, reflecting a professional commitment to informed and responsible decision-making.
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>what mutual funds are and how they work</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding various fund categories such as large-cap, mid-cap, small-cap, flexi-cap, and value funds</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>the relationship between risk and return</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>deciding between SIP (Systematic Investment Plan) and lump-sum investments</span></div>
+              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                By mastering these fundamentals, individuals develop the confidence required to participate in financial markets responsibly and intelligently.
               </p>
             </div>
 
-            <div className="p3-right">
-              <div className="cc-innovation">
-                <Badge label="Authorized Advisor" />
-                <h3 className="cc-innovation-title">Professional Commitment</h3>
-                <div className="cc-innovation-text">
-                  His certification is more than just a number; it is a pledge to adhere to recognized financial ethics. This platform provides individuals with the confidence required to participate in financial markets responsibly and intelligently.
-                </div>
+            {/* Pillar 2 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">02</div>
+              <h3 className="fp-pillar-title">Choosing the Right Investments</h3>
+              <p className="fp-pillar-p">
+                Once the basics are clear, the next step is aligning investments with personal financial goals. Different individuals have different financial objectives — purchasing a home, funding education, building retirement wealth, or achieving early financial independence. Prof. Ravindrababu Ravula helps individuals design investment strategies based on their unique goals. This stage focuses on:
+              </p>
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>identifying short-term, medium-term, and long-term financial goals</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>assessing personal risk tolerance</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding asset allocation between equity and debt</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>selecting appropriate investment instruments</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>avoiding common mistakes made by beginner investors</span></div>
               </div>
-
-              <div className="dark-info-card">
-                <p>
-                  Every financial plan is carefully tailored to an individual’s goals, risk profile, and life priorities, ensuring guidance that truly fits the user’s needs.
-                </p>
-              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                This approach ensures that investments are goal-oriented rather than random, creating a clear roadmap toward financial success.
+              </p>
             </div>
+
+            {/* Pillar 3 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">03</div>
+              <h3 className="fp-pillar-title">Protection Planning – Securing Financial Stability</h3>
+              <p className="fp-pillar-p">
+                Before focusing on wealth creation, financial security must be established. Unexpected medical emergencies, accidents, or life events can disrupt financial stability if adequate protection measures are not in place. Prof. Ravindrababu Ravula emphasizes the importance of insurance and protection planning as a foundation for long-term financial growth. This stage includes guidance on:
+              </p>
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding the role of insurance in financial planning</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>comparing ULIPs and traditional insurance products</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>selecting appropriate health insurance coverage</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>determining the right level of insurance protection</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>evaluating policy features before making decisions</span></div>
+              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                By securing financial protection, individuals ensure that their long-term financial plans remain stable even during unforeseen circumstances.
+              </p>
+            </div>
+
+            {/* Pillar 4 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">04</div>
+              <h3 className="fp-pillar-title">Building a Financial Safety Net</h3>
+              <p className="fp-pillar-p">
+                One of the most important pillars of financial planning is the creation of a financial safety net, commonly known as an emergency fund. An emergency fund acts as a financial cushion that protects individuals during unexpected events such as job loss, medical emergencies, or sudden expenses. Prof. Ravindrababu Ravula guides individuals on:
+              </p>
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>the importance of maintaining an emergency fund</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>how much emergency savings should be maintained</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>where emergency funds should be stored for quick access</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>why financial stability must precede aggressive investments</span></div>
+              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                This safety net provides the confidence needed to pursue long-term investments without fear of short-term disruptions.
+              </p>
+            </div>
+
+            {/* Pillar 5 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">05</div>
+              <h3 className="fp-pillar-title">Tax Planning and Long-Term Wealth Creation</h3>
+              <p className="fp-pillar-p">
+                Effective financial planning also involves understanding how to legally reduce tax burdens while building wealth. Many individuals unknowingly lose a significant portion of their income due to poor tax planning. Prof. Ravindrababu Ravula teaches individuals how to optimize taxes while strengthening their financial portfolios. This includes guidance on:
+              </p>
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>legal tax-saving strategies</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding income tax filing procedures</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>exploring tax-efficient investment instruments</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>utilizing national saving certificates and similar options</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding the power of compounding</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>planning for early retirement</span></div>
+              </div>
+               <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                Through disciplined investing and tax-efficient strategies, individuals can significantly accelerate their wealth-building journey.
+              </p>
+            </div>
+
+            {/* Pillar 6 */}
+            <div className="fp-pillar-card">
+              <div className="fp-pillar-num">06</div>
+              <h3 className="fp-pillar-title">Responsible Credit and Loan Management</h3>
+              <p className="fp-pillar-p">
+                Credit is a powerful financial tool when used wisely, but it can become a major burden if mismanaged. Prof. Ravindrababu Ravula helps individuals understand how to manage credit responsibly by focusing on:
+              </p>
+              <div className="fp-pillar-list">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>understanding what a CIBIL score is and how it works</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>maintaining a strong credit profile</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>responsible credit card usage</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>selecting appropriate loans when necessary</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>distinguishing between good debt and bad debt</span></div>
+              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '16px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.85rem' }}>
+                By developing responsible credit habits, individuals can avoid debt traps and maintain long-term financial health.
+              </p>
+            </div>
+
+            {/* Pillar 7 */}
+            <div className="fp-pillar-card" style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto' }}>
+              <div className="fp-pillar-num">07</div>
+              <h3 className="fp-pillar-title">Personalized Financial Planning Strategy</h3>
+              <p className="fp-pillar-p">
+                Every individual has unique financial circumstances, responsibilities, and goals. Recognizing this, Prof. Ravindrababu Ravula provides financial planning guidance that is personalized according to each person’s needs. This individualized strategy includes:
+              </p>
+              <div className="fp-pillar-list fp-list-2col">
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>goal-based investment planning</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>risk-based asset allocation</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>SIP investment strategies</span></div>
+                <div className="fp-pillar-list-item"><CheckIcon /> <span>long-term wealth creation roadmaps</span></div>
+              </div>
+              <p className="fp-pillar-p" style={{ marginTop: '24px', marginBottom: 0, fontStyle: 'italic', fontSize: '0.95rem', color: '#ffb703' }}>
+                The result is a clear financial blueprint designed to guide individuals toward long-term financial independence.
+              </p>
+            </div>
+
           </div>
         </section>
 
         <div className="fp-divider yp-divider" />
 
         {/* ══════════════════════════════════════════
-            CHAPTER 3: THE ROADMAP
+            CHAPTER 3: LEGACY & CONCLUSION
         ══════════════════════════════════════════ */}
         <section className="p4-section">
           <div className="p4-inner">
             <div className="p4-left">
               <p className="sec-label">Chapter 03</p>
-              <h2 className="panel-h2">A Roadmap for Sustained Financial Growth</h2>
+              <h2 className="panel-h2" style={{ whiteSpace: 'normal' }}>A Mission to Create Financially Empowered Generations</h2>
               <p className="panel-p">
-                Prof. RBR’s financial planning framework follows a structured Roadmap designed to guide individuals step-by-step toward independence.
+                For Prof. Ravindrababu Ravula, financial planning is not just about numbers—it is about empowering people. Having experienced financial struggle earlier in life and later achieving financial freedom through disciplined planning, he understands the transformative power of financial knowledge.
               </p>
-
-              <div className="list-card">
-                {[
-                  "Investment fundamentals & Fund Categories",
-                  "Goal-based asset allocation (Equity vs Debt)",
-                  "Protection planning & Insurance features",
-                  "Financial Safety Net (Emergency Fund)",
-                  "Legal Tax-saving strategies & Compounding",
-                  "Responsible Credit & CIBIL score management",
-                  "Personalized investment strategies",
-                ].map((item, i) => (
-                  <div className="list-row" key={i}>
-                    <span className="num">0{i + 1}</span>
-                    <span className="txt">{item}</span>
-                  </div>
-                ))}
+              
+              <div className="cc dark" style={{ padding: 24, marginTop: 24 }}>
+                <Badge label="The Mission" />
+                <div className="cc-body" style={{ color: "#aaa", marginTop: 12 }}>
+                  Today, his mission is clear: to help millions of students and young professionals achieve financial freedom through education, awareness, and disciplined financial planning.
+                </div>
               </div>
+              
+              <p className="panel-p" style={{ marginTop: 24 }}>
+                Just as he revolutionized computer science education for lakhs of learners, he now seeks to revolutionize financial literacy and wealth-building awareness for the next generation.
+              </p>
             </div>
 
             <div className="p4-right">
-              <div className="dark-info-card" style={{ marginBottom: 20 }}>
-                <h3>Understanding Investment</h3>
-                <p>
-                  Many invest based on tips or emotions. Here, the focus is on mastering fundamentals—understanding large-cap, mid-cap, small-cap, and the power of SIP vs Lump-sum investments.
-                </p>
-              </div>
-
-              <div className="cc dark" style={{ padding: 24 }}>
-                <Badge label="Strategy" />
-                <div className="cc-body" style={{ color: "#aaa", marginTop: 12 }}>
-                  Investments must be goal-oriented, not random. Identifying short, medium, and long-term objectives creates a clear roadmap for success.
-                </div>
-              </div>
-
-              <div className="img-card landscape" style={{ height: 260, marginTop: 20 }}>
-                <img
-                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80"
-                  alt="Asset Management"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="fp-divider yp-divider" />
-
-        {/* ══════════════════════════════════════════
-            CHAPTER 4: PROTECTION & SAFETY NET
-        ══════════════════════════════════════════ */}
-        <section className="p2-section">
-          <div className="p2-inner">
-            <div className="p2-left">
-              <p className="sec-label">Chapter 04</p>
-              <h2 className="panel-h2">Securing Stability: Protection & Safety Nets</h2>
-              <p className="panel-p">
-                Before focusing on wealth creation, security must be established. Unexpected emergencies can disrupt stability if adequate measures aren't in place.
-              </p>
-              <p className="panel-p">
-                This involves protection planning through correct health and life insurance, and building an <strong>Emergency Fund</strong> — a financial cushion that provides confidence during job loss or medical events.
-              </p>
-
-              <div className="support-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginTop: '20px' }}>
-                <div className="cc dark" style={{ padding: '24px' }}>
-                  <h4 style={{ color: '#ffb703', marginBottom: '8px' }}>Insurance</h4>
-                  <div style={{ color: '#888', fontSize: '0.85rem' }}>Choosing appropriate health and life protection over traditional products.</div>
-                </div>
-                <div className="cc dark" style={{ padding: '24px' }}>
-                  <h4 style={{ color: '#ffb703', marginBottom: '8px' }}>Safety Net</h4>
-                  <div style={{ color: '#888', fontSize: '0.85rem' }}>Maintaining quick-access savings to cover unexpected life expenses.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="p2-right">
-              <div className="img-card tall">
-                <img
-                  src="https://images.unsplash.com/photo-1454165833772-d99628a5ffa0?auto=format&fit=crop&w=1200&q=80"
-                  alt="Secure Future"
-                />
-              </div>
-              <div className="dark-info-card" style={{ marginTop: '20px' }}>
-                <p>
-                  By securing financial protection first, individuals ensure their long-term growth plans remain stable even during the most unforeseen circumstances.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="fp-divider yp-divider" />
-
-        {/* ══════════════════════════════════════════
-            CHAPTER 5: TAX & CREDIT
-        ══════════════════════════════════════════ */}
-        <section className="p3-section">
-          <div className="p3-inner">
-            <div className="p3-left">
-              <div className="big-chapter">05</div>
-              <h2 className="panel-h2">Tax Planning & Credit Optimization</h2>
-              <p className="panel-p">
-                Effective planning involves reducing tax burdens while strengthening portfolios. Legal strategies and compounding power can significantly accelerate the wealth journey.
-              </p>
-              <p className="panel-p">
-                Furthermore, credit is a powerful tool when managed responsibly. Understanding <strong>CIBIL scores</strong> and responsible loan management prevents debt traps and maintains long-term health.
-              </p>
-            </div>
-
-            <div className="p3-right">
               <div className="gold-card-massive">
-                <Badge label="Legacy" type="gold" />
+                <Badge label="Conclusion" type="gold" />
+
                 <h3 className="gold-card-h3" style={{ fontSize: '1.4rem' }}>
-                  A Mission for Empowerment
+                  Prof. Ravindrababu Ravula’s financial planning guidance represents a powerful extension of his lifelong mission to empower people through knowledge.
                 </h3>
+
                 <p className="gold-card-p">
-                  For Prof. Ravindrababu Ravula, financial planning is about empowering people. Having experienced struggle and later achieved freedom, he seeks to revolutionize literacy for the next generation.
+                  With a structured financial roadmap, professional certification as a Mutual Fund Distributor (ARN-354459), and a deep commitment to financial education, he helps individuals build, protect, and grow their wealth with confidence.
                 </p>
+
                 <div className="gold-quote-box">
-                  <strong>"His roadmap guides individuals not just to build successful careers, but to build secure and financially independent lives."</strong>
+                  <strong>"Through his guidance, individuals learn that financial freedom is not a matter of luck or high income—it is the result of clear planning, disciplined investing, and informed financial decisions."</strong>
                 </div>
+                
+                <p className="gold-card-p" style={{ marginTop: '20px', fontWeight: 600, color: '#000' }}>
+                  And through this mission, Prof. Ravindrababu Ravula continues to inspire a new generation—not only to build successful careers, but also to build secure and financially independent lives.
+                </p>
               </div>
             </div>
           </div>

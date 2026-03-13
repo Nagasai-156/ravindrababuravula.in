@@ -6,6 +6,7 @@ import logoImg from "./assets/logo.png";
 import YoutuberPage from "./YoutuberPage";
 import EducatorPage from "./EducatorPage";
 import FinancialPlannerPage from "./FinancialPlannerPage";
+import FitnessTrainerPage from "./FitnessTrainerPage";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -49,6 +50,8 @@ function HomeOrbit() {
                       navigate("/educator");
                     } else if (item.text === "Certified Financial Planner") {
                       navigate("/financial-planner");
+                    } else if (item.text === "Fitness Trainer") {
+                      navigate("/fitness-trainer");
                     }
                   }}
                 >
@@ -76,6 +79,7 @@ export default function App() {
       <Route path="/youtuber" element={<YoutuberPage />} />
       <Route path="/educator" element={<EducatorPage />} />
       <Route path="/financial-planner" element={<FinancialPlannerPage />} />
+      <Route path="/fitness-trainer" element={<FitnessTrainerPage />} />
     </Routes>
   );
 }
