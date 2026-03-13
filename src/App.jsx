@@ -5,6 +5,7 @@ import heroPerson from "./assets/hero-person.png";
 import logoImg from "./assets/logo.png";
 import YoutuberPage from "./YoutuberPage";
 import EducatorPage from "./EducatorPage";
+import FinancialPlannerPage from "./FinancialPlannerPage";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -18,15 +19,15 @@ const ITEMS = [
   { text: "Environmentalist", img: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=150&q=80" }
 ];
 
-function HomeContinuum() {
+function HomeOrbit() {
   const navigate = useNavigate();
   return (
-    <div className="continuum-wrapper">
+    <div className="orbit-wrapper">
       <img src={logoImg} alt="Logo" className="top-logo" />
       
       <div className="lines-bg"></div>
 
-      <div className="continuum-orbit">
+      <div className="orbit-container">
         {ITEMS.map((item, i) => {
           const angle = (i * 360) / ITEMS.length;
           return (
@@ -46,6 +47,8 @@ function HomeContinuum() {
                       navigate("/youtuber");
                     } else if (item.text === "Educator") {
                       navigate("/educator");
+                    } else if (item.text === "Certified Financial Planner") {
+                      navigate("/financial-planner");
                     }
                   }}
                 >
@@ -58,7 +61,7 @@ function HomeContinuum() {
         })}
       </div>
 
-      <div className="continuum-center">
+      <div className="orbit-center">
         <img src={heroPerson} alt="Prof. RBR" className="center-photo" />
       </div>
 
@@ -69,9 +72,10 @@ function HomeContinuum() {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<HomeContinuum />} />
+      <Route path="/" element={<HomeOrbit />} />
       <Route path="/youtuber" element={<YoutuberPage />} />
       <Route path="/educator" element={<EducatorPage />} />
+      <Route path="/financial-planner" element={<FinancialPlannerPage />} />
     </Routes>
   );
 }

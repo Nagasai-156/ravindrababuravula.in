@@ -18,7 +18,7 @@ body {
 }
 
 /* Base structural layout */
-.continuum-wrapper {
+.orbit-wrapper {
   background: #050505;
   color: white;
   height: 100vh;
@@ -43,7 +43,7 @@ body {
 }
 
 /* Subtle overlay to make center pop */
-.continuum-wrapper::before {
+.orbit-wrapper::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -60,7 +60,7 @@ body {
   z-index: 20;
 }
 
-.continuum-orbit {
+.orbit-container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -150,7 +150,7 @@ body {
 }
 
 /* Features at the Center */
-.continuum-center {
+.orbit-center {
   position: absolute;
   top: 50%;
   left: 50%;
