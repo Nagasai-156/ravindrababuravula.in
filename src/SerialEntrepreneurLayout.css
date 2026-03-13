@@ -1,0 +1,184 @@
+/* Unique Layouts for Serial Entrepreneur Page */
+
+.se-ventures-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.se-venture-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.se-venture-card:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,183,3,0.3);
+  transform: translateY(-5px);
+}
+
+.se-venture-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255,183,3,0.1);
+  color: #ffb703;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.se-venture-card h3 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.se-venture-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.se-list-group {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.se-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.4;
+}
+
+.se-list-item svg {
+  color: #ffb703;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Secondary Startups Grid (Smaller Cards) */
+.se-startups-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+
+.se-sm-card {
+  background: linear-gradient(135deg, rgba(20,20,20,1) 0%, rgba(30,30,30,1) 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.se-sm-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255,183,3,0.4);
+}
+
+.se-sm-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.se-sm-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* Timeline Layout */
+.se-timeline-section {
+  padding: 80px 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.se-timeline-item {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.se-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.se-timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.se-marker-dot {
+  width: 24px;
+  height: 24px;
+  background: #ffb703;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(255,183,3,0.1);
+  margin-bottom: 16px;
+}
+
+.se-marker-line {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,183,3,0.5), rgba(255,183,3,0));
+}
+
+.se-timeline-content {
+  padding-bottom: 20px;
+}
+
+.se-timeline-content.has-bg {
+  background: rgba(255,255,255,0.03);
+  padding: 32px;
+  border-radius: 16px;
+  border-left: 4px solid #ffb703;
+}
+
+@media (max-width: 960px) {
+  .se-ventures-grid {
+    grid-template-columns: 1fr;
+  }
+  .se-startups-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .se-timeline-item {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .se-startups-grid {
+    grid-template-columns: 1fr;
+  }
+}
