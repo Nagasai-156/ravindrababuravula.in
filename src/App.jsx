@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route, useNavigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import heroPerson from "./assets/hero-person.png";
 import logoImg from "./assets/logo.png";
@@ -8,6 +8,10 @@ import EducatorPage from "./EducatorPage";
 import FinancialPlannerPage from "./FinancialPlannerPage";
 import FitnessTrainerPage from "./FitnessTrainerPage";
 import SerialEntrepreneurPage from "./SerialEntrepreneurPage";
+import VibeCoderPage from "./VibeCoderPage";
+import CorporateTrainerPage from "./CorporateTrainerPage";
+import PhilanthropistPage from "./PhilanthropistPage";
+import EnvironmentalistPage from "./EnvironmentalistPage";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -55,6 +59,14 @@ function HomeOrbit() {
                       navigate("/fitness-trainer");
                     } else if (item.text === "Serial Entrepreneur") {
                       navigate("/serial-entrepreneur");
+                    } else if (item.text === "Vibe Coder") {
+                      navigate("/vibe-coder");
+                    } else if (item.text === "Corporate Trainer") {
+                      navigate("/corporate-trainer");
+                    } else if (item.text === "Philanthropist") {
+                      navigate("/philanthropist");
+                    } else if (item.text === "Environmentalist") {
+                      navigate("/environmentalist");
                     }
                   }}
                 >
@@ -75,15 +87,69 @@ function HomeOrbit() {
   );
 }
 
+function GlobalScrollAnimations() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const timeout = setTimeout(() => {
+      const selectors = [
+        "section",
+        "h2",
+        "h3",
+        "[class*='-card']",
+        ".panel-p",
+        "[class*='-p']",
+        "img:not(.top-logo, .orbit-item-image)"
+      ].join(", ");
+
+      const elements = document.querySelectorAll(selectors);
+      elements.forEach((el) => {
+        if (!el.closest(".orbit-wrapper")) {
+          if (!el.classList.contains("reveal")) {
+            el.classList.add("reveal");
+          }
+          observer.observe(el);
+        }
+      });
+    }, 150);
+
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomeOrbit />} />
-      <Route path="/youtuber" element={<YoutuberPage />} />
-      <Route path="/educator" element={<EducatorPage />} />
-      <Route path="/financial-planner" element={<FinancialPlannerPage />} />
-      <Route path="/fitness-trainer" element={<FitnessTrainerPage />} />
-      <Route path="/serial-entrepreneur" element={<SerialEntrepreneurPage />} />
-    </Routes>
+    <>
+      <GlobalScrollAnimations />
+      <Routes>
+        <Route path="/" element={<HomeOrbit />} />
+        <Route path="/youtuber" element={<YoutuberPage />} />
+        <Route path="/educator" element={<EducatorPage />} />
+        <Route path="/financial-planner" element={<FinancialPlannerPage />} />
+        <Route path="/fitness-trainer" element={<FitnessTrainerPage />} />
+        <Route path="/serial-entrepreneur" element={<SerialEntrepreneurPage />} />
+        <Route path="/vibe-coder" element={<VibeCoderPage />} />
+        <Route path="/corporate-trainer" element={<CorporateTrainerPage />} />
+        <Route path="/philanthropist" element={<PhilanthropistPage />} />
+        <Route path="/environmentalist" element={<EnvironmentalistPage />} />
+      </Routes>
+    </>
   );
 }

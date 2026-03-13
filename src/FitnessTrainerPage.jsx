@@ -72,11 +72,6 @@ export default function FitnessTrainerPage() {
       <nav className="hs-nav">
         <div className="hs-nav-left">
           <span className="hs-logo">PROF RBR</span>
-          <div className="hs-nav-links">
-            <span className="active">Home</span>
-            <span>Fitness</span>
-            <span>Lifestyle</span>
-          </div>
         </div>
         <button className="hs-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />

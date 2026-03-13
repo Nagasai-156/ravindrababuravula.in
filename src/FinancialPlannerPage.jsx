@@ -69,11 +69,6 @@ export default function FinancialPlannerPage() {
       <nav className="hs-nav">
         <div className="hs-nav-left">
           <span className="hs-logo">PROF RBR</span>
-          <div className="hs-nav-links">
-            <span className="active">Home</span>
-            <span>Planning</span>
-            <span>Roadmap</span>
-          </div>
         </div>
         <button className="hs-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />

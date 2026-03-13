@@ -87,11 +87,6 @@ export default function SerialEntrepreneurPage() {
       <nav className="hs-nav">
         <div className="hs-nav-left">
           <span className="hs-logo">PROF RBR</span>
-          <div className="hs-nav-links">
-            <span className="active">Home</span>
-            <span>Ventures</span>
-            <span>Impact</span>
-          </div>
         </div>
         <button className="hs-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />
@@ -207,6 +202,7 @@ export default function SerialEntrepreneurPage() {
             <div className="p2-right" style={{ paddingTop: 0 }}>
               <div className="dark-info-card" style={{ borderColor: '#ffb703' }}>
                 <h3>The Acquisition</h3>
+                <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Unacademy" alt="Unacademy" className="se-acq-logo" style={{ marginTop: '16px', marginBottom: '16px' }} />
                 <p>
                   The impact of this venture was so significant that Raudra Eduservices was later acquired by <strong>Unacademy</strong>, one of India’s leading EdTech companies. 
                 </p>
@@ -225,6 +221,7 @@ export default function SerialEntrepreneurPage() {
           
           <div className="se-venture-card">
             <div className="se-venture-icon"><CodeIcon /></div>
+            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Raudra+Tech" alt="Raudra Technologies" className="se-company-logo" />
             <h3>Raudra Technologies</h3>
             <p>Continuing his entrepreneurial journey, Prof. Ravindrababu Ravula founded Raudra Technologies Private Limited, a technology-driven company focused on developing innovative digital solutions.</p>
             <p style={{ marginBottom: 0 }}>Through Raudra Technologies, he explored the intersection of technology and business, building systems that address real-world challenges through modern technological approaches. The venture reflects his belief that technology has the power to transform industries and unlock new opportunities.</p>
@@ -232,6 +229,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><GlobalIcon /></div>
+            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Game+of+Visas" alt="Game of Visas" className="se-company-logo" />
             <h3>Game of Visas</h3>
             <p>Recognizing the aspirations of many students who wish to pursue higher education abroad, he launched Game of Visas, a platform dedicated to helping students achieve their dream of studying in international universities.</p>
             <div className="se-list-group">
@@ -244,6 +242,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><BrainIcon /></div>
+            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=MetaBrix+Labs" alt="MetaBrix Labs" className="se-company-logo" />
             <h3>MetaBrix Labs (CMO)</h3>
             <p>Another key venture in his entrepreneurial portfolio is MetaBrix Labs, where he serves as Chief Marketing Officer (CMO). MetaBrix is building a Gen-AI powered productivity SaaS platform for the 3D design industry.</p>
             <p style={{ marginBottom: 0 }}>By leveraging generative AI capabilities, the platform aims to accelerate development workflows for gaming, XR, marketing, and e-commerce—reducing development time and cost by more than 60 percent to improve designer efficiency.</p>
@@ -251,6 +250,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><BrainIcon /></div>
+            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Raudra+Labs" alt="Raudra Labs" className="se-company-logo" />
             <h3>Raudra Labs</h3>
             <p>In 2026, he founded Raudra Labs, a research-driven AI organization bridging the gap between academic research and real-world industry applications.</p>
             <div className="se-list-group">
@@ -265,6 +265,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card" style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto', textAlign: 'center', borderColor: 'rgba(255,183,3,0.3)' }}>
             <div className="se-venture-icon" style={{ margin: '0 auto 24px' }}><MedIcon /></div>
+            <img src="https://via.placeholder.com/250x70/111111/ffb703?text=DIAS+Health" alt="DIAS Health & Drugs" className="se-company-logo" style={{ margin: '0 auto 24px' }} />
             <h3>DIAS Health & Drugs</h3>
             <p>Expanding his entrepreneurial footprint into healthcare, Prof. Ravindrababu Ravula also serves as a Co-Founder of DIAS Health & Drugs Private Limited. This venture reflects his commitment to exploring opportunities that contribute to societal well-being. By participating in initiatives within the healthcare sector, he continues to broaden the scope of his entrepreneurial impact beyond education and technology.</p>
           </div>
@@ -286,18 +287,22 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-startups-grid">
             <div className="se-sm-card">
+              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Electronics+Astra" alt="Electronics Astra" className="se-sm-logo" />
               <div className="se-sm-name">Electronics Astra</div>
               <div className="se-sm-desc">A venture focused on technological hardware innovation and electronics.</div>
             </div>
             <div className="se-sm-card">
+              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Eduview" alt="Eduview" className="se-sm-logo" />
               <div className="se-sm-name">Eduview</div>
               <div className="se-sm-desc">An education-focused platform aimed at drastically improving learning experiences.</div>
             </div>
             <div className="se-sm-card">
+              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Getroomix" alt="Getroomix" className="se-sm-logo" />
               <div className="se-sm-name">Getroomix</div>
               <div className="se-sm-desc">A platform designed to creatively address modern accommodation and lifestyle needs.</div>
             </div>
             <div className="se-sm-card">
+              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Kadali+Kitchen" alt="Kadali Kitchen" className="se-sm-logo" />
               <div className="se-sm-name">Kadali Kitchen</div>
               <div className="se-sm-desc">A culinary venture exploring new opportunities in the rapidly evolving food and hospitality space.</div>
             </div>

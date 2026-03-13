@@ -62,11 +62,6 @@ export default function EducatorPage() {
       <nav className="hs-nav">
         <div className="hs-nav-left">
           <span className="hs-logo">PROF RBR</span>
-          <div className="hs-nav-links">
-            <span className="active">Home</span>
-            <span>Services</span>
-            <span>About</span>
-          </div>
         </div>
         <button className="hs-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />

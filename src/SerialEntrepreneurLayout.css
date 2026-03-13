@@ -182,3 +182,27 @@
     grid-template-columns: 1fr;
   }
 }
+
+.se-company-logo {
+  height: 48px;
+  width: auto;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.se-sm-logo {
+  height: 36px;
+  width: auto;
+  margin: 0 auto 20px;
+  display: block;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.se-acq-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}

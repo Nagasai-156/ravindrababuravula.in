@@ -51,3 +51,21 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Global text justification across all screens */
+p, .panel-p, [class*="-p"], [class*="-desc"] {
+  text-align: justify !important;
+  hyphens: auto;
+}
+
+/* Scroll Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -311,7 +311,7 @@ body {
   transform: translate(-50%, -50%);
   font-family: 'Unbounded', sans-serif;
   font-weight: 800;
-  font-size: min(22vw, 260px);
+  font-size: clamp(8rem, 25vw, 22rem);
   line-height: 1;
   color: transparent;
   -webkit-text-stroke: 1.5px rgba(255,255,255,0.04);
