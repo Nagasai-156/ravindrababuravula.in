@@ -12,6 +12,9 @@ import VibeCoderPage from "./VibeCoderPage";
 import CorporateTrainerPage from "./CorporateTrainerPage";
 import PhilanthropistPage from "./PhilanthropistPage";
 import EnvironmentalistPage from "./EnvironmentalistPage";
+import InternshipPage from "./InternshipPage";
+import CohortPage from "./CohortPage";
+import AdminDashboard from "./AdminDashboard";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -29,24 +32,33 @@ function HomeOrbit() {
   const navigate = useNavigate();
   return (
     <div className="orbit-wrapper">
+      <div className="top-nav-buttons">
+        <button className="apply-cohort-btn" onClick={() => navigate("/cohort")}>
+          Apply for Cohort
+        </button>
+        <button className="apply-internship-btn" onClick={() => navigate("/internship")}>
+          Apply for Internship
+        </button>
+      </div>
+
       <img src={logoImg} alt="Logo" className="top-logo" />
-      
+
       <div className="lines-bg"></div>
 
       <div className="orbit-container">
         {ITEMS.map((item, i) => {
           const angle = (i * 360) / ITEMS.length;
           return (
-            <div 
-              key={i} 
+            <div
+              key={i}
               className="orbit-item"
               style={{ transform: `rotate(${angle}deg) translateY(calc(var(--orbit-radius) * -1))` }}
             >
-              <div 
-                className="orbit-item-angle-corrector" 
+              <div
+                className="orbit-item-angle-corrector"
                 style={{ transform: `rotate(${-angle}deg)` }}
               >
-                <div 
+                <div
                   className="orbit-item-animator"
                   onClick={() => {
                     if (item.text === "Youtuber") {
@@ -67,6 +79,8 @@ function HomeOrbit() {
                       navigate("/philanthropist");
                     } else if (item.text === "Environmentalist") {
                       navigate("/environmentalist");
+                    } else if (item.text === "Apply for Internship") {
+                      navigate("/internship");
                     }
                   }}
                 >
@@ -149,6 +163,9 @@ export default function App() {
         <Route path="/corporate-trainer" element={<CorporateTrainerPage />} />
         <Route path="/philanthropist" element={<PhilanthropistPage />} />
         <Route path="/environmentalist" element={<EnvironmentalistPage />} />
+        <Route path="/internship" element={<InternshipPage />} />
+        <Route path="/cohort" element={<CohortPage />} />
+        <Route path="/responses-portal" element={<AdminDashboard />} />
       </Routes>
     </>
   );

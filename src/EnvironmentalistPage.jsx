@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./EnvironmentalistPage.css";
 
@@ -28,6 +29,12 @@ const StarIcon = () => (
 const CheckIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"></polyline>
+  </svg>
+);
+
+const YoutubeIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
@@ -67,7 +74,7 @@ export default function EnvironmentalistPage() {
       {/* ── Navigation ── */}
       <nav className="env-nav">
         <div className="env-nav-left">
-          <span className="env-logo">PROF RBR</span>
+          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
         </div>
         <button className="env-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />
@@ -536,14 +543,20 @@ export default function EnvironmentalistPage() {
         {/* ── Footer ── */}
         <footer className="env-footer">
           <div className="env-footer-inner">
-            <div>
-              <div className="env-footer-logo">PROF RBR</div>
+            <div className="env-footer-left">
+              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
               <p className="env-footer-tagline">
                 Living in harmony with nature —<br />advocating for a cleaner, greener earth.
               </p>
             </div>
-            <div className="env-footer-copy">
-              © 2026 Prof. Ravindrababu Ravula. All rights reserved.
+            <div className="env-footer-right">
+              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="env-yt-link">
+                <YoutubeIcon />
+                <span>Subscribe to Prof. RBR</span>
+              </a>
+              <div className="env-footer-copy">
+                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
+              </div>
             </div>
           </div>
         </footer>

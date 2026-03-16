@@ -819,7 +819,7 @@
 
 /* ─── FOOTER ────────────────────────────────────────────────── */
 .env-footer {
-  padding: 80px 0;
+  padding: 60px 0; /* Reduced from 80px (75%) */
   background: #060606;
   border-top: 1px solid var(--env-border);
 }
@@ -844,6 +844,45 @@
   font-size: 0.95rem;
   color: #555;
   line-height: 1.7;
+}
+
+.footer-logo-text {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.env-footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.env-yt-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #ccc;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.env-yt-link svg { color: #ff0000; flex-shrink: 0; }
+.env-yt-link:hover {
+  background: #252525;
+  border-color: rgba(255,255,255,0.15);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 .env-footer-copy {

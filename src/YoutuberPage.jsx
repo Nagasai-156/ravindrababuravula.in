@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./YoutuberPage.css";
 
@@ -60,7 +61,7 @@ export default function YoutuberPage() {
       {/* ── Navigation ── */}
       <nav className="hs-nav">
         <div className="hs-nav-left">
-          <span className="hs-logo">PROF RBR</span>
+          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
         </div>
         <button className="hs-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />
@@ -447,7 +448,7 @@ export default function YoutuberPage() {
         <footer className="yp-footer">
           <div className="yp-footer-inner">
             <div className="yp-footer-left">
-              <div className="yp-footer-logo">PROF RBR</div>
+              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
               <p className="yp-footer-tagline">
                 Transforming the way India learns —<br />one lecture at a time.
               </p>

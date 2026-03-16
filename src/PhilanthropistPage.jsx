@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./PhilanthropistPage.css";
 
@@ -28,6 +29,12 @@ const CheckIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
+);
+
+const YoutubeIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+  </svg>
 );
 
 /* ── Count Up component ── */
@@ -104,7 +111,7 @@ export default function PhilanthropistPage() {
       {/* ── Navigation ── */}
       <nav className="ph-nav">
         <div className="ph-nav-left">
-          <span className="ph-logo">PROF RBR</span>
+          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
         </div>
         <button className="ph-nav-btn" onClick={() => navigate("/")}>
           Go Back <ArrowUpRight />
@@ -409,14 +416,20 @@ export default function PhilanthropistPage() {
         {/* ── Footer ── */}
         <footer className="ph-footer">
           <div className="ph-footer-inner">
-            <div>
-              <div className="ph-footer-logo">PROF RBR</div>
+            <div className="ph-footer-left">
+              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
               <p className="ph-footer-tagline">
                 Transforming lives through education —<br />creating a world where knowledge knows no bounds.
               </p>
             </div>
-            <div className="ph-footer-copy">
-              © 2026 Prof. Ravindrababu Ravula. All rights reserved.
+            <div className="ph-footer-right">
+              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="ph-yt-link">
+                <YoutubeIcon />
+                <span>Subscribe to Prof. RBR</span>
+              </a>
+              <div className="ph-footer-copy">
+                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
+              </div>
             </div>
           </div>
         </footer>
