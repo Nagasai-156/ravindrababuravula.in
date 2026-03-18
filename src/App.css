@@ -347,25 +347,41 @@ body {
   }
 
   .top-nav-buttons {
-    top: auto;
-    bottom: 30px;
-    right: 50%;
-    transform: translateX(50%);
-    width: 90%;
-    justify-content: center;
-    gap: 10px;
+    top: 70px;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: auto;
+    flex-direction: row;
+    gap: 12px;
   }
 
   .apply-cohort-btn,
   .apply-internship-btn {
-    padding: 10px 16px;
-    font-size: 0.75rem;
-    flex: 1;
-    text-align: center;
+    padding: 8px 16px;
+    font-size: 0.7rem;
+    flex: none;
+    width: auto;
   }
 }
 
 @media (max-width: 480px) {
+  .top-nav-buttons {
+    top: 60px;
+    width: 95%;
+    gap: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .apply-cohort-btn,
+  .apply-internship-btn {
+    padding: 6px 12px;
+    font-size: 0.65rem;
+    flex: 1;
+  }
+
   :root {
     --orbit-radius: 32vw;
   }
