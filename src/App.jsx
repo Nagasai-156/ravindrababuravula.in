@@ -94,13 +94,6 @@ function HomeOrbit() {
 
       <div className="orbit-center">
         <img src={heroPerson} alt="Prof. RBR" className="center-photo" />
-        <div className="center-tribute">
-          <div className="tribute-star">★</div>
-          <div className="tribute-text">
-            <span>"God of CS"</span>
-            <p>A powerful title given by students</p>
-          </div>
-        </div>
       </div>
 
     </div>

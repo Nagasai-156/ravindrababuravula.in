@@ -233,55 +233,7 @@ body {
   pointer-events: auto;
 }
 
-.center-tribute {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: rgba(255, 183, 3, 0.1);
-  border: 1px solid rgba(255, 183, 3, 0.3);
-  padding: 10px 20px;
-  border-radius: 50px;
-  backdrop-filter: blur(10px);
-  z-index: 20;
-  width: max-content;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
 
-.tribute-star {
-  color: #ffb703;
-  font-size: 1.2rem;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.tribute-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.tribute-text span {
-  color: #ffb703;
-  font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
-
-.tribute-text p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
 
 /* Background Lines Matrix Decor */
 .lines-bg {
@@ -323,20 +275,6 @@ body {
     height: 210px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
     border: 4px solid rgba(255, 183, 3, 0.4);
-  }
-
-  .center-tribute {
-    bottom: -25px;
-    padding: 6px 14px;
-    gap: 8px;
-  }
-
-  .tribute-text span {
-    font-size: 0.9rem;
-  }
-
-  .tribute-text p {
-    font-size: 0.6rem;
   }
 
 
