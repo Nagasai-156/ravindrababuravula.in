@@ -96,7 +96,7 @@ export default function CohortPage() {
               </p>
 
               <div className="p1-cta-row">
-                <button className="cta-primary">Apply Now</button>
+                <button className="cta-primary" onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank")}>Apply Now</button>
                 <button className="cta-secondary">Learn More</button>
               </div>
 
@@ -414,7 +414,7 @@ export default function CohortPage() {
                         <span className="f-cta-eyebrow">Ready to build with Raudra?</span>
                         <h2 className="f-cta-h2">12 spots. 5 months. <br />One chance to change everything.</h2>
                         <div className="f-cta-btn-wrap">
-                            <button className="footer-main-btn">Apply Now — Cohort 01</button>
+                            <button className="footer-main-btn" onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank")}>Apply Now — Cohort 01</button>
                             <p className="f-cta-subtext">Applications close soon. No fluff required — just tell us what you're building.</p>
                         </div>
                     </div>

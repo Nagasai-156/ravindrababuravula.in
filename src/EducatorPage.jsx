@@ -127,12 +127,12 @@ export default function EducatorPage() {
 
                 {/* Card 2 — Gold Impact */}
                 <div className="cc gold" style={{ minHeight: 200, justifyContent: "space-between" }}>
-                  <Badge label="Student Trust" type="gold" />
+                  <Badge label="Trust & Admiration" type="gold" />
                   <div className="cc-val" style={{ marginTop: 'auto', marginBottom: 6, fontSize: '1.4rem', fontWeight: 600 }}>
                     "God of CS"
                   </div>
                   <div className="cc-lbl" style={{ color: '#333' }}>
-                    A powerful title reflecting the profound trust and admiration earned from generations of learners.
+                    A powerful title given by students, reflecting the profound trust and admiration earned from generations of learners.
                   </div>
                 </div>
 
