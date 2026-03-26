@@ -274,7 +274,7 @@ body {
 
 /* ─── PAGE BODY ─────────────────────────────────────────────── */
 .vc-body {
-  padding-top: 72px; /* nav height offset */
+  padding-top: 0;
 }
 
 /* ─── SECTION UTILITY ───────────────────────────────────────── */

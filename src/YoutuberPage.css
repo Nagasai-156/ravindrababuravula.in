@@ -274,7 +274,7 @@ body {
 
 /* ─── PAGE BODY ─────────────────────────────────────────────── */
 .yp-body {
-  padding-top: 72px; /* nav height offset */
+  padding-top: 0;
 }
 
 /* ─── SECTION UTILITY ───────────────────────────────────────── */
@@ -712,6 +712,7 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 100px 40px;
+  padding-top: 140px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 80px;
@@ -719,13 +720,46 @@ body {
 }
 
 .big-chapter {
-  font-family: 'Unbounded', sans-serif;
-  font-size: clamp(5rem, 10vw, 10rem);
-  font-weight: 700;
-  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffb703;
   line-height: 1;
-  margin-bottom: -20px;
-  user-select: none;
+  margin-bottom: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.big-chapter::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #ffb703;
+  flex-shrink: 0;
+}
+
+/* Extra top space only on desktop for panel 3 */
+@media (max-width: 960px) {
+  .p3-inner {
+    padding-top: 60px;
+  }
+  .big-chapter {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .big-chapter {
+    font-size: 0.68rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
 }
 
 .note-row {
@@ -1057,9 +1091,53 @@ body {
 }
 
 /* ─── RESPONSIVE ────────────────────────────────────────────── */
+
+/* 1920px+ — Ultra wide */
+@media (min-width: 1920px) {
+  .p1-hero-inner,
+  .p2-inner,
+  .p3-inner,
+  .p4-inner,
+  .p5-inner {
+    max-width: 1600px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .yt-stats-inner {
+    max-width: 1600px;
+  }
+  .p1-headline { font-size: 5rem; }
+  .panel-h2 { font-size: 3.2rem; }
+}
+
+/* 1440px — Large desktop */
+@media (max-width: 1440px) {
+  .p1-hero-inner,
+  .p2-inner,
+  .p3-inner,
+  .p4-inner,
+  .p5-inner {
+    max-width: 1280px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+/* 1280px — Standard desktop */
+@media (max-width: 1280px) {
+  .p1-hero-inner,
+  .p2-inner,
+  .p3-inner,
+  .p4-inner,
+  .p5-inner {
+    max-width: 100%;
+    padding-left: 28px;
+    padding-right: 28px;
+    gap: 48px;
+  }
+}
+
 @media (max-width: 960px) {
-  .hs-nav { padding: 0 20px; }
-  .hs-nav-links { display: none; }
 
   .p1-hero-inner,
   .p2-inner,
@@ -1086,7 +1164,7 @@ body {
   .img-card.tall { height: 240px; }
   .img-card.landscape { height: 220px; }
 
-  .big-chapter { font-size: 5rem; }
+  .big-chapter { font-size: 0.72rem; letter-spacing: 2px; }
   .panel-h2 { font-size: 2rem; }
 
   .yt-stats-inner { flex-direction: column; align-items: flex-start; gap: 24px; }

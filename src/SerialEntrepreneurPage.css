@@ -274,7 +274,7 @@ body {
 
 /* ─── PAGE BODY ─────────────────────────────────────────────── */
 .se-body {
-  padding-top: 72px; /* nav height offset */
+  padding-top: 0;
 }
 
 /* ─── SECTION UTILITY ───────────────────────────────────────── */
@@ -551,6 +551,17 @@ body {
   flex-direction: column;
   gap: 20px;
   padding-top: 140px;
+}
+
+/* Push Acquisition card down on desktop only */
+.se-acquisition-right {
+  padding-top: 180px;
+}
+
+@media (max-width: 960px) {
+  .se-acquisition-right {
+    padding-top: 0;
+  }
 }
 
 /* Chapter 1 — Mini stat row */

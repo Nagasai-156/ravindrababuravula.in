@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./PhilanthropistPage.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const HeartIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.84-8.84 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -29,12 +19,6 @@ const CheckIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-  </svg>
 );
 
 /* ── Count Up component ── */
@@ -95,7 +79,6 @@ const PH_STATS = [
 ];
 
 export default function PhilanthropistPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -107,16 +90,6 @@ export default function PhilanthropistPage() {
 
   return (
     <div className="ph-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="ph-nav">
-        <div className="ph-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="ph-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="ph-body">
 
@@ -211,7 +184,7 @@ export default function PhilanthropistPage() {
             <div className="ph-panel-left">
               <p className="sec-label">Foundation</p>
               <h2 className="panel-h2">
-                Raudra Charitable Trust —<br /><em style={{ fontStyle: "normal", color: "#ffb703" }}>Empowering Through Education</em>
+                Raudra Charitable Trust — <em style={{ fontStyle: "normal", color: "#ffb703" }}>Empowering Through Education</em>
               </h2>
               <p className="panel-p">
                 The Raudra Charitable Trust was founded with a simple yet powerful mission: to promote education and provide learning opportunities to children and students who cannot afford access to quality education.
@@ -412,27 +385,6 @@ export default function PhilanthropistPage() {
             </blockquote>
           </div>
         </section>
-
-        {/* ── Footer ── */}
-        <footer className="ph-footer">
-          <div className="ph-footer-inner">
-            <div className="ph-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="ph-footer-tagline">
-                Transforming lives through education —<br />creating a world where knowledge knows no bounds.
-              </p>
-            </div>
-            <div className="ph-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="ph-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="ph-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

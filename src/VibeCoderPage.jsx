@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./VibeCoderPage.css";
 import "./VibeCoderLayout.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const CodeIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
@@ -51,12 +41,6 @@ const BookIcon = () => (
 
 const CheckIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-  </svg>
 );
 
 /* ── Badge pill ── */
@@ -203,7 +187,6 @@ const VSCodeAnimation = () => {
 };
 
 export default function VibeCoderPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -215,16 +198,6 @@ export default function VibeCoderPage() {
 
   return (
     <div className="vc-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="hs-nav">
-        <div className="hs-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="hs-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="vc-body">
 
@@ -383,10 +356,10 @@ export default function VibeCoderPage() {
         {/* ══════════════════════════════════════════
             FEATURES: WHY IT MATTERS
         ══════════════════════════════════════════ */}
-        <section style={{ padding: '40px 0 0' }}>
-          <div style={{ textAlign: 'center', padding: '0 24px' }}>
-            <p className="sec-label">Advantage</p>
-            <h2 className="panel-h2" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: 24 }}>Why Vibe Coding Matters in the Modern Era</h2>
+        <section style={{ padding: '20px 0 0' }}>
+          <div style={{ textAlign: 'center', padding: '0 40px', maxWidth: '1280px', margin: '0 auto' }}>
+            <p className="sec-label" style={{ textAlign: 'center' }}>Advantage</p>
+            <h2 className="panel-h2" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: 16, textAlign: 'center' }}>Why Vibe Coding Matters in the Modern Era</h2>
             <p className="panel-p" style={{ margin: '0 auto', maxWidth: '800px', textAlign: 'center' }}>The software industry today moves faster than ever before. Startups launch products within weeks, new frameworks appear every year, and developers constantly adapt to evolving technologies. Vibe coding encourages developers to:</p>
           </div>
 
@@ -430,8 +403,8 @@ export default function VibeCoderPage() {
                   <ZapIcon />
                 </div>
                 <div style={{ paddingTop: '8px' }}>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif' }}>Confidence</h3>
-                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6 }}>Building confidence in solving problems independently.</p>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif', textAlign: 'left' }}>Confidence</h3>
+                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6, textAlign: 'left' }}>Building confidence in solving problems independently.</p>
                 </div>
               </div>
 
@@ -440,8 +413,8 @@ export default function VibeCoderPage() {
                   <SparklesIcon />
                 </div>
                 <div style={{ paddingTop: '8px' }}>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif' }}>Curiosity</h3>
-                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6 }}>Fostering curiosity to explore new tech without hesitation.</p>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif', textAlign: 'left' }}>Curiosity</h3>
+                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6, textAlign: 'left' }}>Fostering curiosity to explore new tech without hesitation.</p>
                 </div>
               </div>
 
@@ -450,8 +423,8 @@ export default function VibeCoderPage() {
                   <PaletteIcon />
                 </div>
                 <div style={{ paddingTop: '8px' }}>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif' }}>Creativity</h3>
-                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6 }}>Encouraging creativity in designing practical solutions.</p>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif', textAlign: 'left' }}>Creativity</h3>
+                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6, textAlign: 'left' }}>Encouraging creativity in designing practical solutions.</p>
                 </div>
               </div>
 
@@ -460,8 +433,8 @@ export default function VibeCoderPage() {
                   <CodeIcon />
                 </div>
                 <div style={{ paddingTop: '8px' }}>
-                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif' }}>Resilience</h3>
-                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6 }}>Developing resilience when facing technical challenges.</p>
+                  <h3 style={{ fontSize: '1.25rem', marginBottom: '8px', color: '#fff', fontFamily: 'Unbounded, sans-serif', textAlign: 'left' }}>Resilience</h3>
+                  <p style={{ fontSize: '1rem', color: '#aaa', margin: 0, lineHeight: 1.6, textAlign: 'left' }}>Developing resilience when facing technical challenges.</p>
                 </div>
               </div>
             </div>
@@ -579,26 +552,6 @@ export default function VibeCoderPage() {
         {/* ══════════════════════════════════════════
             FOOTER 
         ══════════════════════════════════════════ */}
-        <footer className="vc-footer p5-footer">
-          <div className="fp-footer-inner p5-footer-inner">
-            <div className="vc-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="fp-footer-tagline">
-                Embracing the state of creative flow.<br />Vibe Coding the Future.
-              </p>
-            </div>
-            <div className="vc-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="vc-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="fp-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved. 
-              </div>
-            </div>
-          </div>
-        </footer>
-
       </div>
 
       {/* Scroll hint */}

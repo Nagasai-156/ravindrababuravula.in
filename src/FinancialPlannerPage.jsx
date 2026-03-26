@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./FinancialPlannerPage.css";
 import "./FinancialPlannerLayout.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const WalletIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 12V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2" />
@@ -30,12 +20,6 @@ const StarIcon = () => (
 const CheckIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
@@ -59,7 +43,6 @@ const FP_STATS = [
 ];
 
 export default function FinancialPlannerPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -71,16 +54,6 @@ export default function FinancialPlannerPage() {
 
   return (
     <div className="fp-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="hs-nav">
-        <div className="hs-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="hs-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="fp-body">
 
@@ -451,29 +424,6 @@ export default function FinancialPlannerPage() {
             </div>
           </div>
         </section>
-
-        {/* ══════════════════════════════════════════
-            FOOTER 
-        ══════════════════════════════════════════ */}
-        <footer className="fp-footer">
-          <div className="fp-footer-inner">
-            <div className="fp-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="fp-footer-tagline">
-                Your guide to financial freedom, security,<br />and a structured wealth roadmap.
-              </p>
-            </div>
-            <div className="fp-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="fp-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="fp-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved. Registered MFD: ARN-354459.
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./EnvironmentalistPage.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const LeafIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2z"/>
@@ -29,12 +19,6 @@ const StarIcon = () => (
 const CheckIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
@@ -58,7 +42,6 @@ const ENV_STATS = [
 ];
 
 export default function EnvironmentalistPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -70,16 +53,6 @@ export default function EnvironmentalistPage() {
 
   return (
     <div className="env-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="env-nav">
-        <div className="env-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="env-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="env-body">
 
@@ -540,26 +513,6 @@ export default function EnvironmentalistPage() {
           </div>
         </section>
 
-        {/* ── Footer ── */}
-        <footer className="env-footer">
-          <div className="env-footer-inner">
-            <div className="env-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="env-footer-tagline">
-                Living in harmony with nature —<br />advocating for a cleaner, greener earth.
-              </p>
-            </div>
-            <div className="env-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="env-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="env-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
 
       {/* Scroll hint */}

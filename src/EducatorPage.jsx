@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./EducatorPage.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const BookIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
@@ -52,7 +42,6 @@ const EDU_STATS = [
 ];
 
 export default function EducatorPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -64,16 +53,6 @@ export default function EducatorPage() {
 
   return (
     <div className="ep-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="hs-nav">
-        <div className="hs-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="hs-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="ep-body">
 
@@ -249,7 +228,7 @@ export default function EducatorPage() {
         <section className="p3-section">
           <div className="p3-inner">
             <div className="p3-left">
-              <div className="big-chapter">02</div>
+              <p className="sec-label">Chapter 02</p>
               <h2 className="panel-h2">A Passion That Never Faded</h2>
 
               <div className="note-row">
@@ -391,29 +370,6 @@ export default function EducatorPage() {
             </div>
           </div>
         </section>
-
-        {/* ══════════════════════════════════════════
-            FOOTER 
-        ══════════════════════════════════════════ */}
-        <footer className="yp-footer ep-footer">
-          <div className="yp-footer-inner ep-footer-inner">
-            <div className="yp-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="yp-footer-tagline">
-                Transforming the way India learns —<br />one lecture at a time.
-              </p>
-            </div>
-            <div className="yp-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="yp-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="yp-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

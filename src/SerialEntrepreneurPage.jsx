@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./SerialEntrepreneurPage.css";
 import "./SerialEntrepreneurLayout.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const RocketIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
@@ -32,12 +22,6 @@ const StarIcon = () => (
 const CheckIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 );
 
@@ -77,7 +61,6 @@ const SE_STATS = [
 ];
 
 export default function SerialEntrepreneurPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -89,16 +72,6 @@ export default function SerialEntrepreneurPage() {
 
   return (
     <div className="se-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="hs-nav">
-        <div className="hs-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="hs-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="se-body">
 
@@ -197,7 +170,7 @@ export default function SerialEntrepreneurPage() {
           <div className="p2-inner">
             <div className="p2-left">
               <p className="sec-label">Origins</p>
-              <h2 className="panel-h2" style={{ whiteSpace: 'normal', fontSize: '2.5rem' }}>Entrepreneurial Beginnings & The EdTech Revolution</h2>
+              <h2 className="panel-h2" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Entrepreneurial Beginnings & The EdTech Revolution</h2>
               <p className="panel-p">
                 Prof. Ravindrababu Ravula’s entrepreneurial journey began with a deep understanding of the challenges faced by students and professionals in the education ecosystem. Recognizing the need for high-quality technical education and mentorship, he founded <strong>Raudra Eduservices</strong>, an educational venture focused on empowering engineering students preparing for competitive exams such as GATE.
               </p>
@@ -206,10 +179,10 @@ export default function SerialEntrepreneurPage() {
               </p>
             </div>
 
-            <div className="p2-right" style={{ paddingTop: 0 }}>
+            <div className="p2-right se-acquisition-right">
               <div className="dark-info-card" style={{ borderColor: '#ffb703' }}>
                 <h3>The Acquisition</h3>
-                <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Unacademy" alt="Unacademy" className="se-acq-logo" style={{ marginTop: '16px', marginBottom: '16px' }} />
+
                 <p>
                   The impact of this venture was so significant that Raudra Eduservices was later acquired by <strong>Unacademy</strong>, one of India’s leading EdTech companies. 
                 </p>
@@ -228,7 +201,7 @@ export default function SerialEntrepreneurPage() {
           
           <div className="se-venture-card">
             <div className="se-venture-icon"><CodeIcon /></div>
-            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Raudra+Tech" alt="Raudra Technologies" className="se-company-logo" />
+
             <h3>Raudra Technologies</h3>
             <p>Continuing his entrepreneurial journey, Prof. Ravindrababu Ravula founded Raudra Technologies Private Limited, a technology-driven company focused on developing innovative digital solutions.</p>
             <p style={{ marginBottom: 0 }}>Through Raudra Technologies, he explored the intersection of technology and business, building systems that address real-world challenges through modern technological approaches. The venture reflects his belief that technology has the power to transform industries and unlock new opportunities.</p>
@@ -236,7 +209,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><GlobalIcon /></div>
-            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Game+of+Visas" alt="Game of Visas" className="se-company-logo" />
+
             <h3>Game of Visas</h3>
             <p>Recognizing the aspirations of many students who wish to pursue higher education abroad, he launched Game of Visas, a platform dedicated to helping students achieve their dream of studying in international universities.</p>
             <div className="se-list-group">
@@ -249,7 +222,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><BrainIcon /></div>
-            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=MetaBrix+Labs" alt="MetaBrix Labs" className="se-company-logo" />
+
             <h3>MetaBrix Labs (CMO)</h3>
             <p>Another key venture in his entrepreneurial portfolio is MetaBrix Labs, where he serves as Chief Marketing Officer (CMO). MetaBrix is building a Gen-AI powered productivity SaaS platform for the 3D design industry.</p>
             <p style={{ marginBottom: 0 }}>By leveraging generative AI capabilities, the platform aims to accelerate development workflows for gaming, XR, marketing, and e-commerce—reducing development time and cost by more than 60 percent to improve designer efficiency.</p>
@@ -257,7 +230,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card">
             <div className="se-venture-icon"><BrainIcon /></div>
-            <img src="https://via.placeholder.com/200x60/111111/ffb703?text=Raudra+Labs" alt="Raudra Labs" className="se-company-logo" />
+
             <h3>Raudra Labs</h3>
             <p>In 2026, he founded Raudra Labs, a research-driven AI organization bridging the gap between academic research and real-world industry applications.</p>
             <div className="se-list-group">
@@ -272,7 +245,7 @@ export default function SerialEntrepreneurPage() {
 
           <div className="se-venture-card" style={{ gridColumn: '1 / -1', maxWidth: '800px', margin: '0 auto', textAlign: 'center', borderColor: 'rgba(255,183,3,0.3)' }}>
             <div className="se-venture-icon" style={{ margin: '0 auto 24px' }}><MedIcon /></div>
-            <img src="https://via.placeholder.com/250x70/111111/ffb703?text=DIAS+Health" alt="DIAS Health & Drugs" className="se-company-logo" style={{ margin: '0 auto 24px' }} />
+
             <h3>DIAS Health & Drugs</h3>
             <p>Expanding his entrepreneurial footprint into healthcare, Prof. Ravindrababu Ravula also serves as a Co-Founder of DIAS Health & Drugs Private Limited. This venture reflects his commitment to exploring opportunities that contribute to societal well-being. By participating in initiatives within the healthcare sector, he continues to broaden the scope of his entrepreneurial impact beyond education and technology.</p>
           </div>
@@ -286,30 +259,30 @@ export default function SerialEntrepreneurPage() {
             SECONDARY STARTUPS
         ══════════════════════════════════════════ */}
         <section style={{ padding: '40px 0 0' }}>
-          <div style={{ textAlign: 'center', padding: '0 24px' }}>
-            <p className="sec-label">The Portfolio</p>
-            <h2 className="panel-h2" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: 24 }}>Building Multiple Startups Across Industries</h2>
-            <p className="panel-p" style={{ margin: '0 auto', maxWidth: '800px' }}>In addition to these major ventures, he actively participates in building and supporting several other startups. Each venture reflects his belief that entrepreneurship is about identifying opportunities across all sectors.</p>
+          <div style={{ textAlign: 'center', padding: '0 40px', maxWidth: '1280px', margin: '0 auto' }}>
+            <p className="sec-label" style={{ textAlign: 'center' }}>The Portfolio</p>
+            <h2 className="panel-h2" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)', marginBottom: 24, textAlign: 'center' }}>Building Multiple Startups Across Industries</h2>
+            <p className="panel-p" style={{ margin: '0 auto', maxWidth: '800px', textAlign: 'center' }}>In addition to these major ventures, he actively participates in building and supporting several other startups. Each venture reflects his belief that entrepreneurship is about identifying opportunities across all sectors.</p>
           </div>
 
           <div className="se-startups-grid">
             <div className="se-sm-card">
-              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Electronics+Astra" alt="Electronics Astra" className="se-sm-logo" />
+
               <div className="se-sm-name">Electronics Astra</div>
               <div className="se-sm-desc">A venture focused on technological hardware innovation and electronics.</div>
             </div>
             <div className="se-sm-card">
-              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Eduview" alt="Eduview" className="se-sm-logo" />
+
               <div className="se-sm-name">Eduview</div>
               <div className="se-sm-desc">An education-focused platform aimed at drastically improving learning experiences.</div>
             </div>
             <div className="se-sm-card">
-              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Getroomix" alt="Getroomix" className="se-sm-logo" />
+
               <div className="se-sm-name">Getroomix</div>
               <div className="se-sm-desc">A platform designed to creatively address modern accommodation and lifestyle needs.</div>
             </div>
             <div className="se-sm-card">
-              <img src="https://via.placeholder.com/150x50/111111/ffb703?text=Kadali+Kitchen" alt="Kadali Kitchen" className="se-sm-logo" />
+
               <div className="se-sm-name">Kadali Kitchen</div>
               <div className="se-sm-desc">A culinary venture exploring new opportunities in the rapidly evolving food and hospitality space.</div>
             </div>
@@ -365,29 +338,6 @@ export default function SerialEntrepreneurPage() {
             </div>
           </div>
         </section>
-
-        {/* ══════════════════════════════════════════
-            FOOTER 
-        ══════════════════════════════════════════ */}
-        <footer className="se-footer p5-footer">
-          <div className="fp-footer-inner p5-footer-inner">
-            <div className="se-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="fp-footer-tagline">
-                Innovating. Building. Empowering.<br />Across Industries.
-              </p>
-            </div>
-            <div className="se-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="se-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="fp-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved. 
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

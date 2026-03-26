@@ -9,7 +9,7 @@
 }
 
 .cp-body {
-  padding-top: 72px;
+  padding-top: 0;
 }
 
 .cp-container {
@@ -653,6 +653,6 @@
   .p1-cta-row { flex-direction: column; }
   .p1-cards-row, .rewards-row { grid-template-columns: 1fr; }
   .footer-h2 { font-size: 2.2rem; }
-  .benefit-item { flex-direction: column; text-align: center; }
+  .benefit-item { flex-direction: column; text-align: left; }
   .tl-left { min-width: 80px; }
 }

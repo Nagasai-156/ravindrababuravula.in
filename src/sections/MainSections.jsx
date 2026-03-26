@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import "./MainSections.css";
 
 // Sample Data
@@ -110,25 +110,11 @@ const TESTIMONIALS = [
 export default function MainSections() {
   const containerRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-
-    const elements = document.querySelectorAll('.reveal-on-scroll');
-    elements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="main-sections-wrapper" ref={containerRef}>
       {/* 1. Logos Section */}
-      <section className="logos-section reveal-on-scroll" style={{ transitionDelay: '0s' }}>
+      <section className="logos-section">
         <div className="logos-container">
           {["Microsoft", "Google", "Stanford", "Oxford", "Cambridge"].map(
             (logo) => (
@@ -141,7 +127,7 @@ export default function MainSections() {
       </section>
 
       {/* 2. Courses Section */}
-      <section className="courses-section reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
+      <section className="courses-section">
         <div className="section-header-centered">
           <span className="pill-badge-light">OUR COURSES</span>
           <h2>Courses Designed for a Fast-Changing World</h2>
@@ -205,7 +191,7 @@ export default function MainSections() {
       </section>
 
       {/* 3. Features Dashboard section */}
-      <section className="features-section reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
+      <section className="features-section">
         <div className="section-header-centered">
           <span className="pill-badge-light">FEATURES</span>
           <h2>Built to Help You Learn Better, faster, smarter.</h2>
@@ -285,7 +271,7 @@ export default function MainSections() {
       </section>
 
       {/* 4. Expert Mentors */}
-      <section className="mentors-section reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
+      <section className="mentors-section">
         <div className="section-header-centered">
           <span className="pill-badge-light">MENTORS</span>
           <h2>Meet Our Expert Mentors</h2>
@@ -309,7 +295,7 @@ export default function MainSections() {
       </section>
 
       {/* 5. Testimonials */}
-      <section className="testimonials-section reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
+      <section className="testimonials-section">
         <div className="section-header-centered">
           <span className="pill-badge-light">TESTIMONIALS</span>
           <h2>What Our Learners Are Saying</h2>
@@ -348,7 +334,7 @@ export default function MainSections() {
       </section>
 
       {/* 6. Big Footer */}
-      <footer className="main-footer reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
+      <footer className="main-footer">
         <div className="footer-top-curve"></div>
         <div className="footer-content">
           <div className="footer-grid">

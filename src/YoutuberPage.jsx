@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./YoutuberPage.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const YoutubeIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -45,7 +35,6 @@ const YT_STATS = [
 ];
 
 export default function YoutuberPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -57,16 +46,6 @@ export default function YoutuberPage() {
 
   return (
     <div className="yp-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="hs-nav">
-        <div className="hs-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="hs-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="yp-body">
 
@@ -258,7 +237,7 @@ export default function YoutuberPage() {
         <section className="p3-section">
           <div className="p3-inner">
             <div className="p3-left">
-              <div className="big-chapter">02</div>
+              <p className="sec-label">Chapter 02</p>
               <h2 className="panel-h2">The Entrepreneurial Spirit</h2>
 
               <div className="note-row">
@@ -441,34 +420,6 @@ export default function YoutuberPage() {
             </div>
           </div>
         </section>
-
-        {/* ══════════════════════════════════════════
-            FOOTER — no buttons, just elegance
-        ══════════════════════════════════════════ */}
-        <footer className="yp-footer">
-          <div className="yp-footer-inner">
-            <div className="yp-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="yp-footer-tagline">
-                Transforming the way India learns —<br />one lecture at a time.
-              </p>
-            </div>
-            <div className="yp-footer-right">
-              <a
-                href="https://www.youtube.com/@ravindrababu_ravula"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="yp-yt-link"
-              >
-                <YoutubeIcon />
-                <span>@ravindrababu_ravula</span>
-              </a>
-              <div className="yp-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

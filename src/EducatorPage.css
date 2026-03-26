@@ -274,7 +274,7 @@ body {
 
 /* ─── PAGE BODY ─────────────────────────────────────────────── */
 .ep-body {
-  padding-top: 72px; /* nav height offset */
+  padding-top: 0;
 }
 
 /* ─── SECTION UTILITY ───────────────────────────────────────── */
@@ -720,13 +720,27 @@ body {
 }
 
 .big-chapter {
-  font-family: 'Unbounded', sans-serif;
-  font-size: clamp(5rem, 10vw, 10rem);
-  font-weight: 700;
-  color: #1a1a1a;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffb703;
   line-height: 1;
-  margin-bottom: -20px;
-  user-select: none;
+  margin-bottom: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+
+.big-chapter::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: #ffb703;
+  flex-shrink: 0;
 }
 
 .note-row {
@@ -1087,7 +1101,7 @@ body {
   .img-card.tall { height: 240px; }
   .img-card.landscape { height: 220px; }
 
-  .big-chapter { font-size: 5rem; }
+  .big-chapter { font-size: 0.72rem; letter-spacing: 2px; }
   .panel-h2 { font-size: 2rem; }
 
   .yt-stats-inner { flex-direction: column; align-items: flex-start; gap: 24px; }

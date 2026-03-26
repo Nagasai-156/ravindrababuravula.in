@@ -1,18 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
 import heroPerson from "./assets/hero-person.png";
 import "./CorporateTrainerPage.css";
 
 /* ── Icons ── */
-const ArrowUpRight = ({ size = 18 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <line x1="7" y1="17" x2="17" y2="7" />
-    <polyline points="7 7 17 7 17 17" />
-  </svg>
-);
-
 const BuildingIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/>
@@ -29,12 +19,6 @@ const CheckIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
         <polyline points="20 6 9 17 4 12"></polyline>
     </svg>
-);
-
-const YoutubeIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-  </svg>
 );
 
 /* ── Count Up component ── */
@@ -95,7 +79,6 @@ const CT_STATS = [
 ];
 
 export default function CorporateTrainerPage() {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -107,16 +90,6 @@ export default function CorporateTrainerPage() {
 
   return (
     <div className="ct-wrapper">
-
-      {/* ── Navigation ── */}
-      <nav className="ct-nav">
-        <div className="ct-nav-left">
-          <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-        </div>
-        <button className="ct-nav-btn" onClick={() => navigate("/")}>
-          Go Back <ArrowUpRight />
-        </button>
-      </nav>
 
       <div className="ct-body">
 
@@ -271,7 +244,7 @@ export default function CorporateTrainerPage() {
             {/* Right: Text content */}
             <div className="ct-panel-right">
               <p className="sec-label">Widespread Impact</p>
-              <h2 className="panel-h2">Training More Than 100 Companies</h2>
+              <h2 className="panel-h2" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Training More Than 100 Companies</h2>
               <p className="panel-p">
                 Over the course of his career, Prof. Ravindrababu Ravula has conducted corporate training programs for more than 100 companies, delivering workshops, seminars, and skill development programs for professionals across different industries.
               </p>
@@ -417,27 +390,6 @@ export default function CorporateTrainerPage() {
             </div>
           </div>
         </section>
-
-        {/* ── Footer ── */}
-        <footer className="ct-footer">
-          <div className="ct-footer-inner">
-            <div className="ct-footer-left">
-              <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-              <p className="ct-footer-tagline">
-                Transforming the modern workforce —<br />empowering leaders and teams.
-              </p>
-            </div>
-            <div className="ct-footer-right">
-              <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="ct-yt-link">
-                <YoutubeIcon />
-                <span>Subscribe to Prof. RBR</span>
-              </a>
-              <div className="ct-footer-copy">
-                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-              </div>
-            </div>
-          </div>
-        </footer>
 
       </div>
 

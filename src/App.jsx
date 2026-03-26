@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import heroPerson from "./assets/hero-person.png";
-import logoImg from "./assets/logo.png";
+import Layout from "./components/Layout";
 import YoutuberPage from "./YoutuberPage";
 import EducatorPage from "./EducatorPage";
 import FinancialPlannerPage from "./FinancialPlannerPage";
@@ -31,17 +31,6 @@ function HomeOrbit() {
   const navigate = useNavigate();
   return (
     <div className="orbit-wrapper">
-      <div className="top-nav-buttons">
-        <button className="apply-cohort-btn" onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank")}>
-          For Startups
-        </button>
-        <button className="apply-internship-btn" onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdeMUhwbSLSC5jDTTQas6lypd_XkAAMPkuC7MEYqC7dZhrNGQ/viewform?usp=publish-editor", "_blank")}>
-          Apply for Internship
-        </button>
-      </div>
-
-      <img src={logoImg} alt="Logo" className="top-logo" />
-
       <div className="lines-bg"></div>
 
       <div className="orbit-container">
@@ -60,27 +49,15 @@ function HomeOrbit() {
                 <div
                   className="orbit-item-animator"
                   onClick={() => {
-                    if (item.text === "Youtuber") {
-                      navigate("/youtuber");
-                    } else if (item.text === "Educator") {
-                      navigate("/educator");
-                    } else if (item.text === "Certified Financial Planner") {
-                      navigate("/financial-planner");
-                    } else if (item.text === "Startup Coach") {
-                      navigate("/cohort");
-                    } else if (item.text === "Serial Entrepreneur") {
-                      navigate("/serial-entrepreneur");
-                    } else if (item.text === "Vibe Coder") {
-                      navigate("/vibe-coder");
-                    } else if (item.text === "Corporate Trainer") {
-                      navigate("/corporate-trainer");
-                    } else if (item.text === "Philanthropist") {
-                      navigate("/philanthropist");
-                    } else if (item.text === "Environmentalist") {
-                      navigate("/environmentalist");
-                    } else if (item.text === "Apply for Internship") {
-                      navigate("/internship");
-                    }
+                    if (item.text === "Youtuber") navigate("/youtuber");
+                    else if (item.text === "Educator") navigate("/educator");
+                    else if (item.text === "Certified Financial Planner") navigate("/financial-planner");
+                    else if (item.text === "Startup Coach") navigate("/cohort");
+                    else if (item.text === "Serial Entrepreneur") navigate("/serial-entrepreneur");
+                    else if (item.text === "Vibe Coder") navigate("/vibe-coder");
+                    else if (item.text === "Corporate Trainer") navigate("/corporate-trainer");
+                    else if (item.text === "Philanthropist") navigate("/philanthropist");
+                    else if (item.text === "Environmentalist") navigate("/environmentalist");
                   }}
                 >
                   <img src={item.img} alt={item.text} className="orbit-item-image" />
@@ -95,76 +72,26 @@ function HomeOrbit() {
       <div className="orbit-center">
         <img src={heroPerson} alt="Prof. RBR" className="center-photo" />
       </div>
-
     </div>
   );
 }
 
-function GlobalScrollAnimations() {
-  const { pathname } = useLocation();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
-    );
-
-    const timeout = setTimeout(() => {
-      const selectors = [
-        "section",
-        "h2",
-        "h3",
-        "[class*='-card']",
-        ".panel-p",
-        "[class*='-p']",
-        "img:not(.top-logo, .orbit-item-image)"
-      ].join(", ");
-
-      const elements = document.querySelectorAll(selectors);
-      elements.forEach((el) => {
-        if (!el.closest(".orbit-wrapper")) {
-          if (!el.classList.contains("reveal")) {
-            el.classList.add("reveal");
-          }
-          observer.observe(el);
-        }
-      });
-    }, 150);
-
-    return () => {
-      clearTimeout(timeout);
-      observer.disconnect();
-    };
-  }, [pathname]);
-
-  return null;
-}
 
 export default function App() {
   return (
-    <>
-      <GlobalScrollAnimations />
-      <Routes>
-        <Route path="/" element={<HomeOrbit />} />
-        <Route path="/youtuber" element={<YoutuberPage />} />
-        <Route path="/educator" element={<EducatorPage />} />
-        <Route path="/financial-planner" element={<FinancialPlannerPage />} />
-        <Route path="/serial-entrepreneur" element={<SerialEntrepreneurPage />} />
-        <Route path="/vibe-coder" element={<VibeCoderPage />} />
-        <Route path="/corporate-trainer" element={<CorporateTrainerPage />} />
-        <Route path="/philanthropist" element={<PhilanthropistPage />} />
-        <Route path="/environmentalist" element={<EnvironmentalistPage />} />
-        <Route path="/internship" element={<InternshipPage />} />
-        <Route path="/cohort" element={<CohortPage />} />
-        <Route path="/responses-portal" element={<AdminDashboard />} />
+    <Routes>
+        <Route path="/" element={<Layout><HomeOrbit /></Layout>} />
+        <Route path="/youtuber" element={<Layout><YoutuberPage /></Layout>} />
+        <Route path="/educator" element={<Layout><EducatorPage /></Layout>} />
+        <Route path="/financial-planner" element={<Layout><FinancialPlannerPage /></Layout>} />
+        <Route path="/serial-entrepreneur" element={<Layout><SerialEntrepreneurPage /></Layout>} />
+        <Route path="/vibe-coder" element={<Layout><VibeCoderPage /></Layout>} />
+        <Route path="/corporate-trainer" element={<Layout><CorporateTrainerPage /></Layout>} />
+        <Route path="/philanthropist" element={<Layout><PhilanthropistPage /></Layout>} />
+        <Route path="/environmentalist" element={<Layout><EnvironmentalistPage /></Layout>} />
+        <Route path="/internship" element={<Layout><InternshipPage /></Layout>} />
+        <Route path="/cohort" element={<Layout><CohortPage /></Layout>} />
+        <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
       </Routes>
-    </>
   );
 }

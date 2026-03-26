@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import logoImg from "./assets/logo.png";
+
 import heroPerson from "./assets/hero-person.png";
 import "./InternshipPage.css";
 import { submitInternshipApplication } from "./services/internshipService";
@@ -46,12 +46,6 @@ const FileTextIcon = () => (
 const CheckIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <polyline points="20,6 9,17 4,12" />
-    </svg>
-);
-
-const YoutubeIcon = () => (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.377.505 9.377.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
     </svg>
 );
 
@@ -144,13 +138,6 @@ export default function InternshipPage() {
     if (submitted) {
         return (
             <div className="internship-wrapper">
-                <nav className="hs-nav">
-                    <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-                    <button className="hs-nav-btn" onClick={() => navigate("/")}>
-                        Go Back <ArrowUpRight />
-                    </button>
-                </nav>
-
                 <div className="success-container">
                     {/* Animated background particles */}
                     <div className="success-bg">
@@ -219,16 +206,6 @@ export default function InternshipPage() {
 
     return (
         <div className="internship-wrapper">
-            {/* Navigation */}
-            <nav className="hs-nav">
-                <div className="hs-nav-left">
-                    <img src={logoImg} alt="Logo" style={{ height: '32px' }} />
-                </div>
-                <button className="hs-nav-btn" onClick={() => navigate("/")}>
-                    Go Back <ArrowUpRight />
-                </button>
-            </nav>
-
             <div className="internship-body">
                 {/* Hero Section */}
                 <section className="p1-hero">
@@ -535,26 +512,6 @@ export default function InternshipPage() {
                     </div>
                 </section>
 
-                {/* Footer */}
-                <footer className="yp-footer ep-footer">
-                    <div className="yp-footer-inner ep-footer-inner">
-                        <div className="ip-footer-left">
-                            <div className="footer-logo-text">Prof. Ravindrababu Ravula</div>
-                            <p className="yp-footer-tagline">
-                                Empowering the next generation of <br />innovators and engineers.
-                            </p>
-                        </div>
-                        <div className="yp-footer-right">
-                            <a href="https://www.youtube.com/@RavindrababuRavula" target="_blank" rel="noopener noreferrer" className="yp-yt-link">
-                                <YoutubeIcon />
-                                <span>Subscribe to Prof. RBR</span>
-                            </a>
-                            <div className="yp-footer-copy">
-                                © 2026 Prof. Ravindrababu Ravula. All rights reserved.
-                            </div>
-                        </div>
-                    </div>
-                </footer>
             </div>
 
             {/* Scroll hint */}
