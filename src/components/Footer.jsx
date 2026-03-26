@@ -70,7 +70,6 @@ const SOCIAL_LINKS = [
   { icon: <LinkedInIcon />, href: "https://www.linkedin.com/in/ravindrababu-ravula/", label: "LinkedIn" },
   { icon: <InstagramIcon />, href: "https://www.instagram.com/ravindrababu_ravula_rbr/", label: "Instagram" },
   { icon: <TelegramIcon />, href: "https://t.me/ravindrababu_ravula", label: "Telegram" },
-  { icon: <GlobeIcon />, href: "https://gameofvisas.com/", label: "Game of Visas" },
 ];
 
 export default function Footer() {
