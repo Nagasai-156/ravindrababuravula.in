@@ -81,9 +81,64 @@
 }
 
 /* ─── Links Group ────────────────────────────── */
+/* ─── Social Icons ───────────────────────────── */
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  color: #888;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  background: rgba(255, 183, 3, 0.1);
+  border-color: rgba(255, 183, 3, 0.3);
+  color: #ffb703;
+}
+
+/* ─── Contact Items ──────────────────────────── */
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #888;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.15s ease;
+}
+
+.footer-contact-item:hover {
+  color: #ffb703;
+}
+
+.footer-contact-item svg {
+  flex-shrink: 0;
+  color: #666;
+}
+
+.footer-contact-item:hover svg {
+  color: #ffb703;
+}
+
+/* ─── Links Group ────────────────────────────── */
 .footer-links-group {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
 }
 
