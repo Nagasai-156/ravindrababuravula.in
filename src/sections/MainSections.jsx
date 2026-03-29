@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./MainSections.css";
 
 // Sample Data
@@ -109,7 +110,7 @@ const TESTIMONIALS = [
 
 export default function MainSections() {
   const containerRef = useRef(null);
-
+  const navigate = useNavigate();
 
   return (
     <div className="main-sections-wrapper" ref={containerRef}>
@@ -326,10 +327,10 @@ export default function MainSections() {
           ))}
         </div>
 
-        <div className="t-pagination">
-          <span className="dot active"></span>
-          <span className="dot"></span>
-          <span className="dot"></span>
+        <div className="t-view-all-wrapper">
+          <button className="t-view-all-btn" onClick={() => navigate("/testimonials")}>
+            View All 100+ Success Stories →
+          </button>
         </div>
       </section>
 

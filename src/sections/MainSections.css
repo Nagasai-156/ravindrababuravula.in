@@ -573,6 +573,34 @@
   background: #eab308;
 }
 
+/* View All Testimonials Button */
+.t-view-all-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.t-view-all-btn {
+  padding: 14px 36px;
+  border-radius: 40px;
+  border: none;
+  background: #1e3a8a;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+.t-view-all-btn:hover {
+  background: #ffb703;
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 183, 3, 0.3);
+}
+
 /* 6. Footer (matches UI curve logic and dark tone) */
 .main-footer {
   background: #0f172a;

@@ -27,6 +27,7 @@ const BREADCRUMB_MAP = {
   "/internship": "Internship",
   "/cohort": "Startup Coach",
   "/responses-portal": "Admin Dashboard",
+  "/testimonials": "Testimonials",
 };
 
 /* Icons */
@@ -160,6 +161,12 @@ export default function Navbar() {
               Home
             </button>
             <button
+              className={`nav-link ${location.pathname === "/testimonials" ? "active" : ""}`}
+              onClick={() => navigate("/testimonials")}
+            >
+              Testimonials
+            </button>
+            <button
               className="nav-link"
               onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdeMUhwbSLSC5jDTTQas6lypd_XkAAMPkuC7MEYqC7dZhrNGQ/viewform?usp=publish-editor", "_blank")}
             >
@@ -269,6 +276,12 @@ export default function Navbar() {
             onClick={() => { navigate("/"); setMobileMenuOpen(false); }}
           >
             Home
+          </button>
+          <button
+            className={`mobile-menu-item ${location.pathname === "/testimonials" ? "active" : ""}`}
+            onClick={() => { navigate("/testimonials"); setMobileMenuOpen(false); }}
+          >
+            Testimonials
           </button>
           <button
             className="mobile-menu-item"

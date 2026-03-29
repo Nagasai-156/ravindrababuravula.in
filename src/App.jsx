@@ -14,6 +14,7 @@ import EnvironmentalistPage from "./EnvironmentalistPage";
 import InternshipPage from "./InternshipPage";
 import CohortPage from "./CohortPage";
 import AdminDashboard from "./AdminDashboard";
+import TestimonialsPage from "./TestimonialsPage";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -91,6 +92,7 @@ export default function App() {
         <Route path="/environmentalist" element={<Layout><EnvironmentalistPage /></Layout>} />
         <Route path="/internship" element={<Layout><InternshipPage /></Layout>} />
         <Route path="/cohort" element={<Layout><CohortPage /></Layout>} />
+        <Route path="/testimonials" element={<Layout><TestimonialsPage /></Layout>} />
         <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
       </Routes>
   );
