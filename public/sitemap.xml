@@ -2,67 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ravindrababuravula.in/</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/youtuber</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/educator</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
+    <loc>https://ravindrababuravula.in/testimonials</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://ravindrababuravula.in/mentors</loc>
+    <lastmod>2026-03-30</lastmod>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
     <loc>https://ravindrababuravula.in/financial-planner</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/serial-entrepreneur</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/vibe-coder</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/corporate-trainer</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/philanthropist</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/environmentalist</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/cohort</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://ravindrababuravula.in/internship</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-03-30</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>

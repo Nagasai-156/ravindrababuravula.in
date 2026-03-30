@@ -16,6 +16,7 @@ import CohortPage from "./CohortPage";
 import AdminDashboard from "./AdminDashboard";
 import TestimonialsPage from "./TestimonialsPage";
 import MentorsPage from "./MentorsPage";
+import SEO from "./components/SEO";
 
 const ITEMS = [
   { text: "Youtuber", img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=150&q=80" },
@@ -79,23 +80,122 @@ function HomeOrbit() {
 }
 
 
+/* ── SEO data per route ── */
+const PAGE_SEO = {
+  "/": {
+    title: null,
+    description: "Official website of Prof. Ravindrababu Ravula — India's EdTech pioneer with 690K+ YouTube subscribers, 90M+ views. IISc alumnus, PhD in AI/ML & Finance. Educator, Serial Entrepreneur, Corporate Trainer.",
+  },
+  "/youtuber": {
+    title: "Youtuber — 690K+ Subscribers & 90M+ Views",
+    description: "Prof. Ravindrababu Ravula's YouTube journey — 2400+ free GATE CS lectures, 690K subscribers, 90M+ views. The first educator to start EdTech in India through YouTube.",
+  },
+  "/educator": {
+    title: "Educator — 18+ Years of Teaching Excellence",
+    description: "Prof. Ravindrababu Ravula, IISc alumnus and PhD in AI/ML, has redefined CS education in India. 18+ years of teaching, from classrooms to digital scale. Known as the 'God of CS' by students.",
+  },
+  "/financial-planner": {
+    title: "Certified Financial Planner — ARN-354459",
+    description: "Prof. Ravindrababu Ravula as a Certified Financial Planner. PhD in Finance & AI/ML. Helping individuals make informed investment decisions with data-driven strategies.",
+  },
+  "/serial-entrepreneur": {
+    title: "Serial Entrepreneur — Raudra Technologies, Raudra Labs, MetaBrix Labs",
+    description: "Prof. Ravindrababu Ravula's entrepreneurial journey. Founder of Raudra Technologies, Raudra Labs, MetaBrix Labs. Building the future across multiple industries.",
+  },
+  "/vibe-coder": {
+    title: "Vibe Coder — Building with AI & Code",
+    description: "Prof. Ravindrababu Ravula as a Vibe Coder. Exploring the intersection of AI, coding, and creativity. Building innovative solutions with modern technology.",
+  },
+  "/corporate-trainer": {
+    title: "Corporate Trainer — 100+ Companies Trained",
+    description: "Prof. Ravindrababu Ravula has trained 100+ companies in Computer Science, AI/ML, and technology. Empowering modern workforces with industry-relevant skills.",
+  },
+  "/philanthropist": {
+    title: "Philanthropist — Raudra Charitable Trust",
+    description: "Prof. Ravindrababu Ravula's philanthropic work through Raudra Charitable Trust. Compassion beyond classrooms — making education accessible to all.",
+  },
+  "/environmentalist": {
+    title: "Environmentalist — Sustainability & Green Initiatives",
+    description: "Prof. Ravindrababu Ravula's commitment to environmental sustainability. Tree planting drives, green initiatives, and raising awareness for a better planet.",
+  },
+  "/internship": {
+    title: "Apply for Internship — Work with Prof. RBR's Team",
+    description: "Join Prof. Ravindrababu Ravula's team as an intern. Work on real projects in EdTech, AI/ML, and technology. Apply now for hands-on learning experience.",
+  },
+  "/cohort": {
+    title: "Startup Coach — For Startups & Entrepreneurs",
+    description: "Prof. Ravindrababu Ravula as a Startup Coach. Guidance for aspiring entrepreneurs, startup strategy, fundraising, and building scalable businesses.",
+  },
+  "/testimonials": {
+    title: "Testimonials — 109+ GATE Toppers Success Stories",
+    description: "Real success stories from 109+ GATE toppers trained by Prof. Ravindrababu Ravula. From AIR 2 to IISc and IITs — read how students transformed their careers.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "GATE Topper Testimonials",
+      "description": "Success stories from 109+ GATE toppers trained by Prof. Ravindrababu Ravula",
+      "numberOfItems": 109,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Jay Bansal — AIR 2, GATE CS 2019" },
+        { "@type": "ListItem", "position": 2, "name": "Prateek Agarwal — AIR 3, GATE CS 2019" },
+        { "@type": "ListItem", "position": 3, "name": "Timojit Chatterjee — AIR 5, GATE 2015" },
+      ],
+    },
+  },
+  "/mentors": {
+    title: "1:1 Mentorship — Learn from IIT, IISc, DRDO & FAANG Experts",
+    description: "Book 1:1 mentorship sessions with 30+ expert mentors from IIT Bombay, IISc, DRDO, PayPal, Amazon, NVIDIA, Oracle, Walmart. GATE preparation, career guidance, interview prep.",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Expert Mentors for GATE & Career Guidance",
+      "description": "1:1 mentorship from IIT, IISc, DRDO, FAANG professionals",
+      "numberOfItems": 30,
+    },
+  },
+};
+
+/* ── 404 Page ── */
+function NotFound() {
+  return (
+    <div style={{ textAlign: "center", padding: "160px 20px 100px", color: "#fff", fontFamily: "'Unbounded', sans-serif" }}>
+      <SEO title="Page Not Found" description="The page you're looking for doesn't exist." path="/404" />
+      <h1 style={{ fontSize: "clamp(4rem, 10vw, 8rem)", fontWeight: 200, color: "#ffb703", margin: 0 }}>404</h1>
+      <p style={{ color: "#666", fontSize: "1rem", marginTop: 16, fontFamily: "Inter, sans-serif" }}>This page doesn't exist.</p>
+      <a href="/" style={{ display: "inline-block", marginTop: 24, padding: "10px 24px", borderRadius: 999, background: "#ffb703", color: "#111", fontFamily: "Inter, sans-serif", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}>Go Home</a>
+    </div>
+  );
+}
+
+/* ── Route with SEO wrapper ── */
+function PageWithSEO({ path, children }) {
+  const seo = PAGE_SEO[path] || {};
+  return (
+    <>
+      <SEO title={seo.title} description={seo.description} path={path} schema={seo.schema} />
+      {children}
+    </>
+  );
+}
+
 export default function App() {
   return (
     <Routes>
-        <Route path="/" element={<Layout><HomeOrbit /></Layout>} />
-        <Route path="/youtuber" element={<Layout><YoutuberPage /></Layout>} />
-        <Route path="/educator" element={<Layout><EducatorPage /></Layout>} />
-        <Route path="/financial-planner" element={<Layout><FinancialPlannerPage /></Layout>} />
-        <Route path="/serial-entrepreneur" element={<Layout><SerialEntrepreneurPage /></Layout>} />
-        <Route path="/vibe-coder" element={<Layout><VibeCoderPage /></Layout>} />
-        <Route path="/corporate-trainer" element={<Layout><CorporateTrainerPage /></Layout>} />
-        <Route path="/philanthropist" element={<Layout><PhilanthropistPage /></Layout>} />
-        <Route path="/environmentalist" element={<Layout><EnvironmentalistPage /></Layout>} />
-        <Route path="/internship" element={<Layout><InternshipPage /></Layout>} />
-        <Route path="/cohort" element={<Layout><CohortPage /></Layout>} />
-        <Route path="/testimonials" element={<Layout><TestimonialsPage /></Layout>} />
-        <Route path="/mentors" element={<Layout><MentorsPage /></Layout>} />
-        <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
-      </Routes>
+      <Route path="/" element={<Layout><PageWithSEO path="/"><HomeOrbit /></PageWithSEO></Layout>} />
+      <Route path="/youtuber" element={<Layout><PageWithSEO path="/youtuber"><YoutuberPage /></PageWithSEO></Layout>} />
+      <Route path="/educator" element={<Layout><PageWithSEO path="/educator"><EducatorPage /></PageWithSEO></Layout>} />
+      <Route path="/financial-planner" element={<Layout><PageWithSEO path="/financial-planner"><FinancialPlannerPage /></PageWithSEO></Layout>} />
+      <Route path="/serial-entrepreneur" element={<Layout><PageWithSEO path="/serial-entrepreneur"><SerialEntrepreneurPage /></PageWithSEO></Layout>} />
+      <Route path="/vibe-coder" element={<Layout><PageWithSEO path="/vibe-coder"><VibeCoderPage /></PageWithSEO></Layout>} />
+      <Route path="/corporate-trainer" element={<Layout><PageWithSEO path="/corporate-trainer"><CorporateTrainerPage /></PageWithSEO></Layout>} />
+      <Route path="/philanthropist" element={<Layout><PageWithSEO path="/philanthropist"><PhilanthropistPage /></PageWithSEO></Layout>} />
+      <Route path="/environmentalist" element={<Layout><PageWithSEO path="/environmentalist"><EnvironmentalistPage /></PageWithSEO></Layout>} />
+      <Route path="/internship" element={<Layout><PageWithSEO path="/internship"><InternshipPage /></PageWithSEO></Layout>} />
+      <Route path="/cohort" element={<Layout><PageWithSEO path="/cohort"><CohortPage /></PageWithSEO></Layout>} />
+      <Route path="/testimonials" element={<Layout><PageWithSEO path="/testimonials"><TestimonialsPage /></PageWithSEO></Layout>} />
+      <Route path="/mentors" element={<Layout><PageWithSEO path="/mentors"><MentorsPage /></PageWithSEO></Layout>} />
+      <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
+      <Route path="*" element={<Layout><NotFound /></Layout>} />
+    </Routes>
   );
 }
