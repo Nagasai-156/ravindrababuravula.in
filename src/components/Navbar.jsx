@@ -29,7 +29,6 @@ const BREADCRUMB_MAP = {
   "/responses-portal": "Admin Dashboard",
   "/testimonials": "Testimonials",
   "/mentors": "Mentors",
-  "/mentors": "Mentors",
 };
 
 /* Icons */
