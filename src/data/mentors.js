@@ -19,29 +19,6 @@ const TOP_MENTORS = [
     perSession: "",
   },
   {
-    name: "Eluru Sai Venkat",
-    photo: "/mentors/eluru-venkat.jpeg",
-    qualification: "M.Tech in Artificial Intelligence (2025) | B.Tech Electrical Engineering, IIT Madras (2023) | AIR 3, GATE Data Science & AI",
-    experience: [
-      "Ex-Samsung R&D Institute Delhi",
-      "AIR 3 in GATE Data Science & Artificial Intelligence (DA)",
-    ],
-    description: "I'm passionate about Multimodal Intelligence Systems and enjoy helping students build strong intuition in mathematics and machine learning for competitive exams like GATE.",
-    areas: ["GATE DA preparation", "Mathematics for GATE", "Machine Learning", "Multimodal AI", "IIT Madras guidance"],
-    perSession: "",
-  },
-  {
-    name: "Cifal Shaul",
-    photo: "/mentors/cifal.jpg",
-    qualification: "M.Tech in Artificial Intelligence, IISc Bangalore | B.Tech IT, IIIT Allahabad | AIR 90, GATE DA 2025",
-    experience: [
-      "Currently pursuing M.Tech AI at IISc Bangalore",
-    ],
-    description: "I secured AIR 90 in GATE DA 2025. I completed my undergraduate studies in Information Technology from IIIT Allahabad and am currently pursuing M.Tech in Artificial Intelligence at IISc Bangalore.",
-    areas: ["GATE DA preparation", "Artificial Intelligence", "IISc guidance", "IIIT Allahabad experience"],
-    perSession: "",
-  },
-  {
     name: "Venkatesh E",
     photo: "/mentors/venkatesh.jpeg",
     qualification: "M.Tech AI, IIT Hyderabad (Best Research Student Award) | B.Tech EEE, Thiagarajar College of Engineering, Madurai",
@@ -56,6 +33,18 @@ const TOP_MENTORS = [
     perSession: "",
   },
   {
+    name: "Eluru Sai Venkat",
+    photo: "/mentors/eluru-venkat.jpeg",
+    qualification: "M.Tech in Artificial Intelligence (2025) | B.Tech Electrical Engineering, IIT Madras (2023) | AIR 3, GATE Data Science & AI",
+    experience: [
+      "Ex-Samsung R&D Institute Delhi",
+      "AIR 3 in GATE Data Science & Artificial Intelligence (DA)",
+    ],
+    description: "I'm passionate about Multimodal Intelligence Systems and enjoy helping students build strong intuition in mathematics and machine learning for competitive exams like GATE.",
+    areas: ["GATE DA preparation", "Mathematics for GATE", "Machine Learning", "Multimodal AI", "IIT Madras guidance"],
+    perSession: "",
+  },
+  {
     name: "Shahjad Alam",
     photo: "/mentors/alam.jpeg",
     qualification: "MSc Mathematics and Computing | GATE CS 2026 AIR 20",
@@ -64,6 +53,31 @@ const TOP_MENTORS = [
     ],
     description: "I secured AIR 20 in GATE CS 2026, reflecting my strong conceptual understanding and problem-solving abilities. I am passionate about Computer Science and aspire to pursue M.Tech from a top IIT.",
     areas: ["GATE CSE preparation", "Mathematics", "Problem solving strategy", "Top rank guidance"],
+    perSession: "",
+  },
+  {
+    name: "Divyansh Tripathi",
+    photo: "/mentors/tripati.jpg",
+    qualification: "M.Tech Data Science, IIT Roorkee | AIR 75, GATE Data Science & AI",
+    experience: [
+      "AI Engineer — building scalable AI applications (Current)",
+      "Code4GovTech, Government of India initiative — NLP-based solutions & data pipelines",
+      "Mentor at Physics Wallah (PW) — GATE preparation guidance",
+      "Multiple internships & freelance projects in ML and AI systems",
+    ],
+    description: "He has gained practical experience through multiple internships and freelance projects, working on real-world Machine Learning and AI systems. He contributed to NLP-based solutions and data pipelines under a Government of India initiative. At Physics Wallah, he guided students in GATE preparation by focusing on strong fundamentals, structured strategy, and problem-solving approaches.",
+    areas: ["GATE DA preparation", "Machine Learning", "AI/NLP systems", "Data Pipelines", "Structured GATE strategy"],
+    perSession: "",
+  },
+  {
+    name: "Cifal Shaul",
+    photo: "/mentors/cifal.jpg",
+    qualification: "M.Tech in Artificial Intelligence, IISc Bangalore | B.Tech IT, IIIT Allahabad | AIR 90, GATE DA 2025",
+    experience: [
+      "Currently pursuing M.Tech AI at IISc Bangalore",
+    ],
+    description: "I secured AIR 90 in GATE DA 2025. I completed my undergraduate studies in Information Technology from IIIT Allahabad and am currently pursuing M.Tech in Artificial Intelligence at IISc Bangalore.",
+    areas: ["GATE DA preparation", "Artificial Intelligence", "IISc guidance", "IIIT Allahabad experience"],
     perSession: "",
   },
   {
