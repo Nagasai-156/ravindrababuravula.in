@@ -127,14 +127,13 @@ const PAGE_SEO = {
     description: "Prof. Ravindrababu Ravula as a Startup Coach. Guidance for aspiring entrepreneurs, startup strategy, fundraising, and building scalable businesses.",
   },
   "/testimonials": {
-    title: "Testimonials — 109+ GATE Toppers Success Stories | AIR 2, AIR 3, AIR 5",
-    description: "Real success stories from 109+ GATE CS toppers trained by Prof. Ravindrababu Ravula. AIR 2 Jay Bansal, AIR 3 Prateek Agarwal, AIR 5 Timojit Chatterjee. From single-digit ranks to IISc, IIT Bombay, IIT Kanpur, Google. Read how students cracked GATE with RBR Sir's lectures.",
+    title: "Testimonials — GATE Toppers Success Stories | AIR 2, AIR 3, AIR 5",
+    description: "Real success stories from GATE CS toppers trained by Prof. Ravindrababu Ravula. AIR 2 Jay Bansal, AIR 3 Prateek Agarwal, AIR 5 Timojit Chatterjee. From single-digit ranks to IISc, IIT Bombay, IIT Kanpur, Google. Read how students cracked GATE with RBR Sir's lectures.",
     schema: {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "GATE Topper Testimonials",
-      "description": "Success stories from 109+ GATE toppers trained by Prof. Ravindrababu Ravula",
-      "numberOfItems": 109,
+      "description": "Success stories from GATE toppers trained by Prof. Ravindrababu Ravula",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Jay Bansal — AIR 2, GATE CS 2019" },
         { "@type": "ListItem", "position": 2, "name": "Prateek Agarwal — AIR 3, GATE CS 2019" },
@@ -144,13 +143,12 @@ const PAGE_SEO = {
   },
   "/mentors": {
     title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
-    description: "Book 1:1 GATE CSE & DA mentorship with 30+ expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
+    description: "Book 1:1 GATE CSE & DA mentorship with expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
     schema: {
       "@context": "https://schema.org",
       "@type": "ItemList",
       "name": "Expert Mentors for GATE & Career Guidance",
       "description": "1:1 mentorship from IIT, IISc, DRDO, FAANG professionals",
-      "numberOfItems": 30,
     },
   },
 };

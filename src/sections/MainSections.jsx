@@ -329,7 +329,7 @@ export default function MainSections() {
 
         <div className="t-view-all-wrapper">
           <button className="t-view-all-btn" onClick={() => navigate("/testimonials")}>
-            View All 100+ Success Stories →
+            View All Success Stories →
           </button>
         </div>
       </section>

@@ -199,7 +199,7 @@ export default function MentorsPage() {
               <div className="p1-img-overlay">
                 <p className="p1-img-title">Mentored by<br />the Best</p>
                 <div className="p1-stat-box">
-                  <div className="big-num">{mentors.length}</div>
+                  <div className="big-num" style={{ fontSize: "1.8rem" }}>Expert</div>
                   <div className="small-lbl">Expert<br />Mentors</div>
                 </div>
               </div>
@@ -214,7 +214,7 @@ export default function MentorsPage() {
           <div className="yt-strip-label"><UsersIcon /><span>Mentorship Highlights</span></div>
           <div className="yt-stats-grid">
             {[
-              { v: String(mentors.length), l: "Expert Mentors" },
+              { v: "Top", l: "Expert Mentors" },
               { v: "1:1", l: "Private Sessions" },
               { v: "IITs", l: "IISc & Top Colleges" },
               { v: "FAANG", l: "& Govt Orgs" },

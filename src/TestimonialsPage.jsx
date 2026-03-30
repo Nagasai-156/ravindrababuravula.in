@@ -250,7 +250,7 @@ export default function TestimonialsPage() {
               </div>
               <div className="eyebrow-row">
                 <span className="eyebrow-label">IMPACT</span>
-                <span className="eyebrow-value">109+ GATE TOPPERS</span>
+                <span className="eyebrow-value">GATE TOPPERS</span>
               </div>
             </div>
 
@@ -310,7 +310,7 @@ export default function TestimonialsPage() {
           </div>
           <div className="yt-stats-grid">
             <div className="yt-stat-item">
-              <div className="yt-stat-val">109+</div>
+              <div className="yt-stat-val">Toppers</div>
               <div className="yt-stat-lbl">Success Stories</div>
             </div>
             <div className="yt-stat-item">
