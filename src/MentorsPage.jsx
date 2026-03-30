@@ -233,8 +233,8 @@ export default function MentorsPage() {
       {/* ─── ALL MENTOR PROFILES ─── */}
       <section className="mn-profiles-section">
         <div className="mn-profiles-inner">
-          <p className="sec-label">Our Mentors</p>
-          <h2 className="panel-h2">Meet Every Mentor</h2>
+          <p className="sec-label" style={{ textAlign: "center" }}>Our Mentors</p>
+          <h2 className="panel-h2" style={{ textAlign: "center" }}>Meet Every Mentor</h2>
           <p className="panel-p mn-profiles-subtitle">
             Each mentor brings real-world experience from top institutions and companies.
             Browse their full profiles — qualifications, experience, achievements, and what they can help you with.

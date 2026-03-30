@@ -3,6 +3,22 @@
 
 const TOP_MENTORS = [
   {
+    name: "Yashavant Kanetkar",
+    photo: "/mentors/yeswanth.jpeg",
+    qualification: "M.Tech from IIT Kanpur | BE from VJTI Mumbai | Distinguished Alumnus Award, IIT Kanpur",
+    experience: [
+      "Director of KICIT Pvt. Ltd.",
+      "Author of globally recognized books on C, C++, Data Structures, VC++, .NET",
+      "Books translated into Hindi, Gujarati, Japanese, Korean, Russian, Chinese",
+      "Published in India, USA, Japan, Singapore, Korea, Russia, China",
+      "5x Microsoft 'Most Valuable Professional' & 'Best .NET Technical Contributor'",
+    ],
+    achievements: "Distinguished Alumnus Award by IIT Kanpur — given to top 50 alumni for significant contributions in the last 50 years. 5 successive Microsoft MVP awards. Books have shaped lacs of IT careers over three decades.",
+    description: "Through his books and online courses on C, C++, Data Structures, VC++, .NET, Yashavant Kanetkar has created, molded and groomed lacs of IT careers in the last three decades. A much sought-after speaker who has conducted seminars and workshops at TedEx, IITs, NITs, IIITs and global software companies. His books are globally recognized, and millions of students and professionals have benefited from them.",
+    areas: ["C & C++ Programming", "Data Structures", ".NET & VC++", "IT Career Guidance", "Technical Workshops"],
+    perSession: "",
+  },
+  {
     name: "Venkatesh E",
     photo: "/mentors/venkatesh.jpeg",
     qualification: "M.Tech AI, IIT Hyderabad (Best Research Student Award) | B.Tech EEE, Thiagarajar College of Engineering, Madurai",

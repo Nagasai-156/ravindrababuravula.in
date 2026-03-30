@@ -71,11 +71,38 @@ function getColor(name) {
 export function getRandomEnrollment() {
   const name = FIRST_NAMES[Math.floor(Math.random() * FIRST_NAMES.length)];
   const course = COURSES[Math.floor(Math.random() * COURSES.length)];
-  const mins = Math.floor(Math.random() * 45) + 2;
+  const timeOptions = [
+    "just now",
+    "few seconds ago",
+    "10 seconds ago",
+    "25 seconds ago",
+    "30 seconds ago",
+    "45 seconds ago",
+    "a minute ago",
+    "1 minute ago",
+    "2 minutes ago",
+    "3 minutes ago",
+    "4 minutes ago",
+    "5 minutes ago",
+    "6 minutes ago",
+    "8 minutes ago",
+    "10 minutes ago",
+    "12 minutes ago",
+    "15 minutes ago",
+    "18 minutes ago",
+    "20 minutes ago",
+    "25 minutes ago",
+    "half an hour ago",
+    "35 minutes ago",
+    "40 minutes ago",
+    "45 minutes ago",
+    "about an hour ago",
+  ];
+  const time = timeOptions[Math.floor(Math.random() * timeOptions.length)];
   return {
     name,
     course,
-    time: `${mins} minutes ago`,
+    time,
     color: getColor(name),
   };
 }

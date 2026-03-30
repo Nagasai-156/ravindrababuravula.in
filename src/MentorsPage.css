@@ -63,7 +63,8 @@
 
 .mn-profiles-subtitle {
   max-width: 640px;
-  margin-bottom: 60px !important;
+  margin: 0 auto 60px !important;
+  text-align: center;
 }
 
 .mn-profiles-list {

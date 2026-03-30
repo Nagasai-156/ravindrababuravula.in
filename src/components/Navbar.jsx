@@ -162,6 +162,12 @@ export default function Navbar() {
               Home
             </button>
             <button
+              className="nav-link"
+              onClick={() => window.open("https://courses.ravindrababuravula.in", "_blank")}
+            >
+              Courses
+            </button>
+            <button
               className={`nav-link ${location.pathname === "/testimonials" ? "active" : ""}`}
               onClick={() => navigate("/testimonials")}
             >
@@ -283,6 +289,12 @@ export default function Navbar() {
             onClick={() => { navigate("/"); setMobileMenuOpen(false); }}
           >
             Home
+          </button>
+          <button
+            className="mobile-menu-item"
+            onClick={() => { window.open("https://courses.ravindrababuravula.in", "_blank"); setMobileMenuOpen(false); }}
+          >
+            Courses
           </button>
           <button
             className={`mobile-menu-item ${location.pathname === "/testimonials" ? "active" : ""}`}

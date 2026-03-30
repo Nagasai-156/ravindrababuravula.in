@@ -17,11 +17,11 @@ export default function SocialProofToast() {
   useEffect(() => {
     if (dismissed) return;
 
-    // First popup after 4 seconds
-    const firstTimer = setTimeout(showNext, 4000);
+    // First popup after 10 seconds
+    const firstTimer = setTimeout(showNext, 10000);
 
-    // Then every 10-18 seconds
-    const interval = setInterval(showNext, 10000 + Math.random() * 8000);
+    // Then every 40-60 seconds
+    const interval = setInterval(showNext, 40000 + Math.random() * 20000);
 
     return () => {
       clearTimeout(firstTimer);
