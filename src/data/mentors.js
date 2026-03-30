@@ -18,7 +18,7 @@ const MENTORS_DATA = [
   {
     name: "Astitva Chouksey",
     photo: "/mentors/image4.png",
-    photoStyle: { objectPosition: "center 8%" },
+    photoStyle: { objectPosition: "center 2%", transform: "scale(2.3)", transformOrigin: "center 12%" },
     qualification: "GATE CS - 99%ile | CAT - 98%ile Quants, 92%ile Overall | PhD offers from 6+ IITs in CSE",
     experience: [
       "Scientist, DRDO, Ministry of Defence, Govt of India (2023-Current) — Research, Deep Learning, Computer Vision",
@@ -52,6 +52,7 @@ const MENTORS_DATA = [
   {
     name: "Ravi Shankar Kumar",
     photo: "/mentors/image3.png",
+    photoStyle: { objectPosition: "center 2%", transform: "scale(2)", transformOrigin: "center 12%" },
     qualification: "M.Tech CSE IIT Bombay (2019-21) | GATE CSE 2019 AIR 350",
     experience: [
       "Member of Technical Staff at Oracle Cloud Infrastructure (Current)",
@@ -64,6 +65,7 @@ const MENTORS_DATA = [
   {
     name: "Shobhit Pal",
     photo: "/mentors/image1.png",
+    photoStyle: { objectPosition: "center 2%", transform: "scale(2.2)", transformOrigin: "center 10%" },
     qualification: "GATE CSE — Improved rank from AIR 4212 to AIR 315 | Full marks in Engineering Mathematics & Aptitude",
     experience: [
       "Government job in POWERGRID as Grade 'A' Officer under Ministry of Power, Govt of India",
@@ -304,7 +306,7 @@ const SHEET_MENTORS = [
   {
     name: "Kunsoth Akhil",
     photo: "/mentors/akhil.jpg",
-    photoStyle: { objectPosition: "center 18%" },
+    photoStyle: { objectPosition: "center 2%", transform: "scale(1.8)", transformOrigin: "center 20%" },
     qualification: "M.Tech Computer Science, NIT Warangal | GATE CSE 2024 qualified",
     experience: [
       "System Software Engineering Intern at Intel Corporation (10 months)",
@@ -345,7 +347,7 @@ const SHEET_MENTORS = [
   {
     name: "Vemuri Hemantha Kumar",
     photo: "/mentors/hemantha.jpg",
-    photoStyle: { objectPosition: "center 75%" },
+    photoStyle: { objectPosition: "center 50%", transform: "scale(2)", transformOrigin: "center 55%" },
     qualification: "B.Tech CSE (9 GPA) | Upcoming M.Tech CSE | 3x GATE CSE/DA top rank — AIR 949 CSE, AIR 1030 DA | LeetCode 4-star",
     experience: [
       "Backend Software Engineer at Tech Mahindra (2+ years)",
