@@ -1,6 +1,58 @@
 // Mentors Data — exact content from 11Mentorship.html
 // Total: 18 mentors
 
+const TOP_MENTORS = [
+  {
+    name: "Venkatesh E",
+    photo: "/mentors/venkatesh.jpeg",
+    qualification: "M.Tech AI, IIT Hyderabad (Best Research Student Award) | B.Tech EEE, Thiagarajar College of Engineering, Madurai",
+    experience: [
+      "Senior Machine Learning Engineer at PayPal (4+ years)",
+      "Machine Learning Engineer at Qualcomm",
+      "GATE Data Science & AI Instructor — Calculus, Python, Aptitude",
+    ],
+    achievements: "AAAI 2021 Best Paper Honorable Mention. Published at ACL 2023 in Natural Language Processing.",
+    description: "A senior ML engineer building scalable AI systems at PayPal with research published at top conferences including AAAI and ACL. Strong emphasis on clarity, fundamentals, and problem-solving in teaching.",
+    areas: ["Data Science", "Machine Learning", "Deep Learning", "Natural Language Processing", "GATE DA & AI preparation", "Python & Calculus"],
+    perSession: "",
+  },
+  {
+    name: "Shahjad Alam",
+    photo: "/mentors/alam.jpeg",
+    qualification: "MSc Mathematics and Computing | GATE CS 2026 AIR 20",
+    experience: [
+      "GATE CS 2026 — All India Rank 20",
+    ],
+    description: "I secured AIR 20 in GATE CS 2026, reflecting my strong conceptual understanding and problem-solving abilities. I am passionate about Computer Science and aspire to pursue M.Tech from a top IIT.",
+    areas: ["GATE CSE preparation", "Mathematics", "Problem solving strategy", "Top rank guidance"],
+    perSession: "",
+  },
+  {
+    name: "Anwesha Kar",
+    photo: "/mentors/anvesha.jpeg",
+    qualification: "IIT Hyderabad Alumna | Best Speaker Award, World Tech Summit 2025 (Dubai)",
+    experience: [
+      "System Software Engineer at NVIDIA — Intelligent Transportation & Real-time Communication",
+      "4 Research Publications in 5G and Intelligent Transportation Systems",
+    ],
+    achievements: "Best Speaker Award at World Tech Summit 2025, Dubai. Research presented at India-Japan Smart Cities Workshop and Suzuki-IITH Tech Show.",
+    description: "A system software engineer at NVIDIA working in intelligent transportation and real-time communication, focused on improving how connected and autonomous systems work. An alumna of IIT Hyderabad, she actively engages in STEM outreach and tech talks, encouraging students to explore technology with purpose.",
+    areas: ["System Software Engineering", "5G & ITS", "Research guidance", "STEM outreach", "Career mentoring"],
+    perSession: "",
+  },
+  {
+    name: "Krishna Murthy",
+    photo: "/mentors/krishnamurty.jpg",
+    qualification: "MTech in Artificial Intelligence, IISc Bangalore | AIR 251 in GATE EE",
+    experience: [
+      "Senior Machine Learning Engineer",
+    ],
+    description: "I specialize in building intelligent systems, exploring cutting-edge ML techniques, and creating research-driven solutions that bridge theory and real-world impact.",
+    areas: ["Machine Learning", "AI/ML systems", "GATE preparation", "IISc guidance", "Research-driven solutions"],
+    perSession: "",
+  },
+];
+
 const MENTORS_DATA = [
   {
     name: "Palak Awasthi",
@@ -18,7 +70,6 @@ const MENTORS_DATA = [
   {
     name: "Astitva Chouksey",
     photo: "/mentors/image4.png",
-    photoStyle: { objectPosition: "center 2%", transform: "scale(2.3)", transformOrigin: "center 12%" },
     qualification: "GATE CS - 99%ile | CAT - 98%ile Quants, 92%ile Overall | PhD offers from 6+ IITs in CSE",
     experience: [
       "Scientist, DRDO, Ministry of Defence, Govt of India (2023-Current) — Research, Deep Learning, Computer Vision",
@@ -52,7 +103,6 @@ const MENTORS_DATA = [
   {
     name: "Ravi Shankar Kumar",
     photo: "/mentors/image3.png",
-    photoStyle: { objectPosition: "center 2%", transform: "scale(2)", transformOrigin: "center 12%" },
     qualification: "M.Tech CSE IIT Bombay (2019-21) | GATE CSE 2019 AIR 350",
     experience: [
       "Member of Technical Staff at Oracle Cloud Infrastructure (Current)",
@@ -64,9 +114,8 @@ const MENTORS_DATA = [
   },
   {
     name: "Shobhit Pal",
-    photo: "/mentors/image1.png",
-    photoStyle: { objectPosition: "center 2%", transform: "scale(2.2)", transformOrigin: "center 10%" },
-    qualification: "GATE CSE — Improved rank from AIR 4212 to AIR 315 | Full marks in Engineering Mathematics & Aptitude",
+    photo: null,
+    qualification: "GATE CSE — AIR 315 | Full marks in Engineering Mathematics & Aptitude",
     experience: [
       "Government job in POWERGRID as Grade 'A' Officer under Ministry of Power, Govt of India",
       "Selected in IIT Bombay Research Assistant Program",
@@ -172,15 +221,6 @@ const MENTORS_DATA = [
     perSession: "500/- (45 Mins)",
   },
   {
-    name: "Venkatesh E",
-    photo: null,
-    qualification: "MTech AI | 2 years as Machine Learning Engineer",
-    experience: ["Machine Learning Engineer (2 years)"],
-    description: "",
-    areas: ["Data Science", "Machine Learning", "Deep Learning", "Natural Language Processing"],
-    perSession: "500/- (45 Mins)",
-  },
-  {
     name: "Suchismith Roy",
     photo: null,
     qualification: "MTech IIIT Hyderabad",
@@ -223,7 +263,6 @@ const SHEET_MENTORS = [
   {
     name: "Md Mouzam Arfi Hussain",
     photo: "/mentors/arfi.jpg",
-    photoStyle: { objectPosition: "center 35%" },
     qualification: "B.Tech CSE | Secured IIT M.Tech admission in just 5 months of GATE prep",
     experience: ["Fresher — focused entirely on cracking GATE efficiently"],
     achievements: "Secured admission to an IIT for M.Tech within just 5 months of GATE preparation.",
@@ -235,9 +274,9 @@ const SHEET_MENTORS = [
   {
     name: "Naresh M",
     photo: "/mentors/naresh.jpg",
-    qualification: "B.Tech IT | AIR 1366, GATE Score 686 in GATE 2025 | RBR Sir's GATE 2025 live class student",
+    qualification: "B.Tech IT | GATE 2025 Qualified | RBR Sir's GATE 2025 live class student",
     experience: ["Final-year B.Tech CSE student, University College of Engineering, Tindivanam"],
-    description: "I secured AIR 1366 with a GATE Score of 686 in GATE 2025, and I was myself an enrolled student of RBR Sir's GATE 2025 live classes — so I understand the journey from a student's perspective. I'm confident across all GATE CS subjects and passionate about making quality education accessible, especially for Tamil-speaking students. Coming from a Tier-3 government college in Tamil Nadu, I relate deeply to students from similar backgrounds.",
+    description: "I was an enrolled student of RBR Sir's GATE 2025 live classes — so I understand the journey from a student's perspective. I'm confident across all GATE CS subjects and passionate about making quality education accessible, especially for Tamil-speaking students. Coming from a Tier-3 government college in Tamil Nadu, I relate deeply to students from similar backgrounds.",
     areas: ["All GATE CSE subjects", "Regional language mentoring (Tamil)", "Tier-3 college guidance"],
     perSession: "",
     linkedin: "https://www.linkedin.com/in/nareshdeveloper/",
@@ -306,7 +345,6 @@ const SHEET_MENTORS = [
   {
     name: "Kunsoth Akhil",
     photo: "/mentors/akhil.jpg",
-    photoStyle: { objectPosition: "center 2%", transform: "scale(1.8)", transformOrigin: "center 20%" },
     qualification: "M.Tech Computer Science, NIT Warangal | GATE CSE 2024 qualified",
     experience: [
       "System Software Engineering Intern at Intel Corporation (10 months)",
@@ -347,8 +385,7 @@ const SHEET_MENTORS = [
   {
     name: "Vemuri Hemantha Kumar",
     photo: "/mentors/hemantha.jpg",
-    photoStyle: { objectPosition: "center 50%", transform: "scale(2)", transformOrigin: "center 55%" },
-    qualification: "B.Tech CSE (9 GPA) | Upcoming M.Tech CSE | 3x GATE CSE/DA top rank — AIR 949 CSE, AIR 1030 DA | LeetCode 4-star",
+    qualification: "B.Tech CSE (9 GPA) | Upcoming M.Tech CSE | 3x GATE CSE/DA Qualified | LeetCode 4-star",
     experience: [
       "Backend Software Engineer at Tech Mahindra (2+ years)",
       "Core CSE & coding specialization",
@@ -381,20 +418,7 @@ const MANUAL_MENTORS = [
   },
 ];
 
-const MANUAL_MENTORS_2 = [
-  {
-    name: "Shahjad Alam",
-    photo: "/mentors/alam.jpeg",
-    qualification: "MSc Mathematics and Computing | GATE CS 2026 AIR 20",
-    experience: [
-      "GATE CS 2026 — All India Rank 20",
-    ],
-    description: "I secured AIR 20 in GATE CS 2026, reflecting my strong conceptual understanding and problem-solving abilities. I am passionate about Computer Science and aspire to pursue M.Tech from a top IIT.",
-    areas: ["GATE CSE preparation", "Mathematics", "Problem solving strategy", "Top rank guidance"],
-    perSession: "",
-    linkedin: "",
-  },
-];
+const MANUAL_MENTORS_2 = [];
 
-export const mentors = [...MENTORS_DATA, ...SHEET_MENTORS, ...MANUAL_MENTORS, ...MANUAL_MENTORS_2];
+export const mentors = [...TOP_MENTORS, ...MENTORS_DATA, ...SHEET_MENTORS, ...MANUAL_MENTORS, ...MANUAL_MENTORS_2];
 export default mentors;

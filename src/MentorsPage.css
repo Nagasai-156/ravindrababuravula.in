@@ -107,12 +107,15 @@
   border-radius: 18px;
   overflow: hidden;
   background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mn-profile-photo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   transition: filter 0.4s ease;
 }
@@ -121,23 +124,6 @@
   filter: brightness(1.08);
 }
 
-.mn-profile-letter-wrap {
-  width: 100%;
-  aspect-ratio: 1;
-  border-radius: 18px;
-  background: linear-gradient(165deg, #161616 0%, #0e0e0e 100%);
-  border: 1px solid rgba(255, 183, 3, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mn-profile-letter {
-  font-family: 'Unbounded', sans-serif;
-  font-size: 4rem;
-  font-weight: 300;
-  color: rgba(255, 183, 3, 0.12);
-}
 
 
 /* ── Mobile info (hidden on desktop, shown on mobile) ── */
@@ -309,7 +295,6 @@
   .mn-profiles-subtitle { margin-bottom: 36px !important; }
   .mn-profiles-list { gap: 14px; }
 
-  /* Switch to horizontal card with circular avatar */
   .mn-profile-inner {
     grid-template-columns: 1fr;
     gap: 0;
@@ -317,45 +302,31 @@
     border-radius: 18px;
   }
 
+  /* Avatar + name in a row */
   .mn-profile-left {
     flex-direction: row;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     margin-bottom: 16px;
   }
 
-  /* Circular photo on mobile — face always visible */
   .mn-profile-photo-wrap {
     width: 72px;
     min-width: 72px;
     height: 72px;
     aspect-ratio: auto;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 183, 3, 0.2);
+    border-radius: 16px;
+    border: 2px solid rgba(255, 183, 3, 0.15);
+    background: #1a1a1a;
   }
 
   .mn-profile-photo {
-    border-radius: 50%;
-    /* Don't override photoStyle — let inline style handle per-mentor crop */
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: center 20%;
   }
 
-  /* Circular letter on mobile — compact gold circle */
-  .mn-profile-letter-wrap {
-    width: 72px;
-    min-width: 72px;
-    height: 72px;
-    aspect-ratio: auto;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255, 183, 3, 0.08), rgba(255, 183, 3, 0.03));
-    border: 2px solid rgba(255, 183, 3, 0.15);
-  }
-
-  .mn-profile-letter {
-    font-size: 1.6rem;
-    color: #ffb703;
-  }
-
-  /* Show name beside avatar, hide in content area */
+  /* Name beside avatar */
   .mn-profile-mobile-info {
     display: flex;
     flex-direction: column;
@@ -369,9 +340,13 @@
     display: none;
   }
 
-  .mn-mobile-name { font-size: 1rem; }
-  .mn-mobile-qual { font-size: 0.72rem; }
-  .mn-profile-num { font-size: 2rem; top: -6px; right: -4px; }
+  .mn-mobile-name { font-size: 0.95rem; }
+  .mn-mobile-qual { font-size: 0.7rem; line-height: 1.4; }
+  .mn-profile-num { display: none; }
+  .mn-profile-desc { font-size: 0.78rem; }
+  .mn-profile-exp-list li { font-size: 0.76rem; }
+  .mn-profile-area { font-size: 0.68rem; }
+  .mn-profile-block-label { font-size: 0.6rem; }
 
   .mn-note-card { padding: 20px 18px; }
   .panel-h2 { font-size: 1.4rem; }
@@ -386,24 +361,23 @@
     border-radius: 16px;
   }
 
-  .mn-profile-photo-wrap,
-  .mn-profile-letter-wrap {
-    width: 56px;
-    min-width: 56px;
-    height: 56px;
+  .mn-profile-photo-wrap {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    border-radius: 14px;
   }
 
-  .mn-profile-letter {
-    font-size: 1.2rem;
+  .mn-profile-photo {
+    border-radius: 12px;
   }
 
-  .mn-profile-name { font-size: 0.9rem; }
-  .mn-profile-qual { font-size: 0.7rem; }
+  .mn-mobile-name { font-size: 0.88rem; }
+  .mn-mobile-qual { font-size: 0.65rem; }
   .mn-profile-desc { font-size: 0.72rem; }
   .mn-profile-exp-list li { font-size: 0.7rem; }
-  .mn-profile-area { font-size: 0.65rem; padding: 4px 10px; }
-  .mn-profile-block-label { font-size: 0.58rem; }
-  .mn-profile-num { display: none; }
+  .mn-profile-area { font-size: 0.62rem; padding: 4px 10px; }
+  .mn-profile-block-label { font-size: 0.56rem; }
 
   .panel-h2 { font-size: 1.2rem; }
   .mn-note-section { padding: 36px 10px 48px; }
@@ -411,15 +385,17 @@
 
 @media (max-width: 380px) {
   .mn-profile-inner { padding: 14px; }
+  .mn-profile-left { gap: 12px; }
 
-  .mn-profile-photo-wrap,
-  .mn-profile-letter-wrap {
+  .mn-profile-photo-wrap {
     width: 52px;
     min-width: 52px;
     height: 52px;
+    border-radius: 12px;
   }
 
-  .mn-profile-letter { font-size: 1.1rem; }
-  .mn-profile-name { font-size: 0.82rem; }
-  .mn-profile-area { font-size: 0.6rem; padding: 3px 8px; }
+  .mn-profile-photo { border-radius: 10px; }
+  .mn-mobile-name { font-size: 0.82rem; }
+  .mn-mobile-qual { font-size: 0.6rem; }
+  .mn-profile-area { font-size: 0.58rem; padding: 3px 8px; }
 }

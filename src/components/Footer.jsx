@@ -136,9 +136,9 @@ export default function Footer() {
                 <MailIcon />
                 <span>gate2014.ravindra@gmail.com</span>
               </a>
-              <a href="tel:+917780734983" className="footer-contact-item">
+              <a href="tel:+919701119856" className="footer-contact-item">
                 <PhoneIcon />
-                <span>+91-7780734983</span>
+                <span>+91-97011 19856</span>
               </a>
             </div>
           </div>

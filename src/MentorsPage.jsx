@@ -72,15 +72,13 @@ function MentorProfile({ data, index }) {
 
         {/* Left / Photo side */}
         <div className="mn-profile-left">
-          {hasPhoto ? (
-            <div className="mn-profile-photo-wrap">
-              <img src={data.photo} alt={data.name} className="mn-profile-photo" style={data.photoStyle || {}} />
-            </div>
-          ) : (
-            <div className="mn-profile-letter-wrap">
-              <div className="mn-profile-letter">{data.name.charAt(0)}</div>
-            </div>
-          )}
+          <div className="mn-profile-photo-wrap">
+            <img
+              src={hasPhoto ? data.photo : "/mentors/default-avatar.svg"}
+              alt={data.name}
+              className="mn-profile-photo"
+            />
+          </div>
           {/* Name shown beside avatar on mobile */}
           <div className="mn-profile-mobile-info">
             <h3 className="mn-profile-name mn-mobile-name">{data.name}</h3>
