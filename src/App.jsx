@@ -127,8 +127,8 @@ const PAGE_SEO = {
     description: "Prof. Ravindrababu Ravula as a Startup Coach. Guidance for aspiring entrepreneurs, startup strategy, fundraising, and building scalable businesses.",
   },
   "/testimonials": {
-    title: "Testimonials — 109+ GATE Toppers Success Stories",
-    description: "Real success stories from 109+ GATE toppers trained by Prof. Ravindrababu Ravula. From AIR 2 to IISc and IITs — read how students transformed their careers.",
+    title: "Testimonials — 109+ GATE Toppers Success Stories | AIR 2, AIR 3, AIR 5",
+    description: "Real success stories from 109+ GATE CS toppers trained by Prof. Ravindrababu Ravula. AIR 2 Jay Bansal, AIR 3 Prateek Agarwal, AIR 5 Timojit Chatterjee. From single-digit ranks to IISc, IIT Bombay, IIT Kanpur, Google. Read how students cracked GATE with RBR Sir's lectures.",
     schema: {
       "@context": "https://schema.org",
       "@type": "ItemList",
@@ -143,8 +143,8 @@ const PAGE_SEO = {
     },
   },
   "/mentors": {
-    title: "1:1 Mentorship — Learn from IIT, IISc, DRDO & FAANG Experts",
-    description: "Book 1:1 mentorship sessions with 30+ expert mentors from IIT Bombay, IISc, DRDO, PayPal, Amazon, NVIDIA, Oracle, Walmart. GATE preparation, career guidance, interview prep.",
+    title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
+    description: "Book 1:1 GATE CSE & DA mentorship with 30+ expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
     schema: {
       "@context": "https://schema.org",
       "@type": "ItemList",
