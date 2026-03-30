@@ -113,12 +113,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%;
-  transition: transform 0.5s ease;
+  object-position: center center;
+  transition: transform 0.4s ease;
 }
 
 .mn-profile-inner:hover .mn-profile-photo {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .mn-profile-letter-wrap {
@@ -139,6 +139,11 @@
   color: rgba(255, 183, 3, 0.12);
 }
 
+
+/* ── Mobile info (hidden on desktop, shown on mobile) ── */
+.mn-profile-mobile-info {
+  display: none;
+}
 
 /* ── Right: Content ── */
 .mn-profile-right {
@@ -300,60 +305,121 @@
 }
 
 @media (max-width: 768px) {
-  .mn-profiles-section, .mn-note-section { padding: 60px 16px; }
+  .mn-profiles-section, .mn-note-section { padding: 50px 14px; }
+  .mn-profiles-subtitle { margin-bottom: 36px !important; }
+  .mn-profiles-list { gap: 14px; }
 
+  /* Switch to horizontal card with circular avatar */
   .mn-profile-inner {
     grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 24px;
-  }
-
-  .mn-profile-photo-wrap,
-  .mn-profile-letter-wrap {
-    aspect-ratio: 16/9;
-    max-height: 240px;
-  }
-
-  .mn-profile-photo {
-    object-position: center top;
-  }
-
-  .mn-profile-name { font-size: 1.1rem; }
-  .mn-profile-num { font-size: 2.5rem; top: -8px; }
-  .mn-profiles-list { gap: 20px; }
-
-  .mn-note-card { padding: 22px 20px; }
-}
-
-@media (max-width: 560px) {
-  .mn-profiles-section { padding: 48px 12px; }
-
-  .mn-profile-inner {
-    padding: 18px;
+    gap: 0;
+    padding: 20px;
     border-radius: 18px;
   }
 
-  .mn-profile-photo-wrap,
-  .mn-profile-letter-wrap {
-    aspect-ratio: 4/3;
-    border-radius: 14px;
+  .mn-profile-left {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
   }
 
-  .mn-profile-name { font-size: 0.95rem; }
-  .mn-profile-qual { font-size: 0.75rem; }
-  .mn-profile-desc { font-size: 0.75rem; }
-  .mn-profile-exp-list li { font-size: 0.73rem; }
-  .mn-profile-area { font-size: 0.68rem; padding: 4px 10px; }
+  /* Circular photo on mobile — face always visible */
+  .mn-profile-photo-wrap {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    aspect-ratio: auto;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 183, 3, 0.2);
+  }
+
+  .mn-profile-photo {
+    border-radius: 50%;
+    /* Don't override photoStyle — let inline style handle per-mentor crop */
+  }
+
+  /* Circular letter on mobile — compact gold circle */
+  .mn-profile-letter-wrap {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
+    aspect-ratio: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 183, 3, 0.08), rgba(255, 183, 3, 0.03));
+    border: 2px solid rgba(255, 183, 3, 0.15);
+  }
+
+  .mn-profile-letter {
+    font-size: 1.6rem;
+    color: #ffb703;
+  }
+
+  /* Show name beside avatar, hide in content area */
+  .mn-profile-mobile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .mn-desktop-name,
+  .mn-desktop-qual {
+    display: none;
+  }
+
+  .mn-mobile-name { font-size: 1rem; }
+  .mn-mobile-qual { font-size: 0.72rem; }
+  .mn-profile-num { font-size: 2rem; top: -6px; right: -4px; }
+
+  .mn-note-card { padding: 20px 18px; }
+  .panel-h2 { font-size: 1.4rem; }
+}
+
+@media (max-width: 560px) {
+  .mn-profiles-section { padding: 40px 10px; }
+  .mn-profiles-list { gap: 12px; }
+
+  .mn-profile-inner {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .mn-profile-photo-wrap,
+  .mn-profile-letter-wrap {
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+  }
+
+  .mn-profile-letter {
+    font-size: 1.2rem;
+  }
+
+  .mn-profile-name { font-size: 0.9rem; }
+  .mn-profile-qual { font-size: 0.7rem; }
+  .mn-profile-desc { font-size: 0.72rem; }
+  .mn-profile-exp-list li { font-size: 0.7rem; }
+  .mn-profile-area { font-size: 0.65rem; padding: 4px 10px; }
   .mn-profile-block-label { font-size: 0.58rem; }
-  .mn-profile-letter { font-size: 2.5rem; }
-  .mn-profiles-list { gap: 16px; }
+  .mn-profile-num { display: none; }
 
   .panel-h2 { font-size: 1.2rem; }
-  .mn-note-section { padding: 40px 12px 60px; }
+  .mn-note-section { padding: 36px 10px 48px; }
 }
 
 @media (max-width: 380px) {
   .mn-profile-inner { padding: 14px; }
-  .mn-profile-name { font-size: 0.85rem; }
-  .mn-profile-area { font-size: 0.62rem; }
+
+  .mn-profile-photo-wrap,
+  .mn-profile-letter-wrap {
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+  }
+
+  .mn-profile-letter { font-size: 1.1rem; }
+  .mn-profile-name { font-size: 0.82rem; }
+  .mn-profile-area { font-size: 0.6rem; padding: 3px 8px; }
 }

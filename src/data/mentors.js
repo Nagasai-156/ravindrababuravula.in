@@ -18,7 +18,7 @@ const MENTORS_DATA = [
   {
     name: "Astitva Chouksey",
     photo: "/mentors/image4.png",
-    photoStyle: { objectPosition: "35% 12%", transform: "scale(2.5)", transformOrigin: "35% 15%" },
+    photoStyle: { objectPosition: "center 8%" },
     qualification: "GATE CS - 99%ile | CAT - 98%ile Quants, 92%ile Overall | PhD offers from 6+ IITs in CSE",
     experience: [
       "Scientist, DRDO, Ministry of Defence, Govt of India (2023-Current) — Research, Deep Learning, Computer Vision",
@@ -221,7 +221,7 @@ const SHEET_MENTORS = [
   {
     name: "Md Mouzam Arfi Hussain",
     photo: "/mentors/arfi.jpg",
-    photoStyle: { objectPosition: "center 30%" },
+    photoStyle: { objectPosition: "center 35%" },
     qualification: "B.Tech CSE | Secured IIT M.Tech admission in just 5 months of GATE prep",
     experience: ["Fresher — focused entirely on cracking GATE efficiently"],
     achievements: "Secured admission to an IIT for M.Tech within just 5 months of GATE preparation.",
@@ -304,6 +304,7 @@ const SHEET_MENTORS = [
   {
     name: "Kunsoth Akhil",
     photo: "/mentors/akhil.jpg",
+    photoStyle: { objectPosition: "center 18%" },
     qualification: "M.Tech Computer Science, NIT Warangal | GATE CSE 2024 qualified",
     experience: [
       "System Software Engineering Intern at Intel Corporation (10 months)",
@@ -344,7 +345,7 @@ const SHEET_MENTORS = [
   {
     name: "Vemuri Hemantha Kumar",
     photo: "/mentors/hemantha.jpg",
-    photoStyle: { objectPosition: "center 85%" },
+    photoStyle: { objectPosition: "center 75%" },
     qualification: "B.Tech CSE (9 GPA) | Upcoming M.Tech CSE | 3x GATE CSE/DA top rank — AIR 949 CSE, AIR 1030 DA | LeetCode 4-star",
     experience: [
       "Backend Software Engineer at Tech Mahindra (2+ years)",

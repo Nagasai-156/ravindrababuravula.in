@@ -81,6 +81,11 @@ function MentorProfile({ data, index }) {
               <div className="mn-profile-letter">{data.name.charAt(0)}</div>
             </div>
           )}
+          {/* Name shown beside avatar on mobile */}
+          <div className="mn-profile-mobile-info">
+            <h3 className="mn-profile-name mn-mobile-name">{data.name}</h3>
+            <p className="mn-profile-qual mn-mobile-qual">{data.qualification}</p>
+          </div>
         </div>
 
         {/* Right / Content side */}
@@ -89,8 +94,8 @@ function MentorProfile({ data, index }) {
             {String(index + 1).padStart(2, "0")}
           </div>
 
-          <h3 className="mn-profile-name">{data.name}</h3>
-          <p className="mn-profile-qual">{data.qualification}</p>
+          <h3 className="mn-profile-name mn-desktop-name">{data.name}</h3>
+          <p className="mn-profile-qual mn-desktop-qual">{data.qualification}</p>
 
           {/* Experience */}
           {data.experience && data.experience.length > 0 && (
