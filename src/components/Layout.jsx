@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import SocialProofToast from "./SocialProofToast";
 import "./Layout.css";
 
 export default function Layout({ children, hideFooter = false }) {
@@ -11,6 +12,7 @@ export default function Layout({ children, hideFooter = false }) {
         {children}
       </main>
       {!hideFooter && <Footer />}
+      <SocialProofToast />
     </div>
   );
 }

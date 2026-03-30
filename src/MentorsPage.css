@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+.mn-page {
+  background: #0e0e0e;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ─── SHARED TYPOGRAPHY ─── */
+.sec-label {
+  color: #ffb703;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.panel-h2 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+.panel-p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ─── SCROLL REVEAL ─── */
+.mn-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mn-reveal.mn-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MENTOR PROFILES SECTION
+   ═══════════════════════════════════════════════════════════ */
+.mn-profiles-section {
+  padding: 100px 40px;
+  background: #0b0b0b;
+}
+
+.mn-profiles-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mn-profiles-subtitle {
+  max-width: 640px;
+  margin-bottom: 60px !important;
+}
+
+.mn-profiles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ─── SINGLE MENTOR PROFILE ─── */
+.mn-profile-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.35s, box-shadow 0.35s;
+}
+
+.mn-profile-inner:hover {
+  border-color: rgba(255, 183, 3, 0.15);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* No alternating — same layout for all */
+
+/* ── Left: Photo ── */
+.mn-profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.mn-profile-photo-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.mn-profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 0.5s ease;
+}
+
+.mn-profile-inner:hover .mn-profile-photo {
+  transform: scale(1.04);
+}
+
+.mn-profile-letter-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 18px;
+  background: linear-gradient(165deg, #161616 0%, #0e0e0e 100%);
+  border: 1px solid rgba(255, 183, 3, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mn-profile-letter {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  color: rgba(255, 183, 3, 0.12);
+}
+
+
+/* ── Right: Content ── */
+.mn-profile-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+.mn-profile-num {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.03);
+  position: absolute;
+  top: -12px;
+  right: 0;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.mn-profile-name {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.mn-profile-qual {
+  font-size: 0.82rem;
+  color: #888;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Blocks ── */
+.mn-profile-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mn-profile-block-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: #ffb703;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.mn-profile-exp-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mn-profile-exp-list li {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+
+.mn-profile-exp-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 183, 3, 0.4);
+}
+
+.mn-profile-desc {
+  font-size: 0.82rem;
+  color: #777;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ── Mentorship Areas ── */
+.mn-profile-areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mn-profile-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  color: #aaa;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+  line-height: 1.3;
+}
+
+.mn-area-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ffb703;
+  flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NOTE SECTION
+   ═══════════════════════════════════════════════════════════ */
+.mn-note-section {
+  padding: 60px 40px 100px;
+  background: #0b0b0b;
+}
+
+.mn-note-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mn-note-card {
+  background: #141414;
+  border: 1px solid rgba(255, 183, 3, 0.1);
+  border-radius: 16px;
+  padding: 28px 32px;
+  text-align: center;
+}
+
+.mn-note-card p {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.mn-note-card strong {
+  color: #ffb703;
+  font-weight: 600;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .mn-profiles-section { padding: 80px 24px; }
+  .mn-profile-inner { grid-template-columns: 220px 1fr; gap: 28px; padding: 28px; }
+}
+
+@media (max-width: 768px) {
+  .mn-profiles-section, .mn-note-section { padding: 60px 16px; }
+
+  .mn-profile-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .mn-profile-photo-wrap,
+  .mn-profile-letter-wrap {
+    aspect-ratio: 16/9;
+    max-height: 240px;
+  }
+
+  .mn-profile-photo {
+    object-position: center top;
+  }
+
+  .mn-profile-name { font-size: 1.1rem; }
+  .mn-profile-num { font-size: 2.5rem; top: -8px; }
+  .mn-profiles-list { gap: 20px; }
+
+  .mn-note-card { padding: 22px 20px; }
+}
+
+@media (max-width: 560px) {
+  .mn-profiles-section { padding: 48px 12px; }
+
+  .mn-profile-inner {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .mn-profile-photo-wrap,
+  .mn-profile-letter-wrap {
+    aspect-ratio: 4/3;
+    border-radius: 14px;
+  }
+
+  .mn-profile-name { font-size: 0.95rem; }
+  .mn-profile-qual { font-size: 0.75rem; }
+  .mn-profile-desc { font-size: 0.75rem; }
+  .mn-profile-exp-list li { font-size: 0.73rem; }
+  .mn-profile-area { font-size: 0.68rem; padding: 4px 10px; }
+  .mn-profile-block-label { font-size: 0.58rem; }
+  .mn-profile-letter { font-size: 2.5rem; }
+  .mn-profiles-list { gap: 16px; }
+
+  .panel-h2 { font-size: 1.2rem; }
+  .mn-note-section { padding: 40px 12px 60px; }
+}
+
+@media (max-width: 380px) {
+  .mn-profile-inner { padding: 14px; }
+  .mn-profile-name { font-size: 0.85rem; }
+  .mn-profile-area { font-size: 0.62rem; }
+}
