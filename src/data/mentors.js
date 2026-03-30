@@ -19,6 +19,29 @@ const TOP_MENTORS = [
     perSession: "",
   },
   {
+    name: "Eluru Sai Venkat",
+    photo: "/mentors/eluru-venkat.jpeg",
+    qualification: "M.Tech in Artificial Intelligence (2025) | B.Tech Electrical Engineering, IIT Madras (2023) | AIR 3, GATE Data Science & AI",
+    experience: [
+      "Ex-Samsung R&D Institute Delhi",
+      "AIR 3 in GATE Data Science & Artificial Intelligence (DA)",
+    ],
+    description: "I'm passionate about Multimodal Intelligence Systems and enjoy helping students build strong intuition in mathematics and machine learning for competitive exams like GATE.",
+    areas: ["GATE DA preparation", "Mathematics for GATE", "Machine Learning", "Multimodal AI", "IIT Madras guidance"],
+    perSession: "",
+  },
+  {
+    name: "Cifal Shaul",
+    photo: "/mentors/cifal.jpg",
+    qualification: "M.Tech in Artificial Intelligence, IISc Bangalore | B.Tech IT, IIIT Allahabad | AIR 90, GATE DA 2025",
+    experience: [
+      "Currently pursuing M.Tech AI at IISc Bangalore",
+    ],
+    description: "I secured AIR 90 in GATE DA 2025. I completed my undergraduate studies in Information Technology from IIIT Allahabad and am currently pursuing M.Tech in Artificial Intelligence at IISc Bangalore.",
+    areas: ["GATE DA preparation", "Artificial Intelligence", "IISc guidance", "IIIT Allahabad experience"],
+    perSession: "",
+  },
+  {
     name: "Venkatesh E",
     photo: "/mentors/venkatesh.jpeg",
     qualification: "M.Tech AI, IIT Hyderabad (Best Research Student Award) | B.Tech EEE, Thiagarajar College of Engineering, Madurai",
@@ -54,6 +77,18 @@ const TOP_MENTORS = [
     achievements: "Best Speaker Award at World Tech Summit 2025, Dubai. Research presented at India-Japan Smart Cities Workshop and Suzuki-IITH Tech Show.",
     description: "A system software engineer at NVIDIA working in intelligent transportation and real-time communication, focused on improving how connected and autonomous systems work. An alumna of IIT Hyderabad, she actively engages in STEM outreach and tech talks, encouraging students to explore technology with purpose.",
     areas: ["System Software Engineering", "5G & ITS", "Research guidance", "STEM outreach", "Career mentoring"],
+    perSession: "",
+  },
+  {
+    name: "Shreyas",
+    photo: "/mentors/shreyas.jpeg",
+    qualification: "Master's from IIIT Hyderabad",
+    experience: [
+      "Backend Engineer at Harness (1 year, Current)",
+      "Backend Engineer at Visa Inc. (3.7 years)",
+    ],
+    description: "I mentor engineers to think clearly, solve problems efficiently, and design scalable systems — focusing on the skills that actually move the needle in interviews and real-world engineering.",
+    areas: ["System Design", "Problem Solving", "Backend Engineering", "Interview Preparation", "Scalable Systems"],
     perSession: "",
   },
   {
