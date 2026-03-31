@@ -33,6 +33,19 @@ const TOP_MENTORS = [
     perSession: "",
   },
   {
+    name: "Pratik Padamwar",
+    photo: "/mentors/pratik.jpg",
+    qualification: "MTech in Computer Science, MIT Manipal | Published at CVPR & ICMLA | Google Scholar",
+    experience: [
+      "Founder, Ultron AI — edge-native perception engine for session-based visual memory",
+      "Former Research Lead for autonomous vehicle perception",
+      "International speaker & Google Scholar",
+    ],
+    description: "AI Entrepreneur and Research Scientist specializing in 60fps Real-Time Vision & Generative Models. Currently building Ultron AI, an edge-native perception engine for session-based visual memory. Transforming unstructured video into structured, queryable data.",
+    areas: ["AI/ML Architecture", "Computer Vision", "Generative Models", "Real-Time AI Systems", "Research & Publications", "AI Entrepreneurship"],
+    perSession: "",
+  },
+  {
     name: "Venkatesh E",
     photo: "/mentors/venkatesh.jpeg",
     qualification: "M.Tech AI, IIT Hyderabad (Best Research Student Award) | B.Tech EEE, Thiagarajar College of Engineering, Madurai",
