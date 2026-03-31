@@ -3,6 +3,20 @@
 
 const TOP_MENTORS = [
   {
+    name: "Hari",
+    photo: "/mentors/HARI.jpg",
+    qualification: "ME in CSE, IISc Bangalore | AIR 1, GATE CS 2010",
+    experience: [
+      "AI/ML Architect at Cognida.ai (Current)",
+      "12+ years total experience, 8 years in Conversational AI/GenAI",
+      "Previously at Zenoti and Kore.ai",
+      "Worked on document comprehension to agentic AI voice",
+    ],
+    description: "An accomplished AI/ML architect with over 12 years of total experience, of which 8 years were in the conversational AI/GenAI space. He has worked on problems ranging from document comprehension to agentic AI voice.",
+    areas: ["AI/ML Architecture", "Conversational AI", "GenAI", "GATE CS preparation", "IISc guidance", "Agentic AI"],
+    perSession: "",
+  },
+  {
     name: "Yashavant Kanetkar",
     photo: "/mentors/yeswanth.jpeg",
     qualification: "M.Tech from IIT Kanpur | BE from VJTI Mumbai | Distinguished Alumnus Award, IIT Kanpur",
