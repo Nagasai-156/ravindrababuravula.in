@@ -29,6 +29,7 @@ const BREADCRUMB_MAP = {
   "/responses-portal": "Admin Dashboard",
   "/testimonials": "Testimonials",
   "/mentors": "Mentors",
+  "/courses": "Courses",
 };
 
 /* Icons */
@@ -168,6 +169,12 @@ export default function Navbar() {
               Courses
             </button>
             <button
+              className={`nav-link ${location.pathname === "/courses" ? "active" : ""}`}
+              onClick={() => navigate("/courses")}
+            >
+              Courses 1
+            </button>
+            <button
               className={`nav-link ${location.pathname === "/testimonials" ? "active" : ""}`}
               onClick={() => navigate("/testimonials")}
             >
@@ -295,6 +302,12 @@ export default function Navbar() {
             onClick={() => { window.open("https://courses.ravindrababuravula.in", "_blank"); setMobileMenuOpen(false); }}
           >
             Courses
+          </button>
+          <button
+            className={`mobile-menu-item ${location.pathname === "/courses" ? "active" : ""}`}
+            onClick={() => { navigate("/courses"); setMobileMenuOpen(false); }}
+          >
+            Courses 1
           </button>
           <button
             className={`mobile-menu-item ${location.pathname === "/testimonials" ? "active" : ""}`}
