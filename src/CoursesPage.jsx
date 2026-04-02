@@ -401,17 +401,6 @@ export default function CoursesPage() {
           <div className="cp-hero-inner">
             {/* Left */}
             <div className="cp-hero-left">
-              <div className="cp-eyebrow">
-                <div className="cp-eyebrow-row">
-                  <span className="cp-eyebrow-label">Platform</span>
-                  <span className="cp-eyebrow-value">RAVINDRABABURAVULA.IN</span>
-                </div>
-                <div className="cp-eyebrow-row">
-                  <span className="cp-eyebrow-label">Domain</span>
-                  <span className="cp-eyebrow-value">GATE CS · DA · DSA</span>
-                </div>
-              </div>
-
               <h1 className="cp-headline">
                 Master GATE with<br />
                 <em>India's #1</em> CS<br />
