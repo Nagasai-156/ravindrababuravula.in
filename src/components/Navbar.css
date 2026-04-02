@@ -179,6 +179,37 @@
   flex-shrink: 0;
 }
 
+/* ─── Your Purchases Button (Highlighted) ─── */
+.nav-purchases-btn {
+  background: #ffb703;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.nav-purchases-btn:hover {
+  background: #ffc633;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+}
+
+/* Mobile purchases button */
+.mobile-purchases-btn {
+  background: #ffb703 !important;
+  color: #111 !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  text-align: center !important;
+  margin-top: 8px;
+}
+
 .nav-icon-btn {
   display: flex;
   align-items: center;

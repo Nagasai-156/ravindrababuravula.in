@@ -83,6 +83,32 @@ const TOP_MENTORS = [
     perSession: "",
   },
   {
+    name: "Abhishek Sharma",
+    photo: null,
+    qualification: "Master's from Indian Institute of Science (IISc), Bangalore | AIR 26, GATE CS 2023",
+    experience: [
+      "Applied Scientist at Microsoft (Current)",
+      "Master's from IISc Bangalore",
+      "GATE CS 2023 — All India Rank 26",
+    ],
+    linkedin: "https://www.linkedin.com/in/abhishek-sharma-iisc",
+    description: "I'm currently working as Applied Scientist at Microsoft. I did my master's from Indian Institute of Science, Bangalore. I've qualified GATE CS'23 with AIR-26. I'm here to help aspirants like me who are on the same path or planning to go through it.",
+    areas: ["GATE CSE preparation", "IISc guidance", "Microsoft interview prep", "Career strategy", "Applied Science & Research"],
+    perSession: "",
+  },
+  {
+    name: "Chiranjeev Patel",
+    photo: "/mentors/chiranjeev.jpeg",
+    qualification: "B.Tech from KIET Group of Institutions | AIR 43, GATE CS 2026",
+    experience: [
+      "GATE CS 2026 — All India Rank 43",
+      "Passionate competitive programmer",
+    ],
+    description: "I am Chiranjeev Patel and I have secured AIR 43 in GATE Computer Science 2026. I have completed my B.Tech from KIET Group of Institutions. I am a passionate competitive programmer dedicated to helping GATE aspirants achieve their best ranks.",
+    areas: ["GATE CSE preparation", "Competitive programming", "Problem solving strategy", "Top rank guidance"],
+    perSession: "",
+  },
+  {
     name: "Divyansh Tripathi",
     photo: "/mentors/tripati.jpg",
     qualification: "M.Tech Data Science, IIT Roorkee | AIR 75, GATE Data Science & AI",

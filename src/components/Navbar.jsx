@@ -163,16 +163,10 @@ export default function Navbar() {
               Home
             </button>
             <button
-              className="nav-link"
-              onClick={() => window.open("https://courses.ravindrababuravula.in", "_blank")}
-            >
-              Courses
-            </button>
-            <button
               className={`nav-link ${location.pathname === "/courses" ? "active" : ""}`}
               onClick={() => navigate("/courses")}
             >
-              Courses 1
+              Courses
             </button>
             <button
               className={`nav-link ${location.pathname === "/testimonials" ? "active" : ""}`}
@@ -202,6 +196,13 @@ export default function Navbar() {
 
           {/* Right: Search + CTA + Mobile */}
           <div className="nav-right">
+            {/* Your Purchases */}
+            <button
+              className="nav-purchases-btn"
+              onClick={() => window.open("https://courses.ravindrababuravula.in/purchases?type=10", "_blank")}
+            >
+              Your Purchases
+            </button>
             {/* Search */}
             <div className="nav-search-wrap" ref={searchRef}>
               <button
@@ -298,16 +299,10 @@ export default function Navbar() {
             Home
           </button>
           <button
-            className="mobile-menu-item"
-            onClick={() => { window.open("https://courses.ravindrababuravula.in", "_blank"); setMobileMenuOpen(false); }}
-          >
-            Courses
-          </button>
-          <button
             className={`mobile-menu-item ${location.pathname === "/courses" ? "active" : ""}`}
             onClick={() => { navigate("/courses"); setMobileMenuOpen(false); }}
           >
-            Courses 1
+            Courses
           </button>
           <button
             className={`mobile-menu-item ${location.pathname === "/testimonials" ? "active" : ""}`}
@@ -332,6 +327,12 @@ export default function Navbar() {
             onClick={() => { window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank"); setMobileMenuOpen(false); }}
           >
             For Startups
+          </button>
+          <button
+            className="mobile-menu-item mobile-purchases-btn"
+            onClick={() => { window.open("https://courses.ravindrababuravula.in/purchases?type=10", "_blank"); setMobileMenuOpen(false); }}
+          >
+            Your Purchases
           </button>
         </div>
 
