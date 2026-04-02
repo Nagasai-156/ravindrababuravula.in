@@ -58,7 +58,7 @@ const Badge = ({ label, type = "dark" }) => (
 
 /* ── Course Stats ── */
 const COURSE_STATS = [
-  { value: "16", label: "Courses Offered", icon: "📚" },
+  { value: "17", label: "Courses Offered", icon: "📚" },
   { value: "LIVE", label: "Daily Classes", icon: "⏱️" },
   { value: "50K+", label: "Students Enrolled", icon: "🎓" },
   { value: "rbr2000", label: "₹2,000 Off Coupon", icon: "🏷️" },
@@ -84,6 +84,7 @@ const CATEGORIES = [
         id: 1, tag: "FLAGSHIP", title: "GATE CS Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-cs-core-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/1-gate-cs-core-2027",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Structured Learning Path", "Coupon: rbr2000 (₹2,000 off)"],
         price: "9,999", originalPrice: "15,000", discount: "34", color: "gold",
@@ -92,6 +93,7 @@ const CATEGORIES = [
         id: 2, tag: "GATE DA", title: "GATE DA Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-da-core-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/7-gate-da-core-2027",
         description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
         highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Structured Approach", "Coupon: rbr2000 (₹2,000 off)"],
         price: "9,999", originalPrice: "15,000", discount: "34", color: "dark",
@@ -100,6 +102,7 @@ const CATEGORIES = [
         id: 3, tag: "COMBO", title: "GATE CS & DA Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-cs-da-core-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/16-gate-cs-da-core-2027",
         description: "A comprehensive LIVE program covering both the complete GATE CS and DA syllabi — best value for students targeting both papers.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo", "Coupon: rbr2000 (₹2,000 off)"],
         price: "16,999", originalPrice: "25,000", discount: "33", color: "accent",
@@ -108,6 +111,7 @@ const CATEGORIES = [
         id: 4, tag: "MOST POPULAR", title: "GATE CS Core Plus 2027",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/gate-cs-core-plus-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/4-gate-cs-core-plus-2027",
         description: "GATE + DSA + Java + LeetCode Problems. Complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems", "Coupon: rbr2000 (₹2,000 off)"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "accent",
@@ -116,6 +120,7 @@ const CATEGORIES = [
         id: 5, tag: "PREMIUM · MENTORSHIP", title: "GATE DA 2027 – Core Plus",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
         image: "/courses/gate-da-core-plus-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/10-gate-da-2027-core-plus-mentorship-program",
         description: "Includes everything in DA Core + personalized 1:1 mentorship and performance tracking for serious aspirants.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking", "Coupon: rbr2000 (₹2,000 off)"],
         price: "49,999", originalPrice: "65,000", discount: "24", color: "dark",
@@ -133,6 +138,7 @@ const CATEGORIES = [
         id: 6, tag: "EARLY BIRD", title: "GATE CS Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-cs-core-2028.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/2-gate-cs-core-2028",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Early Bird Advantage", "Coupon: rbr2000 (₹2,000 off)"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "dark",
@@ -141,6 +147,7 @@ const CATEGORIES = [
         id: 7, tag: "EARLY BIRD", title: "GATE DA Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-da-core-2028.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/8-gate-da-core-2028",
         description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
         highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Early Bird Advantage", "Coupon: rbr2000 (₹2,000 off)"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "dark",
@@ -149,6 +156,7 @@ const CATEGORIES = [
         id: 8, tag: "COMBO", title: "GATE CS & DA Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-cs-da-core-2028.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/17-gate-cs-da-core-2028",
         description: "A comprehensive LIVE program covering both the complete GATE CS and DA syllabi — best value for students targeting both papers.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo", "Coupon: rbr2000 (₹2,000 off)"],
         price: "22,999", originalPrice: "35,000", discount: "35", color: "accent",
@@ -157,6 +165,7 @@ const CATEGORIES = [
         id: 9, tag: "MOST POPULAR", title: "GATE CS Core Plus 2028",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/gate-cs-core-plus-2028.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/5-gate-cs-core-plus-2028",
         description: "GATE + DSA + Java + LeetCode Problems. Complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems", "Coupon: rbr2000 (₹2,000 off)"],
         price: "19,999", originalPrice: "30,000", discount: "34", color: "accent",
@@ -165,6 +174,7 @@ const CATEGORIES = [
         id: 10, tag: "PREMIUM · MENTORSHIP", title: "GATE DA 2028 – Core Plus",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
         image: "/courses/gate-da-core-plus-2028.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/11-gate-da-2028-core-plus-mentorship-program",
         description: "Includes everything in DA Core + personalized 1:1 mentorship and performance tracking for serious aspirants.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking", "Coupon: rbr2000 (₹2,000 off)"],
         price: "69,999", originalPrice: "90,000", discount: "23", color: "dark",
@@ -182,6 +192,7 @@ const CATEGORIES = [
         id: 11, tag: "GATE CS", title: "GATE CS 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-cs-test-series-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/test-series/1-gate-cs-2027-test-series?subjectId=-1",
         description: "Comprehensive GATE CS test series with full-length mock tests, subject-wise tests, and detailed performance analysis.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Exam Simulation"],
         price: "3,538", originalPrice: "4,999", discount: "30", color: "dark",
@@ -190,6 +201,7 @@ const CATEGORIES = [
         id: 12, tag: "GATE DA", title: "GATE DA 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate-da-test-series-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/test-series/2-gate-da-2027-test-series?subjectId=-1",
         description: "Comprehensive GATE DA test series with full-length mock tests, subject-wise tests, and detailed performance analysis.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Exam Simulation"],
         price: "3,538", originalPrice: "4,999", discount: "30", color: "dark",
@@ -207,6 +219,7 @@ const CATEGORIES = [
         id: 13, tag: "DEC 2026", title: "UGC NET Dec 2026",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc-net-dec-2026.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/13-ugc-net-dec-2026",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and consistent practice.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus", "Coupon: rbr2000 (₹2,000 off)"],
         price: "9,999", originalPrice: "15,000", discount: "34", color: "dark",
@@ -215,6 +228,7 @@ const CATEGORIES = [
         id: 14, tag: "JUNE 2027", title: "UGC NET June 2027",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc-net-june-2027.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/14-ugc-net-june-2027",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and consistent practice.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus", "Coupon: rbr2000 (₹2,000 off)"],
         price: "14,999", originalPrice: "20,000", discount: "26", color: "dark",
@@ -226,20 +240,31 @@ const CATEGORIES = [
     label: "AI & ML",
     heading: "AI & ML Courses",
     description: "Industry-oriented, hands-on programs designed to build real-world AI, Machine Learning, and DSA skills.",
-    count: 2,
+    count: 3,
     courses: [
       {
-        id: 15, tag: "HANDS-ON", title: "Practical AI & ML Program",
+        id: 15, tag: "SKILL BUILDER", title: "DSA with Java + LeetCode",
+        subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
+        image: "/courses/dsa-java-leetcode.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/15-dsa-with-java-leet-code-problems",
+        description: "Master Data Structures & Algorithms with Java and solve curated LeetCode problems. From arrays to dynamic programming — placement-focused approach.",
+        highlights: ["DSA with Java", "LeetCode Problems", "Placement Focused", "Coupon: rbr2000 (₹2,000 off)"],
+        price: "14,999", originalPrice: "25,000", discount: "41", color: "dark",
+      },
+      {
+        id: 16, tag: "HANDS-ON", title: "Practical AI & ML Program",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyuthuni",
         image: "/courses/practical-ai-ml.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/19-practical-ai-ml-program",
         description: "An implementation-focused LIVE program designed to build real-world AI & ML skills. Industry-oriented, hands-on, and application-focused with depth and projects.",
         highlights: ["Real-World Projects", "Hands-on Implementation", "Industry-Oriented", "Coupon: rbr2000 (₹2,000 off)"],
         price: "39,999", originalPrice: "55,999", discount: "29", color: "accent",
       },
       {
-        id: 16, tag: "PREMIUM · DSA + AI/ML", title: "Algorithms to AI Accelerator",
+        id: 17, tag: "PREMIUM · DSA + AI/ML", title: "Algorithms to AI Accelerator",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyuthuni · Syed Peera Saheb",
         image: "/courses/algorithms-to-ai.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/20-algorithms-to-ai-accelerator-dsa-aiml",
         description: "DSA + AI/ML combined program. Hands-on projects, industry-oriented curriculum, and premium depth covering algorithms through artificial intelligence.",
         highlights: ["DSA + AI/ML Combined", "3 Expert Instructors", "Hands-on Projects", "Coupon: rbr2000 (₹2,000 off)"],
         price: "45,999", originalPrice: "65,000", discount: "30", color: "accent",
@@ -335,7 +360,7 @@ export default function CoursesPage() {
                 <div className="cp-hero-img-overlay">
                   <p className="cp-hero-img-title">World-Class<br />CS Education</p>
                   <div className="cp-hero-stat-box">
-                    <div className="cp-big-num">16</div>
+                    <div className="cp-big-num">17</div>
                     <div className="cp-small-lbl">LIVE<br />Courses</div>
                   </div>
                 </div>
@@ -448,12 +473,12 @@ export default function CoursesPage() {
                         <div className="cp-card-gst">+ 18% GST</div>
 
                         <a
-                          href="https://courses.ravindrababuravula.in"
+                          href={course.link}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="cp-card-cta"
                         >
-                          Enroll Now <ArrowIcon />
+                          View Details <ArrowIcon />
                         </a>
                       </div>
                     </div>
