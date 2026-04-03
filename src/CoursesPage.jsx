@@ -109,7 +109,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2027", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
-          note: "GATE CS 2027 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -150,7 +150,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2027", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2027 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -216,7 +216,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2028", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
-          note: "GATE CS 2028 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -257,7 +257,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2028", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2028 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -323,7 +323,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2029", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
-          note: "GATE CS 2029 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -364,7 +364,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2029", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2029 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -475,7 +475,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2027", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2027 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -594,7 +594,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2028", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2028 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -713,7 +713,7 @@ const CATEGORIES = [
           whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2029", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
-          note: "GATE CS & DA 2029 Test Series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -840,7 +840,7 @@ const CATEGORIES = [
           whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for UGC NET", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
-          note: "Test series may be offered separately, if applicable.",
+
         },
       },
       {
@@ -860,7 +860,7 @@ const CATEGORIES = [
           whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for UGC NET", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
-          note: "Test series may be offered separately, if applicable.",
+
         },
       },
     ],
