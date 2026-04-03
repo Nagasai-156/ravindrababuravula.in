@@ -727,6 +727,9 @@
   text-decoration: none;
   transition: all 0.3s ease;
   margin-top: 4px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
 .cp-card-cta:hover {
@@ -1223,4 +1226,410 @@
 
   .cp-hero-ctas { flex-direction: column; }
   .cp-cta-buttons { flex-direction: column; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   COURSE DETAIL MODAL
+═══════════════════════════════════════════════════════════════ */
+.cp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: cp-fadeIn 0.2s ease;
+}
+
+@keyframes cp-fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cp-slideUp {
+  from { opacity: 0; transform: translateY(24px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.cp-modal {
+  background: #141414;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: cp-slideUp 0.3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.1) transparent;
+}
+
+.cp-modal::-webkit-scrollbar { width: 6px; }
+.cp-modal::-webkit-scrollbar-track { background: transparent; }
+.cp-modal::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+/* Close button */
+.cp-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+}
+
+.cp-modal-close:hover {
+  background: rgba(255,255,255,0.15);
+  transform: scale(1.05);
+}
+
+/* Banner */
+.cp-modal-banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px 28px 0 0;
+}
+
+.cp-modal-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Content */
+.cp-modal-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tag */
+.cp-modal-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffb703;
+  background: rgba(255,183,3,0.1);
+  padding: 5px 14px;
+  border-radius: 999px;
+  width: fit-content;
+  border: 1px solid rgba(255,183,3,0.15);
+}
+
+/* Title */
+.cp-modal-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: -0.5px;
+  line-height: 1.3;
+  margin-top: -4px;
+}
+
+/* Subtitle */
+.cp-modal-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -8px;
+}
+
+.cp-modal-subtitle strong {
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Description */
+.cp-modal-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: #888;
+  line-height: 1.75;
+}
+
+/* Schedule */
+.cp-modal-schedule {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(255,183,3,0.05);
+  border: 1px solid rgba(255,183,3,0.1);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #999;
+  line-height: 1.5;
+}
+
+.cp-modal-schedule svg {
+  color: #ffb703;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Section label */
+.cp-modal-section-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Highlights */
+.cp-modal-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: -4px;
+}
+
+.cp-modal-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #ccc;
+}
+
+.cp-modal-highlight svg {
+  color: #ffb703;
+  flex-shrink: 0;
+}
+
+/* Price Section */
+.cp-modal-price-section {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin-top: 8px;
+}
+
+.cp-modal-price-left {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.cp-modal-price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.cp-modal-original-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  text-decoration: line-through;
+}
+
+.cp-modal-discount {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #22c55e;
+  background: rgba(34,197,94,0.1);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.cp-modal-gst {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+/* Enroll Button */
+.cp-modal-enroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #ffb703;
+  color: #111;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+}
+
+.cp-modal-enroll:hover {
+  background: #ffc633;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255,183,3,0.3);
+}
+
+/* Detail sections */
+.cp-modal-detail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cp-modal-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cp-modal-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.cp-modal-detail-item svg {
+  color: #ffb703;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.cp-modal-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffb703;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+/* Subjects grid */
+.cp-modal-subjects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cp-modal-subject-chip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #ccc;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 6px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Note */
+.cp-modal-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #777;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 14px 16px;
+  line-height: 1.6;
+}
+
+.cp-modal-note strong {
+  color: #ffb703;
+  font-weight: 600;
+}
+
+/* Mentorship */
+.cp-modal-mentorship {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cp-modal-mentorship-block {
+  background: rgba(255,183,3,0.03);
+  border: 1px solid rgba(255,183,3,0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cp-modal-mentorship-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #ffb703;
+  letter-spacing: -0.2px;
+  margin-bottom: 4px;
+}
+
+/* Syllabus */
+.cp-modal-syllabus {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cp-modal-syllabus-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+
+.cp-modal-syllabus-subject {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #ffb703;
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.cp-modal-syllabus-topics {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: #999;
+  line-height: 1.7;
+}
+
+/* ─── Modal Responsive ─── */
+@media (max-width: 640px) {
+  .cp-modal-overlay { padding: 12px; }
+  .cp-modal { max-width: 100%; border-radius: 20px; }
+  .cp-modal-banner { border-radius: 20px 20px 0 0; }
+  .cp-modal-content { padding: 24px 20px; }
+  .cp-modal-title { font-size: 1.25rem; }
+  .cp-modal-price { font-size: 1.6rem; }
+  .cp-modal-price-section { flex-direction: column; align-items: flex-start; gap: 4px; }
 }
