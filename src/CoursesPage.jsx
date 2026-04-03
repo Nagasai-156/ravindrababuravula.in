@@ -779,7 +779,7 @@ const CATEGORIES = [
       {
         id: 11, tag: "GATE CS", title: "GATE CS 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "",
+        image: "/courses/gate-cs-test-series-2027.jpg",
         link: "https://courses.ravindrababuravula.in/test-series/1-gate-cs-2027-test-series?subjectId=-1",
         description: "A structured test series designed to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
@@ -798,7 +798,7 @@ const CATEGORIES = [
       {
         id: 12, tag: "GATE DA", title: "GATE DA 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "",
+        image: "/courses/gate-da-test-series-2027.jpg",
         link: "https://courses.ravindrababuravula.in/test-series/2-gate-da-2027-test-series?subjectId=-1",
         description: "A structured test series designed to help you evaluate your preparation, improve accuracy, and build confidence for GATE Data Science & AI 2027.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
