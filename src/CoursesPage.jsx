@@ -783,7 +783,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/test-series/1-gate-cs-2027-test-series?subjectId=-1",
         description: "A structured test series designed to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
-        price: "3,538", originalPrice: "4,999", discount: "30", color: "dark",
+        price: "2,999", originalPrice: "4,999", discount: "40", color: "dark",
         details: {
           overview: "This test series is created to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly. The focus is on helping you identify strengths and weak areas, improve problem-solving speed and accuracy, and build confidence for the final exam.",
           format: ["Topic-wise tests covering individual subjects", "Sectional tests for combined topics", "Full-length tests based on GATE exam pattern"],
@@ -802,7 +802,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/test-series/2-gate-da-2027-test-series?subjectId=-1",
         description: "A structured test series designed to help you evaluate your preparation, improve accuracy, and build confidence for GATE Data Science & AI 2027.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
-        price: "3,538", originalPrice: "4,999", discount: "30", color: "dark",
+        price: "2,999", originalPrice: "4,999", discount: "40", color: "dark",
         details: {
           overview: "This test series is designed to simulate the actual GATE DA exam environment, allowing you to practice under timed conditions and assess your performance regularly. The focus is on helping you identify strong and weak areas, improve accuracy and problem-solving speed, and develop confidence in handling exam-level questions.",
           format: ["Topic-wise tests covering individual subjects", "Sectional tests combining multiple topics", "Full-length mock tests based on GATE DA pattern"],
