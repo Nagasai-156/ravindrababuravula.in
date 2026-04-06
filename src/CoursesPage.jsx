@@ -869,26 +869,26 @@ const CATEGORIES = [
     key: "dsa",
     label: "DSA with Java",
     heading: "DSA with Java",
-    description: "Build strong foundations in Data Structures, Java programming, and LeetCode problem solving. Classes held between 6 AM–8 AM and 6 PM–10 PM.",
+    description: "Build strong foundations in Data Structures, Java programming, and LeetCode problem solving. Recorded classes — learn at your own pace.",
     count: 2,
     courses: [
       {
-        id: 201, tag: "SKILL BUILDER", title: "DSA with Java & LeetCode Problems",
+        id: 201, tag: "RECORDED", title: "DSA with Java & LeetCode Problems",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/dsa-java-leetcode.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/15-dsa-with-java-leet-code-problems",
-        description: "A structured program designed to build strong foundations in Data Structures, Java programming, and problem-solving through LeetCode, with a focus on practical coding skills and logical thinking.",
-        highlights: ["Data Structures & Algorithms", "Java Programming", "LeetCode Problems"],
+        description: "A structured recorded program designed to build strong foundations in Data Structures, Java programming, and problem-solving through LeetCode, with a focus on practical coding skills and logical thinking.",
+        highlights: ["Data Structures & Algorithms", "Java Programming", "LeetCode Problems", "Recorded Classes"],
         price: "6,999", originalPrice: "9,999", discount: "31", color: "dark",
         details: {
           overview: "This course is designed to help you develop problem-solving ability from basics to a confident level, using Java as the primary language. The program focuses on understanding core data structures, applying algorithms effectively, and solving problems with a clear approach. Along with concepts, you will practice through curated problems and guided coding sessions, ensuring steady improvement.",
-          format: ["Structured sessions covering concepts and implementation", "Guided problem-solving classes", "Practice assignments and coding exercises", "Continuous support through a student discussion group"],
+          format: ["Recorded sessions covering concepts and implementation", "Guided problem-solving classes", "Practice assignments and coding exercises", "Continuous support through a student discussion group", "Learn at your own pace — access anytime"],
           whatYouLearn: ["Fundamentals of Data Structures and Algorithms", "Writing clean and structured Java code", "Approach to solving coding problems", "Techniques to improve logical thinking and efficiency"],
           dsaCoverage: ["Arrays and Strings", "Linked Lists", "Stacks and Queues", "Trees and Graphs", "Recursion and Backtracking", "Searching and Sorting", "Greedy Algorithms", "Dynamic Programming", "Problem-solving patterns"],
           javaCoverage: ["Basics of Java and syntax", "Control structures and functions", "Object-Oriented Programming (OOP)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling", "Writing structured and maintainable code"],
           leetcodeCoverage: ["Topic-wise problem practice", "Easy to medium level problems", "Selected problems for concept clarity", "Focus on approach and optimization", "Improving speed and accuracy"],
           features: ["Concept + Implementation Approach — Each topic taught with coding implementation", "Guided Problem Solving — Problems solved step-by-step for clarity", "Practice After Every Session — Assignments to reinforce concepts", "Coding-Focused Learning — Emphasis on writing code, not just theory", "Progressive Difficulty — Problems increase as understanding improves"],
-          whatYouGet: ["100 hours of structured learning", "Concept explanations with coding implementation", "Practice problems and assignments", "LeetCode problem-solving sessions", "Java-based coding approach", "Access to student discussion group"],
+          whatYouGet: ["100 hours of recorded classes", "Concept explanations with coding implementation", "Practice problems and assignments", "LeetCode problem-solving sessions", "Java-based coding approach", "Access to student discussion group"],
           whoIsFor: ["Students starting with Data Structures and Algorithms", "Those who want to improve coding skills using Java", "College students preparing for placements", "Beginners looking for a structured approach to problem-solving"],
           outcome: ["Strong foundation in Data Structures and Algorithms", "Ability to solve problems on platforms like LeetCode", "Confidence in writing Java programs", "Improved logical thinking and coding approach"],
         },
@@ -1103,11 +1103,13 @@ function CourseModal({ course, onClose }) {
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
 
-          {/* Schedule */}
-          <div className="cp-modal-schedule">
-            <ClockIcon />
-            <span>Classes held between 6 AM to 8 AM and 6 PM to 10 PM as per educator availability</span>
-          </div>
+          {/* Schedule — hide for recorded courses */}
+          {course.tag !== "RECORDED" && (
+            <div className="cp-modal-schedule">
+              <ClockIcon />
+              <span>Classes held between 6 AM to 8 AM and 6 PM to 10 PM as per educator availability</span>
+            </div>
+          )}
 
           {/* If full details exist, show them */}
           {d ? (
