@@ -17,6 +17,7 @@ import AdminDashboard from "./AdminDashboard";
 import TestimonialsPage from "./TestimonialsPage";
 import MentorsPage from "./MentorsPage";
 import CoursesPage from "./CoursesPage";
+import ForumPage from "./ForumPage";
 import SEO from "./components/SEO";
 
 const ITEMS = [
@@ -146,6 +147,10 @@ const PAGE_SEO = {
     title: "Courses — GATE CS & DA 2027/2028 by Prof. Ravindrababu Ravula",
     description: "Explore all GATE courses by Prof. Ravindrababu Ravula. GATE CS Core, CS Core Plus, DA Core, DA Core Plus Mentorship for 2027 & 2028. LIVE classes, structured preparation, use coupon rbr2000 for ₹2,000 off.",
   },
+  "/forum": {
+    title: "Forum — Coming Soon",
+    description: "The RBR Community Forum is under construction. Stay tuned for discussions, doubt-solving, and peer learning with Prof. Ravindrababu Ravula's community.",
+  },
   "/mentors": {
     title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
     description: "Book 1:1 GATE CSE & DA mentorship with expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
@@ -198,6 +203,7 @@ export default function App() {
       <Route path="/testimonials" element={<Layout><PageWithSEO path="/testimonials"><TestimonialsPage /></PageWithSEO></Layout>} />
       <Route path="/courses" element={<Layout><PageWithSEO path="/courses"><CoursesPage /></PageWithSEO></Layout>} />
       <Route path="/mentors" element={<Layout><PageWithSEO path="/mentors"><MentorsPage /></PageWithSEO></Layout>} />
+      <Route path="/forum" element={<Layout><PageWithSEO path="/forum"><ForumPage /></PageWithSEO></Layout>} />
       <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>
