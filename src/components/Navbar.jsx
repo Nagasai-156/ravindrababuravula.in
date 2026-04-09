@@ -182,6 +182,12 @@ export default function Navbar() {
             </button>
             <button
               className="nav-link"
+              onClick={() => window.open("https://forum.ravindrababuravula.in", "_blank")}
+            >
+              Forum
+            </button>
+            <button
+              className="nav-link"
               onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdeMUhwbSLSC5jDTTQas6lypd_XkAAMPkuC7MEYqC7dZhrNGQ/viewform?usp=publish-editor", "_blank")}
             >
               Apply for Internship
@@ -315,6 +321,12 @@ export default function Navbar() {
             onClick={() => { navigate("/mentors"); setMobileMenuOpen(false); }}
           >
             Mentors
+          </button>
+          <button
+            className="mobile-menu-item"
+            onClick={() => { window.open("https://forum.ravindrababuravula.in", "_blank"); setMobileMenuOpen(false); }}
+          >
+            Forum
           </button>
           <button
             className="mobile-menu-item"
