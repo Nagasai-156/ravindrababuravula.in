@@ -74,6 +74,71 @@ const COURSE_STATS = [
 /* ── Course Categories with proper grouping ── */
 const CATEGORIES = [
   {
+    key: "featured",
+    label: "Featured",
+    heading: "Featured",
+    description: "Our flagship program for serious GATE aspirants who want top ranks and placement-ready coding skills.",
+    count: 1,
+    courses: [
+      {
+        id: "super100", tag: "FLAGSHIP · GATE 2027", title: "GATE CS + DA 2027 — Super 100 Batch + DSA with Java & LeetCode",
+        subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
+        image: "/courses/super100.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/29-super-100-gate-csda-2027-dsa-with-java",
+        description: "Complete Preparation + Coding Mastery + Mentorship Program. A comprehensive, high-impact program combining GATE CS & DA preparation with hands-on DSA training using Java and LeetCode.",
+        highlights: ["1200+ Hours LIVE CS & DA Classes", "200+ Hours DSA + Java + LeetCode", "1:1 Personalized Mentorship", "LIVE + Recorded Access"],
+        price: "50,000", originalPrice: "50,000", discount: "0", color: "gold",
+        details: {
+          overview: "This program integrates complete GATE CS & Data Science (DA) preparation with hands-on coding training in DSA using Java and LeetCode.\n\nIt is designed to ensure:\n• Strong theoretical foundation (GATE-oriented)\n• Practical coding skills (placement-oriented)\n• Structured preparation with continuous mentorship\n• Consistent progress through planning and evaluation\n\nThe focus is on building both:\n• Rank-oriented preparation\n• Industry-ready coding skills",
+          format: ["Fully LIVE structured classes (with recorded access)", "Dedicated DSA + LeetCode coding sessions", "Regular mentor meetings via Google Meet", "Frequent interaction sessions with Ravindrababu Ravula", "Personalized study plan for each student", "Continuous support via discussion forum", "Lecture notes provided after every class", "The program ensures discipline, flexibility, and guided learning throughout your journey"],
+          whatYouLearn: ["Deep understanding of CS + Data Science concepts", "Strong problem-solving skills for GATE and coding interviews", "Ability to solve problems on platforms like LeetCode", "Improved accuracy, speed, and exam temperament", "Personalized strategy based on your performance", "Consistent motivation, accountability, and direction"],
+          subjects: ["Programming & Data Structures", "Algorithms", "Discrete Mathematics", "Computer Organization & Architecture", "Operating Systems", "Databases", "Computer Networks", "Theory of Computation", "Compiler Design"],
+          csSyllabus: [
+            { subject: "Engineering Mathematics", topics: "Discrete Mathematics: Propositional and first order logic, sets, relations, functions, partial orders and lattices, monoids, groups, graphs (connectivity, matching, colouring), combinatorics (counting, recurrence relations, generating functions). Linear Algebra: Matrices, determinants, system of linear equations, eigenvalues and eigenvectors, LU decomposition. Calculus: Limits, continuity and differentiability, maxima and minima, mean value theorem, integration. Probability and Statistics: Random variables, uniform, normal, exponential, Poisson and binomial distributions, mean, median, mode and standard deviation, conditional probability and Bayes theorem." },
+            { subject: "Digital Logic", topics: "Boolean algebra. Combinational and sequential circuits. Minimization. Number representations and computer arithmetic (fixed and floating point)." },
+            { subject: "Computer Organization & Architecture", topics: "Machine instructions and addressing modes. ALU, data-path and control unit. Instruction pipelining, pipeline hazards. Memory hierarchy: cache, main memory and secondary storage; I/O interface (interrupt and DMA mode)." },
+            { subject: "Programming & Data Structures", topics: "Programming in C. Recursion. Arrays, stacks, queues, linked lists, trees, binary search trees, binary heaps, graphs." },
+            { subject: "Algorithms", topics: "Searching, sorting, hashing. Asymptotic worst case time and space complexity. Algorithm design techniques: greedy, dynamic programming and divide-and-conquer. Graph traversals, minimum spanning trees, shortest paths." },
+            { subject: "Theory of Computation", topics: "Regular expressions and finite automata. Context-free grammars and push-down automata. Regular and context-free languages, pumping lemma. Turing machines and undecidability." },
+            { subject: "Compiler Design", topics: "Lexical analysis, parsing, syntax-directed translation. Runtime environments. Intermediate code generation. Local optimization, data flow analyses: constant propagation, liveness analysis, common sub-expression elimination." },
+            { subject: "Operating Systems", topics: "System calls, processes, threads, inter-process communication, concurrency and synchronization. Deadlock. CPU and I/O scheduling. Memory management and virtual memory. File systems." },
+            { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing (e.g., B and B+ trees). Transactions and concurrency control." },
+            { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
+          ],
+          daSubjects: ["Probability & Statistics", "Linear Algebra", "Calculus & Optimization", "Programming, Data Structures & Algorithms", "Database Management & Warehousing", "Machine Learning", "AI"],
+          daSyllabus: [
+            { subject: "Probability and Statistics", topics: "Counting (permutation and combinations), probability axioms, sample space, events, independent events, mutually exclusive events, marginal, conditional and joint probability, Bayes Theorem, conditional expectation and variance, mean, median, mode and standard deviation, correlation and covariance, random variables, discrete random variables and probability mass functions, uniform, Bernoulli, binomial distribution, continuous random variables and probability distribution function, uniform, exponential, Poisson, normal, standard normal, t-distribution, chi-squared distributions, cumulative distribution function, conditional PDF, Central limit theorem, confidence interval, z-test, t-test, chi-squared test." },
+            { subject: "Linear Algebra", topics: "Vector space, subspaces, linear dependence and independence of vectors, matrices, projection matrix, orthogonal matrix, idempotent matrix, partition matrix and their properties, quadratic forms, systems of linear equations and solutions, Gaussian elimination, eigenvalues and eigenvectors, determinant, rank, nullity, projections, LU decomposition, singular value decomposition." },
+            { subject: "Calculus and Optimization", topics: "Functions of a single variable, limit, continuity and differentiability, Taylor series, maxima and minima, optimization involving a single variable." },
+            { subject: "Programming, Data Structures and Algorithms", topics: "Programming in Python, basic data structures: stacks, queues, linked lists, trees, hash tables; search algorithms: linear search and binary search, basic sorting algorithms: selection sort, bubble sort and insertion sort; divide and conquer: mergesort, quicksort; introduction to graph theory; basic graph algorithms: traversals and shortest path." },
+            { subject: "Database Management and Warehousing", topics: "ER-model, relational model: relational algebra, tuple calculus, SQL, integrity constraints, normal form, file organization, indexing, data types, data transformation such as normalization, discretization, sampling, compression; data warehouse modelling: schema for multidimensional data models, concept hierarchies, measures: categorization and computations." },
+            { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
+            { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
+          ],
+          dsaCoverage: ["Arrays and Strings", "Linked Lists", "Stacks and Queues", "Trees and Graphs", "Recursion and Backtracking", "Searching and Sorting", "Greedy Algorithms", "Dynamic Programming", "Problem-solving patterns"],
+          javaCoverage: ["Java fundamentals and syntax", "Control structures and functions", "Object-Oriented Programming (OOP)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling", "Writing clean and maintainable code"],
+          leetcodeCoverage: ["Topic-wise curated problems", "Easy to medium level progression", "Focus on approach and optimization", "Speed and accuracy improvement"],
+          customSections: [
+            { title: "Structured Concept Delivery", desc: "Topics are taught in a logical and progressive sequence, ensuring strong conceptual clarity across both theory and coding." },
+            { title: "Practice & Coding After Every Session", items: ["Assignments after each lecture", "Coding exercises and implementation tasks", "Guided problem-solving sessions"] },
+            { title: "GATE PYQs with Detailed Explanation", items: ["Complete Previous Year Questions coverage", "Focus on patterns, approach, and exam strategy"] },
+            { title: "High-Quality Practice Sets", items: ["Curated problems for both GATE and coding", "Designed to strengthen problem-solving ability"] },
+            { title: "Regular Evaluation", items: ["Weekly quizzes and tests", "Daily Practice Problems (DPPs)", "Full-length mock tests", "Coding progress tracking"] },
+            { title: "Revision Support", items: ["Compact revision modules", "Quick revision strategies for final phase"] },
+          ],
+          mentorship: [
+            { title: "Mentorship & Personal Guidance (Key Feature)", items: ["Regular mentor meetings on Google Meet", "Frequent live sessions with Ravindrababu Ravula", "Personalized study schedule and planning", "Continuous performance tracking and feedback", "Exclusive WhatsApp groups for peer learning and discussion"] },
+            { title: "These curated peer groups ensure", items: ["Daily discussions and doubt solving", "Coding + GATE preparation support", "Healthy competition and consistency", "Real-time updates and guidance"] },
+          ],
+          whatYouGet: ["1200+ hours of LIVE + recorded CS & DA classes", "200+ hours of DSA + Java + LeetCode training", "Complete syllabus coverage (GATE + Coding)", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Personalized schedule plan", "Regular mentorship sessions", "Exclusive peer learning groups", "Access to student discussion forum"],
+          whoIsFor: ["Serious GATE CS/DA 2027 aspirants", "Students aiming for both top ranks and placements", "College students balancing academics with preparation", "Beginners who want both theory + coding clarity", "Working professionals seeking structured and guided learning"],
+          outcome: ["Strong conceptual clarity across CS and Data Science", "Ability to solve GATE-level and coding interview problems", "Confidence in writing clean Java code", "Familiarity with LeetCode-style problem solving", "A disciplined and structured preparation approach", "Improved chances of achieving both high GATE rank and placement readiness"],
+          note: "Join this program to prepare with a complete ecosystem — concepts, coding, mentorship, and strategy — designed for aspirants who aim to excel in both GATE and placements.",
+        },
+      },
+    ],
+  },
+  {
     key: "gatecs",
     label: "GATE CS",
     heading: "GATE CS",
@@ -1103,8 +1168,8 @@ function CourseModal({ course, onClose }) {
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
 
-          {/* Schedule — hide for recorded courses */}
-          {course.tag !== "RECORDED" && (
+          {/* Schedule — hide for recorded courses and super100 */}
+          {course.tag !== "RECORDED" && course.id !== "super100" && (
             <div className="cp-modal-schedule">
               <ClockIcon />
               <span>Classes held between 6 AM to 8 AM and 6 PM to 10 PM as per educator availability</span>
@@ -1117,19 +1182,26 @@ function CourseModal({ course, onClose }) {
               {/* Course Overview */}
               <div className="cp-modal-detail-section">
                 <div className="cp-modal-section-label">Course Overview</div>
-                <p className="cp-modal-desc">{d.overview}</p>
+                <p className="cp-modal-desc" style={{ whiteSpace: "pre-line" }}>{d.overview}</p>
               </div>
 
               {/* Course Format */}
               <DetailSection title="Course Format" items={d.format} />
 
-              {/* What You Will Learn */}
-              <DetailSection title="What You Will Learn" items={d.whatYouLearn} />
+              {/* What You Will Gain / Learn */}
+              <DetailSection title={course.id === "super100" ? "What You Will Gain" : "What You Will Learn"} items={d.whatYouLearn} />
 
-              {/* Subjects Covered (chip style) */}
+              {/* Academic Coverage heading for super100 */}
+              {course.id === "super100" && (
+                <div className="cp-modal-detail-section">
+                  <div className="cp-modal-section-label">Academic Coverage</div>
+                </div>
+              )}
+
+              {/* GATE CS Subjects (chip style) */}
               {d.subjects && (
                 <div className="cp-modal-detail-section">
-                  <div className="cp-modal-section-label">Subjects Covered</div>
+                  <div className="cp-modal-section-label">GATE CS Subjects</div>
                   <div className="cp-modal-subjects-grid">
                     {d.subjects.map((s, i) => (
                       <div className="cp-modal-subject-chip" key={i}>{s}</div>
@@ -1153,8 +1225,35 @@ function CourseModal({ course, onClose }) {
                 </div>
               )}
 
-              {/* DA Detailed Syllabus */}
-              {d.syllabus && (
+              {/* Data Science & AI Subjects (chip style) + full syllabus */}
+              {d.daSubjects && (
+                <div className="cp-modal-detail-section">
+                  <div className="cp-modal-section-label">Data Science & AI</div>
+                  <div className="cp-modal-subjects-grid">
+                    {d.daSubjects.map((s, i) => (
+                      <div className="cp-modal-subject-chip" key={i}>{s}</div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* DA Detailed Syllabus — from daSyllabus for super100, else from syllabus */}
+              {d.daSyllabus && (
+                <div className="cp-modal-detail-section">
+                  <div className="cp-modal-section-label">Data Science & AI — Detailed Syllabus</div>
+                  <div className="cp-modal-syllabus">
+                    {d.daSyllabus.map((item, i) => (
+                      <div className="cp-modal-syllabus-item" key={i}>
+                        <h4 className="cp-modal-syllabus-subject">{item.subject}</h4>
+                        <p className="cp-modal-syllabus-topics">{item.topics}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* DA Detailed Syllabus (for non-super100 courses) */}
+              {d.syllabus && !d.daSyllabus && (
                 <div className="cp-modal-detail-section">
                   <div className="cp-modal-section-label">GATE DA Detailed Syllabus</div>
                   <div className="cp-modal-syllabus">
@@ -1222,16 +1321,33 @@ function CourseModal({ course, onClose }) {
               )}
 
               {/* DSA Coverage */}
-              {d.dsaCoverage && <DetailSection title="DSA Coverage" items={d.dsaCoverage} />}
+              {d.dsaCoverage && <DetailSection title={course.id === "super100" ? "DSA with Java + LeetCode — Taught by Syed Peera Saheb" : "DSA Coverage"} items={d.dsaCoverage} />}
 
               {/* Java Coverage */}
               {d.javaCoverage && <DetailSection title="Java Programming" items={d.javaCoverage} />}
 
               {/* LeetCode Coverage */}
-              {d.leetcodeCoverage && <DetailSection title="LeetCode Problem Solving" items={d.leetcodeCoverage} />}
+              {d.leetcodeCoverage && <DetailSection title={course.id === "super100" ? "LeetCode Practice" : "LeetCode Problem Solving"} items={d.leetcodeCoverage} />}
 
-              {/* Academic Features */}
-              {d.features && <DetailSection title="Course Features" items={d.features} />}
+              {/* Custom Sections (for super100) */}
+              {d.customSections && d.customSections.map((sec, i) => (
+                <div className="cp-modal-detail-section" key={i}>
+                  <div className="cp-modal-section-label">{sec.title}</div>
+                  {sec.desc && <p className="cp-modal-desc">{sec.desc}</p>}
+                  {sec.items && (
+                    <div className="cp-modal-detail-list">
+                      {sec.items.map((item, j) => (
+                        <div className="cp-modal-detail-item" key={j}>
+                          <CheckIcon /> <span>{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+
+              {/* Academic Features (for non-super100 courses) */}
+              {d.features && !d.customSections && <DetailSection title="Course Features" items={d.features} />}
 
               {/* What You Get */}
               <DetailSection title="What You Get" items={d.whatYouGet} />
@@ -1242,10 +1358,10 @@ function CourseModal({ course, onClose }) {
               {/* Learning Outcome */}
               <DetailSection title="Learning Outcome" items={d.outcome} />
 
-              {/* Note */}
+              {/* Note / Enrollment */}
               {d.note && (
                 <div className="cp-modal-note">
-                  <strong>Note:</strong> {d.note}
+                  <strong>{course.id === "super100" ? "Enrollment:" : "Note:"}</strong> {d.note}
                 </div>
               )}
             </>
@@ -1362,166 +1478,6 @@ export default function CoursesPage() {
         <div className="cp-divider" />
 
         {/* ══════════════════════════════════════════
-            FEATURED — SUPER 100 BATCH
-        ══════════════════════════════════════════ */}
-        <section className="cp-super100-section">
-          <div className="cp-super100-inner">
-            <div className="cp-super100-banner">
-              <img src="/courses/super100.jpg" alt="GATE CS + DA 2027 Super 100 Batch" />
-            </div>
-            <div className="cp-super100-badge">FLAGSHIP PROGRAM</div>
-            <h2 className="cp-super100-title">GATE CS + DA 2027 — SUPER 100 BATCH</h2>
-            <p className="cp-super100-subtitle">+ DSA WITH JAVA & LEETCODE</p>
-            <p className="cp-super100-tagline">Complete Preparation + Coding Mastery + Mentorship Program</p>
-
-            <div className="cp-super100-instructors">
-              <span>GATE Instructor: <strong>Ravindrababu Ravula</strong></span>
-              <span className="cp-super100-dot">•</span>
-              <span>DSA with Java Instructor: <strong>Syed Peera Saheb</strong></span>
-            </div>
-
-            <p className="cp-super100-desc">
-              A comprehensive, high-impact program designed for aspirants who want top GATE
-              ranks along with strong coding skills for placements, combining concept mastery,
-              problem-solving, and personalized mentorship.
-            </p>
-
-            <div className="cp-super100-stats">
-              <div className="cp-super100-stat">
-                <div className="cp-super100-stat-val">1200+</div>
-                <div className="cp-super100-stat-lbl">Hours LIVE CS & DA Classes</div>
-              </div>
-              <div className="cp-super100-stat">
-                <div className="cp-super100-stat-val">200+</div>
-                <div className="cp-super100-stat-lbl">Hours DSA + Java + LeetCode</div>
-              </div>
-              <div className="cp-super100-stat">
-                <div className="cp-super100-stat-val">1:1</div>
-                <div className="cp-super100-stat-lbl">Personalized Mentorship</div>
-              </div>
-              <div className="cp-super100-stat">
-                <div className="cp-super100-stat-val">LIVE</div>
-                <div className="cp-super100-stat-lbl">+ Recorded Access</div>
-              </div>
-            </div>
-
-            <div className="cp-super100-features">
-              <div className="cp-super100-col">
-                <h4>GATE CS & DA Coverage</h4>
-                <ul>
-                  <li><CheckIcon /> Programming & Data Structures</li>
-                  <li><CheckIcon /> Algorithms</li>
-                  <li><CheckIcon /> Discrete Mathematics</li>
-                  <li><CheckIcon /> OS, DBMS, CN, COA, TOC, CD</li>
-                  <li><CheckIcon /> Linear Algebra, Probability & Statistics</li>
-                  <li><CheckIcon /> Machine Learning & AI</li>
-                </ul>
-              </div>
-              <div className="cp-super100-col">
-                <h4>DSA + Java + LeetCode</h4>
-                <ul>
-                  <li><CheckIcon /> Arrays, Strings, Linked Lists</li>
-                  <li><CheckIcon /> Trees, Graphs, Stacks, Queues</li>
-                  <li><CheckIcon /> Dynamic Programming & Greedy</li>
-                  <li><CheckIcon /> Java OOP & Clean Code</li>
-                  <li><CheckIcon /> LeetCode Problem Solving</li>
-                  <li><CheckIcon /> Speed & Accuracy Training</li>
-                </ul>
-              </div>
-              <div className="cp-super100-col">
-                <h4>Mentorship & Support</h4>
-                <ul>
-                  <li><CheckIcon /> Regular Mentor Meetings (Google Meet)</li>
-                  <li><CheckIcon /> Frequent Sessions with RBR Sir</li>
-                  <li><CheckIcon /> Personalized Study Plan</li>
-                  <li><CheckIcon /> Weekly Tests & DPPs</li>
-                  <li><CheckIcon /> Exclusive WhatsApp Groups</li>
-                  <li><CheckIcon /> Full-length Mock Tests</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="cp-super100-what-you-get">
-              <h4>What You Get</h4>
-              <div className="cp-super100-get-grid">
-                {[
-                  "1200+ hours LIVE + recorded CS & DA classes",
-                  "200+ hours DSA + Java + LeetCode training",
-                  "Complete syllabus coverage (GATE + Coding)",
-                  "Weekly tests & structured practice",
-                  "Full-length test series",
-                  "Weekly live problem-solving sessions",
-                  "Complete PYQ coverage",
-                  "Personalized schedule plan",
-                  "Regular mentorship sessions",
-                  "Exclusive peer learning groups",
-                  "Discussion forum access",
-                  "Compact revision modules",
-                ].map((item, i) => (
-                  <div className="cp-super100-get-item" key={i}>
-                    <CheckIcon /> <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="cp-super100-price-row">
-              <div className="cp-super100-price">₹50,000</div>
-              <div className="cp-super100-gst">+ 18% GST</div>
-            </div>
-
-            <button
-              className="cp-super100-cta"
-              onClick={() => setSelectedCourse({
-                id: "super100",
-                tag: "FLAGSHIP · GATE 2027",
-                title: "GATE CS + DA 2027 — SUPER 100 BATCH + DSA WITH JAVA & LEETCODE",
-                subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-                image: "/courses/super100.jpg",
-                link: "https://courses.ravindrababuravula.in",
-                description: "A comprehensive, high-impact program designed for aspirants who want top GATE ranks along with strong coding skills for placements, combining concept mastery, problem-solving, and personalized mentorship.",
-                highlights: ["Complete CS + DA + DSA", "1:1 Mentorship", "1400+ Hours", "LIVE + Recorded"],
-                price: "50,000", originalPrice: "50,000", discount: "0", color: "gold",
-                details: {
-                  overview: "This program integrates complete GATE CS & Data Science (DA) preparation with hands-on coding training in DSA using Java and LeetCode. It is designed to ensure strong theoretical foundation (GATE-oriented), practical coding skills (placement-oriented), structured preparation with continuous mentorship, and consistent progress through planning and evaluation.",
-                  format: ["Fully LIVE structured classes (with recorded access)", "Dedicated DSA + LeetCode coding sessions", "Regular mentor meetings via Google Meet", "Frequent interaction sessions with Ravindrababu Ravula", "Personalized study plan for each student", "Continuous support via discussion forum", "Lecture notes provided after every class"],
-                  whatYouLearn: ["Deep understanding of CS + Data Science concepts", "Strong problem-solving skills for GATE and coding interviews", "Ability to solve problems on platforms like LeetCode", "Improved accuracy, speed, and exam temperament", "Personalized strategy based on your performance", "Consistent motivation, accountability, and direction"],
-                  subjects: ["Programming & Data Structures", "Algorithms", "Discrete Mathematics", "Computer Organization & Architecture", "Operating Systems", "Databases", "Computer Networks", "Theory of Computation", "Compiler Design", "Linear Algebra", "Probability & Statistics", "Machine Learning", "Artificial Intelligence"],
-                  csSyllabus: [
-                    { subject: "Programming & Data Structures", topics: "Programming in C. Recursion. Arrays, stacks, queues, linked lists, trees, binary search trees, binary heaps, graphs." },
-                    { subject: "Algorithms", topics: "Searching, sorting, hashing. Asymptotic worst case time and space complexity. Algorithm design techniques: greedy, dynamic programming and divide-and-conquer. Graph traversals, minimum spanning trees, shortest paths." },
-                    { subject: "Discrete Mathematics", topics: "Propositional and first order logic, sets, relations, functions, partial orders and lattices, monoids, groups, graphs, combinatorics, counting, recurrence relations, generating functions." },
-                    { subject: "Computer Organization & Architecture", topics: "Machine instructions and addressing modes. ALU, data-path and control unit. Instruction pipelining, pipeline hazards. Memory hierarchy: cache, main memory and secondary storage; I/O interface." },
-                    { subject: "Operating Systems", topics: "System calls, processes, threads, inter-process communication, concurrency and synchronization. Deadlock. CPU and I/O scheduling. Memory management and virtual memory. File systems." },
-                    { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing. Transactions and concurrency control." },
-                    { subject: "Computer Networks", topics: "OSI and TCP/IP Protocol Stacks; packet, circuit and virtual circuit-switching; Data link layer; Routing protocols; IP addressing, IPv4; Transport layer: UDP, TCP; Application layer: DNS, SMTP, HTTP, FTP." },
-                    { subject: "Theory of Computation", topics: "Regular expressions and finite automata. Context-free grammars and push-down automata. Regular and context-free languages, pumping lemma. Turing machines and undecidability." },
-                    { subject: "Compiler Design", topics: "Lexical analysis, parsing, syntax-directed translation. Runtime environments. Intermediate code generation. Local optimization, data flow analyses." },
-                  ],
-                  syllabus: [
-                    { subject: "Linear Algebra", topics: "Vector space, subspaces, linear dependence and independence, matrices, eigenvalues and eigenvectors, determinant, rank, nullity, LU decomposition, singular value decomposition." },
-                    { subject: "Probability & Statistics", topics: "Random variables, distributions (uniform, normal, exponential, Poisson, binomial), mean, median, mode, standard deviation, conditional probability, Bayes theorem, Central limit theorem, hypothesis testing." },
-                    { subject: "Machine Learning", topics: "Supervised Learning: regression, classification, linear regression, logistic regression, KNN, naive Bayes, SVM, decision trees, neural networks. Unsupervised Learning: clustering, k-means, hierarchical clustering, PCA." },
-                    { subject: "Artificial Intelligence", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty." },
-                  ],
-                  dsaCoverage: ["Arrays and Strings", "Linked Lists", "Stacks and Queues", "Trees and Graphs", "Recursion and Backtracking", "Searching and Sorting", "Greedy Algorithms", "Dynamic Programming", "Problem-solving patterns"],
-                  javaCoverage: ["Java fundamentals and syntax", "Control structures and functions", "Object-Oriented Programming (OOP)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling", "Writing clean and maintainable code"],
-                  leetcodeCoverage: ["Topic-wise curated problems", "Easy to medium level progression", "Focus on approach and optimization", "Speed and accuracy improvement"],
-                  features: ["Structured Concept Delivery — Topics in logical and progressive sequence", "Practice & Coding After Every Session", "GATE PYQs with Detailed Explanation", "High-Quality Practice Sets for GATE and coding", "Weekly quizzes, tests and DPPs", "Full-length mock tests", "Coding progress tracking", "Compact revision modules"],
-                  whatYouGet: ["1200+ hours of LIVE + recorded CS & DA classes", "200+ hours of DSA + Java + LeetCode training", "Complete syllabus coverage (GATE + Coding)", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Personalized schedule plan", "Regular mentorship sessions", "Exclusive peer learning groups", "Access to student discussion forum"],
-                  whoIsFor: ["Serious GATE CS/DA 2027 aspirants", "Students aiming for both top ranks and placements", "College students balancing academics with preparation", "Beginners who want both theory + coding clarity", "Working professionals seeking structured and guided learning"],
-                  outcome: ["Strong conceptual clarity across CS and Data Science", "Ability to solve GATE-level and coding interview problems", "Confidence in writing clean Java code", "Familiarity with LeetCode-style problem solving", "A disciplined and structured preparation approach", "Improved chances of achieving both high GATE rank and placement readiness"],
-                },
-              })}
-            >
-              View Full Details <ArrowIcon />
-            </button>
-          </div>
-        </section>
-
-        <div className="cp-divider" />
-
-        {/* ══════════════════════════════════════════
             COURSES — FILTER BAR
         ══════════════════════════════════════════ */}
         <section className="cp-courses-section" id="courses-grid">
@@ -1562,12 +1518,23 @@ export default function CoursesPage() {
                 </div>
 
                 {/* Course cards grid */}
-                <div className="cp-courses-grid">
+                <div className={`cp-courses-grid ${cat.key === "featured" ? "cp-featured-grid" : ""}`}>
                   {cat.courses.map((course) => (
                     <div
                       key={course.id}
                       className={`cp-course-card ${course.color === "gold" ? "cp-card-gold" : course.color === "accent" ? "cp-card-accent" : ""}`}
                     >
+                      {/* Scrolling marquee for featured */}
+                      {course.color === "gold" && (
+                        <div className="cp-featured-marquee">
+                          <div className="cp-featured-marquee-track">
+                            {Array.from({ length: 10 }).map((_, i) => (
+                              <span key={i}>FEATURED COURSE &nbsp;★&nbsp; FLAGSHIP PROGRAM &nbsp;★&nbsp; </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
                       {/* Banner Image */}
                       {course.image && (
                         <div className="cp-card-banner">
@@ -1595,8 +1562,12 @@ export default function CoursesPage() {
 
                         <div className="cp-card-price-row">
                           <div className="cp-card-price">₹{course.price}</div>
-                          <div className="cp-card-original-price">₹{course.originalPrice}</div>
-                          <div className="cp-card-discount">{course.discount}% off</div>
+                          {course.discount !== "0" && (
+                            <>
+                              <div className="cp-card-original-price">₹{course.originalPrice}</div>
+                              <div className="cp-card-discount">{course.discount}% off</div>
+                            </>
+                          )}
                         </div>
                         <div className="cp-card-gst">+ 18% GST</div>
 
