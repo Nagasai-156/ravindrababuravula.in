@@ -1663,6 +1663,20 @@
   border-radius: 0 0 2px 2px;
 }
 
+/* Banner image */
+.cp-super100-banner {
+  margin: -44px -44px 28px;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+}
+
+.cp-super100-banner img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 340px;
+}
+
 .cp-super100-badge {
   display: inline-block;
   background: #ffb703;
@@ -1909,6 +1923,13 @@
   .cp-super100-inner {
     padding: 28px 20px 24px;
     border-radius: 16px;
+  }
+  .cp-super100-banner {
+    margin: -28px -20px 20px;
+    border-radius: 16px 16px 0 0;
+  }
+  .cp-super100-banner img {
+    max-height: 200px;
   }
   .cp-super100-inner::before {
     left: 20px;

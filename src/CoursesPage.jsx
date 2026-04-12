@@ -1366,6 +1366,9 @@ export default function CoursesPage() {
         ══════════════════════════════════════════ */}
         <section className="cp-super100-section">
           <div className="cp-super100-inner">
+            <div className="cp-super100-banner">
+              <img src="/courses/super100.jpg" alt="GATE CS + DA 2027 Super 100 Batch" />
+            </div>
             <div className="cp-super100-badge">FLAGSHIP PROGRAM</div>
             <h2 className="cp-super100-title">GATE CS + DA 2027 — SUPER 100 BATCH</h2>
             <p className="cp-super100-subtitle">+ DSA WITH JAVA & LEETCODE</p>
@@ -1474,7 +1477,7 @@ export default function CoursesPage() {
                 tag: "FLAGSHIP · GATE 2027",
                 title: "GATE CS + DA 2027 — SUPER 100 BATCH + DSA WITH JAVA & LEETCODE",
                 subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-                image: "/courses/gate-cs-core-plus-2027.jpg",
+                image: "/courses/super100.jpg",
                 link: "https://courses.ravindrababuravula.in",
                 description: "A comprehensive, high-impact program designed for aspirants who want top GATE ranks along with strong coding skills for placements, combining concept mastery, problem-solving, and personalized mentorship.",
                 highlights: ["Complete CS + DA + DSA", "1:1 Mentorship", "1400+ Hours", "LIVE + Recorded"],
