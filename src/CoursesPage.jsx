@@ -1362,6 +1362,163 @@ export default function CoursesPage() {
         <div className="cp-divider" />
 
         {/* ══════════════════════════════════════════
+            FEATURED — SUPER 100 BATCH
+        ══════════════════════════════════════════ */}
+        <section className="cp-super100-section">
+          <div className="cp-super100-inner">
+            <div className="cp-super100-badge">FLAGSHIP PROGRAM</div>
+            <h2 className="cp-super100-title">GATE CS + DA 2027 — SUPER 100 BATCH</h2>
+            <p className="cp-super100-subtitle">+ DSA WITH JAVA & LEETCODE</p>
+            <p className="cp-super100-tagline">Complete Preparation + Coding Mastery + Mentorship Program</p>
+
+            <div className="cp-super100-instructors">
+              <span>GATE Instructor: <strong>Ravindrababu Ravula</strong></span>
+              <span className="cp-super100-dot">•</span>
+              <span>DSA with Java Instructor: <strong>Syed Peera Saheb</strong></span>
+            </div>
+
+            <p className="cp-super100-desc">
+              A comprehensive, high-impact program designed for aspirants who want top GATE
+              ranks along with strong coding skills for placements, combining concept mastery,
+              problem-solving, and personalized mentorship.
+            </p>
+
+            <div className="cp-super100-stats">
+              <div className="cp-super100-stat">
+                <div className="cp-super100-stat-val">1200+</div>
+                <div className="cp-super100-stat-lbl">Hours LIVE CS & DA Classes</div>
+              </div>
+              <div className="cp-super100-stat">
+                <div className="cp-super100-stat-val">200+</div>
+                <div className="cp-super100-stat-lbl">Hours DSA + Java + LeetCode</div>
+              </div>
+              <div className="cp-super100-stat">
+                <div className="cp-super100-stat-val">1:1</div>
+                <div className="cp-super100-stat-lbl">Personalized Mentorship</div>
+              </div>
+              <div className="cp-super100-stat">
+                <div className="cp-super100-stat-val">LIVE</div>
+                <div className="cp-super100-stat-lbl">+ Recorded Access</div>
+              </div>
+            </div>
+
+            <div className="cp-super100-features">
+              <div className="cp-super100-col">
+                <h4>GATE CS & DA Coverage</h4>
+                <ul>
+                  <li><CheckIcon /> Programming & Data Structures</li>
+                  <li><CheckIcon /> Algorithms</li>
+                  <li><CheckIcon /> Discrete Mathematics</li>
+                  <li><CheckIcon /> OS, DBMS, CN, COA, TOC, CD</li>
+                  <li><CheckIcon /> Linear Algebra, Probability & Statistics</li>
+                  <li><CheckIcon /> Machine Learning & AI</li>
+                </ul>
+              </div>
+              <div className="cp-super100-col">
+                <h4>DSA + Java + LeetCode</h4>
+                <ul>
+                  <li><CheckIcon /> Arrays, Strings, Linked Lists</li>
+                  <li><CheckIcon /> Trees, Graphs, Stacks, Queues</li>
+                  <li><CheckIcon /> Dynamic Programming & Greedy</li>
+                  <li><CheckIcon /> Java OOP & Clean Code</li>
+                  <li><CheckIcon /> LeetCode Problem Solving</li>
+                  <li><CheckIcon /> Speed & Accuracy Training</li>
+                </ul>
+              </div>
+              <div className="cp-super100-col">
+                <h4>Mentorship & Support</h4>
+                <ul>
+                  <li><CheckIcon /> Regular Mentor Meetings (Google Meet)</li>
+                  <li><CheckIcon /> Frequent Sessions with RBR Sir</li>
+                  <li><CheckIcon /> Personalized Study Plan</li>
+                  <li><CheckIcon /> Weekly Tests & DPPs</li>
+                  <li><CheckIcon /> Exclusive WhatsApp Groups</li>
+                  <li><CheckIcon /> Full-length Mock Tests</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="cp-super100-what-you-get">
+              <h4>What You Get</h4>
+              <div className="cp-super100-get-grid">
+                {[
+                  "1200+ hours LIVE + recorded CS & DA classes",
+                  "200+ hours DSA + Java + LeetCode training",
+                  "Complete syllabus coverage (GATE + Coding)",
+                  "Weekly tests & structured practice",
+                  "Full-length test series",
+                  "Weekly live problem-solving sessions",
+                  "Complete PYQ coverage",
+                  "Personalized schedule plan",
+                  "Regular mentorship sessions",
+                  "Exclusive peer learning groups",
+                  "Discussion forum access",
+                  "Compact revision modules",
+                ].map((item, i) => (
+                  <div className="cp-super100-get-item" key={i}>
+                    <CheckIcon /> <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="cp-super100-price-row">
+              <div className="cp-super100-price">₹50,000</div>
+              <div className="cp-super100-gst">+ 18% GST</div>
+            </div>
+
+            <button
+              className="cp-super100-cta"
+              onClick={() => setSelectedCourse({
+                id: "super100",
+                tag: "FLAGSHIP · GATE 2027",
+                title: "GATE CS + DA 2027 — SUPER 100 BATCH + DSA WITH JAVA & LEETCODE",
+                subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
+                image: "/courses/gate-cs-core-plus-2027.jpg",
+                link: "https://courses.ravindrababuravula.in",
+                description: "A comprehensive, high-impact program designed for aspirants who want top GATE ranks along with strong coding skills for placements, combining concept mastery, problem-solving, and personalized mentorship.",
+                highlights: ["Complete CS + DA + DSA", "1:1 Mentorship", "1400+ Hours", "LIVE + Recorded"],
+                price: "50,000", originalPrice: "50,000", discount: "0", color: "gold",
+                details: {
+                  overview: "This program integrates complete GATE CS & Data Science (DA) preparation with hands-on coding training in DSA using Java and LeetCode. It is designed to ensure strong theoretical foundation (GATE-oriented), practical coding skills (placement-oriented), structured preparation with continuous mentorship, and consistent progress through planning and evaluation.",
+                  format: ["Fully LIVE structured classes (with recorded access)", "Dedicated DSA + LeetCode coding sessions", "Regular mentor meetings via Google Meet", "Frequent interaction sessions with Ravindrababu Ravula", "Personalized study plan for each student", "Continuous support via discussion forum", "Lecture notes provided after every class"],
+                  whatYouLearn: ["Deep understanding of CS + Data Science concepts", "Strong problem-solving skills for GATE and coding interviews", "Ability to solve problems on platforms like LeetCode", "Improved accuracy, speed, and exam temperament", "Personalized strategy based on your performance", "Consistent motivation, accountability, and direction"],
+                  subjects: ["Programming & Data Structures", "Algorithms", "Discrete Mathematics", "Computer Organization & Architecture", "Operating Systems", "Databases", "Computer Networks", "Theory of Computation", "Compiler Design", "Linear Algebra", "Probability & Statistics", "Machine Learning", "Artificial Intelligence"],
+                  csSyllabus: [
+                    { subject: "Programming & Data Structures", topics: "Programming in C. Recursion. Arrays, stacks, queues, linked lists, trees, binary search trees, binary heaps, graphs." },
+                    { subject: "Algorithms", topics: "Searching, sorting, hashing. Asymptotic worst case time and space complexity. Algorithm design techniques: greedy, dynamic programming and divide-and-conquer. Graph traversals, minimum spanning trees, shortest paths." },
+                    { subject: "Discrete Mathematics", topics: "Propositional and first order logic, sets, relations, functions, partial orders and lattices, monoids, groups, graphs, combinatorics, counting, recurrence relations, generating functions." },
+                    { subject: "Computer Organization & Architecture", topics: "Machine instructions and addressing modes. ALU, data-path and control unit. Instruction pipelining, pipeline hazards. Memory hierarchy: cache, main memory and secondary storage; I/O interface." },
+                    { subject: "Operating Systems", topics: "System calls, processes, threads, inter-process communication, concurrency and synchronization. Deadlock. CPU and I/O scheduling. Memory management and virtual memory. File systems." },
+                    { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing. Transactions and concurrency control." },
+                    { subject: "Computer Networks", topics: "OSI and TCP/IP Protocol Stacks; packet, circuit and virtual circuit-switching; Data link layer; Routing protocols; IP addressing, IPv4; Transport layer: UDP, TCP; Application layer: DNS, SMTP, HTTP, FTP." },
+                    { subject: "Theory of Computation", topics: "Regular expressions and finite automata. Context-free grammars and push-down automata. Regular and context-free languages, pumping lemma. Turing machines and undecidability." },
+                    { subject: "Compiler Design", topics: "Lexical analysis, parsing, syntax-directed translation. Runtime environments. Intermediate code generation. Local optimization, data flow analyses." },
+                  ],
+                  syllabus: [
+                    { subject: "Linear Algebra", topics: "Vector space, subspaces, linear dependence and independence, matrices, eigenvalues and eigenvectors, determinant, rank, nullity, LU decomposition, singular value decomposition." },
+                    { subject: "Probability & Statistics", topics: "Random variables, distributions (uniform, normal, exponential, Poisson, binomial), mean, median, mode, standard deviation, conditional probability, Bayes theorem, Central limit theorem, hypothesis testing." },
+                    { subject: "Machine Learning", topics: "Supervised Learning: regression, classification, linear regression, logistic regression, KNN, naive Bayes, SVM, decision trees, neural networks. Unsupervised Learning: clustering, k-means, hierarchical clustering, PCA." },
+                    { subject: "Artificial Intelligence", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty." },
+                  ],
+                  dsaCoverage: ["Arrays and Strings", "Linked Lists", "Stacks and Queues", "Trees and Graphs", "Recursion and Backtracking", "Searching and Sorting", "Greedy Algorithms", "Dynamic Programming", "Problem-solving patterns"],
+                  javaCoverage: ["Java fundamentals and syntax", "Control structures and functions", "Object-Oriented Programming (OOP)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling", "Writing clean and maintainable code"],
+                  leetcodeCoverage: ["Topic-wise curated problems", "Easy to medium level progression", "Focus on approach and optimization", "Speed and accuracy improvement"],
+                  features: ["Structured Concept Delivery — Topics in logical and progressive sequence", "Practice & Coding After Every Session", "GATE PYQs with Detailed Explanation", "High-Quality Practice Sets for GATE and coding", "Weekly quizzes, tests and DPPs", "Full-length mock tests", "Coding progress tracking", "Compact revision modules"],
+                  whatYouGet: ["1200+ hours of LIVE + recorded CS & DA classes", "200+ hours of DSA + Java + LeetCode training", "Complete syllabus coverage (GATE + Coding)", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Personalized schedule plan", "Regular mentorship sessions", "Exclusive peer learning groups", "Access to student discussion forum"],
+                  whoIsFor: ["Serious GATE CS/DA 2027 aspirants", "Students aiming for both top ranks and placements", "College students balancing academics with preparation", "Beginners who want both theory + coding clarity", "Working professionals seeking structured and guided learning"],
+                  outcome: ["Strong conceptual clarity across CS and Data Science", "Ability to solve GATE-level and coding interview problems", "Confidence in writing clean Java code", "Familiarity with LeetCode-style problem solving", "A disciplined and structured preparation approach", "Improved chances of achieving both high GATE rank and placement readiness"],
+                },
+              })}
+            >
+              View Full Details <ArrowIcon />
+            </button>
+          </div>
+        </section>
+
+        <div className="cp-divider" />
+
+        {/* ══════════════════════════════════════════
             COURSES — FILTER BAR
         ══════════════════════════════════════════ */}
         <section className="cp-courses-section" id="courses-grid">
