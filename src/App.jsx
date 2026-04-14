@@ -18,6 +18,9 @@ import TestimonialsPage from "./TestimonialsPage";
 import MentorsPage from "./MentorsPage";
 import CoursesPage from "./CoursesPage";
 import ForumPage from "./ForumPage";
+import BlogListPage from "./BlogListPage";
+import BlogDetailPage from "./BlogDetailPage";
+import BlogAdminPage from "./BlogAdminPage";
 import SEO from "./components/SEO";
 
 const ITEMS = [
@@ -151,6 +154,10 @@ const PAGE_SEO = {
     title: "Forum — Coming Soon",
     description: "The RBR Community Forum is under construction. Stay tuned for discussions, doubt-solving, and peer learning with Prof. Ravindrababu Ravula's community.",
   },
+  "/blog": {
+    title: "Blog — GATE CS, AI/ML & EdTech Insights | Prof. Ravindrababu Ravula",
+    description: "Read articles on GATE preparation, CS fundamentals, AI/ML, career guidance, and EdTech by Prof. Ravindrababu Ravula — India's pioneer educator.",
+  },
   "/mentors": {
     title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
     description: "Book 1:1 GATE CSE & DA mentorship with expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
@@ -204,6 +211,9 @@ export default function App() {
       <Route path="/courses" element={<Layout><PageWithSEO path="/courses"><CoursesPage /></PageWithSEO></Layout>} />
       <Route path="/mentors" element={<Layout><PageWithSEO path="/mentors"><MentorsPage /></PageWithSEO></Layout>} />
       <Route path="/forum" element={<Layout><PageWithSEO path="/forum"><ForumPage /></PageWithSEO></Layout>} />
+      <Route path="/blog" element={<Layout><PageWithSEO path="/blog"><BlogListPage /></PageWithSEO></Layout>} />
+      <Route path="/blog/:slug" element={<Layout><BlogDetailPage /></Layout>} />
+      <Route path="/admin/blog" element={<BlogAdminPage />} />
       <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />
     </Routes>

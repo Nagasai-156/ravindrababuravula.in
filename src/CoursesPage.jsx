@@ -1504,7 +1504,7 @@ export default function CoursesPage() {
 
             {/* ── Categorized Course Groups ── */}
             {visibleCategories.map((cat, catIdx) => (
-              <div className="cp-category-group" key={cat.key}>
+              <div className={`cp-category-group ${cat.key === "featured" ? "cp-category-featured" : ""}`} key={cat.key}>
                 {/* Category heading */}
                 <div className="cp-category-heading">
                   <div className="cp-category-heading-left">
@@ -1524,17 +1524,20 @@ export default function CoursesPage() {
                       key={course.id}
                       className={`cp-course-card ${course.color === "gold" ? "cp-card-gold" : course.color === "accent" ? "cp-card-accent" : ""}`}
                     >
-                      {/* Scrolling marquee for featured */}
+                      {/* Diagonal marquee inside gold card */}
                       {course.color === "gold" && (
-                        <div className="cp-featured-marquee">
-                          <div className="cp-featured-marquee-track">
-                            {Array.from({ length: 10 }).map((_, i) => (
-                              <span key={i}>FEATURED COURSE &nbsp;★&nbsp; FLAGSHIP PROGRAM &nbsp;★&nbsp; </span>
+                        <div className="cp-gold-marquee">
+                          <div className="cp-gold-marquee-track">
+                            {Array.from({ length: 6 }).map((_, row) => (
+                              <div className="cp-gold-marquee-row" key={row}>
+                                {Array.from({ length: 8 }).map((_, i) => (
+                                  <span key={i}>FEATURED COURSE ★ FLAGSHIP PROGRAM ★ SUPER 100 BATCH ★ GATE CS + DA 2027 ★ </span>
+                                ))}
+                              </div>
                             ))}
                           </div>
                         </div>
                       )}
-
                       {/* Banner Image */}
                       {course.image && (
                         <div className="cp-card-banner">

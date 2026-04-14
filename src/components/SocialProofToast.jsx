@@ -20,8 +20,8 @@ export default function SocialProofToast() {
     // First popup after 10 seconds
     const firstTimer = setTimeout(showNext, 10000);
 
-    // Then every 20-30 seconds
-    const interval = setInterval(showNext, 20000 + Math.random() * 10000);
+    // Then every 50-70 seconds
+    const interval = setInterval(showNext, 50000 + Math.random() * 20000);
 
     return () => {
       clearTimeout(firstTimer);

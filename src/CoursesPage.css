@@ -552,47 +552,27 @@
 
 /* Gold card variant */
 .cp-card-gold {
-  background: #ffb703;
-  border-color: #ffb703;
+  background: linear-gradient(165deg, #1c1500 0%, #151515 50%);
+  border-color: rgba(255,183,3,0.35);
 }
 
 .cp-card-gold:hover {
-  border-color: #ffc633;
-  box-shadow: 0 12px 40px rgba(255,183,3,0.3);
+  border-color: rgba(255,183,3,0.6);
+  box-shadow: 0 12px 40px rgba(255,183,3,0.15);
 }
 
 .cp-card-gold .cp-card-tag {
-  background: rgba(0,0,0,0.15);
-  color: #111;
-}
-
-.cp-card-gold .cp-card-title {
-  color: #111;
-}
-
-.cp-card-gold .cp-card-subtitle {
-  color: #333;
-}
-
-.cp-card-gold .cp-card-desc {
-  color: #444;
-}
-
-.cp-card-gold .cp-card-highlight {
-  color: #222;
-}
-
-.cp-card-gold .cp-card-highlight svg {
-  color: #111;
-}
-
-.cp-card-gold .cp-card-cta {
-  background: #111;
+  background: rgba(255,183,3,0.15);
   color: #ffb703;
 }
 
+.cp-card-gold .cp-card-cta {
+  background: #ffb703;
+  color: #111;
+}
+
 .cp-card-gold .cp-card-cta:hover {
-  background: #000;
+  background: #ffc633;
 }
 
 /* Accent card variant */
@@ -706,11 +686,8 @@
 }
 
 /* Gold card price overrides */
-.cp-card-gold .cp-card-price { color: #111; }
-.cp-card-gold .cp-card-original-price { color: #666; }
-.cp-card-gold .cp-card-discount { background: rgba(0,0,0,0.1); color: #116329; }
-.cp-card-gold .cp-card-gst { color: #666; }
-.cp-card-gold .cp-card-price-row { border-top-color: rgba(0,0,0,0.1); }
+.cp-card-gold .cp-card-price { color: #ffb703; }
+.cp-card-gold .cp-card-price-row { border-top-color: rgba(255,183,3,0.12); }
 
 .cp-card-cta {
   display: flex;
@@ -1635,64 +1612,70 @@
 }
 
 /* ═══════════════════════════════════════════════════════════
-   FEATURED GRID — Centered single card
+   FEATURED CATEGORY
 ═══════════════════════════════════════════════════════════ */
 .cp-featured-grid {
   grid-template-columns: 1fr !important;
-  max-width: 480px;
+  max-width: 560px;
   margin: 0 auto;
 }
 
-/* ─── Gold Card ─── */
-.cp-card-gold {
-  border: 1.5px solid rgba(255,183,3,0.3) !important;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ─── Scrolling Marquee — diagonal band ─── */
-.cp-featured-marquee {
+/* ─── Diagonal Marquee inside Gold Card ─── */
+.cp-gold-marquee {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  overflow: hidden;
   z-index: 1;
+  overflow: hidden;
+  border-radius: 24px;
 }
 
-.cp-featured-marquee-track {
+.cp-gold-marquee-track {
   position: absolute;
-  top: 38%;
-  left: -20%;
-  width: 140%;
-  background: rgba(255,183,3,0.12);
-  transform: rotate(-15deg);
-  padding: 10px 0;
+  top: 0;
+  left: -100%;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: rotate(-18deg) translateY(-10%);
+  transform-origin: center center;
+}
+
+.cp-gold-marquee-row {
   display: flex;
   white-space: nowrap;
-  animation: marqueeScroll 15s linear infinite;
-  font-family: 'Unbounded', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: rgba(255,183,3,0.15);
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  animation: goldMarqueeText 28s linear infinite;
+  padding: 6px 0;
 }
 
-.cp-featured-marquee-track span {
+.cp-gold-marquee-row:nth-child(even) {
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+.cp-gold-marquee-row span {
   flex-shrink: 0;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255,183,3,0.18);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  padding-right: 40px;
 }
 
-@keyframes marqueeScroll {
-  0% { transform: rotate(-15deg) translateX(0); }
-  100% { transform: rotate(-15deg) translateX(-50%); }
-}
-
-/* Ensure card content stays above marquee */
 .cp-card-gold .cp-card-banner,
 .cp-card-gold .cp-card-body {
   position: relative;
   z-index: 2;
+}
+
+@keyframes goldMarqueeText {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
