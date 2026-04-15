@@ -183,8 +183,8 @@ export default function Navbar() {
               Mentors
             </button>
             <button
-              className="nav-link"
-              onClick={() => window.open("https://forum.ravindrababuravula.in", "_blank")}
+              className={`nav-link ${location.pathname === "/forum" ? "active" : ""}`}
+              onClick={() => navigate("/forum")}
             >
               Forum
             </button>
@@ -331,8 +331,8 @@ export default function Navbar() {
             Mentors
           </button>
           <button
-            className="mobile-menu-item"
-            onClick={() => { window.open("https://forum.ravindrababuravula.in", "_blank"); setMobileMenuOpen(false); }}
+            className={`mobile-menu-item ${location.pathname === "/forum" ? "active" : ""}`}
+            onClick={() => { navigate("/forum"); setMobileMenuOpen(false); }}
           >
             Forum
           </button>
