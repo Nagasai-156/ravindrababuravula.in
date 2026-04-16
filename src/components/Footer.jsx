@@ -150,6 +150,8 @@ export default function Footer() {
         <div className="footer-bottom-inner">
           <p>&copy; 2026 Prof. Ravindrababu Ravula. All rights reserved.</p>
           <div className="footer-bottom-links">
+            <a href="/refund-policy">Refund Policy</a>
+            <span className="footer-dot"></span>
             <a href="#">Privacy Policy</a>
             <span className="footer-dot"></span>
             <a href="#">Terms of Service</a>

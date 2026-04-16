@@ -21,6 +21,7 @@ import ForumPage from "./ForumPage";
 import BlogListPage from "./BlogListPage";
 import BlogDetailPage from "./BlogDetailPage";
 import BlogAdminPage from "./BlogAdminPage";
+import RefundPolicyPage from "./RefundPolicyPage";
 import SEO from "./components/SEO";
 
 const ITEMS = [
@@ -158,6 +159,10 @@ const PAGE_SEO = {
     title: "Blog — GATE CS, AI/ML & EdTech Insights | Prof. Ravindrababu Ravula",
     description: "Read articles on GATE preparation, CS fundamentals, AI/ML, career guidance, and EdTech by Prof. Ravindrababu Ravula — India's pioneer educator.",
   },
+  "/refund-policy": {
+    title: "Refund Policy — No Refunds",
+    description: "Refund policy for ravindrababuravula.in. All purchases including courses, mentorship programs, and digital products are final and non-refundable.",
+  },
   "/mentors": {
     title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
     description: "Book 1:1 GATE CSE & DA mentorship with expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
@@ -211,6 +216,7 @@ export default function App() {
       <Route path="/courses" element={<Layout><PageWithSEO path="/courses"><CoursesPage /></PageWithSEO></Layout>} />
       <Route path="/mentors" element={<Layout><PageWithSEO path="/mentors"><MentorsPage /></PageWithSEO></Layout>} />
       <Route path="/forum" element={<Layout><PageWithSEO path="/forum"><ForumPage /></PageWithSEO></Layout>} />
+      <Route path="/refund-policy" element={<Layout><PageWithSEO path="/refund-policy"><RefundPolicyPage /></PageWithSEO></Layout>} />
       <Route path="/blog" element={<Layout><PageWithSEO path="/blog"><BlogListPage /></PageWithSEO></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogDetailPage /></Layout>} />
       <Route path="/admin/blog" element={<BlogAdminPage />} />
