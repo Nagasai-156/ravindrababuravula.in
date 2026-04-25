@@ -895,7 +895,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/new-courses/13-ugc-net-dec-2026",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
-        price: "9,999", originalPrice: "15,000", discount: "34", color: "dark",
+        price: "15,999", originalPrice: "25,000", discount: "34", color: "dark",
         details: {
           overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
           format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
@@ -915,7 +915,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/new-courses/14-ugc-net-june-2027",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
-        price: "14,999", originalPrice: "20,000", discount: "26", color: "dark",
+        price: "20,999", originalPrice: "35,000", discount: "40", color: "dark",
         details: {
           overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
           format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
