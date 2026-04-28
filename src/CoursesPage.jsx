@@ -81,6 +81,29 @@ const CATEGORIES = [
     count: 1,
     courses: [
       {
+        id: "free10k", tag: "FREE · GATE CS & DA", title: "10000+ Free Practice Questions and 500+ Free Tests",
+        subtitle: "Prof Ravindrababu Ravula",
+        image: "/courses/free-10k-practice-questions.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/31-free-10k-practice-questions-and-500-tests-gate",
+        description: "Free 10,000+ Practice Questions & 500+ Tests for GATE CS & DA. Prepare smarter and stronger with our comprehensive practice platform — now available completely FREE.",
+        highlights: ["10,000+ High-Quality Practice Questions", "500+ Full-length & Topic-wise Tests", "Detailed Solutions & Performance Analysis", "Covers Entire GATE CS & DA Syllabus"],
+        price: "FREE", originalPrice: "0", discount: "0", color: "gold", isFree: true,
+        marqueeText: "FREE PRACTICE ★ 10000+ QUESTIONS ★ 500+ TESTS ★ GATE CS & DA ★ ",
+        details: {
+          overview: "Prepare smarter and stronger for GATE CS and Data Science & AI (DA) with our comprehensive practice platform — now available completely FREE.\n\nWe provide 10,000+ high-quality practice questions covering the entire GATE syllabus, carefully designed to strengthen your concepts and improve problem-solving skills. Along with this, get access to 500+ full-length and topic-wise tests that simulate the real exam environment and help you track your performance effectively.\n\nWhether you are just starting your preparation or revising before the exam, this platform ensures you have everything you need to excel in GATE CS & DA.\n\nStart practicing today and take one step closer to your dream rank — absolutely free!",
+          whatYouLearn: ["Build strong fundamentals across all subjects", "Practice a wide variety of questions (easy to advanced level)", "Analyze your performance with detailed solutions", "Improve speed, accuracy, and confidence"],
+          whatYouGet: ["10,000+ practice questions covering entire GATE CS & DA syllabus", "500+ full-length and topic-wise tests", "Detailed solutions for every question", "Performance analytics to track progress", "Real exam environment simulation", "Completely free access — no payment required"],
+          whoIsFor: ["Students starting their GATE CS / DA preparation", "Aspirants in the revision phase before the exam", "Anyone looking for high-quality free practice material", "Students who want to benchmark themselves against the GATE pattern"],
+          outcome: ["Strong conceptual foundation across all GATE topics", "Improved problem-solving speed and accuracy", "Confidence built through extensive practice", "Clear understanding of personal strengths and weaknesses"],
+          note: "Sign up on the platform to access all 10,000+ questions and 500+ tests — completely free.",
+        },
+      },
+      /* ──────────────────────────────────────────────────────────────
+         Super 100 Batch — temporarily removed from the Featured section.
+         Kept here (commented out) so it can be re-enabled in the future
+         without re-typing the full content.
+         ──────────────────────────────────────────────────────────────
+      {
         id: "super100", tag: "FLAGSHIP · GATE 2027", title: "GATE CS + DA 2027 — Super 100 Batch + DSA with Java & LeetCode",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/super100.jpg",
@@ -88,6 +111,7 @@ const CATEGORIES = [
         description: "Complete Preparation + Coding Mastery + Mentorship Program. A comprehensive, high-impact program combining GATE CS & DA preparation with hands-on DSA training using Java and LeetCode.",
         highlights: ["1200+ Hours LIVE CS & DA Classes", "200+ Hours DSA + Java + LeetCode", "1:1 Personalized Mentorship", "LIVE + Recorded Access"],
         price: "50,000", originalPrice: "50,000", discount: "0", color: "gold",
+        marqueeText: "FEATURED COURSE ★ FLAGSHIP PROGRAM ★ SUPER 100 BATCH ★ GATE CS + DA 2027 ★ ",
         details: {
           overview: "This program integrates complete GATE CS & Data Science (DA) preparation with hands-on coding training in DSA using Java and LeetCode.\n\nIt is designed to ensure:\n• Strong theoretical foundation (GATE-oriented)\n• Practical coding skills (placement-oriented)\n• Structured preparation with continuous mentorship\n• Consistent progress through planning and evaluation\n\nThe focus is on building both:\n• Rank-oriented preparation\n• Industry-ready coding skills",
           format: ["Fully LIVE structured classes (with recorded access)", "Dedicated DSA + LeetCode coding sessions", "Regular mentor meetings via Google Meet", "Frequent interaction sessions with Ravindrababu Ravula", "Personalized study plan for each student", "Continuous support via discussion forum", "Lecture notes provided after every class", "The program ensures discipline, flexibility, and guided learning throughout your journey"],
@@ -136,6 +160,7 @@ const CATEGORIES = [
           note: "Join this program to prepare with a complete ecosystem — concepts, coding, mentorship, and strategy — designed for aspirants who aim to excel in both GATE and placements.",
         },
       },
+      */
     ],
   },
   {
@@ -848,7 +873,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/test-series/1-gate-cs-2027-test-series?subjectId=-1",
         description: "A structured test series designed to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
-        price: "2,999", originalPrice: "4,999", discount: "40", color: "dark",
+        price: "3,999", originalPrice: "4,999", discount: "20", color: "dark",
         details: {
           overview: "This test series is created to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly. The focus is on helping you identify strengths and weak areas, improve problem-solving speed and accuracy, and build confidence for the final exam.",
           format: ["Topic-wise tests covering individual subjects", "Sectional tests for combined topics", "Full-length tests based on GATE exam pattern"],
@@ -867,7 +892,7 @@ const CATEGORIES = [
         link: "https://courses.ravindrababuravula.in/test-series/2-gate-da-2027-test-series?subjectId=-1",
         description: "A structured test series designed to help you evaluate your preparation, improve accuracy, and build confidence for GATE Data Science & AI 2027.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
-        price: "2,999", originalPrice: "4,999", discount: "40", color: "dark",
+        price: "3,999", originalPrice: "4,999", discount: "20", color: "dark",
         details: {
           overview: "This test series is designed to simulate the actual GATE DA exam environment, allowing you to practice under timed conditions and assess your performance regularly. The focus is on helping you identify strong and weak areas, improve accuracy and problem-solving speed, and develop confidence in handling exam-level questions.",
           format: ["Topic-wise tests covering individual subjects", "Sectional tests combining multiple topics", "Full-length mock tests based on GATE DA pattern"],
@@ -935,7 +960,7 @@ const CATEGORIES = [
     label: "DSA with Java",
     heading: "DSA with Java",
     description: "Build strong foundations in Data Structures, Java programming, and LeetCode problem solving. Recorded classes — learn at your own pace.",
-    count: 2,
+    count: 1,
     courses: [
       {
         id: 201, tag: "RECORDED", title: "DSA with Java & LeetCode Problems",
@@ -958,6 +983,11 @@ const CATEGORIES = [
           outcome: ["Strong foundation in Data Structures and Algorithms", "Ability to solve problems on platforms like LeetCode", "Confidence in writing Java programs", "Improved logical thinking and coding approach"],
         },
       },
+      /* ──────────────────────────────────────────────────────────────
+         Algorithms to AI Accelerator (DSA + AIML) — hidden for now.
+         Kept here (commented out) so it can be re-enabled in the future
+         without re-typing the full content.
+         ──────────────────────────────────────────────────────────────
       {
         id: 202, tag: "DSA + AI/ML", title: "Algorithms to AI Accelerator (DSA + AIML)",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyuthuni · Syed Peera Saheb",
@@ -994,6 +1024,7 @@ const CATEGORIES = [
           outcome: ["Strong foundation in Data Structures and Algorithms", "Ability to solve problems on platforms like LeetCode", "Confidence in writing Java programs", "Work with real-world datasets confidently", "Build and evaluate machine learning models", "Develop and deploy AI-based applications"],
         },
       },
+      */
     ],
   },
   {
@@ -1001,7 +1032,7 @@ const CATEGORIES = [
     label: "AI & ML",
     heading: "AI & ML Course",
     description: "Industry-oriented, hands-on programs designed to build real-world AI, Machine Learning skills with depth and projects.",
-    count: 2,
+    count: 1,
     courses: [
       {
         id: 301, tag: "HANDS-ON", title: "Practical AI & ML Program",
@@ -1036,6 +1067,11 @@ const CATEGORIES = [
           outcome: ["Work with real-world datasets confidently", "Build and evaluate machine learning models", "Develop AI-based applications", "Deploy and manage ML systems", "Understand modern AI tools and workflows"],
         },
       },
+      /* ──────────────────────────────────────────────────────────────
+         Algorithms to AI Accelerator (DSA + AIML) — hidden for now.
+         Kept here (commented out) so it can be re-enabled in the future
+         without re-typing the full content.
+         ──────────────────────────────────────────────────────────────
       {
         id: 302, tag: "PREMIUM · DSA + AI/ML", title: "Algorithms to AI Accelerator (DSA + AIML)",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyuthuni · Syed Peera Saheb",
@@ -1072,6 +1108,7 @@ const CATEGORIES = [
           outcome: ["Strong foundation in Data Structures and Algorithms", "Ability to solve problems on platforms like LeetCode", "Confidence in writing Java programs", "Work with real-world datasets confidently", "Build and evaluate machine learning models", "Develop and deploy AI-based applications"],
         },
       },
+      */
     ],
   },
 ];
@@ -1092,19 +1129,22 @@ const CloseIcon = () => (
 );
 
 /* ── Detail Section Helper ── */
-const DetailSection = ({ title, items, icon = "check" }) => (
-  <div className="cp-modal-detail-section">
-    <div className="cp-modal-section-label">{title}</div>
-    <div className="cp-modal-detail-list">
-      {items.map((item, i) => (
-        <div className="cp-modal-detail-item" key={i}>
-          {icon === "check" ? <CheckIcon /> : <span className="cp-modal-bullet" />}
-          <span>{item}</span>
-        </div>
-      ))}
+const DetailSection = ({ title, items, icon = "check" }) => {
+  if (!items || items.length === 0) return null;
+  return (
+    <div className="cp-modal-detail-section">
+      <div className="cp-modal-section-label">{title}</div>
+      <div className="cp-modal-detail-list">
+        {items.map((item, i) => (
+          <div className="cp-modal-detail-item" key={i}>
+            {icon === "check" ? <CheckIcon /> : <span className="cp-modal-bullet" />}
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 /* ── Course Detail Modal ── */
 function CourseModal({ course, onClose }) {
@@ -1148,11 +1188,15 @@ function CourseModal({ course, onClose }) {
           {/* Price Section — at the top for visibility */}
           <div className="cp-modal-price-section">
             <div className="cp-modal-price-left">
-              <div className="cp-modal-price">₹{course.price}</div>
-              <div className="cp-modal-original-price">₹{course.originalPrice}</div>
-              <div className="cp-modal-discount">{course.discount}% off</div>
+              <div className="cp-modal-price">{course.isFree ? "FREE" : `₹${course.price}`}</div>
+              {!course.isFree && (
+                <>
+                  <div className="cp-modal-original-price">₹{course.originalPrice}</div>
+                  <div className="cp-modal-discount">{course.discount}% off</div>
+                </>
+              )}
             </div>
-            <div className="cp-modal-gst">+ 18% GST</div>
+            {!course.isFree && <div className="cp-modal-gst">+ 18% GST</div>}
           </div>
 
           {/* CTA — at top */}
@@ -1168,8 +1212,8 @@ function CourseModal({ course, onClose }) {
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
 
-          {/* Schedule — hide for recorded courses and super100 */}
-          {course.tag !== "RECORDED" && course.id !== "super100" && (
+          {/* Schedule — hide for recorded courses, super100, and free self-paced products */}
+          {course.tag !== "RECORDED" && course.id !== "super100" && !course.isFree && (
             <div className="cp-modal-schedule">
               <ClockIcon />
               <span>Classes held between 6 AM to 8 AM and 6 PM to 10 PM as per educator availability</span>
@@ -1524,20 +1568,6 @@ export default function CoursesPage() {
                       key={course.id}
                       className={`cp-course-card ${course.color === "gold" ? "cp-card-gold" : course.color === "accent" ? "cp-card-accent" : ""}`}
                     >
-                      {/* Diagonal marquee inside gold card */}
-                      {course.color === "gold" && (
-                        <div className="cp-gold-marquee">
-                          <div className="cp-gold-marquee-track">
-                            {Array.from({ length: 6 }).map((_, row) => (
-                              <div className="cp-gold-marquee-row" key={row}>
-                                {Array.from({ length: 8 }).map((_, i) => (
-                                  <span key={i}>FEATURED COURSE ★ FLAGSHIP PROGRAM ★ SUPER 100 BATCH ★ GATE CS + DA 2027 ★ </span>
-                                ))}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      )}
                       {/* Banner Image */}
                       {course.image && (
                         <div className="cp-card-banner">
@@ -1564,15 +1594,15 @@ export default function CoursesPage() {
                         </div>
 
                         <div className="cp-card-price-row">
-                          <div className="cp-card-price">₹{course.price}</div>
-                          {course.discount !== "0" && (
+                          <div className="cp-card-price">{course.isFree ? "FREE" : `₹${course.price}`}</div>
+                          {!course.isFree && course.discount !== "0" && (
                             <>
                               <div className="cp-card-original-price">₹{course.originalPrice}</div>
                               <div className="cp-card-discount">{course.discount}% off</div>
                             </>
                           )}
                         </div>
-                        <div className="cp-card-gst">+ 18% GST</div>
+                        {!course.isFree && <div className="cp-card-gst">+ 18% GST</div>}
 
                         <button
                           className="cp-card-cta"
