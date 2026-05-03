@@ -106,7 +106,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 60px;
   align-items: stretch;
-  padding: 60px 40px 80px;
+  padding: 130px 40px 80px;
   max-width: 1280px;
   margin: 0 auto;
   position: relative;
@@ -1156,7 +1156,7 @@
     padding: 60px 24px;
   }
 
-  .cp-hero-inner { min-height: auto; padding-top: 40px; }
+  .cp-hero-inner { min-height: auto; padding-top: 110px; }
   .cp-headline { font-size: 2.2rem; letter-spacing: -1px; }
 
   .cp-hero-img-wrap { min-height: 300px; }
