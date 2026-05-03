@@ -494,13 +494,15 @@
 
 /* Course Cards Grid */
 .cp-courses-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
 
 /* ─── Course Card ─── */
 .cp-course-card {
+  width: calc(33.333% - 14px);
   background: #151515;
   border: 1px solid rgba(255,255,255,0.07);
   border-radius: 24px;
@@ -573,6 +575,52 @@
 
 .cp-card-gold .cp-card-cta:hover {
   background: #ffc633;
+}
+
+/* Solid Gold card variant */
+.cp-card-solid-gold {
+  background: linear-gradient(135deg, #e4c45b, #ffda68, #c6a233);
+  border-color: #f7d057;
+}
+
+.cp-card-solid-gold:hover {
+  border-color: #ffe680;
+  box-shadow: 0 12px 40px rgba(255, 218, 104, 0.4);
+}
+
+.cp-card-solid-gold .cp-card-tag {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+  font-weight: 700;
+}
+
+.cp-card-solid-gold .cp-card-title,
+.cp-card-solid-gold .cp-card-subtitle,
+.cp-card-solid-gold .cp-card-desc,
+.cp-card-solid-gold .cp-highlight-text,
+.cp-card-solid-gold .cp-card-price,
+.cp-card-solid-gold .cp-card-price-gst,
+.cp-card-solid-gold .cp-marquee-content {
+  color: #111 !important;
+}
+
+.cp-card-solid-gold .cp-highlight-icon {
+  color: #111;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.cp-card-solid-gold .cp-card-cta {
+  background: #111;
+  color: #ffda68;
+}
+
+.cp-card-solid-gold .cp-card-cta:hover {
+  background: #000;
+}
+
+.cp-card-solid-gold .cp-card-price-row,
+.cp-card-solid-gold .cp-marquee-container {
+  border-top-color: rgba(0,0,0,0.15);
 }
 
 /* Accent card variant */
@@ -1096,7 +1144,7 @@
     padding-left: 28px;
     padding-right: 28px;
   }
-  .cp-courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .cp-course-card { width: calc(50% - 10px); }
 }
 
 /* Tablet */
@@ -1117,7 +1165,7 @@
   .cp-path-inner,
   .cp-cta-inner { padding: 60px 24px; }
 
-  .cp-courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .cp-course-card { width: calc(50% - 10px); }
 
   .cp-path-timeline {
     grid-template-columns: 1fr;
@@ -1173,7 +1221,7 @@
 
 /* Mobile */
 @media (max-width: 640px) {
-  .cp-courses-grid { grid-template-columns: 1fr; }
+  .cp-course-card { width: 100%; }
 
   .cp-filter-pills {
     flex-wrap: wrap;
@@ -1615,9 +1663,28 @@
    FEATURED CATEGORY
 ═══════════════════════════════════════════════════════════ */
 .cp-featured-grid {
-  grid-template-columns: 1fr !important;
-  max-width: 560px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cp-featured-grid > .cp-course-card {
+  flex: 1 1 calc(33.333% - 14px);
+  min-width: 280px;
+  max-width: 100%;
+  width: auto !important;
+}
+
+@media (max-width: 1100px) {
+  .cp-featured-grid > .cp-course-card {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 640px) {
+  .cp-featured-grid > .cp-course-card {
+    flex: 1 1 100%;
+  }
 }
 
 /* ─── Diagonal Marquee inside Gold Card ─── */

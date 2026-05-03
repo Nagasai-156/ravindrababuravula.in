@@ -76,14 +76,161 @@ const CATEGORIES = [
   {
     key: "featured",
     label: "Featured",
-    heading: "Featured",
-    description: "Our flagship program for serious GATE aspirants who want top ranks and placement-ready coding skills.",
-    count: 1,
+    heading: "Featured Courses",
+    description: "Start your learning journey — explore our AI Generalist Program, Study Abroad Guidance, and Free Practice Questions all in one place.",
+    count: 3,
     courses: [
+      {
+        id: "ai-generalist-01",
+        tag: "6-MONTH PROGRAM",
+        title: "AI Generalist Program",
+        subtitle: "Become an AI Generalist in 6 Months",
+        image: "/courses/ai generalist.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/33-ai-generalist-program",
+        description: "A comprehensive program designed to help learners build practical AI skills across multiple domains — from AI fundamentals to building real-world AI applications using modern tools and workflows.",
+        highlights: ["6 Structured Levels", "Hands-on Tool-Based Learning", "Capstone Project & Demo Day", "Real-World AI Applications"],
+        price: "29,999",
+        originalPrice: "0",
+        discount: "0",
+        color: "solid-gold",
+        marqueeText: "FEATURED ★ AI GENERALIST PROGRAM ★ 6 MONTHS ★ HANDS-ON LEARNING ★ REAL-WORLD TOOLS ★ CAPSTONE PROJECT ★ ",
+        details: {
+          overview: "A comprehensive program designed to help learners build practical AI skills across multiple domains. The course covers everything from understanding AI fundamentals to building real-world AI applications using modern tools and workflows.\n\nThe focus is on hands-on learning, structured progression, and real-world problem solving, enabling learners to apply AI effectively across industries.",
+          format: [
+            "Structured learning across 6 levels",
+            "Hands-on assignments and practical exercises",
+            "Tool-based learning with real-world applications",
+            "Capstone project for end-to-end implementation",
+            "Demo Day presentation",
+          ],
+          whatYouLearn: [
+            "Fundamentals of Artificial Intelligence and Generative AI",
+            "Working with Large Language Models (LLMs)",
+            "Prompt engineering and optimization techniques",
+            "AI-based content creation (text, image, video, voice)",
+            "Automation using workflows and AI agents",
+            "Building and deploying AI-powered applications",
+          ],
+          programLevels: [
+            {
+              title: "Level 1 & 2 — Foundations of LLMs, RAG & Prompt Engineering",
+              desc: "Learn the fundamentals of AI, Generative AI, and Large Language Models. Understand prompt engineering techniques, prompt chaining, and introduction to Retrieval-Augmented Generation (RAG).",
+              tools: ["Hugging Face Hub", "GPT-4 (OpenAI Playground)", "Playground AI", "OpenAI API", "Google Gemini Deep Research", "Google AI Studio", "Claude", "Fireflies", "NotebookLM", "Vapi", "Gamma", "ElevenLabs", "Surf AI", "Replit", "Rows"],
+            },
+            {
+              title: "Level 3 — AI for Image & Video Creation",
+              desc: "Explore generative AI for images and videos, diffusion models, and tools for creating visual and media content.",
+              tools: ["Leonardo AI", "MidJourney", "Runway ML", "Pika AI", "HeyGen", "Synthesia", "Stability AI", "D-ID", "ElevenLabs"],
+            },
+            {
+              title: "Level 4 — Automate Tasks with AI Agents",
+              desc: "Understand workflow automation, build AI agents, and design multi-step automation systems using modern tools.",
+              tools: ["n8n", "Zapier", "Make (Integromat)", "LangChain", "Relevance AI", "Agentive AI"],
+            },
+            {
+              title: "Level 5 — Building AI-Powered Applications",
+              desc: "Learn to build AI-powered applications, create chatbots, integrate APIs, and deploy real-world solutions.",
+              tools: ["v0 (Vercel)", "Cursor AI", "Bubble", "Supabase", "Bolt.new"],
+            },
+            {
+              title: "Level 6 — Final Project (Capstone)",
+              desc: "Apply all concepts to build an end-to-end AI solution and solve a real-world problem.",
+              tools: ["Cursor AI", "Postman", "SDXL", "Runway ML", "ElevenLabs", "LangChain / n8n"],
+            },
+          ],
+          whatYouGet: [
+            "Complete structured learning across 6 levels",
+            "Hands-on assignments and practice",
+            "Real-world tool exposure",
+            "Capstone project",
+            "Demo Day presentation",
+          ],
+          whoIsFor: [
+            "Beginners exploring AI",
+            "Students and recent graduates",
+            "Working professionals",
+            "Individuals interested in automation and AI applications",
+          ],
+          outcome: [
+            "Strong understanding of AI and LLMs",
+            "Ability to use AI tools effectively",
+            "Capability to automate workflows",
+            "Experience in building AI-powered applications",
+            "Confidence to solve real-world problems using AI",
+          ],
+          features: [
+            "Structured learning path",
+            "Practical and tool-based approach",
+            "Industry-relevant curriculum",
+            "Focus on real-world applications",
+          ],
+        },
+      },
+      {
+        id: "study-abroad-01",
+        tag: "GUIDANCE PROGRAM",
+        title: "Study Abroad Guidance Program",
+        subtitle: "Your Journey to a Global Career Starts Here",
+        image: "/courses/study abroad.jpg",
+        link: "https://courses.ravindrababuravula.in/new-courses/32-study-abroad",
+        description: "End-to-end support for students serious about pursuing a Master\u2019s degree abroad — guidance at every step until you successfully secure a job, covering USA, UK, Australia, Canada, Germany, New Zealand, and Singapore.",
+        highlights: ["End-to-End Guidance", "Country & University Selection", "Visa & SOP Assistance", "Job Placement Support"],
+        price: "4,999",
+        originalPrice: "0",
+        discount: "0",
+        color: "dark",
+        details: {
+          overview: "If you are serious about pursuing a Master\u2019s degree abroad — whether you are in your first year, final year, or even a drop year — we are here to guide you at every step of your journey until you successfully secure a job.\n\nWith the number of Indian students planning to study overseas expected to exceed 2 million by 2025, global education is no longer a trend — it is a powerful pathway to better opportunities and a higher quality of life.\n\nCountries such as the USA, UK, Australia, Canada, Germany, New Zealand, and Singapore continue to attract students due to strong job markets, high earning potential, advanced education systems, and better quality of life.",
+          format: [
+            "Personalized one-on-one guidance sessions",
+            "Step-by-step assistance throughout the process",
+            "Updated information on immigration policies and global trends",
+            "Dedicated customer support throughout your journey",
+          ],
+          whatYouLearn: [
+            "How to choose the right country based on opportunities, budget, and preferences",
+            "Identifying programs aligned with your career goals",
+            "How to craft a strong Statement of Purpose (SOP) and Letters of Recommendation",
+            "Understanding visa procedures and mock interview preparation",
+            "Financial planning, loan approval guidance, and pre-departure preparation",
+          ],
+          programLevels: [
+            { title: "1. Career Counseling", desc: "Understand your goals, interests, and career path to make informed decisions.", tools: [] },
+            { title: "2. Country Selection", desc: "Choose the right country based on opportunities, budget, and personal preferences.", tools: [] },
+            { title: "3. Course Selection", desc: "Identify programs aligned with your career goals and academic background.", tools: [] },
+            { title: "4. University Selection", desc: "Shortlist universities based on your profile, academic requirements, and goals.", tools: [] },
+            { title: "5. SOP & LOR Assistance", desc: "Craft strong Statements of Purpose and Letters of Recommendation with expert guidance.", tools: [] },
+            { title: "6. Loan Assistance", desc: "Guidance to secure the best education loans with favourable terms.", tools: [] },
+            { title: "7. Visa Mock Interviews", desc: "Prepare confidently for visa interviews with practice sessions and tips.", tools: [] },
+            { title: "8. Pre-Departure Guidance", desc: "Get ready for life abroad — travel, accommodation, cultural expectations, and more.", tools: [] },
+          ],
+          whatYouGet: [
+            "End-to-end guidance until you secure a job",
+            "Transparent and reliable support",
+            "Updated knowledge of global education and immigration",
+            "Dedicated customer support throughout your journey",
+          ],
+          whoIsFor: [
+            "First-year students planning early",
+            "Final-year students preparing for applications",
+            "Graduates and drop-year students",
+            "Anyone serious about studying abroad",
+          ],
+          outcome: [
+            "Clear roadmap to study at a top university abroad",
+            "Strong application with compelling SOP and LOR",
+            "Visa confidence through mock interview preparation",
+            "Financial clarity with loan guidance",
+            "Smooth pre-departure and post-arrival transition",
+            "End-to-end support until you land your first job",
+          ],
+          note: "Candidates are expected to have GRE scores (if required) and English proficiency test scores (IELTS / TOEFL / equivalent). Once you have your scores, we will guide you through all next steps.",
+        },
+      },
       {
         id: "free10k", tag: "FREE · GATE CS & DA", title: "10000+ Free Practice Questions and 500+ Free Tests",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/free-10k-practice-questions.jpg",
+        image: "/courses/10000+ free practice questions.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/31-free-10k-practice-questions-and-500-tests-gate",
         description: "Free 10,000+ Practice Questions & 500+ Tests for GATE CS & DA. Prepare smarter and stronger with our comprehensive practice platform — now available completely FREE.",
         highlights: ["10,000+ High-Quality Practice Questions", "500+ Full-length & Topic-wise Tests", "Detailed Solutions & Performance Analysis", "Covers Entire GATE CS & DA Syllabus"],
@@ -173,7 +320,7 @@ const CATEGORIES = [
       {
         id: 11, tag: "GATE CS", title: "GATE CS 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-test-series-2027.jpg",
+        image: "/courses/challenging test series gate cs.jpg",
         link: "https://courses.ravindrababuravula.in/test-series/1-gate-cs-2027-test-series?subjectId=-1",
         description: "A structured test series designed to simulate the actual GATE exam environment, allowing you to practice under exam conditions and assess your performance regularly.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
@@ -192,7 +339,7 @@ const CATEGORIES = [
       {
         id: 12, tag: "GATE DA", title: "GATE DA 2027 Test Series",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-da-test-series-2027.jpg",
+        image: "/courses/challenging test series gate da.jpg",
         link: "https://courses.ravindrababuravula.in/test-series/2-gate-da-2027-test-series?subjectId=-1",
         description: "A structured test series designed to help you evaluate your preparation, improve accuracy, and build confidence for GATE Data Science & AI 2027.",
         highlights: ["Full-Length Mocks", "Subject-wise Tests", "Detailed Analysis", "Performance Tracking"],
@@ -220,7 +367,7 @@ const CATEGORIES = [
       {
         id: 1, tag: "GATE 2027", title: "GATE CS Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-core-2027.jpg",
+        image: "/courses/gate cs 2027 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/1-gate-cs-core-2027",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Structured Learning Path"],
@@ -252,7 +399,7 @@ const CATEGORIES = [
       {
         id: 2, tag: "COMBO · GATE 2027", title: "GATE CS & DA Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2027.jpg",
+        image: "/courses/gate cs+da 2027 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/16-gate-cs-da-core-2027",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -293,7 +440,7 @@ const CATEGORIES = [
       {
         id: 3, tag: "MOST POPULAR · GATE 2027", title: "GATE CS Core Plus 2027",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-        image: "/courses/gate-cs-core-plus-2027.jpg",
+        image: "/courses/gate cs 2027 core plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/4-gate-cs-core-plus-2027",
         description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
@@ -327,7 +474,7 @@ const CATEGORIES = [
       {
         id: 4, tag: "GATE 2028", title: "GATE CS Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-core-2028.jpg",
+        image: "/courses/gate cs 2028 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/2-gate-cs-core-2028",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Early Bird Advantage"],
@@ -359,7 +506,7 @@ const CATEGORIES = [
       {
         id: 5, tag: "COMBO · GATE 2028", title: "GATE CS & DA Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2028.jpg",
+        image: "/courses/gate cs+da 2028 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/17-gate-cs-da-core-2028",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -400,7 +547,7 @@ const CATEGORIES = [
       {
         id: 6, tag: "MOST POPULAR · GATE 2028", title: "GATE CS Core Plus 2028",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-        image: "/courses/gate-cs-core-plus-2028.jpg",
+        image: "/courses/gate cs 2028 core plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/5-gate-cs-core-plus-2028",
         description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
@@ -434,7 +581,7 @@ const CATEGORIES = [
       {
         id: 7, tag: "GATE 2029", title: "GATE CS Core 2029",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-core-2029.jpg",
+        image: "/courses/gate cs 2029 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/3-gate-cs-core-2029",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Maximum Prep Time"],
@@ -466,7 +613,7 @@ const CATEGORIES = [
       {
         id: 8, tag: "COMBO · GATE 2029", title: "GATE CS & DA Core 2029",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2029.jpg",
+        image: "/courses/gate cs+da 2029 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/18-gate-cs-da-core-2029",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -507,7 +654,7 @@ const CATEGORIES = [
       {
         id: 9, tag: "MOST POPULAR · GATE 2029", title: "GATE CS Core Plus 2029",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-        image: "/courses/gate-cs-core-plus-2029.jpg",
+        image: "/courses/gate cs 2029 core plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/6-gate-cs-core-plus-2029",
         description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
@@ -550,7 +697,7 @@ const CATEGORIES = [
       {
         id: 101, tag: "GATE 2027", title: "GATE DA Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-da-core-2027.jpg",
+        image: "/courses/gate da 2027 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/7-gate-da-core-2027",
         description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation experience.",
         highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Structured Approach"],
@@ -577,7 +724,7 @@ const CATEGORIES = [
       {
         id: 102, tag: "COMBO · GATE 2027", title: "GATE CS & DA Core 2027",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2027.jpg",
+        image: "/courses/gate cs+da 2027 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/16-gate-cs-da-core-2027",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -618,11 +765,11 @@ const CATEGORIES = [
       {
         id: 103, tag: "PREMIUM · MENTORSHIP · GATE 2027", title: "GATE DA 2027 – Core Plus",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
-        image: "/courses/gate-da-core-plus-2027.jpg",
+        image: "/courses/gate-da-2027-core-plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/10-gate-da-2027-core-plus-mentorship-program",
         description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
-        price: "49,999", originalPrice: "65,000", discount: "24", color: "dark",
+        price: "14,999", originalPrice: "25,000", discount: "40", color: "dark",
         details: {
           overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
           format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
@@ -643,23 +790,9 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          aimlSyllabus: [
-            { module: "Module 1: Programming for Data & AI", topics: "Python fundamentals, data structures (lists, dictionaries, sets), stacks and queues for pipelines, OOP, error handling, NumPy, Pandas, Git. Case Studies: Flask app deployment, GitHub Actions scheduling." },
-            { module: "Module 2: Data Visualization & Storytelling", topics: "Matplotlib, Seaborn, Plotly, business storytelling, box plot, histogram, bar chart, mosaic plots, scatter plots, univariate and bivariate analysis. Case Studies: COVID-19 Airbnb impact, ML diagnostics visualization." },
-            { module: "Module 3: Statistics for Data Science", topics: "Descriptive statistics, sampling, probability distributions, Central Limit Theorem, correlation vs causation. Case Studies: Market basket analysis, Call Center operations modelling." },
-            { module: "Module 4: Linear Algebra for ML", topics: "Vectors and matrices intuition, matrix multiplication. Case Studies: PCA, embeddings and similarity metrics, customer survey analysis." },
-            { module: "Module 5: Data Management & SQL", topics: "SQL fundamentals, joins, aggregations, window functions, missing values, outlier handling, imbalanced datasets, feature engineering, MECE. Case Studies: Dataset cleaning, CRISP-DM features." },
-            { module: "Module 6: Hypothesis Testing", topics: "Null/Alternate hypothesis, t-tests, ANOVA, chi-square, A/B testing. Case Studies: Marketing A/B testing, pharma drug trials, retail demographics." },
-            { module: "Module 7: Regression & Classification", topics: "Linear/logistic regression, decision trees, ensembles, SVM, KNN, Naive Bayes, model interpretability, data leakage, accuracy metrics (Precision, Recall, AUC-ROC, RMSE, MAE, R²). Case Studies: House price prediction, explainable healthcare models." },
-            { module: "Module 8: ML Systems", topics: "Train-test-validation, cross-validation, hyperparameter tuning, ensemble models. Case Studies: Banking risk prediction, consumer goods demand forecasting." },
-            { module: "Module 9: Time Series Forecasting", topics: "Trend, seasonality, Moving Averages, Exponential Smoothing, ARIMA, feature-based forecasting. Case Studies: Stock trading strategy, air quality prediction, Walmart demand forecasting." },
-            { module: "Module 10: Deep Learning", topics: "Neural network basics, backpropagation, dense networks, RNN, LSTM, autoencoders. Case Study: Aircraft engine failure prediction." },
-            { module: "Module 11: Optimization & OR", topics: "Linear/integer programming, constraints modeling, OR-Tools. Case Studies: Supply chain optimization, shortest path and network flow." },
-            { module: "Module 12: Clustering & Segmentation", topics: "K-Means, hierarchical clustering, DBSCAN, cluster evaluation. Case Study: Indian Railways high delay zone clustering." },
-            { module: "Module 13: Generative AI", topics: "ChatGPT, Gemini, Claude, tokenization, embeddings, prompt engineering, RAG pipelines, vector databases, hallucination, RAGAS evaluation, LLM-as-a-judge. Case Studies: RAG chatbot, local models (LLaMA)." },
-            { module: "Module 14: Agentic AI & Orchestration", topics: "Tool calling, memory, LangGraph, CrewAI, multi-agent workflows. Case Studies: Coding Agent, NL-to-SQL agent, visualization agent, web scraping agent, supervisor agent, enterprise chatbot." },
-            { module: "Module 15: Deployment, MLOps & Evaluation", topics: "Streamlit, Flask deployment, cloud ML (AWS, Azure, GCP), model versioning, drift, bias in AI, data privacy. Capstone: End-to-end deployed system." },
-          ],
+          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
+          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
+          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -669,7 +802,7 @@ const CATEGORIES = [
       {
         id: 104, tag: "GATE 2028", title: "GATE DA Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-da-core-2028.jpg",
+        image: "/courses/gate da 2028 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/8-gate-da-core-2028",
         description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
         highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Early Bird Advantage"],
@@ -696,7 +829,7 @@ const CATEGORIES = [
       {
         id: 105, tag: "COMBO · GATE 2028", title: "GATE CS & DA Core 2028",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2028.jpg",
+        image: "/courses/gate cs+da 2028 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/17-gate-cs-da-core-2028",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -737,11 +870,11 @@ const CATEGORIES = [
       {
         id: 106, tag: "PREMIUM · MENTORSHIP · GATE 2028", title: "GATE DA 2028 – Core Plus",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
-        image: "/courses/gate-da-core-plus-2028.jpg",
+        image: "/courses/gate-da-2028-core-plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/11-gate-da-2028-core-plus-mentorship-program",
         description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
-        price: "69,999", originalPrice: "90,000", discount: "23", color: "dark",
+        price: "19,999", originalPrice: "35,000", discount: "43", color: "dark",
         details: {
           overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
           format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
@@ -762,23 +895,9 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          aimlSyllabus: [
-            { module: "Module 1: Programming for Data & AI", topics: "Python fundamentals, data structures (lists, dictionaries, sets), stacks and queues for pipelines, OOP, error handling, NumPy, Pandas, Git. Case Studies: Flask app deployment, GitHub Actions scheduling." },
-            { module: "Module 2: Data Visualization & Storytelling", topics: "Matplotlib, Seaborn, Plotly, business storytelling, box plot, histogram, bar chart, mosaic plots, scatter plots, univariate and bivariate analysis. Case Studies: COVID-19 Airbnb impact, ML diagnostics visualization." },
-            { module: "Module 3: Statistics for Data Science", topics: "Descriptive statistics, sampling, probability distributions, Central Limit Theorem, correlation vs causation. Case Studies: Market basket analysis, Call Center operations modelling." },
-            { module: "Module 4: Linear Algebra for ML", topics: "Vectors and matrices intuition, matrix multiplication. Case Studies: PCA, embeddings and similarity metrics, customer survey analysis." },
-            { module: "Module 5: Data Management & SQL", topics: "SQL fundamentals, joins, aggregations, window functions, missing values, outlier handling, imbalanced datasets, feature engineering, MECE. Case Studies: Dataset cleaning, CRISP-DM features." },
-            { module: "Module 6: Hypothesis Testing", topics: "Null/Alternate hypothesis, t-tests, ANOVA, chi-square, A/B testing. Case Studies: Marketing A/B testing, pharma drug trials, retail demographics." },
-            { module: "Module 7: Regression & Classification", topics: "Linear/logistic regression, decision trees, ensembles, SVM, KNN, Naive Bayes, model interpretability, data leakage, accuracy metrics (Precision, Recall, AUC-ROC, RMSE, MAE, R²). Case Studies: House price prediction, explainable healthcare models." },
-            { module: "Module 8: ML Systems", topics: "Train-test-validation, cross-validation, hyperparameter tuning, ensemble models. Case Studies: Banking risk prediction, consumer goods demand forecasting." },
-            { module: "Module 9: Time Series Forecasting", topics: "Trend, seasonality, Moving Averages, Exponential Smoothing, ARIMA, feature-based forecasting. Case Studies: Stock trading strategy, air quality prediction, Walmart demand forecasting." },
-            { module: "Module 10: Deep Learning", topics: "Neural network basics, backpropagation, dense networks, RNN, LSTM, autoencoders. Case Study: Aircraft engine failure prediction." },
-            { module: "Module 11: Optimization & OR", topics: "Linear/integer programming, constraints modeling, OR-Tools. Case Studies: Supply chain optimization, shortest path and network flow." },
-            { module: "Module 12: Clustering & Segmentation", topics: "K-Means, hierarchical clustering, DBSCAN, cluster evaluation. Case Study: Indian Railways high delay zone clustering." },
-            { module: "Module 13: Generative AI", topics: "ChatGPT, Gemini, Claude, tokenization, embeddings, prompt engineering, RAG pipelines, vector databases, hallucination, RAGAS evaluation, LLM-as-a-judge. Case Studies: RAG chatbot, local models (LLaMA)." },
-            { module: "Module 14: Agentic AI & Orchestration", topics: "Tool calling, memory, LangGraph, CrewAI, multi-agent workflows. Case Studies: Coding Agent, NL-to-SQL agent, visualization agent, web scraping agent, supervisor agent, enterprise chatbot." },
-            { module: "Module 15: Deployment, MLOps & Evaluation", topics: "Streamlit, Flask deployment, cloud ML (AWS, Azure, GCP), model versioning, drift, bias in AI, data privacy. Capstone: End-to-end deployed system." },
-          ],
+          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
+          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
+          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -788,7 +907,7 @@ const CATEGORIES = [
       {
         id: 107, tag: "GATE 2029", title: "GATE DA Core 2029",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-da-core-2029.jpg",
+        image: "/courses/gate da 2029 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/9-gate-da-core-2029",
         description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
         highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Maximum Prep Time"],
@@ -815,7 +934,7 @@ const CATEGORIES = [
       {
         id: 108, tag: "COMBO · GATE 2029", title: "GATE CS & DA Core 2029",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/gate-cs-da-core-2029.jpg",
+        image: "/courses/gate cs+da 2029 core.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/18-gate-cs-da-core-2029",
         description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
         highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
@@ -856,11 +975,11 @@ const CATEGORIES = [
       {
         id: 109, tag: "PREMIUM · MENTORSHIP · GATE 2029", title: "GATE DA 2029 – Core Plus",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
-        image: "/courses/gate-da-core-plus-2029.jpg",
+        image: "/courses/gate-da-2029-core-plus.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/12-gate-da-2029-core-plus-mentorship-program",
         description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
-        price: "89,999", originalPrice: "1,50,000", discount: "41", color: "dark",
+        price: "24,999", originalPrice: "45,000", discount: "44", color: "dark",
         details: {
           overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
           format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
@@ -881,23 +1000,9 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          aimlSyllabus: [
-            { module: "Module 1: Programming for Data & AI", topics: "Python fundamentals, data structures (lists, dictionaries, sets), stacks and queues for pipelines, OOP, error handling, NumPy, Pandas, Git. Case Studies: Flask app deployment, GitHub Actions scheduling." },
-            { module: "Module 2: Data Visualization & Storytelling", topics: "Matplotlib, Seaborn, Plotly, business storytelling, box plot, histogram, bar chart, mosaic plots, scatter plots, univariate and bivariate analysis. Case Studies: COVID-19 Airbnb impact, ML diagnostics visualization." },
-            { module: "Module 3: Statistics for Data Science", topics: "Descriptive statistics, sampling, probability distributions, Central Limit Theorem, correlation vs causation. Case Studies: Market basket analysis, Call Center operations modelling." },
-            { module: "Module 4: Linear Algebra for ML", topics: "Vectors and matrices intuition, matrix multiplication. Case Studies: PCA, embeddings and similarity metrics, customer survey analysis." },
-            { module: "Module 5: Data Management & SQL", topics: "SQL fundamentals, joins, aggregations, window functions, missing values, outlier handling, imbalanced datasets, feature engineering, MECE. Case Studies: Dataset cleaning, CRISP-DM features." },
-            { module: "Module 6: Hypothesis Testing", topics: "Null/Alternate hypothesis, t-tests, ANOVA, chi-square, A/B testing. Case Studies: Marketing A/B testing, pharma drug trials, retail demographics." },
-            { module: "Module 7: Regression & Classification", topics: "Linear/logistic regression, decision trees, ensembles, SVM, KNN, Naive Bayes, model interpretability, data leakage, accuracy metrics (Precision, Recall, AUC-ROC, RMSE, MAE, R²). Case Studies: House price prediction, explainable healthcare models." },
-            { module: "Module 8: ML Systems", topics: "Train-test-validation, cross-validation, hyperparameter tuning, ensemble models. Case Studies: Banking risk prediction, consumer goods demand forecasting." },
-            { module: "Module 9: Time Series Forecasting", topics: "Trend, seasonality, Moving Averages, Exponential Smoothing, ARIMA, feature-based forecasting. Case Studies: Stock trading strategy, air quality prediction, Walmart demand forecasting." },
-            { module: "Module 10: Deep Learning", topics: "Neural network basics, backpropagation, dense networks, RNN, LSTM, autoencoders. Case Study: Aircraft engine failure prediction." },
-            { module: "Module 11: Optimization & OR", topics: "Linear/integer programming, constraints modeling, OR-Tools. Case Studies: Supply chain optimization, shortest path and network flow." },
-            { module: "Module 12: Clustering & Segmentation", topics: "K-Means, hierarchical clustering, DBSCAN, cluster evaluation. Case Study: Indian Railways high delay zone clustering." },
-            { module: "Module 13: Generative AI", topics: "ChatGPT, Gemini, Claude, tokenization, embeddings, prompt engineering, RAG pipelines, vector databases, hallucination, RAGAS evaluation, LLM-as-a-judge. Case Studies: RAG chatbot, local models (LLaMA)." },
-            { module: "Module 14: Agentic AI & Orchestration", topics: "Tool calling, memory, LangGraph, CrewAI, multi-agent workflows. Case Studies: Coding Agent, NL-to-SQL agent, visualization agent, web scraping agent, supervisor agent, enterprise chatbot." },
-            { module: "Module 15: Deployment, MLOps & Evaluation", topics: "Streamlit, Flask deployment, cloud ML (AWS, Azure, GCP), model versioning, drift, bias in AI, data privacy. Capstone: End-to-end deployed system." },
-          ],
+          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
+          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
+          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -916,7 +1021,7 @@ const CATEGORIES = [
       {
         id: 13, tag: "DEC 2026", title: "UGC NET Dec 2026",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/ugc-net-dec-2026.jpg",
+        image: "/courses/ugc net dec 2026.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/13-ugc-net-dec-2026",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
@@ -936,7 +1041,7 @@ const CATEGORIES = [
       {
         id: 14, tag: "JUNE 2027", title: "UGC NET June 2027",
         subtitle: "Prof Ravindrababu Ravula",
-        image: "/courses/ugc-net-june-2027.jpg",
+        image: "/courses/ugc net june 2027.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/14-ugc-net-june-2027",
         description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
         highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
@@ -965,7 +1070,7 @@ const CATEGORIES = [
       {
         id: 201, tag: "RECORDED", title: "DSA with Java & LeetCode Problems",
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
-        image: "/courses/dsa-java-leetcode.jpg",
+        image: "/courses/dsa with java.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/15-dsa-with-java-leet-code-problems",
         description: "A structured recorded program designed to build strong foundations in Data Structures, Java programming, and problem-solving through LeetCode, with a focus on practical coding skills and logical thinking.",
         highlights: ["Data Structures & Algorithms", "Java Programming", "LeetCode Problems", "Recorded Classes"],
@@ -1037,7 +1142,7 @@ const CATEGORIES = [
       {
         id: 301, tag: "HANDS-ON", title: "Practical AI & ML Program",
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyuthuni",
-        image: "/courses/practical-ai-ml.jpg",
+        image: "/courses/practical ai ml program.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/19-practical-ai-ml-program",
         description: "An implementation-focused LIVE program designed to build real-world AI & ML skills. Industry-oriented, hands-on, and application-focused with depth and projects.",
         highlights: ["Real-World Projects", "Hands-on Implementation", "Industry-Oriented"],
@@ -1170,7 +1275,7 @@ function CourseModal({ course, onClose }) {
         {/* Banner */}
         {course.image && (
           <div className="cp-modal-banner">
-            <img src={course.image} alt={course.title} />
+            <img src={`${course.image}?v=3`} alt={course.title} />
           </div>
         )}
 
@@ -1189,7 +1294,7 @@ function CourseModal({ course, onClose }) {
           <div className="cp-modal-price-section">
             <div className="cp-modal-price-left">
               <div className="cp-modal-price">{course.isFree ? "FREE" : `₹${course.price}`}</div>
-              {!course.isFree && (
+              {!course.isFree && course.originalPrice && course.originalPrice !== "0" && (
                 <>
                   <div className="cp-modal-original-price">₹{course.originalPrice}</div>
                   <div className="cp-modal-discount">{course.discount}% off</div>
@@ -1212,13 +1317,8 @@ function CourseModal({ course, onClose }) {
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
 
-          {/* Schedule — hide for recorded courses, super100, and free self-paced products */}
-          {course.tag !== "RECORDED" && course.id !== "super100" && !course.isFree && (
-            <div className="cp-modal-schedule">
-              <ClockIcon />
-              <span>Classes held between 6 AM to 8 AM and 6 PM to 10 PM as per educator availability</span>
-            </div>
-          )}
+
+
 
           {/* If full details exist, show them */}
           {d ? (
@@ -1324,6 +1424,28 @@ function CourseModal({ course, onClose }) {
                             <CheckIcon /> <span>{item}</span>
                           </div>
                         ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Program Levels (AI Generalist / Study Abroad) */}
+              {d.programLevels && (
+                <div className="cp-modal-detail-section">
+                  <div className="cp-modal-section-label">Program Structure</div>
+                  <div className="cp-modal-mentorship">
+                    {d.programLevels.map((level, i) => (
+                      <div className="cp-modal-mentorship-block" key={i}>
+                        <h4 className="cp-modal-mentorship-title">{level.title}</h4>
+                        <p className="cp-modal-desc" style={{ marginBottom: level.tools && level.tools.length ? 8 : 0 }}>{level.desc}</p>
+                        {level.tools && level.tools.length > 0 && (
+                          <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginTop: 6 }}>
+                            {level.tools.map((tool, j) => (
+                              <span key={j} className="cp-modal-subject-chip" style={{ fontSize: 11, padding: "3px 8px" }}>{tool}</span>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -1490,8 +1612,8 @@ export default function CoursesPage() {
                 <div className="cp-hero-img-overlay">
                   <p className="cp-hero-img-title">World-Class<br />CS Education</p>
                   <div className="cp-hero-stat-box">
-                    <div className="cp-big-num">17</div>
-                    <div className="cp-small-lbl">LIVE<br />Courses</div>
+                    <div className="cp-big-num">19</div>
+                    <div className="cp-small-lbl">Courses<br />& Programs</div>
                   </div>
                 </div>
               </div>
@@ -1567,17 +1689,33 @@ export default function CoursesPage() {
                     <div
                       key={course.id}
                       className={`cp-course-card ${course.color === "gold" ? "cp-card-gold" : course.color === "accent" ? "cp-card-accent" : ""}`}
+                      style={{ position: "relative" }}
                     >
+                      {/* Highlighted Badge */}
+                      {course.highlighted && (
+                        <div style={{
+                          position: "absolute", top: 12, right: 12, zIndex: 10,
+                          background: "linear-gradient(135deg, #f59e0b, #ef4444)",
+                          color: "#fff", fontSize: 11, fontWeight: 700,
+                          padding: "4px 10px", borderRadius: 20,
+                          letterSpacing: "0.05em", boxShadow: "0 2px 8px rgba(245,158,11,0.5)",
+                          display: "flex", alignItems: "center", gap: 4,
+                        }}>
+                          ⭐ HIGHLIGHTED
+                        </div>
+                      )}
+
                       {/* Banner Image */}
                       {course.image && (
                         <div className="cp-card-banner">
                           <img
-                            src={course.image}
+                            src={`${course.image}?v=3`}
                             alt={course.title}
                             onError={(e) => { e.target.style.display = 'none'; e.target.parentElement.classList.add('cp-card-banner-fallback'); }}
                           />
                         </div>
                       )}
+
 
                       {/* Card body */}
                       <div className="cp-card-body">
@@ -1595,7 +1733,7 @@ export default function CoursesPage() {
 
                         <div className="cp-card-price-row">
                           <div className="cp-card-price">{course.isFree ? "FREE" : `₹${course.price}`}</div>
-                          {!course.isFree && course.discount !== "0" && (
+                          {!course.isFree && course.originalPrice && course.originalPrice !== "0" && course.discount !== "0" && (
                             <>
                               <div className="cp-card-original-price">₹{course.originalPrice}</div>
                               <div className="cp-card-discount">{course.discount}% off</div>
