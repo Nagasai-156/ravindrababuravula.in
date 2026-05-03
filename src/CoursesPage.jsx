@@ -228,7 +228,7 @@ const CATEGORIES = [
         },
       },
       {
-        id: "free10k", tag: "FREE · GATE CS & DA", title: "10000+ Free Practice Questions and 500+ Free Tests",
+        id: "free10k", tag: "FREE · GATE CS & DA", title: "10000+ Free Practice Questions and 1000+ Free Tests",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/10000+ free practice questions.jpg",
         link: "https://courses.ravindrababuravula.in/new-courses/31-free-10k-practice-questions-and-500-tests-gate",
