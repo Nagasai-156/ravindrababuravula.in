@@ -1467,6 +1467,15 @@ function CourseModal({ course, onClose }) {
                 </div>
               )}
 
+              {/* DSA Coverage */}
+              {d.dsaCoverage && <DetailSection title={course.id === "super100" ? "DSA with Java + LeetCode — Taught by Syed Peera Saheb" : "DSA Coverage"} items={d.dsaCoverage} />}
+
+              {/* Java Coverage */}
+              {d.javaCoverage && <DetailSection title="Java Programming" items={d.javaCoverage} />}
+
+              {/* LeetCode Coverage */}
+              {d.leetcodeCoverage && <DetailSection title={course.id === "super100" ? "LeetCode Practice" : "LeetCode Problem Solving"} items={d.leetcodeCoverage} />}
+
               {/* Mentorship & Guidance */}
               {d.mentorship && (
                 <div className="cp-modal-detail-section">
@@ -1485,15 +1494,6 @@ function CourseModal({ course, onClose }) {
                   </div>
                 </div>
               )}
-
-              {/* DSA Coverage */}
-              {d.dsaCoverage && <DetailSection title={course.id === "super100" ? "DSA with Java + LeetCode — Taught by Syed Peera Saheb" : "DSA Coverage"} items={d.dsaCoverage} />}
-
-              {/* Java Coverage */}
-              {d.javaCoverage && <DetailSection title="Java Programming" items={d.javaCoverage} />}
-
-              {/* LeetCode Coverage */}
-              {d.leetcodeCoverage && <DetailSection title={course.id === "super100" ? "LeetCode Practice" : "LeetCode Problem Solving"} items={d.leetcodeCoverage} />}
 
               {/* Custom Sections (for super100) */}
               {d.customSections && d.customSections.map((sec, i) => (
