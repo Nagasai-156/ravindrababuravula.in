@@ -1239,6 +1239,8 @@
   .cp-path-inner,
   .cp-cta-inner { padding: 48px 16px; }
 
+  .cp-hero-inner { padding-top: 130px; }
+
   .cp-headline { font-size: 1.8rem; }
 
   .cp-stat-val { font-size: 1.3rem; }
