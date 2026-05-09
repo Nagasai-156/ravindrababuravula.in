@@ -71,171 +71,170 @@ const COURSE_STATS = [
  * Each image should be ~600x340 (landscape ratio) like the provided banner.
  */
 
+/* ── Crack FAANG — New & Trending (standalone, top of page) ── */
+const FAANG_COURSE = {
+  id: "crack-faang-01",
+  tag: "PRODUCT-BASED COMPANY PREP",
+  title: "Crack FAANG — Complete Product-Based Company Preparation Program",
+  subtitle: "A Structured Recorded Program for Coding Interviews, Placements & Product-Based Companies",
+  image: "/courses/faang.jpeg",
+  link: "https://courses.ravindrababuravula.in/new-courses/15-crack-faang",
+  description: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.",
+  highlights: [
+    "Programming in Python, C++ & Java",
+    "DSA from Basics to Advanced",
+    "250+ Curated LeetCode Problems",
+    "Computer Networks & DBMS for Interviews",
+  ],
+  price: "Enroll Now",
+  marqueeText: "NEW & TRENDING ★ CRACK FAANG ★ PRODUCT-BASED COMPANY PREP ★ DSA MASTERY ★ PYTHON · C++ · JAVA ★ 250+ LEETCODE PROBLEMS ★ GOOGLE · META · AMAZON · APPLE · NETFLIX ★ ",
+  details: {
+    overview: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.\n\nThe program is carefully designed for students who want a complete roadmap from beginner-level programming to advanced DSA, LeetCode problem solving, competitive programming, and interview preparation.\n\nUnlike random coding practice, Crack FAANG follows a systematic and pattern-based learning approach that focuses on:\n• Logical thinking\n• Coding implementation\n• Optimization techniques\n• Interview problem-solving\n• Real placement preparation\n\nInspired by hiring standards of top product-based companies like Google, Meta, Amazon, Apple, and Netflix — the program focuses on building strong problem-solving skills and interview confidence through structured learning and consistent coding practice.",
+    format: [
+      "Structured recorded sessions covering concepts and coding implementation",
+      "Beginner-to-advanced learning roadmap",
+      "Guided problem-solving classes",
+      "Topic-wise coding practice",
+      "Pattern-based DSA learning",
+      "Curated interview problem sheets",
+      "Practice assignments after every module",
+      "LeetCode-focused problem-solving sessions",
+      "Progressive difficulty-based learning approach",
+      "Continuous support through student discussion groups",
+      "Learn anytime at your own pace",
+    ],
+    whatYouLearn: [
+      "Programming fundamentals using Python, C++, and Java",
+      "Data Structures and Algorithms from basics to advanced level",
+      "Pattern-based coding interview preparation",
+      "Problem-solving approaches for LeetCode-style questions",
+      "Time complexity and optimization techniques",
+      "Competitive programming fundamentals",
+      "Interview-oriented coding strategies",
+      "Dynamic Programming and Graph algorithms",
+      "Database Management Systems concepts",
+      "Computer Networks fundamentals",
+      "Coding round preparation strategies",
+      "Mock interview preparation",
+      "Logical thinking and analytical problem-solving skills",
+    ],
+    programLevels: [
+      {
+        title: "Python — Logic Building & Foundations",
+        desc: "Python is used as the beginner-friendly language for building strong coding foundations and logical thinking. Covers Python syntax and fundamentals, functions and recursion, strings and collections, OOP in Python, problem solving, and Python libraries useful for DSA.",
+        tools: ["Python Syntax & Fundamentals", "Functions & Recursion", "OOP in Python", "Strings & Collections", "DSA with Python"],
+      },
+      {
+        title: "C++ — High-Performance Programming & STL",
+        desc: "C++ is introduced for high-performance programming, STL mastery, and competitive coding. Covers Tokens & Data Types, Operators, Control Statements, Functions & Recursion, Arrays & Strings, Pointers & Memory Management, OOP, Constructors & Destructors, Templates, Exception Handling, STL Containers & Algorithms, Competitive Programming, and DSA Implementation.",
+        tools: ["Pointers & Memory", "STL Containers", "Templates", "Exception Handling", "Competitive Programming", "DSA with C++"],
+      },
+      {
+        title: "Java — Placements & Enterprise Development",
+        desc: "Java is one of the most important languages for placements and enterprise-level software development. Covers Java Basics, Control Structures, OOP, Classes & Objects, Inheritance & Polymorphism, Exception Handling, Collections Framework, Multithreading, File Handling, Java 8 Features, and DSA with Java.",
+        tools: ["OOP in Java", "Collections Framework", "Multithreading", "Java 8 Features", "DSA with Java", "Clean Code"],
+      },
+    ],
+    dsaCoverage: [
+      "Arrays & Strings — Prefix Sum, Sliding Window, Two Pointers, Kadane's Algorithm, KMP",
+      "Linked List — Reversal, Fast & Slow Pointer, Merge Techniques, Cycle Detection",
+      "Stack & Queue — Monotonic Stack, Expression Evaluation, Circular Queue, Priority Queue",
+      "Trees & BST — DFS & BFS, Binary Search Trees, Tree Recursion, Path Problems, Serialization",
+      "Graphs — BFS & DFS, Topological Sort, Dijkstra, Minimum Spanning Tree, Union Find",
+      "Advanced — Heap, Trie, Backtracking, Dynamic Programming, Greedy Algorithms",
+    ],
+    customSections: [
+      {
+        title: "Algorithms Curriculum",
+        items: [
+          "Complexity Analysis — Big O Notation, Time & Space Complexity",
+          "Searching — Linear Search, Binary Search, Binary Search on Answers",
+          "Sorting — Merge Sort, Quick Sort, Heap Sort",
+          "Advanced — Divide and Conquer, Greedy Algorithms, Dynamic Programming, Graph Algorithms",
+        ],
+      },
+      {
+        title: "LeetCode Problem Solving — 250+ Curated Problems",
+        items: [
+          "Covers Blind 75, NeetCode 150, Striver SDE Sheet, Love Babbar Sheet",
+          "Topic-wise: Arrays, Binary Search, Strings, Sliding Window, Linked List, Stack & Queue",
+          "Topic-wise: Heap, Greedy, Recursion & Backtracking, Dynamic Programming",
+          "Topic-wise: Trees & BST, Graphs, Bit Manipulation, Trie",
+          "Easy-to-hard progression with pattern recognition and optimization",
+          "Timed problem solving and interview-style coding practice",
+        ],
+      },
+      {
+        title: "Computer Networks",
+        items: [
+          "OSI Model & TCP/IP Model",
+          "Routing and Switching, IPv4 and IP Addressing",
+          "TCP and UDP, DNS, HTTP, FTP, SMTP",
+          "How internet communication and client-server systems work",
+        ],
+      },
+      {
+        title: "Database Management Systems (DBMS)",
+        items: [
+          "ER Model & Relational Model",
+          "SQL and Relational Algebra",
+          "Normalization — 1NF, 2NF, 3NF, BCNF",
+          "Transactions, Indexing, B Trees & B+ Trees",
+          "Concurrency Control",
+        ],
+      },
+      {
+        title: "What Makes Crack FAANG Different?",
+        items: [
+          "Structured Roadmap — complete beginner-to-advanced path for placements",
+          "Multi-Language DSA — implementation in Python, C++, and Java",
+          "Pattern-Based Learning — understand patterns, not just memorize solutions",
+          "Coding-Focused — every concept taught with implementation and guided practice",
+          "Progressive Difficulty — Beginner → Intermediate → Advanced → Interview Level",
+          "Placement & Interview Preparation — coding rounds, OAs, product-company interviews",
+        ],
+      },
+    ],
+    whatYouGet: [
+      "Complete structured recorded sessions from beginner to advanced",
+      "Programming in Python, C++, and Java with DSA implementation",
+      "250+ curated LeetCode problems (Blind 75, NeetCode 150, Striver SDE Sheet)",
+      "Topic-wise and pattern-wise problem sheets",
+      "Practice assignments after every module",
+      "Computer Networks and DBMS for interviews",
+      "Student discussion group support",
+      "Learn anytime at your own pace",
+    ],
+    whoIsFor: [
+      "Students starting with programming and DSA",
+      "Placement and internship aspirants",
+      "Competitive programming learners",
+      "College students preparing for coding interviews",
+      "Beginners looking for a structured coding roadmap",
+      "Product-company interview aspirants",
+    ],
+    outcome: [
+      "Develop strong programming foundations in Python, C++, and Java",
+      "Master DSA patterns and algorithms",
+      "Solve interview-level coding problems confidently",
+      "Improve logical thinking and optimization skills",
+      "Write optimized programs with clean code",
+      "Understand DBMS and Computer Networks fundamentals",
+      "Improve coding speed and interview confidence",
+      "Prepare for coding rounds and technical interviews at top product-based companies",
+    ],
+  },
+};
+
 /* ── Course Categories with proper grouping ── */
 const CATEGORIES = [
   {
     key: "featured",
     label: "Featured",
     heading: "Featured Courses",
-    description: "Start your learning journey — explore our Crack FAANG Program, AI Generalist Program, Study Abroad Guidance, and Free Practice Questions all in one place.",
-    count: 4,
+    description: "Start your learning journey — explore our AI Generalist Program, Study Abroad Guidance, and Free Practice Questions all in one place.",
+    count: 3,
     courses: [
-      {
-        id: "crack-faang-01",
-        tag: "PRODUCT-BASED COMPANY PREP",
-        title: "Crack FAANG — Complete Product-Based Company Preparation Program",
-        subtitle: "A Structured Recorded Program for Coding Interviews, Placements & Product-Based Companies",
-        image: "/courses/faang.jpeg",
-        link: "https://courses.ravindrababuravula.in/new-courses/15-crack-faang",
-        description: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.",
-        highlights: [
-          "Programming in Python, C++ & Java",
-          "DSA from Basics to Advanced",
-          "250+ Curated LeetCode Problems",
-          "Computer Networks & DBMS for Interviews",
-        ],
-        price: "Coming Soon",
-        originalPrice: "0",
-        discount: "0",
-        color: "solid-gold",
-        marqueeText: "CRACK FAANG ★ PRODUCT-BASED COMPANY PREP ★ DSA MASTERY ★ PYTHON · C++ · JAVA ★ LEETCODE 250+ ★ GOOGLE · META · AMAZON · APPLE · NETFLIX ★ ",
-        details: {
-          overview: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.\n\nThe program is carefully designed for students who want a complete roadmap from beginner-level programming to advanced DSA, LeetCode problem solving, competitive programming, and interview preparation.\n\nUnlike random coding practice, Crack FAANG follows a systematic and pattern-based learning approach that focuses on:\n• Logical thinking\n• Coding implementation\n• Optimization techniques\n• Interview problem-solving\n• Real placement preparation\n\nInspired by hiring standards of top product-based companies like Google, Meta, Amazon, Apple, and Netflix — the program focuses on building strong problem-solving skills and interview confidence through structured learning and consistent coding practice.",
-          format: [
-            "Structured recorded sessions covering concepts and coding implementation",
-            "Beginner-to-advanced learning roadmap",
-            "Guided problem-solving classes",
-            "Topic-wise coding practice",
-            "Pattern-based DSA learning",
-            "Curated interview problem sheets",
-            "Practice assignments after every module",
-            "LeetCode-focused problem-solving sessions",
-            "Progressive difficulty-based learning approach",
-            "Continuous support through student discussion groups",
-            "Learn anytime at your own pace",
-          ],
-          whatYouLearn: [
-            "Programming fundamentals using Python, C++, and Java",
-            "Data Structures and Algorithms from basics to advanced level",
-            "Pattern-based coding interview preparation",
-            "Problem-solving approaches for LeetCode-style questions",
-            "Time complexity and optimization techniques",
-            "Competitive programming fundamentals",
-            "Interview-oriented coding strategies",
-            "Dynamic Programming and Graph algorithms",
-            "Database Management Systems concepts",
-            "Computer Networks fundamentals",
-            "Coding round preparation strategies",
-            "Mock interview preparation",
-            "Logical thinking and analytical problem-solving skills",
-          ],
-          programLevels: [
-            {
-              title: "Python — Logic Building & Foundations",
-              desc: "Python is used as the beginner-friendly language for building strong coding foundations and logical thinking. Covers Python syntax and fundamentals, functions and recursion, strings and collections, OOP in Python, problem solving, and Python libraries useful for DSA. Python helps students focus on logic building, algorithmic thinking, and coding confidence without worrying about complicated syntax.",
-              tools: ["Python Syntax & Fundamentals", "Functions & Recursion", "OOP in Python", "Strings & Collections", "DSA with Python"],
-            },
-            {
-              title: "C++ — High-Performance Programming & STL",
-              desc: "C++ is introduced for high-performance programming, STL mastery, and competitive coding. Covers Tokens & Data Types, Operators, Control Statements, Functions & Recursion, Arrays & Strings, Pointers & Memory Management, OOP, Constructors & Destructors, Templates, Exception Handling, STL Containers & Algorithms, Competitive Programming, and DSA Implementation.",
-              tools: ["Pointers & Memory", "STL Containers", "Templates", "Exception Handling", "Competitive Programming", "DSA with C++"],
-            },
-            {
-              title: "Java — Placements & Enterprise Development",
-              desc: "Java is one of the most important languages for placements and enterprise-level software development. Covers Java Basics, Control Structures, OOP, Classes & Objects, Inheritance & Polymorphism, Exception Handling, Collections Framework, Multithreading, File Handling, Java 8 Features, and DSA with Java.",
-              tools: ["OOP in Java", "Collections Framework", "Multithreading", "Java 8 Features", "DSA with Java", "Clean Code"],
-            },
-          ],
-          dsaCoverage: [
-            "Arrays & Strings — Prefix Sum, Sliding Window, Two Pointers, Kadane's Algorithm, KMP",
-            "Linked List — Reversal, Fast & Slow Pointer, Merge Techniques, Cycle Detection",
-            "Stack & Queue — Monotonic Stack, Expression Evaluation, Circular Queue, Priority Queue",
-            "Trees & BST — DFS & BFS, Binary Search Trees, Tree Recursion, Path Problems, Serialization",
-            "Graphs — BFS & DFS, Topological Sort, Dijkstra, Minimum Spanning Tree, Union Find",
-            "Advanced — Heap, Trie, Backtracking, Dynamic Programming, Greedy Algorithms",
-          ],
-          customSections: [
-            {
-              title: "Algorithms Curriculum",
-              items: [
-                "Complexity Analysis — Big O Notation, Time & Space Complexity",
-                "Searching — Linear Search, Binary Search, Binary Search on Answers",
-                "Sorting — Merge Sort, Quick Sort, Heap Sort",
-                "Advanced — Divide and Conquer, Greedy Algorithms, Dynamic Programming, Graph Algorithms",
-              ],
-            },
-            {
-              title: "LeetCode Problem Solving — 250+ Curated Problems",
-              items: [
-                "Covers Blind 75, NeetCode 150, Striver SDE Sheet, Love Babbar Sheet",
-                "Topic-wise: Arrays, Binary Search, Strings, Sliding Window, Linked List, Stack & Queue",
-                "Topic-wise: Heap, Greedy, Recursion & Backtracking, Dynamic Programming",
-                "Topic-wise: Trees & BST, Graphs, Bit Manipulation, Trie",
-                "Easy-to-hard progression with pattern recognition and optimization",
-                "Timed problem solving and interview-style coding practice",
-              ],
-            },
-            {
-              title: "Computer Networks",
-              items: [
-                "OSI Model & TCP/IP Model",
-                "Routing and Switching, IPv4 and IP Addressing",
-                "TCP and UDP, DNS, HTTP, FTP, SMTP",
-                "How internet communication and client-server systems work",
-              ],
-            },
-            {
-              title: "Database Management Systems (DBMS)",
-              items: [
-                "ER Model & Relational Model",
-                "SQL and Relational Algebra",
-                "Normalization — 1NF, 2NF, 3NF, BCNF",
-                "Transactions, Indexing, B Trees & B+ Trees",
-                "Concurrency Control",
-              ],
-            },
-            {
-              title: "What Makes Crack FAANG Different?",
-              items: [
-                "Structured Roadmap — complete beginner-to-advanced path for placements",
-                "Multi-Language DSA — implementation in Python, C++, and Java",
-                "Pattern-Based Learning — understand patterns, not just memorize solutions",
-                "Coding-Focused — every concept taught with implementation and guided practice",
-                "Progressive Difficulty — Beginner → Intermediate → Advanced → Interview Level",
-                "Placement & Interview Preparation — coding rounds, OAs, product-company interviews",
-              ],
-            },
-          ],
-          whatYouGet: [
-            "Complete structured recorded sessions from beginner to advanced",
-            "Programming in Python, C++, and Java with DSA implementation",
-            "250+ curated LeetCode problems (Blind 75, NeetCode 150, Striver SDE Sheet)",
-            "Topic-wise and pattern-wise problem sheets",
-            "Practice assignments after every module",
-            "Computer Networks and DBMS for interviews",
-            "Student discussion group support",
-            "Learn anytime at your own pace",
-          ],
-          whoIsFor: [
-            "Students starting with programming and DSA",
-            "Placement and internship aspirants",
-            "Competitive programming learners",
-            "College students preparing for coding interviews",
-            "Beginners looking for a structured coding roadmap",
-            "Product-company interview aspirants",
-          ],
-          outcome: [
-            "Develop strong programming foundations in Python, C++, and Java",
-            "Master DSA patterns and algorithms",
-            "Solve interview-level coding problems confidently",
-            "Improve logical thinking and optimization skills",
-            "Write optimized programs with clean code",
-            "Understand DBMS and Computer Networks fundamentals",
-            "Improve coding speed and interview confidence",
-            "Prepare for coding rounds and technical interviews at top product-based companies",
-          ],
-        },
-      },
       {
         id: "ai-generalist-01",
         tag: "6-MONTH PROGRAM",
@@ -1775,6 +1774,69 @@ export default function CoursesPage() {
                   <div className="cp-stat-lbl">{s.label}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <div className="cp-divider" />
+
+        {/* ══════════════════════════════════════════
+            CRACK FAANG — NEW & TRENDING
+        ══════════════════════════════════════════ */}
+        <section className="cp-faang-section">
+          {/* Marquee */}
+          <div className="cp-faang-marquee">
+            <div className="cp-faang-marquee-track">
+              {[...Array(3)].map((_, i) => (
+                <span key={i}>{FAANG_COURSE.marqueeText}</span>
+              ))}
+            </div>
+          </div>
+
+          <div className="cp-faang-inner">
+            {/* Badge row */}
+            <div className="cp-faang-badges">
+              <span className="cp-faang-badge-new">🔥 NEW</span>
+              <span className="cp-faang-badge-trending">📈 TRENDING</span>
+              <span className="cp-faang-badge-tag">{FAANG_COURSE.tag}</span>
+            </div>
+
+            <div className="cp-faang-card">
+              {/* Left — Image */}
+              <div className="cp-faang-img-wrap">
+                <img src={`${FAANG_COURSE.image}?v=1`} alt={FAANG_COURSE.title} />
+                <div className="cp-faang-img-glow" />
+              </div>
+
+              {/* Right — Content */}
+              <div className="cp-faang-content">
+                <h2 className="cp-faang-title">{FAANG_COURSE.title}</h2>
+                <p className="cp-faang-subtitle">{FAANG_COURSE.subtitle}</p>
+                <p className="cp-faang-desc">{FAANG_COURSE.description}</p>
+
+                <div className="cp-faang-highlights">
+                  {FAANG_COURSE.highlights.map((h, i) => (
+                    <div className="cp-faang-highlight" key={i}>
+                      <CheckIcon /> <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="cp-faang-companies">
+                  {["Google", "Meta", "Amazon", "Apple", "Netflix"].map((c) => (
+                    <span key={c} className="cp-faang-company-chip">{c}</span>
+                  ))}
+                </div>
+
+                <div className="cp-faang-actions">
+                  <a href={FAANG_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
+                    <PlayIcon /> Enroll Now
+                  </a>
+                  <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(FAANG_COURSE)}>
+                    View Details <ArrowIcon />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>

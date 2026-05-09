@@ -1256,6 +1256,237 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   CRACK FAANG — NEW & TRENDING SECTION
+═══════════════════════════════════════════════════════════════ */
+.cp-faang-section {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0d0a00 100%);
+  border-top: 2px solid rgba(255, 183, 3, 0.25);
+  border-bottom: 2px solid rgba(255, 183, 3, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Marquee */
+.cp-faang-marquee {
+  background: linear-gradient(90deg, #ffb703, #f59e0b, #ffb703);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+.cp-faang-marquee-track {
+  display: inline-block;
+  animation: faangMarquee 22s linear infinite;
+}
+.cp-faang-marquee-track span {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.08em;
+  padding-right: 40px;
+}
+@keyframes faangMarquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+
+/* Inner */
+.cp-faang-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 40px 56px;
+}
+
+/* Badges row */
+.cp-faang-badges {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.cp-faang-badge-new {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  box-shadow: 0 2px 12px rgba(239,68,68,0.5);
+}
+.cp-faang-badge-trending {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.1em;
+  box-shadow: 0 2px 12px rgba(16,185,129,0.4);
+}
+.cp-faang-badge-tag {
+  background: rgba(255,183,3,0.12);
+  color: #ffb703;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,183,3,0.3);
+  letter-spacing: 0.06em;
+}
+
+/* Card layout */
+.cp-faang-card {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Image */
+.cp-faang-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(255,183,3,0.2), 0 20px 60px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,183,3,0.2);
+}
+.cp-faang-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.cp-faang-img-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(255,183,3,0.12), transparent 60%);
+  pointer-events: none;
+}
+
+/* Content */
+.cp-faang-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cp-faang-title {
+  font-family: 'Unbounded', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.cp-faang-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #ffb703;
+  font-weight: 500;
+}
+.cp-faang-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  line-height: 1.7;
+}
+
+/* Highlights */
+.cp-faang-highlights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+.cp-faang-highlight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+.cp-faang-highlight svg { color: #ffb703; flex-shrink: 0; }
+
+/* Company chips */
+.cp-faang-companies {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cp-faang-company-chip {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #aaa;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.05em;
+}
+
+/* Actions */
+.cp-faang-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.cp-faang-enroll-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffb703;
+  color: #000;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 20px rgba(255,183,3,0.4);
+}
+.cp-faang-enroll-btn:hover {
+  background: #ffc31a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(255,183,3,0.55);
+}
+.cp-faang-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #ffb703;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,183,3,0.35);
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.cp-faang-details-btn:hover {
+  background: rgba(255,183,3,0.08);
+  border-color: #ffb703;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .cp-faang-card { grid-template-columns: 1fr; gap: 32px; }
+  .cp-faang-inner { padding: 40px 24px 48px; }
+}
+@media (max-width: 560px) {
+  .cp-faang-inner { padding: 32px 16px 40px; }
+  .cp-faang-highlights { grid-template-columns: 1fr; }
+  .cp-faang-title { font-size: 1.3rem; }
+  .cp-faang-actions { flex-direction: column; align-items: stretch; }
+  .cp-faang-enroll-btn, .cp-faang-details-btn { justify-content: center; }
+}
+
+/* ═══════════════════════════════════════════════════════════════
    COURSE DETAIL MODAL
 ═══════════════════════════════════════════════════════════════ */
 .cp-modal-overlay {
