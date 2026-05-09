@@ -86,7 +86,7 @@ const CATEGORIES = [
         title: "Crack FAANG — Complete Product-Based Company Preparation Program",
         subtitle: "A Structured Recorded Program for Coding Interviews, Placements & Product-Based Companies",
         image: "/courses/faang.jpeg",
-        link: "https://courses.ravindrababuravula.in",
+        link: "https://courses.ravindrababuravula.in/new-courses/15-crack-faang",
         description: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.",
         highlights: [
           "Programming in Python, C++ & Java",
