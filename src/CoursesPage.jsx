@@ -1781,69 +1781,6 @@ export default function CoursesPage() {
         <div className="cp-divider" />
 
         {/* ══════════════════════════════════════════
-            CRACK FAANG — NEW & TRENDING
-        ══════════════════════════════════════════ */}
-        <section className="cp-faang-section">
-          {/* Marquee */}
-          <div className="cp-faang-marquee">
-            <div className="cp-faang-marquee-track">
-              {[...Array(3)].map((_, i) => (
-                <span key={i}>{FAANG_COURSE.marqueeText}</span>
-              ))}
-            </div>
-          </div>
-
-          <div className="cp-faang-inner">
-            {/* Badge row */}
-            <div className="cp-faang-badges">
-              <span className="cp-faang-badge-new">🔥 NEW</span>
-              <span className="cp-faang-badge-trending">📈 TRENDING</span>
-              <span className="cp-faang-badge-tag">{FAANG_COURSE.tag}</span>
-            </div>
-
-            <div className="cp-faang-card">
-              {/* Left — Image */}
-              <div className="cp-faang-img-wrap">
-                <img src={`${FAANG_COURSE.image}?v=1`} alt={FAANG_COURSE.title} />
-                <div className="cp-faang-img-glow" />
-              </div>
-
-              {/* Right — Content */}
-              <div className="cp-faang-content">
-                <h2 className="cp-faang-title">{FAANG_COURSE.title}</h2>
-                <p className="cp-faang-subtitle">{FAANG_COURSE.subtitle}</p>
-                <p className="cp-faang-desc">{FAANG_COURSE.description}</p>
-
-                <div className="cp-faang-highlights">
-                  {FAANG_COURSE.highlights.map((h, i) => (
-                    <div className="cp-faang-highlight" key={i}>
-                      <CheckIcon /> <span>{h}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="cp-faang-companies">
-                  {["Google", "Meta", "Amazon", "Apple", "Netflix"].map((c) => (
-                    <span key={c} className="cp-faang-company-chip">{c}</span>
-                  ))}
-                </div>
-
-                <div className="cp-faang-actions">
-                  <a href={FAANG_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
-                    <PlayIcon /> Enroll Now
-                  </a>
-                  <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(FAANG_COURSE)}>
-                    View Details <ArrowIcon />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="cp-divider" />
-
-        {/* ══════════════════════════════════════════
             COURSES — FILTER BAR
         ══════════════════════════════════════════ */}
         <section className="cp-courses-section" id="courses-grid">
@@ -1865,6 +1802,74 @@ export default function CoursesPage() {
                     {f}
                   </button>
                 ))}
+              </div>
+            </div>
+
+            {/* ══════════════════════════════════════════
+                CRACK FAANG — NEW & TRENDING
+            ══════════════════════════════════════════ */}
+            <div className="cp-faang-section">
+              {/* Marquee */}
+              <div className="cp-faang-marquee">
+                <div className="cp-faang-marquee-track">
+                  {[...Array(3)].map((_, i) => (
+                    <span key={i}>{FAANG_COURSE.marqueeText}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="cp-faang-inner">
+                {/* Badge row */}
+                <div className="cp-faang-badges">
+                  <span className="cp-faang-badge-new">🔥 NEW</span>
+                  <span className="cp-faang-badge-trending">📈 TRENDING</span>
+                  <span className="cp-faang-badge-tag">{FAANG_COURSE.tag}</span>
+                </div>
+
+                <div className="cp-faang-card">
+                  {/* Left — Image */}
+                  <div className="cp-faang-img-wrap">
+                    <img src={`${FAANG_COURSE.image}?v=1`} alt={FAANG_COURSE.title} />
+                    <div className="cp-faang-img-glow" />
+                  </div>
+
+                  {/* Right — Content */}
+                  <div className="cp-faang-content">
+                    <h2 className="cp-faang-title">{FAANG_COURSE.title}</h2>
+                    <p className="cp-faang-subtitle">{FAANG_COURSE.subtitle}</p>
+                    <p className="cp-faang-desc">{FAANG_COURSE.description}</p>
+
+                    <div className="cp-faang-highlights">
+                      {FAANG_COURSE.highlights.map((h, i) => (
+                        <div className="cp-faang-highlight" key={i}>
+                          <CheckIcon /> <span>{h}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="cp-faang-companies">
+                      {["Google", "Meta", "Amazon", "Apple", "Netflix"].map((c) => (
+                        <span key={c} className="cp-faang-company-chip">{c}</span>
+                      ))}
+                    </div>
+
+                    <div className="cp-faang-pricing">
+                      <span className="cp-faang-original-price">₹45,000</span>
+                      <span className="cp-faang-current-price">₹25,000</span>
+                      <span className="cp-faang-discount-badge">44.4% OFF</span>
+                      <span className="cp-faang-gst">+ 18% GST</span>
+                    </div>
+
+                    <div className="cp-faang-actions">
+                      <a href={FAANG_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
+                        <PlayIcon /> Enroll Now
+                      </a>
+                      <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(FAANG_COURSE)}>
+                        View Details <ArrowIcon />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 

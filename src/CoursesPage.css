@@ -1260,10 +1260,11 @@
 ═══════════════════════════════════════════════════════════════ */
 .cp-faang-section {
   background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0d0a00 100%);
-  border-top: 2px solid rgba(255, 183, 3, 0.25);
-  border-bottom: 2px solid rgba(255, 183, 3, 0.25);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  border-radius: 20px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 48px;
 }
 
 /* Marquee */
@@ -1423,6 +1424,42 @@
   padding: 4px 12px;
   border-radius: 20px;
   letter-spacing: 0.05em;
+}
+
+/* Pricing */
+.cp-faang-pricing {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.cp-faang-original-price {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+.cp-faang-current-price {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #ffb703;
+  letter-spacing: -0.02em;
+}
+.cp-faang-discount-badge {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+}
+.cp-faang-gst {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #666;
 }
 
 /* Actions */
