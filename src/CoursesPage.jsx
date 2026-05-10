@@ -1845,8 +1845,8 @@ export default function CoursesPage() {
 
                   <div className="cp-faang-pricing">
                     <span className="cp-faang-original-price">₹45,000</span>
-                    <span className="cp-faang-current-price">₹25,000</span>
-                    <span className="cp-faang-discount-badge">44.4% OFF</span>
+                    <span className="cp-faang-current-price">₹10,000</span>
+                    <span className="cp-faang-discount-badge">77.8% OFF</span>
                     <span className="cp-faang-gst">+ 18% GST</span>
                   </div>
 
