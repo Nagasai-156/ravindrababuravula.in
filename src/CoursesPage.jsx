@@ -77,17 +77,17 @@ const FAANG_COURSE = {
   tag: "PRODUCT-BASED COMPANY PREP",
   title: "Crack FAANG — Complete Product-Based Company Preparation Program",
   subtitle: "A Structured Recorded Program for Coding Interviews, Placements & Product-Based Companies",
-  image: "/courses/faang.jpeg",
+  image: "/courses/faang-offer.jpg",
   link: "https://courses.ravindrababuravula.in/new-courses/15-crack-faang",
   description: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.",
   highlights: [
     "Programming in Python, C++ & Java",
     "DSA from Basics to Advanced",
-    "250+ Curated LeetCode Problems",
+    "500+ Curated Practice Problems",
     "Computer Networks & DBMS for Interviews",
   ],
   price: "Enroll Now",
-  marqueeText: "NEW & TRENDING ★ CRACK FAANG ★ PRODUCT-BASED COMPANY PREP ★ DSA MASTERY ★ PYTHON · C++ · JAVA ★ 250+ LEETCODE PROBLEMS ★ GOOGLE · META · AMAZON · APPLE · NETFLIX ★ ",
+  marqueeText: "NEW & TRENDING ★ CRACK FAANG ★ PRODUCT-BASED COMPANY PREP ★ DSA MASTERY ★ PYTHON · C++ · JAVA ★ 500+ CURATED PRACTICE PROBLEMS ★ GOOGLE · META · AMAZON · APPLE · NETFLIX ★ ",
   details: {
     overview: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.\n\nThe program is carefully designed for students who want a complete roadmap from beginner-level programming to advanced DSA, LeetCode problem solving, competitive programming, and interview preparation.\n\nUnlike random coding practice, Crack FAANG follows a systematic and pattern-based learning approach that focuses on:\n• Logical thinking\n• Coding implementation\n• Optimization techniques\n• Interview problem-solving\n• Real placement preparation\n\nInspired by hiring standards of top product-based companies like Google, Meta, Amazon, Apple, and Netflix — the program focuses on building strong problem-solving skills and interview confidence through structured learning and consistent coding practice.",
     format: [
@@ -154,17 +154,6 @@ const FAANG_COURSE = {
         ],
       },
       {
-        title: "LeetCode Problem Solving — 250+ Curated Problems",
-        items: [
-          "Covers Blind 75, NeetCode 150, Striver SDE Sheet, Love Babbar Sheet",
-          "Topic-wise: Arrays, Binary Search, Strings, Sliding Window, Linked List, Stack & Queue",
-          "Topic-wise: Heap, Greedy, Recursion & Backtracking, Dynamic Programming",
-          "Topic-wise: Trees & BST, Graphs, Bit Manipulation, Trie",
-          "Easy-to-hard progression with pattern recognition and optimization",
-          "Timed problem solving and interview-style coding practice",
-        ],
-      },
-      {
         title: "Computer Networks",
         items: [
           "OSI Model & TCP/IP Model",
@@ -198,7 +187,7 @@ const FAANG_COURSE = {
     whatYouGet: [
       "Complete structured recorded sessions from beginner to advanced",
       "Programming in Python, C++, and Java with DSA implementation",
-      "250+ curated LeetCode problems (Blind 75, NeetCode 150, Striver SDE Sheet)",
+      "500+ curated practice problems (topic-wise and pattern-wise)",
       "Topic-wise and pattern-wise problem sheets",
       "Practice assignments after every module",
       "Computer Networks and DBMS for interviews",
