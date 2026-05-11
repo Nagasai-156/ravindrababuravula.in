@@ -79,14 +79,16 @@ const FAANG_COURSE = {
   subtitle: "A Structured Recorded Program for Coding Interviews, Placements & Product-Based Companies",
   image: "/courses/faang-offer.jpg",
   link: "https://voujhg.courses.store/843931?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-  description: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.",
+  description: "A structured recorded program to master DSA, crack coding interviews, and land offers at top product-based companies like Google, Meta, Amazon, Apple & Netflix.",
   highlights: [
     "Programming in Python, C++ & Java",
     "DSA from Basics to Advanced",
     "500+ Curated Practice Problems",
     "Computer Networks & DBMS for Interviews",
   ],
-  price: "Enroll Now",
+  price: "10,000",
+  originalPrice: "45,000",
+  discount: "77.8",
   marqueeText: "NEW & TRENDING ★ CRACK FAANG ★ PRODUCT-BASED COMPANY PREP ★ DSA MASTERY ★ PYTHON · C++ · JAVA ★ 500+ CURATED PRACTICE PROBLEMS ★ GOOGLE · META · AMAZON · APPLE · NETFLIX ★ ",
   details: {
     overview: "Crack FAANG is a comprehensive structured recorded program designed to help students build strong programming foundations, master Data Structures & Algorithms, solve interview-level coding problems, and prepare for top product-based company interviews.\n\nThe program is carefully designed for students who want a complete roadmap from beginner-level programming to advanced DSA, LeetCode problem solving, competitive programming, and interview preparation.\n\nUnlike random coding practice, Crack FAANG follows a systematic and pattern-based learning approach that focuses on:\n• Logical thinking\n• Coding implementation\n• Optimization techniques\n• Interview problem-solving\n• Real placement preparation\n\nInspired by hiring standards of top product-based companies like Google, Meta, Amazon, Apple, and Netflix — the program focuses on building strong problem-solving skills and interview confidence through structured learning and consistent coding practice.",
