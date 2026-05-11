@@ -375,7 +375,7 @@ const CATEGORIES = [
     label: "Test Series",
     heading: "Test Series",
     description: "Sharpen your exam readiness with full-length mock tests, subject-wise tests, and detailed performance analysis.",
-    count: 2,
+    count: 3,
     courses: [
       {
         id: 11, tag: "GATE CS", title: "GATE CS 2027 Test Series",
@@ -413,6 +413,25 @@ const CATEGORIES = [
           whoIsFor: ["Students preparing for GATE DA 2027", "Aspirants looking to evaluate their preparation", "Those who want to improve accuracy and consistency", "Students in revision or final preparation phase"],
           outcome: ["Gain familiarity with GATE DA exam pattern", "Improve speed and accuracy", "Identify and work on weak areas", "Build confidence for the final exam"],
           note: "This test series is focused on practice and evaluation. It does not include full-length teaching sessions.",
+        },
+      },
+      {
+        id: 13, tag: "UGC NET", title: "UGC NET Test Series",
+        subtitle: "Prof Ravindrababu Ravula",
+        image: "/courses/ugc net dec 2026.jpg",
+        link: "",
+        description: "A comprehensive test series to evaluate your UGC NET preparation with full-length mocks, subject-wise tests, and detailed performance analysis.",
+        highlights: ["Full-Length Mock Tests", "Subject-wise Tests", "Detailed Solutions", "Performance Analysis"],
+        price: "1,999", originalPrice: "2,999", discount: "33", color: "dark",
+        details: {
+          overview: "This UGC NET test series is designed to simulate the actual exam environment and help you assess your preparation thoroughly. The tests cover Paper 1 and Paper 2 topics and are structured to improve your accuracy, speed, and confidence before the exam.",
+          format: ["Topic-wise tests for Paper 1 and Paper 2", "Sectional tests combining multiple topics", "Full-length mock tests based on UGC NET pattern"],
+          whatYouLearn: ["Identify strong and weak areas across all topics", "Improve accuracy and time management", "Build exam confidence through regular practice"],
+          features: ["Exam-Pattern Tests — Questions matching actual UGC NET difficulty and format", "Detailed Solutions — Step-by-step explanations for every question", "Performance Tracking — Analyze progress after each test", "Regular Practice — Maintain consistency and improve speed"],
+          whatYouGet: ["Topic-wise and full-length mock tests", "Detailed solutions for all questions", "Performance analysis after each test", "Score evaluation and ranking"],
+          whoIsFor: ["Students preparing for UGC NET CS", "Aspirants looking to evaluate their preparation", "Those in revision or final preparation phase"],
+          outcome: ["Familiarity with UGC NET exam pattern", "Improved accuracy and time management", "Identify and strengthen weak areas", "Build confidence for the final exam"],
+          note: "This test series is focused on practice and evaluation. It does not include teaching sessions.",
         },
       },
     ],
@@ -1058,7 +1077,7 @@ const CATEGORIES = [
     label: "UGC NET",
     heading: "UGC NET Courses",
     description: "Structured LIVE programs for UGC NET Computer Science & Applications with concept clarity and answer writing focus.",
-    count: 2,
+    count: 3,
     courses: [
       {
         id: 13, tag: "DEC 2026", title: "UGC NET Dec 2026",
@@ -1078,6 +1097,25 @@ const CATEGORIES = [
           whoIsFor: ["Students preparing for UGC NET", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
 
+        },
+      },
+      {
+        id: 15, tag: "DEC 2027", title: "UGC NET Dec 2027",
+        subtitle: "Prof Ravindrababu Ravula",
+        image: "/courses/ugc net dec 2027.jpg",
+        link: "",
+        description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
+        highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
+        price: "20,999", originalPrice: "35,000", discount: "40", color: "dark",
+        details: {
+          overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
+          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
+          whatYouLearn: ["Core concepts required for UGC NET", "Understanding of important topics and exam patterns", "Techniques for solving objective questions", "Approach to improve accuracy and time management"],
+          subjects: ["Paper 1 (General Aptitude)", "Paper 2 (Subject-specific topics)"],
+          features: ["Complete Syllabus Coverage — All topics covered in structured, exam-focused manner", "Concept-Based Teaching — Topics explained clearly for proper understanding and retention", "Practice After Every Lecture — Assignments with detailed solutions", "Previous Year Questions (PYQs) — Discussed with explanation and pattern analysis", "Practice Sets — Additional questions to strengthen preparation", "Weekly quizzes and practice tests", "Full-length mock tests", "Compact revision modules for quick review"],
+          whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
+          whoIsFor: ["Students preparing for UGC NET Dec 2027", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
+          outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
         },
       },
       {
