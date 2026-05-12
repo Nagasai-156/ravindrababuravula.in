@@ -4,28 +4,64 @@
 
 /* ─── Top Banner ─────────────────────────────── */
 .nav-top-banner {
-  background: #25D366; /* WhatsApp green */
+  background: #128C7E;
   color: #fff;
-  text-align: center;
-  padding: 8px 16px;
+  padding: 7px 16px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 600;
   width: 100%;
 }
 
-.nav-whatsapp-link {
-  display: inline-flex;
+.nav-top-banner-links {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  color: #fff;
-  text-decoration: none;
-  transition: opacity 0.2s ease;
+  flex-wrap: wrap;
+  gap: 6px 4px;
 }
 
-.nav-whatsapp-link:hover {
+.nav-banner-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  padding: 2px 4px;
+}
+
+.nav-banner-link:hover {
+  opacity: 0.85;
+}
+
+.nav-banner-sep {
+  color: rgba(255,255,255,0.5);
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.nav-banner-orgcode {
+  font-weight: 400;
+  font-size: 0.75rem;
   opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .nav-top-banner {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+  .nav-banner-sep {
+    display: none;
+  }
+  .nav-top-banner-links {
+    gap: 4px 8px;
+  }
+  .nav-banner-orgcode {
+    display: none;
+  }
 }
 .global-nav {
   position: fixed;
