@@ -213,7 +213,7 @@ export default function Navbar() {
             {/* Your Purchases */}
             <button
               className="nav-purchases-btn"
-              onClick={() => window.open("https://courses.ravindrababuravula.in/purchases?type=10", "_blank")}
+              onClick={() => window.open("https://store.ravindrababuravula.in/login", "_blank")}
             >
               Your Purchases
             </button>

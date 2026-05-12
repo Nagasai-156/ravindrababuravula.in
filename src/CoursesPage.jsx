@@ -505,7 +505,7 @@ const CATEGORIES = [
         id: 13, tag: "UGC NET", title: "UGC NET Test Series",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc net testseries.jpg",
-        link: "https://store.ravindrababuravula.in/login",
+        link: "https://voujhg.courses.store/842464?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
         description: "A comprehensive test series to evaluate your UGC NET preparation with full-length mocks, subject-wise tests, and detailed performance analysis.",
         highlights: ["Full-Length Mock Tests", "Subject-wise Tests", "Detailed Solutions", "Performance Analysis"],
         price: "3,999", originalPrice: "4,999", discount: "20", color: "dark",
