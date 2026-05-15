@@ -389,7 +389,7 @@ export default function Navbar() {
           </button>
           <button
             className="mobile-menu-item mobile-purchases-btn"
-            onClick={() => { window.open("https://courses.ravindrababuravula.in/purchases?type=10", "_blank"); setMobileMenuOpen(false); }}
+            onClick={() => { window.open("https://store.ravindrababuravula.in/login", "_blank"); setMobileMenuOpen(false); }}
           >
             Your Purchases
           </button>
