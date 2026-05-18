@@ -17,6 +17,7 @@ import AdminDashboard from "./AdminDashboard";
 import TestimonialsPage from "./TestimonialsPage";
 import MentorsPage from "./MentorsPage";
 import CoursesPage from "./CoursesPage";
+import TeamPage from "./TeamPage";
 import ForumPage from "./ForumPage";
 import BlogListPage from "./BlogListPage";
 import BlogDetailPage from "./BlogDetailPage";
@@ -163,6 +164,10 @@ const PAGE_SEO = {
     title: "Refund Policy — No Refunds",
     description: "Refund policy for ravindrababuravula.in. All purchases including courses, mentorship programs, and digital products are final and non-refundable.",
   },
+  "/team": {
+    title: "Our Team — The People Behind Prof. Ravindrababu Ravula",
+    description: "Meet the team behind Prof. Ravindrababu Ravula — educators, engineers, and subject-matter experts working together to make world-class learning accessible to every student.",
+  },
   "/mentors": {
     title: "1:1 GATE Mentorship — IIT Bombay, IISc, DRDO, PayPal, NVIDIA, Amazon Mentors",
     description: "Book 1:1 GATE CSE & DA mentorship with expert mentors. IIT Bombay MTech, IISc Bangalore, DRDO Scientist, PayPal ML Engineer, NVIDIA Engineer, Amazon SDE. Personalized GATE preparation strategy, interview prep, PSU guidance, career counseling. Join Prof. Ravindrababu Ravula's mentor network.",
@@ -219,6 +224,7 @@ export default function App() {
       <Route path="/refund-policy" element={<Layout><PageWithSEO path="/refund-policy"><RefundPolicyPage /></PageWithSEO></Layout>} />
       <Route path="/blog" element={<Layout><PageWithSEO path="/blog"><BlogListPage /></PageWithSEO></Layout>} />
       <Route path="/blog/:slug" element={<Layout><BlogDetailPage /></Layout>} />
+      <Route path="/team" element={<Layout><PageWithSEO path="/team"><TeamPage /></PageWithSEO></Layout>} />
       <Route path="/admin/blog" element={<BlogAdminPage />} />
       <Route path="/responses-portal" element={<Layout><AdminDashboard /></Layout>} />
       <Route path="*" element={<Layout><NotFound /></Layout>} />

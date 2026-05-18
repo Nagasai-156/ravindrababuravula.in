@@ -1,0 +1,423 @@
+/* ──────────────────────────────────────────────────────────
+   Our Team page — same layout as the reference template, but
+   re-skinned to the site theme (see src/index.css):
+     bg     #0e0e0e / #111111 / #1a1a1a
+     accent #ffb703  (site --accent-gold)
+     fonts  'Unbounded' (display) + 'Inter' (body)
+   Every rule is scoped under `.team-page` so the template's
+   global resets do not leak into the rest of the site.
+   ────────────────────────────────────────────────────────── */
+
+.team-page,
+.team-page *,
+.team-page *::before,
+.team-page *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.team-page {
+  /* Mapped to the site palette (src/index.css :root) */
+  --gold: #ffb703;
+  --gold-dim: rgba(255,183,3,0.15);
+  --bg: #0e0e0e;
+  --bg2: #111111;
+  --bg3: #1a1a1a;
+  --text: #ffffff;
+  --muted: #888888;
+  --border: rgba(255,255,255,0.06);
+
+  scroll-behavior: smooth;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ─── HERO ─── */
+.team-page .hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 64px;
+  max-width: 1280px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px);
+  padding: 64px 52px 80px;
+  position: relative;
+}
+
+/* Decorative rings */
+.team-page .hero::after {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(255,183,3,0.08);
+  box-shadow: 0 0 0 80px rgba(255,183,3,0.04), 0 0 0 160px rgba(255,183,3,0.02);
+  pointer-events: none;
+}
+
+.team-page .hero-left { display: flex; flex-direction: column; }
+
+.team-page .eyebrow {
+  font-size: 11px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 24px;
+  display: flex; align-items: center; gap: 14px;
+}
+.team-page .eyebrow::before {
+  content: ''; display: block;
+  width: 40px; height: 0.5px; background: var(--gold);
+}
+
+.team-page .hero-title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 300;
+  font-size: clamp(52px, 7vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+}
+.team-page .hero-title .outline {
+  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  color: transparent;
+}
+.team-page .hero-title .gold { color: var(--gold); }
+
+.team-page .hero-desc {
+  font-size: 15px; line-height: 1.8;
+  color: var(--muted); max-width: 380px;
+  font-weight: 300;
+  border-left: 1px solid rgba(255,255,255,0.1);
+  padding-left: 20px;
+}
+
+.team-page .hero-stats {
+  display: flex;
+  gap: 0;
+  margin-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 28px;
+}
+.team-page .stat-item {
+  flex: 1;
+  padding-left: 28px;
+  border-left: 1px solid rgba(255,255,255,0.08);
+}
+.team-page .stat-item:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+.team-page .stat-num {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 300;
+  font-size: 38px; letter-spacing: -1px; color: var(--text);
+  line-height: 1;
+}
+.team-page .stat-label {
+  font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: #666;
+  margin-top: 6px;
+}
+
+/* ─── CEO CARD ─── */
+.team-page .ceo-wrap {
+  display: flex; flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  animation: tp-slideUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.2s both;
+}
+
+@keyframes tp-slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.team-page .ceo-card {
+  width: 100%; max-width: 380px;
+  position: relative;
+}
+
+.team-page .ceo-label-vertical {
+  position: absolute;
+  left: -30px; top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: 'Unbounded', sans-serif;
+  font-size: 10px; letter-spacing: 4px;
+  color: #444; white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.team-page .ceo-image-box {
+  position: relative;
+  width: 100%; aspect-ratio: 3/4;
+  background: var(--bg3);
+  overflow: hidden;
+  border: 0.5px solid rgba(255,255,255,0.08);
+  border-radius: 12px 12px 0 0;
+}
+
+.team-page .ceo-initials {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 300;
+  font-size: 110px; letter-spacing: -2px;
+  color: rgba(255,183,3,0.2);
+  position: relative; z-index: 1;
+  transition: color 0.4s;
+}
+.team-page .ceo-card:hover .ceo-initials { color: rgba(255,183,3,0.35); }
+
+.team-page .ceo-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 20%;
+  z-index: 1;
+  filter: grayscale(0.15);
+  transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+}
+.team-page .ceo-card:hover .ceo-photo { transform: scale(1.04); filter: grayscale(0); }
+
+.team-page .ceo-image-box::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 25% 15%, rgba(255,183,3,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 85%, rgba(255,183,3,0.06) 0%, transparent 50%);
+  z-index: 2;
+}
+
+.team-page .grid-overlay {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,183,3,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,183,3,0.035) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.team-page .ceo-badge {
+  position: absolute; top: 18px; left: 18px; z-index: 10;
+  background: var(--gold);
+  color: #111111;
+  font-size: 9px; letter-spacing: 2px;
+  text-transform: uppercase; font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+.team-page .ceo-num-badge {
+  position: absolute; top: 18px; right: 18px; z-index: 10;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px; letter-spacing: 2px; color: #555;
+}
+
+.team-page .ceo-hover-bar {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+  z-index: 10;
+}
+.team-page .ceo-card:hover .ceo-hover-bar { transform: scaleX(1); }
+
+.team-page .ceo-info {
+  background: var(--bg2);
+  border: 0.5px solid rgba(255,255,255,0.08); border-top: none;
+  padding: 22px 28px;
+  border-radius: 0 0 12px 12px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.team-page .ceo-name {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 28px; letter-spacing: -0.5px;
+  color: var(--text); line-height: 1.1;
+  margin-bottom: 6px;
+}
+.team-page .ceo-role {
+  font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--gold);
+}
+.team-page .ceo-arrow {
+  color: #555;
+  transition: color 0.3s, transform 0.3s;
+  flex-shrink: 0;
+}
+.team-page .ceo-arrow svg { width: 20px; height: 20px; display: block; }
+.team-page .ceo-card.has-link { display: block; cursor: pointer; color: inherit; text-decoration: none; }
+.team-page .ceo-card.has-link:hover .ceo-arrow { color: #0a66c2; transform: translate(3px,-3px); }
+
+/* ─── ROLE LAYERS ─── */
+.team-page .team-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 56px 52px 0;
+}
+.team-page .team-section:last-of-type { padding-bottom: 100px; }
+
+.team-page .layer-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 36px;
+}
+.team-page .layer-line {
+  width: 3px;
+  align-self: stretch;
+  min-height: 34px;
+  background: var(--gold);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.team-page .layer-titles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.team-page .layer-title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 300;
+  font-size: clamp(18px, 2.2vw, 26px);
+  letter-spacing: -0.5px;
+  color: var(--text);
+  line-height: 1.1;
+}
+.team-page .layer-subtitle {
+  font-size: 11px; letter-spacing: 2px;
+  text-transform: uppercase; color: #666;
+}
+.team-page .layer-count {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 13px; letter-spacing: 2px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.team-page .team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-page .member-card {
+  width: calc((100% - 2 * 20px) / 3);
+  background: var(--bg2);
+  border: 0.5px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.35s ease, transform 0.35s ease;
+}
+.team-page .member-card:hover {
+  border-color: rgba(255,183,3,0.25);
+  transform: translateY(-4px);
+}
+.team-page a.member-card { display: block; color: inherit; text-decoration: none; cursor: pointer; }
+.team-page a.member-card:hover { border-color: rgba(10,102,194,0.5); }
+
+/* LinkedIn badge */
+.team-page .member-li {
+  position: absolute; top: 10px; left: 12px; z-index: 3;
+  width: 26px; height: 26px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  background: rgba(10,10,10,0.55);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  color: #cfcfcf;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+}
+.team-page .member-li svg { width: 14px; height: 14px; display: block; }
+.team-page .member-card:hover .member-li {
+  opacity: 1; transform: translateY(0);
+  color: #fff; background: #0a66c2;
+}
+
+.team-page .member-img {
+  aspect-ratio: 1/1;
+  background: #141414;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.team-page .member-initials {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 300;
+  font-size: 44px; color: #2e2e2e;
+  transition: color 0.35s;
+  position: relative; z-index: 1;
+  letter-spacing: -1px;
+}
+.team-page .member-card:hover .member-initials { color: rgba(255,183,3,0.4); }
+
+.team-page .member-photo {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 18%;
+  z-index: 1;
+  filter: grayscale(0.2);
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+}
+.team-page .member-card:hover .member-photo { transform: scale(1.05); filter: grayscale(0); }
+
+.team-page .member-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,0.45) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.team-page .member-id {
+  position: absolute; top: 10px; right: 12px;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 11px; letter-spacing: 1px; color: #333;
+}
+
+.team-page .member-bottom {
+  padding: 14px 16px 16px;
+  border-top: 0.5px solid rgba(255,255,255,0.05);
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative;
+}
+
+.team-page .member-name {
+  font-size: 15px; font-weight: 600;
+  color: #eeeeee; letter-spacing: 0.2px;
+}
+.team-page .member-role {
+  font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: #666;
+}
+
+.team-page .member-line {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 1.5px; background: var(--gold);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.team-page .member-card:hover .member-line { transform: scaleX(1); }
+
+/* ─── ANIMATIONS ─── */
+.team-page .fade-up {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16,1,0.3,1);
+}
+.team-page .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 960px) {
+  .team-page .hero { grid-template-columns: 1fr; padding: 40px 24px 60px; }
+  .team-page .ceo-wrap { align-items: center; }
+  .team-page .member-card { width: calc((100% - 20px) / 2); }
+  .team-page .team-section { padding: 48px 24px 0; }
+}
+@media (max-width: 540px) {
+  .team-page .member-card { width: 100%; max-width: 320px; }
+  .team-page .hero-title { font-size: 56px; }
+}

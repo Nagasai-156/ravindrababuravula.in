@@ -12,6 +12,18 @@ dist
 dist-ssr
 *.local
 
+# Firebase deploy cache
+.firebase/
+
+# Local raw image staging folders (not used by the build)
+/courses images/
+/mentor images/
+/images/
+/team/
+
+# Loose source docs
+*.docx
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

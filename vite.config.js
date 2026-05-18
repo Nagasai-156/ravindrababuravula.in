@@ -4,11 +4,13 @@ import { writeFileSync } from 'fs'
 import { resolve } from 'path'
 
 function buildVersionPlugin() {
+  // Capture the version ONCE so the value baked into the bundle
+  // (__BUILD_VERSION__) and the value written to version.json are identical.
+  const version = Date.now().toString()
   return {
     name: 'build-version',
     apply: 'build',
     closeBundle() {
-      const version = Date.now().toString()
       writeFileSync(
         resolve(process.cwd(), 'dist', 'version.json'),
         JSON.stringify({ version })
@@ -17,7 +19,7 @@ function buildVersionPlugin() {
     config() {
       return {
         define: {
-          __BUILD_VERSION__: JSON.stringify(Date.now().toString()),
+          __BUILD_VERSION__: JSON.stringify(version),
         },
       }
     },

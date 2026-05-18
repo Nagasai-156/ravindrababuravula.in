@@ -201,10 +201,10 @@ export default function Navbar() {
               Apply for Internship
             </button>
             <button
-              className="nav-link"
-              onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank")}
+              className={`nav-link ${location.pathname === "/team" ? "active" : ""}`}
+              onClick={() => navigate("/team")}
             >
-              For Startups
+              Team
             </button>
           </div>
 
@@ -382,10 +382,10 @@ export default function Navbar() {
             Apply for Internship
           </button>
           <button
-            className="mobile-menu-item"
-            onClick={() => { window.open("https://docs.google.com/forms/d/e/1FAIpQLSdoK0hxfcyeqVAsTpzgrCn0qbhVTqOPwknAhC0b6bfc3V6xJQ/viewform?usp=publish-editor", "_blank"); setMobileMenuOpen(false); }}
+            className={`mobile-menu-item ${location.pathname === "/team" ? "active" : ""}`}
+            onClick={() => { navigate("/team"); setMobileMenuOpen(false); }}
           >
-            For Startups
+            Team
           </button>
           <button
             className="mobile-menu-item mobile-purchases-btn"
