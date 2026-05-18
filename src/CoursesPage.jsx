@@ -57,12 +57,7 @@ const Badge = ({ label, type = "dark" }) => (
 );
 
 /* ── Course Stats ── */
-const COURSE_STATS = [
-  { value: "17", label: "Courses Offered", icon: "📚" },
-  { value: "LIVE", label: "Daily Classes", icon: "⏱️" },
-  { value: "50K+", label: "Students Enrolled", icon: "🎓" },
-  { value: "4.9", label: "Average Rating", icon: "⭐" },
-];
+/* COURSE_STATS is defined after CATEGORIES so the course count auto-derives */
 
 /*
  * ── Course Banner Images ──
@@ -215,6 +210,14 @@ const FAANG_COURSE = {
       "Prepare for coding rounds and technical interviews at top product-based companies",
     ],
   },
+};
+
+/* ── Crack FAANG curriculum block — reused inside GATE CS / DA Core Plus courses
+   (replaces the older DSA/Java/LeetCode coverage sections). ── */
+const CRACK_FAANG_TRACK = {
+  programLevels: FAANG_COURSE.details.programLevels,
+  dsaCoverage: FAANG_COURSE.details.dsaCoverage,
+  customSections: FAANG_COURSE.details.customSections,
 };
 
 /* ── Course Categories with proper grouping ── */
@@ -546,7 +549,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/gate cs 2027 core plus.jpg",
         link: "https://voujhg.courses.store/834715?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
+        description: "GATE CS + Crack FAANG. Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "accent",
         details: {
@@ -566,9 +569,7 @@ const CATEGORIES = [
             { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing (e.g., B and B+ trees). Transactions and concurrency control." },
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
           whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2027", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
@@ -653,7 +654,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/gate cs 2028 core plus.jpg",
         link: "https://voujhg.courses.store/834714?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
+        description: "GATE CS + Crack FAANG. Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "19,999", originalPrice: "30,000", discount: "34", color: "accent",
         details: {
@@ -673,9 +674,7 @@ const CATEGORIES = [
             { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing (e.g., B and B+ trees). Transactions and concurrency control." },
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
           whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2028", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
@@ -760,7 +759,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Syed Peera Saheb",
         image: "/courses/gate cs 2029 core plus.jpg",
         link: "https://voujhg.courses.store/834713?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "(GATE + DSA + Java + LeetCode Problems) Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
+        description: "GATE CS + Crack FAANG. Includes complete GATE preparation along with Data Structures, Algorithms, Java programming and LeetCode problem solving.",
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "24,999", originalPrice: "35,000", discount: "29", color: "accent",
         details: {
@@ -780,9 +779,7 @@ const CATEGORIES = [
             { subject: "Databases", topics: "ER-model. Relational model: relational algebra, tuple calculus, SQL. Integrity constraints, normal forms. File organization, indexing (e.g., B and B+ trees). Transactions and concurrency control." },
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
           whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2029", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
@@ -871,7 +868,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
         image: "/courses/gate-da-2027-core-plus.jpg",
         link: "https://voujhg.courses.store/834709?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
+        description: "GATE DA + Crack FAANG. Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "14,999", originalPrice: "25,000", discount: "40", color: "dark",
         details: {
@@ -888,9 +885,7 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -970,7 +965,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
         image: "/courses/gate-da-2028-core-plus.jpg",
         link: "https://voujhg.courses.store/834708?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
+        description: "GATE DA + Crack FAANG. Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "19,999", originalPrice: "35,000", discount: "43", color: "dark",
         details: {
@@ -987,9 +982,7 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -1069,7 +1062,7 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula · Sri Harsha Achyunthuni",
         image: "/courses/gate-da-2029-core-plus.jpg",
         link: "https://voujhg.courses.store/834707?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
+        description: "GATE DA + Crack FAANG. Includes everything in Core + personalized 1:1 mentorship and performance tracking.",
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "24,999", originalPrice: "45,000", discount: "44", color: "dark",
         details: {
@@ -1086,9 +1079,7 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          dsaCoverage: ["Arrays, Strings, Linked Lists", "Stacks, Queues, Trees, Graphs", "Recursion and Backtracking", "Searching and Sorting techniques", "Greedy, Dynamic Programming, and Graph algorithms", "Problem-solving techniques and pattern recognition"],
-          javaCoverage: ["Basics of Java (syntax, control structures)", "Object-Oriented Programming (OOP concepts)", "Classes, Objects, Inheritance, Polymorphism", "Exception handling and standard libraries", "Writing clean and structured code", "Applying Java for problem-solving"],
-          leetcodeCoverage: ["Topic-wise problem-solving aligned with DSA concepts", "Easy to medium level problems for concept building", "Selected problems to improve logical thinking", "Approach-based problem discussion", "Focus on writing optimized and correct solutions"],
+          ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
           whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
@@ -1285,6 +1276,18 @@ const CATEGORIES = [
       },
     ],
   },
+];
+
+/* Keep each category's count and the "Courses Offered" stat in sync
+   with the actual data — no more hardcoded numbers to forget. */
+CATEGORIES.forEach((c) => { c.count = c.courses.length; });
+const TOTAL_COURSES = CATEGORIES.reduce((n, c) => n + c.courses.length, 0);
+
+const COURSE_STATS = [
+  { value: String(TOTAL_COURSES), label: "Courses Offered", icon: "📚" },
+  { value: "LIVE", label: "Daily Classes", icon: "⏱️" },
+  { value: "50K+", label: "Students Enrolled", icon: "🎓" },
+  { value: "4.9", label: "Average Rating", icon: "⭐" },
 ];
 
 /* ── Why Choose Section Data ── */
@@ -1808,19 +1811,8 @@ export default function CoursesPage() {
 
           <div className="cp-courses-inner">
             {/* ── Categorized Course Groups ── */}
-            {visibleCategories.map((cat, catIdx) => (
+            {visibleCategories.map((cat) => (
               <div className={`cp-category-group ${cat.key === "featured" ? "cp-category-featured" : ""}`} key={cat.key}>
-                {/* Category heading */}
-                <div className="cp-category-heading">
-                  <div className="cp-category-heading-left">
-                    <span className="cp-category-number">0{catIdx + 2}</span>
-                    <div>
-                      <h3 className="cp-category-title">{cat.heading}</h3>
-                      <p className="cp-category-desc">{cat.description}</p>
-                    </div>
-                  </div>
-                  <div className="cp-category-count">{cat.count} Courses</div>
-                </div>
 
                 {/* Course cards grid */}
                 <div className={`cp-courses-grid ${cat.key === "featured" ? "cp-featured-grid" : ""}`}>
