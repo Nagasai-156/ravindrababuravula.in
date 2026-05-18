@@ -33,12 +33,12 @@ function processYouTubeEmbeds(html) {
     (_, src) => `<div class="yt-embed"><iframe src="${src}" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>`
   );
   html = html.replace(
-    /(?<!["\\'=])(https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w-]+)[^\s<"]*)/g,
-    (_, _u, id) => `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${id}" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>`
+    /(^|[^"\\'=])(https?:\/\/(?:www\.)?youtube\.com\/watch\?v=([\w-]+)[^\s<"]*)/g,
+    (_, pre, _u, id) => `${pre}<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${id}" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>`
   );
   html = html.replace(
-    /(?<!["\\'=])(https?:\/\/youtu\.be\/([\w-]+)[^\s<"]*)/g,
-    (_, _u, id) => `<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${id}" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>`
+    /(^|[^"\\'=])(https?:\/\/youtu\.be\/([\w-]+)[^\s<"]*)/g,
+    (_, pre, _u, id) => `${pre}<div class="yt-embed"><iframe src="https://www.youtube.com/embed/${id}" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>`
   );
   return html;
 }
