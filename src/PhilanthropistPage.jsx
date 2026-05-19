@@ -36,10 +36,12 @@ const CountUp = ({ end, duration = 2000, suffix = "" }) => {
           observer.unobserve(ref);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0 }
     );
     observer.observe(ref);
-    return () => observer.disconnect();
+    // Safety net: run the count-up even if it never crosses the observer
+    const fallback = setTimeout(() => setIsVisible(true), 1800);
+    return () => { observer.disconnect(); clearTimeout(fallback); };
   }, [ref]);
 
   useEffect(() => {

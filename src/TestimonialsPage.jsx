@@ -122,12 +122,23 @@ function TestimonialCard({ data, index, onSelect }) {
   const isLong = data.testimonial.length > 220;
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const reveal = () => el.classList.add("tm-visible");
+    const prefersReduced =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!("IntersectionObserver" in window) || prefersReduced) {
+      reveal();
+      return;
+    }
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) e.target.classList.add("tm-visible"); },
-      { threshold: 0.08 }
+      ([e]) => { if (e.isIntersecting) { reveal(); obs.disconnect(); } },
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" }
     );
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
+    obs.observe(el);
+    const fallback = setTimeout(reveal, 2500);
+    return () => { obs.disconnect(); clearTimeout(fallback); };
   }, []);
 
   return (
