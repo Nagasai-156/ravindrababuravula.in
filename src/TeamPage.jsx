@@ -152,25 +152,48 @@ export default function TeamPage() {
     const root = rootRef.current;
     if (!root) return;
 
+    root.querySelectorAll(".member-card").forEach((card, i) => {
+      card.classList.add("fade-up");
+      card.style.transitionDelay = i * 50 + "ms";
+    });
+
+    const targets = root.querySelectorAll(".fade-up");
+    const revealAll = () => targets.forEach((el) => el.classList.add("visible"));
+
+    // No IntersectionObserver or reduced-motion preference → just show everything.
+    const prefersReduced =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!("IntersectionObserver" in window) || prefersReduced) {
+      revealAll();
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e, i) => {
           if (e.isIntersecting) {
             setTimeout(() => e.target.classList.add("visible"), i * 80);
+            observer.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.1 }
+      // threshold 0 fires on the first visible pixel — works even when a
+      // section is far taller than the viewport (e.g. 1-column mobile),
+      // which a 0.1 threshold could never reach (cards stayed invisible).
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" }
     );
 
-    root.querySelectorAll(".fade-up").forEach((el) => observer.observe(el));
-    root.querySelectorAll(".member-card").forEach((card, i) => {
-      card.classList.add("fade-up");
-      card.style.transitionDelay = i * 50 + "ms";
-      observer.observe(card);
-    });
+    targets.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    // Safety net: if the observer never fires for any reason, don't leave
+    // content stuck at opacity 0.
+    const fallback = setTimeout(revealAll, 2500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(fallback);
+    };
   }, []);
 
   return (

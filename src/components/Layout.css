@@ -11,12 +11,17 @@
 
 .layout-main {
   flex: 1;
-  padding-top: 64px; /* navbar height */
+  /* --nav-h is measured live by Navbar (inner bar + teal banner +
+     breadcrumb). The fallbacks below only apply for the first paint
+     before JS runs, so content never starts under the fixed nav. */
+  padding-top: var(--nav-h, 96px);
 }
 
-/* When breadcrumb is visible, add extra padding */
-.layout-main:has(+ .global-footer) {
-  padding-top: 64px;
+@media (max-width: 768px) {
+  .layout-main { padding-top: var(--nav-h, 120px); }
+}
+@media (max-width: 480px) {
+  .layout-main { padding-top: var(--nav-h, 116px); }
 }
 
 /* ═══════════════════════════════════════════════

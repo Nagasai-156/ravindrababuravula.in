@@ -244,7 +244,7 @@ export default function CorporateTrainerPage() {
             {/* Right: Text content */}
             <div className="ct-panel-right">
               <p className="sec-label">Widespread Impact</p>
-              <h2 className="panel-h2" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Training More Than 100 Companies</h2>
+              <h2 className="panel-h2" style={{ fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Training More Than 100 Companies</h2>
               <p className="panel-p">
                 Over the course of his career, Prof. Ravindrababu Ravula has conducted corporate training programs for more than 100 companies, delivering workshops, seminars, and skill development programs for professionals across different industries.
               </p>

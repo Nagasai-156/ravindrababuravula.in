@@ -655,4 +655,22 @@
   .footer-h2 { font-size: 2.2rem; }
   .benefit-item { flex-direction: column; text-align: left; }
   .tl-left { min-width: 80px; }
+
+  /* Multi-column grids that previously stayed wide on phones —
+     collapse so content isn't crushed / clipped on iPhone */
+  .domains-grid,
+  .benefits-grid,
+  .equity-features,
+  .who-grid { grid-template-columns: 1fr; }
+  .highlights-strip { grid-template-columns: repeat(2, 1fr); }
+
+  /* Oversized desktop padding wastes the whole width on a 320px phone */
+  .points-card,
+  .equity-box { padding: 32px; }
+  .details-card { padding: 28px; }
+  .footer-cta-card { padding: 48px 20px; }
+
+  /* Footer row was squeezing two blocks side-by-side */
+  .footer-bottom-v2 { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .footer-info { align-items: flex-start; }
 }

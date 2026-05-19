@@ -50,17 +50,41 @@
 
 @media (max-width: 600px) {
   .nav-top-banner {
-    font-size: 0.75rem;
-    padding: 6px 10px;
+    font-size: 0.7rem;
+    padding: 6px 8px;
   }
   .nav-banner-sep {
     display: none;
   }
+  /* Keep all 4 links on a single row on phones */
   .nav-top-banner-links {
-    gap: 4px 8px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0 6px;
+  }
+  .nav-banner-link {
+    gap: 4px;
+    padding: 2px 2px;
+  }
+  .nav-banner-link svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
   }
   .nav-banner-orgcode {
     display: none;
+  }
+}
+
+/* Extra-narrow phones (iPhone SE / small Androids) */
+@media (max-width: 360px) {
+  .nav-top-banner {
+    font-size: 0.62rem;
+    padding: 6px 6px;
+  }
+  .nav-banner-link svg {
+    width: 12px;
+    height: 12px;
   }
 }
 .global-nav {

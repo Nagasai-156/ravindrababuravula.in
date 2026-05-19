@@ -170,7 +170,7 @@ export default function SerialEntrepreneurPage() {
           <div className="p2-inner">
             <div className="p2-left">
               <p className="sec-label">Origins</p>
-              <h2 className="panel-h2" style={{ whiteSpace: 'nowrap', fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Entrepreneurial Beginnings & The EdTech Revolution</h2>
+              <h2 className="panel-h2" style={{ fontSize: 'clamp(1.4rem, 2.2vw, 2.5rem)' }}>Entrepreneurial Beginnings & The EdTech Revolution</h2>
               <p className="panel-p">
                 Prof. Ravindrababu Ravula’s entrepreneurial journey began with a deep understanding of the challenges faced by students and professionals in the education ecosystem. Recognizing the need for high-quality technical education and mentorship, he founded <strong>Raudra Eduservices</strong>, an educational venture focused on empowering engineering students preparing for competitive exams such as GATE.
               </p>

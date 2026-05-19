@@ -817,7 +817,12 @@
   color: #b0b0b0;
   font-size: 1.02rem;
   line-height: 1.78;
+  /* Author HTML can contain long URLs / inline code tokens that would
+     overflow horizontally on iPhone — force them to break */
+  overflow-wrap: anywhere;
 }
+.bd-prose a,
+.bd-prose code { word-break: break-word; }
 
 /* Kill empty paragraphs TipTap generates */
 .bd-prose p:empty { display: none; }

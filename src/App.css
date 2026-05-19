@@ -22,7 +22,7 @@ body {
 .orbit-wrapper {
   background: #0e0e0e;
   color: white;
-  height: calc(100vh - 64px);
+  height: calc(100vh - var(--nav-h, 64px));
   width: 100%;
   display: flex;
   align-items: center;
@@ -313,6 +313,11 @@ body {
 
   .orbit-item-text {
     font-size: 0.6rem;
+    /* Long labels (e.g. "Certified Financial Planner") were clipped at
+       the screen edges on iPhone — let them wrap in a small box */
+    white-space: normal;
+    max-width: 84px;
+    line-height: 1.25;
   }
 
   .orbit-item-image {

@@ -103,14 +103,19 @@
 /* Close button */
 .sp-close {
   position: absolute;
-  top: 8px;
-  right: 10px;
+  top: 2px;
+  right: 4px;
   background: none;
   border: none;
   color: #bbb;
   font-size: 1.1rem;
   cursor: pointer;
-  padding: 0;
+  /* larger touch target (was an ~18px hit area) */
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1;
   transition: color 0.2s;
 }

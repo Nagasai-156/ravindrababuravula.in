@@ -419,5 +419,8 @@
 }
 @media (max-width: 540px) {
   .team-page .member-card { width: 100%; max-width: 320px; }
-  .team-page .hero-title { font-size: 56px; }
+  /* Scales down on narrow iPhones (SE 320px) so "Our Team" never clips */
+  .team-page .hero-title { font-size: clamp(40px, 12vw, 56px); }
+  /* Decorative side label would sit off the left edge on centered mobile layout */
+  .team-page .ceo-label-vertical { display: none; }
 }

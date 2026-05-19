@@ -41,7 +41,10 @@
   color: #fff;
   letter-spacing: -0.5px;
   word-spacing: -2px;
-  white-space: nowrap;
+  /* "Prof. Ravindrababu Ravula" must be allowed to wrap or it overflows
+     the viewport on 320px iPhones */
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .footer-brand-tagline {
@@ -112,6 +115,9 @@
 /* ─── Contact Items ──────────────────────────── */
 .footer-contact-item {
   display: flex;
+  /* long email token must be allowed to break on 320px iPhones */
+  overflow-wrap: anywhere;
+  min-width: 0;
   align-items: center;
   gap: 10px;
   color: #888;

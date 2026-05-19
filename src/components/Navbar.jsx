@@ -81,6 +81,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   const searchRef = useRef(null);
+  const navRef = useRef(null);
   const isHome = location.pathname === "/";
   const currentPage = BREADCRUMB_MAP[location.pathname];
 
@@ -89,6 +90,31 @@ export default function Navbar() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  /* Publish the real fixed-nav height (inner bar + teal banner + breadcrumb)
+     as a CSS var so page content is offset correctly on every device —
+     no hardcoded breakpoint guessing. Updates on resize / banner wrap /
+     breadcrumb show/hide / orientation change. */
+  useEffect(() => {
+    const el = navRef.current;
+    if (!el) return;
+    const setVar = () =>
+      document.documentElement.style.setProperty(
+        "--nav-h",
+        el.offsetHeight + "px"
+      );
+    setVar();
+    const ro =
+      "ResizeObserver" in window ? new ResizeObserver(setVar) : null;
+    if (ro) ro.observe(el);
+    window.addEventListener("resize", setVar);
+    window.addEventListener("orientationchange", setVar);
+    return () => {
+      if (ro) ro.disconnect();
+      window.removeEventListener("resize", setVar);
+      window.removeEventListener("orientationchange", setVar);
+    };
+  }, [location.pathname]);
 
   useEffect(() => {
     setMobileMenuOpen(false);
@@ -117,7 +143,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`global-nav ${scrolled ? "nav-scrolled" : ""} ${isHome ? "nav-home" : ""}`}>
+      <nav ref={navRef} className={`global-nav ${scrolled ? "nav-scrolled" : ""} ${isHome ? "nav-home" : ""}`}>
         <div className="nav-inner">
           {/* Left: Logo */}
           <div className="nav-left">

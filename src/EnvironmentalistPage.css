@@ -1041,3 +1041,9 @@
 
   .env-big-num { font-size: 4rem; }
 }
+
+/* Narrowest iPhones: 2 stat cells get too cramped — stack to 1 */
+@media (max-width: 360px) {
+  .env-hero-stats { grid-template-columns: 1fr; }
+  .env-hero-stat-item { border-right: none; }
+}
