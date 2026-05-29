@@ -228,17 +228,17 @@ const PNC_COURSE = {
   subtitle: "Prof Ravindrababu Ravula",
   image: "/courses/p&c.jpg",
   link: "https://www.udemy.com/course/permutation-and-combinations-e/?referralCode=D772C09EE566DD1995CA",
-  description: "Master fundamental principles of permutations and combinations — from basic arrangements and selections to advanced combinatorial reasoning for JEE, Olympiads, and competitive exams.",
+  description: "Master fundamental principles of permutations and combinations — from basic arrangements and selections to advanced combinatorial reasoning for GATE, college exams, and competitive exams.",
   highlights: [
     "Fundamental P&C Principles",
-    "JEE & Olympiad Level Problems",
+    "Gate Exam & College Exam Problems",
     "Advanced Techniques: Cases, Symmetry, Grouping",
     "Real-world Combinatorial Reasoning",
   ],
   price: "999",
   originalPrice: null,
   discount: null,
-  marqueeText: "UDEMY COURSE ★ PERMUTATION & COMBINATIONS ★ JEE ★ OLYMPIADS ★ COMPETITIVE EXAMS ★ PROF RBR ★ ",
+  marqueeText: "UDEMY COURSE ★ PERMUTATION & COMBINATIONS ★ GATE EXAM ★ COLLEGE EXAMS ★ COMPETITIVE EXAMS ★ PROF RBR ★ ",
 };
 
 /* ── Course Categories with proper grouping ── */
