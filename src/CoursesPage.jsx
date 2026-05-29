@@ -220,6 +220,27 @@ const CRACK_FAANG_TRACK = {
   customSections: FAANG_COURSE.details.customSections,
 };
 
+/* ── Permutation & Combinations — Udemy (standalone) ── */
+const PNC_COURSE = {
+  id: "udemy-pnc-01",
+  tag: "UDEMY · MATHEMATICS",
+  title: "Permutation and Combinations",
+  subtitle: "Prof Ravindrababu Ravula",
+  image: "/courses/p&c.jpg",
+  link: "https://www.udemy.com/course/permutation-and-combinations-e/?referralCode=D772C09EE566DD1995CA",
+  description: "Master fundamental principles of permutations and combinations — from basic arrangements and selections to advanced combinatorial reasoning for JEE, Olympiads, and competitive exams.",
+  highlights: [
+    "Fundamental P&C Principles",
+    "JEE & Olympiad Level Problems",
+    "Advanced Techniques: Cases, Symmetry, Grouping",
+    "Real-world Combinatorial Reasoning",
+  ],
+  price: "999",
+  originalPrice: null,
+  discount: null,
+  marqueeText: "UDEMY COURSE ★ PERMUTATION & COMBINATIONS ★ JEE ★ OLYMPIADS ★ COMPETITIVE EXAMS ★ PROF RBR ★ ",
+};
+
 /* ── Course Categories with proper grouping ── */
 const CATEGORIES = [
   {
@@ -1803,6 +1824,60 @@ export default function CoursesPage() {
                     <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(FAANG_COURSE)}>
                       View Details <ArrowIcon />
                     </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ══════════════════════════════════════════
+              PERMUTATION & COMBINATIONS — UDEMY (full-width)
+          ══════════════════════════════════════════ */}
+          <div className="cp-faang-section cp-pnc-section">
+            {/* Marquee */}
+            <div className="cp-faang-marquee">
+              <div className="cp-faang-marquee-track">
+                {[...Array(3)].map((_, i) => (
+                  <span key={i}>{PNC_COURSE.marqueeText}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="cp-faang-inner">
+              {/* Badge row */}
+              <div className="cp-faang-badges">
+                <span className="cp-faang-badge-tag">{PNC_COURSE.tag}</span>
+              </div>
+
+              <div className="cp-faang-card">
+                {/* Left — Image */}
+                <div className="cp-faang-img-wrap">
+                  <img src={`${PNC_COURSE.image}?v=1`} alt={PNC_COURSE.title} />
+                  <div className="cp-faang-img-glow" />
+                </div>
+
+                {/* Right — Content */}
+                <div className="cp-faang-content">
+                  <h2 className="cp-faang-title">{PNC_COURSE.title}</h2>
+                  <p className="cp-faang-subtitle">{PNC_COURSE.subtitle}</p>
+                  <p className="cp-faang-desc">{PNC_COURSE.description}</p>
+
+                  <div className="cp-faang-highlights">
+                    {PNC_COURSE.highlights.map((h, i) => (
+                      <div className="cp-faang-highlight" key={i}>
+                        <CheckIcon /> <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="cp-faang-pricing">
+                    <span className="cp-faang-current-price">₹{PNC_COURSE.price}</span>
+                  </div>
+
+                  <div className="cp-faang-actions">
+                    <a href={PNC_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
+                      <PlayIcon /> Enroll on Udemy
+                    </a>
                   </div>
                 </div>
               </div>
