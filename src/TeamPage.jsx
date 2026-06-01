@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./TeamPage.css";
 
-import mubeenImg from "./assets/team/mubeen.jpg";
 import rbrImg from "./assets/team/rbr.jpg";
 import chitraImg from "./assets/team/chitra.jpeg";
 import kaushalyaImg from "./assets/team/kaushalya.jpg";
@@ -10,7 +9,6 @@ import tilakImg from "./assets/team/tilak.jpg";
 import avinashImg from "./assets/team/avinash.jpg";
 import abhishekImg from "./assets/team/abhishek.jpg";
 import swathiImg from "./assets/team/swathi.jpg";
-import nagasaiImg from "./assets/team/nagasai.jpg";
 import nagasai1Img from "./assets/team/nagasai1.jpg";
 import yashdeepImg from "./assets/team/yashdeep.jpg";
 import saivenkatImg from "./assets/team/saivenkat.jpg";
@@ -36,12 +34,12 @@ import shahadalamImg from "./assets/team/shahadalam.jpg";
 
 /* ── Featured leadership (hero card) ── */
 const CEO = {
-  initials: "M",
-  name: "Mubeen",
-  role: "CEO, Raudra Group of Companies",
+  initials: "RR",
+  name: "Prof. Ravindrababu Ravula",
+  role: "Founder and CEO of Raudra Group of Companies",
   badge: "CEO",
-  img: mubeenImg,
-  linkedin: null,
+  img: rbrImg,
+  linkedin: "https://www.linkedin.com/in/ravindrababu-ravula/",
 };
 
 /* initials fallback for members with no photo yet */
@@ -50,9 +48,8 @@ const ini = (name) =>
 
 /* ── The rest of the team (ids auto-numbered) ── */
 const RAW_MEMBERS = [
-  // Leadership row (alongside CTO)
-  { layer: "lead", name: "Nagasai Chimmili", role: "Chief Technology Officer", img: nagasaiImg,  linkedin: "https://www.linkedin.com/in/nagasai-chimmili/" },
-  { layer: "lead", name: "Yashdeep",         role: "Chief Marketing Officer",  img: yashdeepImg, linkedin: null },
+  // Leadership row
+  { layer: "lead", name: "Yashdeep", role: "Chief Marketing Officer", img: yashdeepImg, linkedin: null },
 
   // Educators
   { layer: "educators", name: "Prof. Ravindrababu Ravula", role: "Director, Educator & AI Generalist", img: rbrImg, linkedin: "https://www.linkedin.com/in/ravindrababu-ravula/" },
