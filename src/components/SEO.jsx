@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE = "https://ravindrababuravula.in";
-const DEFAULT_IMAGE = `${SITE}/logo.png`;
+const DEFAULT_IMAGE = `${SITE}/logo.jpg`;
 
 export default function SEO({ title, description, path = "/", image, schema }) {
   const fullTitle = title
