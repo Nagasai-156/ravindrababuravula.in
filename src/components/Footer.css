@@ -29,9 +29,27 @@
   gap: 16px;
 }
 
+.footer-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
 .footer-logo-img {
   height: 48px;
   width: fit-content;
+}
+
+.footer-logo-tagline {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #ffb703;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .footer-brand-name {

@@ -147,12 +147,10 @@ export default function Navbar() {
         <div className="nav-inner">
           {/* Left: Logo */}
           <div className="nav-left">
-            <img
-              src={logoImg}
-              alt="RBR Logo"
-              className="nav-logo"
-              onClick={() => navigate("/")}
-            />
+            <div className="nav-logo-wrap" onClick={() => navigate("/")}>
+              <img src={logoImg} alt="RBR Logo" className="nav-logo" />
+              <span className="nav-logo-tagline">Make India Great Again</span>
+            </div>
 
             {/* Roles Dropdown */}
             <div className="nav-dropdown-wrap" ref={dropdownRef}>

@@ -81,7 +81,10 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Left: Brand */}
           <div className="footer-brand">
-            <img src={logoImg} alt="RBR Logo" className="footer-logo-img" />
+            <div className="footer-logo-wrap">
+              <img src={logoImg} alt="RBR Logo" className="footer-logo-img" />
+              <span className="footer-logo-tagline">Make India Great Again</span>
+            </div>
             <h3 className="footer-brand-name">Prof. Ravindrababu Ravula</h3>
             <p className="footer-brand-tagline">
               Transforming the way India learns — one lecture at a time. Educator, entrepreneur, and visionary.
