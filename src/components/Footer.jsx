@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logoImg from "../assets/logo.jpg";
+import logoImg from "../assets/logo.png";
 import "./Footer.css";
 
 const YoutubeIcon = () => (
