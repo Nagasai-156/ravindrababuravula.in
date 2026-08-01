@@ -1290,6 +1290,39 @@
   to   { transform: translateX(-33.333%); }
 }
 
+/* ── AI Generalist OS variant ──
+   Same structure as the FAANG section, carrying the program's own lime accent
+   so the newest listing reads as its own thing rather than a duplicate. The
+   enrol button stays the site's amber so the primary action is consistent
+   everywhere on the page. */
+.cp-aios-section {
+  background: linear-gradient(135deg, #0a0b09 0%, #121309 50%, #0a0b09 100%);
+  border-top: 2px solid rgba(194, 233, 79, 0.3);
+  border-bottom: 2px solid rgba(194, 233, 79, 0.3);
+}
+.cp-aios-section .cp-faang-marquee {
+  background: linear-gradient(90deg, #c2e94f, #a8d139, #c2e94f);
+}
+.cp-aios-section .cp-faang-badge-tag {
+  background: rgba(194, 233, 79, 0.12);
+  color: #c2e94f;
+  border-color: rgba(194, 233, 79, 0.32);
+}
+.cp-aios-section .cp-faang-company-chip {
+  border-color: rgba(194, 233, 79, 0.28);
+  color: #d5e8a4;
+}
+.cp-aios-badge-live {
+  background: rgba(194, 233, 79, 0.14);
+  color: #c2e94f;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(194, 233, 79, 0.4);
+  letter-spacing: 0.1em;
+}
+
 /* Inner */
 .cp-faang-inner {
   max-width: 1280px;

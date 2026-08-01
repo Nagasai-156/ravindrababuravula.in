@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c2e94f" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#7f9c2a" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c2e94f" stop-opacity="0.85"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.68" cy="0.42" r="0.62">
+      <stop offset="0" stop-color="#c2e94f" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#c2e94f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#0b0c0a"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- woven light field -->
+  <g fill="none" stroke="#e8e6da" stroke-opacity="0.09" stroke-width="1.6">
+    <path d="M-40 210 C 260 140, 560 300, 860 210 S 1420 120, 1660 220"/>
+    <path d="M-40 300 C 280 230, 600 390, 900 295 S 1440 205, 1660 310"/>
+    <path d="M-40 640 C 300 560, 590 730, 890 640 S 1430 550, 1660 655"/>
+    <path d="M-40 730 C 280 660, 600 820, 900 725 S 1440 640, 1660 745"/>
+  </g>
+  <g fill="none" stroke="#c2e94f" stroke-opacity="0.30" stroke-width="2">
+    <path d="M-40 420 C 290 345, 590 505, 890 415 S 1430 325, 1660 430"/>
+    <path d="M-40 500 C 270 430, 610 585, 910 495 S 1440 405, 1660 510"/>
+  </g>
+
+  <!-- outer frame, echoing the bordered style of the sibling banners -->
+  <rect x="14" y="14" width="1572" height="872" rx="10" fill="none" stroke="url(#edge)" stroke-width="5"/>
+  <rect x="30" y="30" width="1540" height="840" rx="6" fill="none" stroke="#c2e94f" stroke-opacity="0.16" stroke-width="1.5"/>
+
+  <!-- eyebrow -->
+  <text x="86" y="132" fill="#c2e94f" font-family="Consolas, monospace" font-size="26" font-weight="700" letter-spacing="7">METABRIX LABS</text>
+  <text x="392" y="132" fill="#a3a290" font-family="Consolas, monospace" font-size="26" letter-spacing="7">· LIVE COHORT</text>
+
+  <!-- title -->
+  <text x="80" y="300" fill="#e8e6da" font-size="132" font-weight="700" letter-spacing="-5">AI GENERALIST OS</text>
+  <text x="86" y="378" fill="#c2e94f" font-size="60" font-weight="600" letter-spacing="-1.5">38-Day Builder Program</text>
+
+  <line x1="86" y1="440" x2="1514" y2="440" stroke="#e8e6da" stroke-opacity="0.18" stroke-width="2"/>
+
+  <!-- promise -->
+  <text x="86" y="530" fill="#e8e6da" font-size="62" font-weight="600" letter-spacing="-2">Build 6 real AI systems in 38 days.</text>
+  <text x="86" y="586" fill="#a3a290" font-size="34">Understand modern AI · master the tools · graduate with a portfolio</text>
+
+  <!-- fact tiles -->
+  <g>
+    <rect x="86" y="646" width="330" height="106" rx="12" fill="#16170f" stroke="#c2e94f" stroke-opacity="0.28"/>
+    <text x="112" y="694" fill="#e8e6da" font-family="Consolas, monospace" font-size="42" font-weight="700">38 LIVE DAYS</text>
+    <text x="112" y="728" fill="#a3a290" font-family="Consolas, monospace" font-size="22">~75 hrs live + lab</text>
+
+    <rect x="440" y="646" width="360" height="106" rx="12" fill="#16170f" stroke="#c2e94f" stroke-opacity="0.28"/>
+    <text x="466" y="694" fill="#e8e6da" font-family="Consolas, monospace" font-size="42" font-weight="700">6 REAL PROJECTS</text>
+    <text x="466" y="728" fill="#a3a290" font-family="Consolas, monospace" font-size="22">built on the call</text>
+
+    <rect x="824" y="646" width="392" height="106" rx="12" fill="#16170f" stroke="#c2e94f" stroke-opacity="0.28"/>
+    <text x="850" y="694" fill="#e8e6da" font-family="Consolas, monospace" font-size="42" font-weight="700">CAPSTONE + DEMO</text>
+    <text x="850" y="728" fill="#a3a290" font-family="Consolas, monospace" font-size="22">project-linked certificate</text>
+  </g>
+
+  <!-- no-prereq flag -->
+  <rect x="1240" y="646" width="274" height="106" rx="12" fill="#c2e94f"/>
+  <text x="1377" y="691" fill="#0b0c0a" font-size="31" font-weight="700" text-anchor="middle">No coding</text>
+  <text x="1377" y="729" fill="#0b0c0a" font-size="31" font-weight="700" text-anchor="middle">required</text>
+
+  <!-- instructors -->
+  <text x="86" y="822" fill="#a3a290" font-family="Consolas, monospace" font-size="24">INSTRUCTORS</text>
+  <text x="300" y="822" fill="#e8e6da" font-size="28" font-weight="600">Pratik Padamwar  ·  Zeeshan Ahmad Khan</text>
+  <text x="1514" y="822" fill="#a3a290" font-family="Consolas, monospace" font-size="24" text-anchor="end">ravindrababuravula.in</text>
+</svg>

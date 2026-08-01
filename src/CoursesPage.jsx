@@ -241,6 +241,161 @@ const PNC_COURSE = {
   marqueeText: "UDEMY COURSE ★ PERMUTATION & COMBINATIONS ★ GATE EXAM ★ COLLEGE EXAMS ★ COMPETITIVE EXAMS ★ PROF RBR ★ ",
 };
 
+/* ── AI Generalist OS — 38-Day Builder Program (standalone, very top of page) ──
+   NOTE: this is a different program from the 6-month "AI Generalist Program"
+   in the Featured category below. This one is the 38-day live cohort by
+   MetaBrix Labs. Both are intentionally listed. */
+const AI_OS_COURSE = {
+  id: "ai-generalist-os-01",
+  tag: "38-DAY LIVE COHORT · METABRIX LABS",
+  title: "AI Generalist OS — 38-Day Builder Program",
+  subtitle: "Pratik Padamwar · Zeeshan Ahmad Khan",
+  image: "/courses/ai-generalist-os.jpg",
+  /* TODO: replace with the live enrolment / landing page URL once it is
+     published. Falls back to email so the CTA still works today. */
+  link: "mailto:info@metabrixlab.com?subject=AI%20Generalist%20OS%20%E2%80%94%20Application",
+  description:
+    "A 38-day live builder program for students, engineers and operators. Understand modern AI, master the tools, and graduate with six real projects — a portfolio, not a certificate of attendance. No coding background required.",
+  highlights: [
+    "38 Live Days · ~75 Hours Live + Lab",
+    "8-Day CTO-Led Build Sprint",
+    "6 Portfolio-Ready Projects",
+    "Capstone, Demo Day & Certificate",
+  ],
+  tools: ["ChatGPT", "Claude", "Perplexity", "n8n", "Replit", "Webflow"],
+  price: "35,000",
+  originalPrice: null,
+  discount: null,
+  marqueeText:
+    "NEW ★ AI GENERALIST OS ★ 38-DAY LIVE COHORT ★ BUILD 6 REAL AI SYSTEMS ★ CTO-LED BUILD SPRINT ★ NO CODING BACKGROUND REQUIRED ★ CAPSTONE + DEMO DAY ★ ",
+  details: {
+    overview:
+      "AI Generalist OS is a 38-day live, cohort-based program that takes you from scattered AI exposure to demonstrable capability.\n\nMost people stuck on AI are stuck at the same place: enough exposure to feel behind, not enough structure to build anything. Tool demos create activity — they do not create capability. This program is built around the opposite idea: every phase ends with an artifact you keep.\n\nThe program deliberately occupies the practical middle ground. It is simple enough to enter without a coding background, and deep enough that you finish having built and published six working AI systems.\n\nTheory is taught by an AI research scientist and founder; implementation is led by a CTO. Both are present for all 38 days — you are not handed to a teaching assistant once the build sprint starts.",
+    format: [
+      "Fully LIVE online cohort sessions, every session recorded",
+      "Lab time after each session with instructors still online",
+      "8-day CTO-led implementation sprint",
+      "Project review — your own work looked at and corrected",
+      "Doubt support between sessions via the cohort channel",
+      "Capstone presentation on Demo Day",
+      "Limited seats so every project gets reviewed, not just submitted",
+    ],
+    whatYouLearn: [
+      "The AI ecosystem — AI vs ML vs deep learning vs generative AI",
+      "Prompt engineering: role, context, task, constraints, examples, verification",
+      "How LLMs actually work — tokens, embeddings, context windows",
+      "Agents, RAG and retrieval over your own documents",
+      "APIs, databases and the architecture of a real AI application",
+      "Workflow automation and multi-step AI agents",
+      "Evaluating AI output — accuracy, hallucination, bias, safety, cost and latency",
+      "Turning AI capability into career, freelance, startup or business direction",
+    ],
+    programLevels: [
+      {
+        title: "Phase 1 · Days 1–5 — Foundation",
+        desc: "AI vs ML vs GenAI, LLMs, agents and multimodal AI, then the Prompt Blueprint: role, context, task, constraints, examples, verify. You stop chatting randomly and start directing AI intentionally. Deliverable: your own AI opportunity map plus a prompt library you reuse all program.",
+        tools: ["ChatGPT", "Claude", "Gemini"],
+      },
+      {
+        title: "Phase 2 · Days 6–11 — Tools & Personal AI Stack",
+        desc: "Research, writing, design, voice, video and automation tools assembled into one stack instead of thirty tabs — chosen by job-to-be-done rather than hype. Deliverable: a working research workflow, a content workflow and a daily productivity system.",
+        tools: ["Perplexity", "NotebookLM", "Canva", "ElevenLabs"],
+      },
+      {
+        title: "Phase 3 · Days 12–17 — Model Thinking",
+        desc: "Tokens, embeddings, context windows, RAG, APIs, training vs inference, hallucination, cost and latency. The layer that lets you judge AI output instead of trusting it. Deliverable: an architecture map of a real AI application, drawn and explained by you.",
+        tools: ["OpenAI API", "Embeddings", "Vector stores"],
+      },
+      {
+        title: "Phase 4 · Days 18–25 — CTO-Led Build Sprint",
+        desc: "Eight consecutive days of implementation. Portfolio website, AI chatbot, document assistant, automation workflow, content system and marketing funnel — built on the call, tested, then published. Deliverable: six shipped artifacts. This is the portfolio.",
+        tools: ["Replit", "Webflow", "n8n", "Make"],
+      },
+      {
+        title: "Phase 5 · Days 26–35 — Business & Evaluation",
+        desc: "Sales, support, operations and reporting with AI. Accuracy, hallucination, bias, safety, speed and cost evaluation. Then career, freelance and startup positioning. Deliverable: a career or freelance roadmap, client-ready proposals and an evaluation checklist.",
+        tools: ["CRM workflows", "Funnel templates", "Evaluation rubrics"],
+      },
+      {
+        title: "Phase 6 · Days 36–38 — Capstone & Demo Day",
+        desc: "Finalise, test, tell the story, present live to the cohort and answer questions. Attendance creates exposure; a capstone creates evidence. Deliverable: a presented capstone and a project-linked certificate.",
+        tools: ["Your own stack", "Demo Day", "Certificate"],
+      },
+    ],
+    customSections: [
+      {
+        title: "The Six Things You Build",
+        items: [
+          "Live portfolio website — bio, skills, projects and contact, published at a real URL",
+          "AI chatbot — an assistant answering from your own material, with sources attached",
+          "Document AI assistant — upload PDFs, ask questions, get summaries and extracted fields",
+          "Automation workflow — lead capture, email replies, form-to-sheet, running on its own",
+          "Content + marketing system — calendar, posts, scripts, landing page and follow-up",
+          "Capstone project — one major build, presented live and certified",
+        ],
+      },
+      {
+        title: "How a Week Actually Runs",
+        items: [
+          "LIVE — concept, then a demo built in front of you. Questions answered on the call.",
+          "LAB — you build the same thing on your own screen while instructors are still online.",
+          "ASYNC — doubt support in the cohort channel so you are not stuck for a week.",
+          "REVIEW — your work gets looked at and corrected, which free content structurally cannot do.",
+        ],
+      },
+      {
+        title: "Four Directions After Day 38",
+        items: [
+          "Career — AI generalist, AI workflow operator, AI product analyst, AI QA evaluator",
+          "Freelance — websites, chatbots, automations and content systems you can charge for",
+          "Startup — problem selection, MVP workflow, pricing, distribution, demo and one-pager",
+          "Business — sales, marketing, support and operations automation inside your own company",
+        ],
+      },
+      {
+        title: "What Makes This Different",
+        items: [
+          "Not a workshop — 38 live days with two instructors present throughout",
+          "Not an ML course — no maths prerequisites and no long coding runway before you build",
+          "Artifact-first — if a phase does not produce something you keep, it is not in the program",
+          "Taught at three levels — plain explanation, real workflow, and builder depth if you want it",
+          "Honest positioning — no job guarantee, and no invented placement statistics",
+        ],
+      },
+    ],
+    whatYouGet: [
+      "38 live learning days (~75 hours of live + lab learning)",
+      "8-day CTO-led build sprint",
+      "Six portfolio artifacts, built on the call",
+      "Every session recorded",
+      "100+ prompt library and an AI tools directory",
+      "Proposal, résumé, funnel and content-calendar templates",
+      "AI safety and evaluation checklists",
+      "Project review and doubt support throughout",
+      "Private cohort community and peer network",
+      "Capstone, Demo Day and a project-linked certificate",
+    ],
+    whoIsFor: [
+      "Students who want a portfolio and a demo-day recording before they graduate",
+      "Engineers who want agentic workflows, RAG and evaluation they can defend in a review",
+      "Working professionals wanting productivity, research and workplace automation",
+      "Marketers and creators who want a content engine that runs weekly",
+      "Business owners looking to automate real processes and cut recurring costs",
+      "Freelancers adding a new service line they can quote for",
+      "Aspiring founders who want problem selection, an MVP and a demo",
+    ],
+    outcome: [
+      "A working understanding of the AI ecosystem, end to end",
+      "A personal AI stack that saves you time every week",
+      "Six public, working projects you can show an employer or a client",
+      "The ability to evaluate AI output critically instead of trusting it",
+      "Fluency to talk to technical teams without bluffing",
+      "A clear direction: career, freelance, startup or business",
+    ],
+    note: "No job guarantee is offered — be suspicious of anyone selling one. What this program guarantees is capability you can demonstrate: six public artifacts, an evaluation framework, and positioning for career, freelance, startup or business paths.",
+  },
+};
+
 /* ── Course Categories with proper grouping ── */
 const CATEGORIES = [
   {
@@ -1758,6 +1913,72 @@ export default function CoursesPage() {
                     {f}
                   </button>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ══════════════════════════════════════════
+              AI GENERALIST OS — 38-DAY BUILDER PROGRAM (full-width, top)
+          ══════════════════════════════════════════ */}
+          <div className="cp-faang-section cp-aios-section">
+            {/* Marquee */}
+            <div className="cp-faang-marquee">
+              <div className="cp-faang-marquee-track">
+                {[...Array(3)].map((_, i) => (
+                  <span key={i}>{AI_OS_COURSE.marqueeText}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="cp-faang-inner">
+              {/* Badge row */}
+              <div className="cp-faang-badges">
+                <span className="cp-faang-badge-new">🔥 NEW</span>
+                <span className="cp-aios-badge-live">● LIVE COHORT</span>
+                <span className="cp-faang-badge-tag">{AI_OS_COURSE.tag}</span>
+              </div>
+
+              <div className="cp-faang-card">
+                {/* Left — Image */}
+                <div className="cp-faang-img-wrap">
+                  <img src={`${AI_OS_COURSE.image}?v=1`} alt={AI_OS_COURSE.title} />
+                  <div className="cp-faang-img-glow" />
+                </div>
+
+                {/* Right — Content */}
+                <div className="cp-faang-content">
+                  <h2 className="cp-faang-title">{AI_OS_COURSE.title}</h2>
+                  <p className="cp-faang-subtitle">{AI_OS_COURSE.subtitle}</p>
+                  <p className="cp-faang-desc">{AI_OS_COURSE.description}</p>
+
+                  <div className="cp-faang-highlights">
+                    {AI_OS_COURSE.highlights.map((h, i) => (
+                      <div className="cp-faang-highlight" key={i}>
+                        <CheckIcon /> <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="cp-faang-companies">
+                    {AI_OS_COURSE.tools.map((t) => (
+                      <span key={t} className="cp-faang-company-chip">{t}</span>
+                    ))}
+                  </div>
+
+                  <div className="cp-faang-pricing">
+                    <span className="cp-faang-current-price">₹{AI_OS_COURSE.price}</span>
+                    <span className="cp-faang-gst">+ 18% GST</span>
+                  </div>
+
+                  <div className="cp-faang-actions">
+                    <a href={AI_OS_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
+                      <PlayIcon /> Enroll Now
+                    </a>
+                    <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(AI_OS_COURSE)}>
+                      View Details <ArrowIcon />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
