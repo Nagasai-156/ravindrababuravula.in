@@ -17,8 +17,8 @@
  * without any `!important`.
  * ======================================================================== */
 
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap");
+/* Unbounded / Inter are already loaded by src/index.css — no extra webfonts
+   here, so this route costs nothing beyond the site's existing font budget. */
 
 @import "tailwindcss/theme.css";
 @import "tailwindcss/utilities.css";
@@ -43,9 +43,13 @@
   --color-panel: #f2d271;
   --color-hairline: rgba(255, 255, 255, 0.1);  /* --border-light */
 
-  --font-sans: "Satoshi", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-serif: "Instrument Serif", Georgia, serif;
+  /* The main site's type system: Unbounded for display, Inter for everything
+     else. `--font-mono` is deliberately mapped to Inter too — this page used
+     to set small labels in JetBrains Mono, which read as a different brand. */
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
+  --font-serif: "Unbounded", sans-serif;
 }
 
 /* ── Route root ─────────────────────────────────────────────────────────── */
@@ -66,9 +70,10 @@
   color: var(--color-ink);
 }
 
-/* Opt out of the main site's heading typography inside this route only. */
-:where(.aios-root) :is(h1, h2, h3, h4, h5, h6) {
-  font-family: inherit;
+/* Headings use the site's display face; size/weight/leading stay with the
+   Tailwind utilities, which outrank this (0,0,1) rule. */
+:where(.aios-root) :is(h1, h2, h3) {
+  font-family: var(--font-display);
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
@@ -78,6 +83,64 @@
   word-wrap: normal;
   hyphens: none;
   text-align: inherit;
+}
+:where(.aios-root) :is(h4, h5, h6) {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-align: inherit;
+}
+
+/* ── Section eyebrow — mirrors .cp-sec-label ─────────────────────────────── */
+.aios-root .aios-sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-volt);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.aios-root .aios-sec-label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-volt);
+  flex-shrink: 0;
+}
+
+/* ── Card + button behaviour — mirrors .cp-course-card / .cp-cta-primary ─── */
+.aios-root [class*="rounded-3xl"][class*="border-hairline"] {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.aios-root [class*="rounded-3xl"][class*="border-hairline"]:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 183, 3, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.aios-root :is(a, button)[class*="bg-volt"] {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    gap 0.3s ease;
+}
+.aios-root :is(a, button)[class*="bg-volt"]:hover {
+  background-color: #ffc633;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 183, 3, 0.3);
 }
 
 /* index.css matches `[class*="-p"]`, which catches utilities like `gap-px`. */
@@ -129,7 +192,7 @@
 
 .aios-root .t-body {
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.85; /* matches .cp-panel-p */
   color: var(--color-muted);
   max-width: 68ch;
 }
@@ -150,16 +213,14 @@
   }
 }
 
+/* Small caps label — same treatment as .cp-card-tag / .cp-sec-label */
 .aios-root .t-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  line-height: 1.4;
-}
-@media (min-width: 768px) {
-  .aios-root .t-label {
-    font-size: 0.8125rem;
-  }
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  line-height: 1.5;
 }
 
 .aios-root .t-meta {

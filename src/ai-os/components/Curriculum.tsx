@@ -66,7 +66,7 @@ export const Curriculum = () => (
       <div className="col-span-12 mb-12 lg:col-span-4 lg:mb-0">
         <div className="lg:sticky lg:top-28">
           <Reveal>
-            <h2 className="text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-5xl">
+            <h2 className="text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-5xl">
               Every phase ends with something you keep.
             </h2>
           </Reveal>
@@ -117,7 +117,7 @@ export const Curriculum = () => (
             </h3>
             <p className="t-body mt-3">{p.body}</p>
 
-            <div className="mt-5 rounded-xl border border-hairline bg-surface/60 p-4 md:p-5">
+            <div className="mt-5 rounded-2xl border border-hairline bg-surface/60 p-4 md:p-5">
               <p className="t-label text-volt">YOU WALK OUT WITH</p>
               <p className="mt-2 text-[16px] leading-snug text-bone md:text-[17px]">
                 {p.deliverable}

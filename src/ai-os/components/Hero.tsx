@@ -10,6 +10,7 @@ import {
   priceLabel,
   ctaLabel,
   applyHref,
+  applyLinkProps,
   applyFlow,
   instructors,
   leadMagnet,
@@ -43,6 +44,7 @@ const PrimaryCta = () => {
     <motion.a
       ref={ref}
       href={applyHref}
+      {...applyLinkProps}
       onClick={() => track("cta_click", { location: "hero" })}
       style={{ x, y }}
       className="group inline-flex items-center gap-2 rounded-full bg-volt py-1.5 pl-6 pr-1.5 text-base font-bold text-ink transition-[gap] hover:gap-3.5 md:text-lg"
@@ -123,12 +125,13 @@ export const Hero = () => {
             </span>
           </motion.div>
 
-          {/* Sized so "systems in 38 days." never wraps: the column is full
-              width below lg but only 7/12 above it, and the container caps at
-              1400px — hence the vw step down and the rem ceiling. */}
-          <h1 className="font-medium leading-[0.88] tracking-[-0.04em] text-bone text-[11vw] lg:text-[6.4vw] xl:text-[min(6.4vw,5.7rem)]">
+          {/* Same scale and weight as .cp-headline on the rest of the site.
+              Unbounded is a wide face, so this is deliberately smaller than a
+              grotesk would need — at 4.5rem "systems in 38 days." still holds
+              on one line in the 7/12 column. */}
+          <h1 className="text-[clamp(1.9rem,6.5vw,4.5rem)] font-light leading-[1.1] tracking-[-1.5px] text-bone lg:text-[clamp(2.4rem,4vw,4.5rem)]">
             <Line delay={0.2}>
-              Build 6 <span className="font-serif italic">real</span> AI
+              Build 6 <span className="text-volt">real</span> AI
             </Line>
             <Line delay={0.32}>systems in 38 days.</Line>
           </h1>
@@ -213,7 +216,7 @@ export const Hero = () => {
         >
           <motion.div
             style={{ x: asideX, y: asideY }}
-            className="rounded-2xl border border-hairline bg-surface/90 p-6 backdrop-blur-md md:p-7"
+            className="rounded-3xl border border-hairline bg-surface/90 p-6 backdrop-blur-md md:p-7"
           >
             <p className="t-label text-volt">COHORT {String(cohort.number).padStart(2, "0")}</p>
             <dl className="mt-4">
@@ -236,7 +239,7 @@ export const Hero = () => {
             <p className="t-meta mt-4">
               {applyFlow.mode === "apply"
                 ? "Applying takes 2 minutes and costs nothing. We'll confirm your seat by email."
-                : "Seats are confirmed on payment."}
+                : "Checkout is handled on our course platform. Your seat is confirmed as soon as payment goes through."}
             </p>
           </motion.div>
         </motion.aside>

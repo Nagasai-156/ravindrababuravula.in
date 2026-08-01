@@ -4,6 +4,7 @@ import {
   pricing,
   applyFlow,
   applyHref,
+  applyLinkProps,
   ctaLabel,
   startLabel,
   seatsLabel,
@@ -27,14 +28,20 @@ const included = [
   "Career, freelance and startup direction",
 ];
 
-const afterYouApply = [
+const afterYouApply =
   applyFlow.mode === "apply"
-    ? "You send the 2-minute application — no payment at this stage."
-    : "You complete payment and your seat is confirmed.",
-  "We confirm your seat by email and share the payment link if you're in.",
-  "You get the welcome pack, tool checklist and cohort channel invite.",
-  "Day 1 starts live with the whole cohort.",
-];
+    ? [
+        "You send the 2-minute application — no payment at this stage.",
+        "We confirm your seat by email and share the payment link if you're in.",
+        "You get the welcome pack, tool checklist and cohort channel invite.",
+        "Day 1 starts live with the whole cohort.",
+      ]
+    : [
+        "You complete checkout on our course platform and your seat is confirmed.",
+        "You get an email receipt with your GST invoice.",
+        "You get the welcome pack, tool checklist and cohort channel invite.",
+        "Day 1 starts live with the whole cohort.",
+      ];
 
 export const Pricing = () => (
   <Section id="pricing" className="py-24 md:py-36">
@@ -44,11 +51,11 @@ export const Pricing = () => (
       {/* value stack first, number second */}
       <Reveal className="col-span-12 lg:col-span-7">
         {/* Solid-gold surface, matching .cp-card-solid-gold on the courses page */}
-        <div className="flex h-full flex-col rounded-2xl bg-panel p-8 text-ink md:p-11">
+        <div className="flex h-full flex-col rounded-3xl bg-panel p-8 text-ink md:p-11">
           <p className="font-mono text-xs tracking-[0.2em] text-ink/60">
             NEXT COHORT · {startLabel.toUpperCase()} · {seatsLabel.toUpperCase()}
           </p>
-          <h2 className="mt-4 max-w-[16ch] text-4xl font-medium leading-[1.02] tracking-[-0.03em] md:text-5xl">
+          <h2 className="mt-4 max-w-[16ch] text-4xl font-light leading-[1.15] tracking-[-0.02em] md:text-5xl">
             Everything that's included.
           </h2>
 
@@ -90,6 +97,7 @@ export const Pricing = () => (
 
               <a
                 href={applyHref}
+                {...applyLinkProps}
                 onClick={() => track("cta_click", { location: "pricing" })}
                 className="group inline-flex items-center gap-2 rounded-full bg-ink py-1.5 pl-6 pr-1.5 text-base font-bold text-bone transition-all hover:gap-3.5 md:text-lg"
               >
@@ -106,7 +114,7 @@ export const Pricing = () => (
       <div className="col-span-12 flex flex-col gap-6 lg:col-span-5">
         {/* refund — stated precisely, or not claimed at all */}
         <Reveal delay={0.1}>
-          <div className="rounded-2xl border border-hairline bg-surface p-7">
+          <div className="rounded-3xl border border-hairline bg-surface p-7">
             <p className="t-label text-bone-70">REFUNDS</p>
             {pricing.refundTerms ? (
               <p className="mt-3 text-[17px] leading-relaxed text-bone">
@@ -131,8 +139,12 @@ export const Pricing = () => (
 
         {/* what happens next */}
         <Reveal delay={0.18}>
-          <div className="rounded-2xl border border-hairline bg-surface p-7">
-            <p className="t-label text-bone-70">WHAT HAPPENS AFTER YOU APPLY</p>
+          <div className="rounded-3xl border border-hairline bg-surface p-7">
+            <p className="t-label text-bone-70">
+              {applyFlow.mode === "apply"
+                ? "What happens after you apply"
+                : "What happens after you enroll"}
+            </p>
             <ol className="mt-4">
               {afterYouApply.map((step, i) => (
                 <li
@@ -152,7 +164,7 @@ export const Pricing = () => (
         </Reveal>
 
         <Reveal delay={0.26}>
-          <div className="rounded-2xl border border-hairline bg-surface p-7">
+          <div className="rounded-3xl border border-hairline bg-surface p-7">
             <p className="text-lg font-medium leading-snug text-bone">
               No job guarantee.
             </p>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
-import { priceLabel, startLabel, ctaLabel, applyHref } from "../content/site";
+import { priceLabel, startLabel, ctaLabel, applyHref, applyLinkProps } from "../content/site";
 import { track } from "../lib/track";
 
 const items = [
@@ -78,6 +78,7 @@ export const Nav = () => {
           </AnimatePresence>
           <a
             href={applyHref}
+            {...applyLinkProps}
             onClick={() => track("cta_click", { location: "nav" })}
             className="shrink-0 whitespace-nowrap rounded-full bg-volt px-4 py-1.5 text-xs font-bold text-ink transition-transform hover:-translate-y-px md:text-[13px]"
           >

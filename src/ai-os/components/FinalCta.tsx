@@ -9,6 +9,7 @@ import {
   gstLabel,
   ctaLabel,
   applyHref,
+  applyLinkProps,
   applyFlow,
 } from "../content/site";
 import { track } from "../lib/track";
@@ -30,7 +31,7 @@ export const FinalCta = () => (
         <p className="t-label text-bone-70">
           COHORT 01 · {startLabel.toUpperCase()} · {seatsLabel.toUpperCase()}
         </p>
-        <h2 className="mt-5 max-w-[15ch] text-[13vw] font-medium leading-[0.9] tracking-[-0.04em] text-bone lg:text-[7vw]">
+        <h2 className="mt-5 max-w-[15ch] text-[clamp(2rem,7vw,4.5rem)] font-light leading-[1.1] tracking-[-1.5px] text-bone">
           Stop watching from outside.
         </h2>
       </Reveal>
@@ -62,6 +63,7 @@ export const FinalCta = () => (
             </div>
             <a
               href={applyHref}
+              {...applyLinkProps}
               onClick={() => track("cta_click", { location: "final" })}
               className="group inline-flex items-center gap-2 rounded-full bg-volt py-2 pl-7 pr-2 text-lg font-bold text-ink transition-all hover:gap-3.5"
             >
@@ -74,7 +76,7 @@ export const FinalCta = () => (
           <p className="t-meta mt-5">
             {applyFlow.mode === "apply"
               ? "Applying takes 2 minutes and costs nothing."
-              : "Seats are confirmed on payment."}{" "}
+              : "Secure checkout on our course platform; your seat is confirmed on payment."}{" "}
             Refund terms are published in the footer.
           </p>
         </Reveal>

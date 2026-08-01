@@ -41,7 +41,7 @@ export const LeadMagnet = () => {
   return (
     <Section className="py-20 md:py-24">
       <Reveal>
-        <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8 rounded-2xl border border-hairline bg-surface p-8 md:p-11">
+        <div className="grid grid-cols-12 items-center gap-x-6 gap-y-8 rounded-3xl border border-hairline bg-surface p-8 md:p-11">
           <div className="col-span-12 lg:col-span-6">
             <h2 className="max-w-[22ch] text-3xl font-medium leading-[1.05] tracking-[-0.02em] text-bone md:text-4xl">
               Not ready to apply? Read the whole thing first.
@@ -54,7 +54,7 @@ export const LeadMagnet = () => {
 
           <div className="col-span-12 lg:col-span-5 lg:col-start-8">
             {state === "done" ? (
-              <div className="rounded-xl border border-hairline bg-ink p-6">
+              <div className="rounded-2xl border border-hairline bg-ink p-6">
                 <p className="text-[17px] font-medium text-bone">
                   {leadMagnet.endpoint
                     ? "Sent — check your inbox."

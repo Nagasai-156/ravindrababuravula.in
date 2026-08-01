@@ -31,7 +31,7 @@ export const WeekRhythm = () => (
     <div className="grid grid-cols-12 gap-x-6 gap-y-10">
       <div className="col-span-12 lg:col-span-5">
         <Reveal>
-          <h2 className="max-w-[16ch] text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-5xl">
+          <h2 className="max-w-[16ch] text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-5xl">
             Live, then build, then reviewed.
           </h2>
         </Reveal>

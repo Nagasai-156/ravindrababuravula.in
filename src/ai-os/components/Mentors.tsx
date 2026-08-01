@@ -54,9 +54,9 @@ export const Mentors = () => (
     <div className="grid grid-cols-12 gap-x-6 gap-y-4">
       <div className="col-span-12 lg:col-span-6">
         <Reveal>
-          <h2 className="max-w-[18ch] text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-5xl">
+          <h2 className="max-w-[18ch] text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-5xl">
             Theory from a founder. Implementation from a{" "}
-            <span className="font-serif italic">CTO.</span>
+            <span className="text-volt">CTO.</span>
           </h2>
         </Reveal>
       </div>
@@ -73,7 +73,7 @@ export const Mentors = () => (
     <div className="mt-14 grid grid-cols-12 gap-6">
       {instructors.map((m, i) => (
         <Reveal key={m.initials} delay={i * 0.1} className="col-span-12 md:col-span-6">
-          <div className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-7 md:p-9">
+          <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface p-7 md:p-9">
             <div className="flex items-center gap-5">
               <Avatar src={m.photo} initials={m.initials} name={m.name} />
               <div className="min-w-0">
@@ -109,7 +109,7 @@ export const Mentors = () => (
 
     {trackRecord.length > 0 && (
       <Reveal delay={0.15}>
-        <div className="mt-6 rounded-2xl border border-hairline bg-surface p-7">
+        <div className="mt-6 rounded-3xl border border-hairline bg-surface p-7">
           <p className="t-label text-muted">METABRIX LABS HAS SHIPPED</p>
           <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {trackRecord.map((t) => (
@@ -124,7 +124,7 @@ export const Mentors = () => (
     )}
 
     <Reveal delay={0.2}>
-      <div className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline sm:grid-cols-3 lg:grid-cols-6">
+      <div className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-3xl border border-hairline bg-hairline sm:grid-cols-3 lg:grid-cols-6">
         {support.map(([title, sub]) => (
           <div key={title} className="bg-surface p-5">
             <p className="text-[15px] font-medium text-bone">{title}</p>

@@ -32,9 +32,9 @@ export const Pain = () => (
     <div className="grid grid-cols-12 gap-x-6 gap-y-10">
       <div className="col-span-12 lg:col-span-6">
         <Reveal>
-          <h2 className="max-w-[18ch] text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-6xl">
+          <h2 className="max-w-[18ch] text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-6xl">
             Consuming AI content is not the same as being able to{" "}
-            <span className="font-serif italic">use it.</span>
+            <span className="text-volt">use it.</span>
           </h2>
         </Reveal>
         <Reveal delay={0.12}>

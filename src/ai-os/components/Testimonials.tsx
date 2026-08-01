@@ -14,7 +14,7 @@ export const Testimonials = () => {
       <SysLabel index="10" name="FROM THE COHORT" />
 
       <Reveal>
-        <h2 className="max-w-[20ch] text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-5xl">
+        <h2 className="max-w-[20ch] text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-5xl">
           What they built, in their words.
         </h2>
       </Reveal>
@@ -22,7 +22,7 @@ export const Testimonials = () => {
       <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {testimonials.map((t, i) => (
           <Reveal key={t.name} delay={(i % 3) * 0.08}>
-            <figure className="flex h-full flex-col rounded-2xl border border-hairline bg-surface p-7">
+            <figure className="flex h-full flex-col rounded-3xl border border-hairline bg-surface p-7">
               <blockquote className="text-[17px] leading-relaxed text-bone">
                 “{t.quote}”
               </blockquote>

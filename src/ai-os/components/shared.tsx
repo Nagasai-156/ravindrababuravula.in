@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
-/** Terminal-style section index — the OS boot sequence that threads the page. */
-export const SysLabel = ({ index, name }: { index: string; name: string }) => (
-  <div className="mb-8 flex items-center gap-3 md:mb-12">
-    <span className="t-label font-semibold text-volt">SYS.{index}</span>
-    <span className="h-px flex-1 bg-hairline" />
-    <span className="t-label text-muted">{name}</span>
+/**
+ * Section eyebrow, matching `.cp-sec-label` on the rest of the site: a short
+ * gold rule followed by an uppercase gold label. (`index` is still accepted so
+ * call sites didn't need touching, but the old SYS.xx terminal motif was a
+ * different brand's language and is no longer shown.)
+ */
+export const SysLabel = ({ name }: { index?: string; name: string }) => (
+  <div className="mb-8 md:mb-12">
+    <span className="aios-sec-label">{name}</span>
   </div>
 );
 

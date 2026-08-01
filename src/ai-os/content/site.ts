@@ -56,12 +56,15 @@ export const pricing = {
 
 export const applyFlow = {
   /**
-   * "apply" = form first, no payment (recommended — removes the payment-wall
-   * flinch the audit flags). "pay" = straight to checkout.
+   * "apply" = form first, no payment. "pay" = straight to checkout.
+   * Set to "pay" because the CTA now goes directly to the courses.store
+   * listing — the surrounding copy switches with it, so the page never says
+   * "no payment now" while linking to a checkout.
    */
-  mode: "apply" as "apply" | "pay",
-  /** TODO: replace with your form/checkout URL. Falls back to email. */
-  url: null as string | null,
+  mode: "pay" as "apply" | "pay",
+  /** Live checkout — courses.store listing for this program. */
+  // url: "https://voujhg.courses.store",
+  url: null,
   email: "info@metabrixlab.com",
   /** TODO: your booking link for the consult call. null → consult link hidden. */
   consultUrl: null as string | null,
@@ -166,11 +169,19 @@ export const perSessionAnchor =
       ).toLocaleString("en-IN")} per live session`
     : null;
 
+/* "Enroll" (not "Enrol") to match the spelling used across the rest of the site. */
 export const ctaLabel =
-  applyFlow.mode === "apply" ? "Apply — no payment now" : "Enrol now";
+  applyFlow.mode === "apply" ? "Apply — no payment now" : "Enroll Now";
 
 export const applyHref =
   applyFlow.url ??
   `mailto:${applyFlow.email}?subject=${encodeURIComponent(
     "AI Generalist OS — Application"
   )}`;
+
+/** The checkout lives on another domain, so those links open in a new tab. */
+export const applyIsExternal = /^https?:\/\//.test(applyHref);
+
+export const applyLinkProps = applyIsExternal
+  ? { target: "_blank" as const, rel: "noopener noreferrer" }
+  : {};

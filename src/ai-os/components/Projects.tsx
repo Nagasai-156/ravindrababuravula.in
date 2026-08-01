@@ -71,7 +71,7 @@ export const Projects = () => (
     <div className="grid grid-cols-12 gap-x-6 gap-y-6">
       <div className="col-span-12 lg:col-span-7">
         <Reveal>
-          <h2 className="text-4xl font-medium leading-[1.02] tracking-[-0.03em] text-bone md:text-6xl">
+          <h2 className="text-4xl font-light leading-[1.15] tracking-[-0.02em] text-bone md:text-6xl">
             Six things that exist when you're done.
           </h2>
         </Reveal>
@@ -103,7 +103,7 @@ export const Projects = () => (
             }}
             className="group"
           >
-            <div className="overflow-hidden rounded-xl border border-hairline transition-colors duration-300 group-hover:border-bone/25">
+            <div className="overflow-hidden rounded-2xl border border-hairline transition-colors duration-300 group-hover:border-bone/25">
               <Visual />
             </div>
             <div className="mt-5 flex items-baseline justify-between gap-3">
