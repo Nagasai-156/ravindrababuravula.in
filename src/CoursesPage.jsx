@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import heroPerson from "./assets/hero-person.png";
 import "./CoursesPage.css";
 
@@ -251,9 +252,10 @@ const AI_OS_COURSE = {
   title: "AI Generalist OS — 38-Day Builder Program",
   subtitle: "Pratik Padamwar · Zeeshan Ahmad Khan",
   image: "/courses/ai-generalist-os.jpg",
-  /* TODO: replace with the live enrolment / landing page URL once it is
-     published. Falls back to email so the CTA still works today. */
-  link: "mailto:info@metabrixlab.com?subject=AI%20Generalist%20OS%20%E2%80%94%20Application",
+  /* Full course landing page, served by this same app at /ai-generalist-os.
+     `internal` makes the CTAs use client-side routing instead of a new tab. */
+  link: "/ai-generalist-os",
+  internal: true,
   description:
     "A 38-day live builder program for students, engineers and operators. Understand modern AI, master the tools, and graduate with six real projects — a portfolio, not a certificate of attendance. No coding background required.",
   highlights: [
@@ -1552,15 +1554,22 @@ function CourseModal({ course, onClose }) {
             {!course.isFree && <div className="cp-modal-gst">+ 18% GST</div>}
           </div>
 
-          {/* CTA — at top */}
-          <a
-            href={course.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cp-modal-enroll"
-          >
-            Enroll Now <ArrowIcon />
-          </a>
+          {/* CTA — at top. Internal courses route within this app; everything
+              else still opens its external store page in a new tab. */}
+          {course.internal ? (
+            <Link to={course.link} className="cp-modal-enroll" onClick={onClose}>
+              View the full program <ArrowIcon />
+            </Link>
+          ) : (
+            <a
+              href={course.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cp-modal-enroll"
+            >
+              Enroll Now <ArrowIcon />
+            </a>
+          )}
 
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
@@ -1971,9 +1980,9 @@ export default function CoursesPage() {
                   </div>
 
                   <div className="cp-faang-actions">
-                    <a href={AI_OS_COURSE.link} target="_blank" rel="noopener noreferrer" className="cp-faang-enroll-btn">
+                    <Link to={AI_OS_COURSE.link} className="cp-faang-enroll-btn">
                       <PlayIcon /> Enroll Now
-                    </a>
+                    </Link>
                     <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(AI_OS_COURSE)}>
                       View Details <ArrowIcon />
                     </button>
