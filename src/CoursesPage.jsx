@@ -244,11 +244,11 @@ const PNC_COURSE = {
 
 /* ── AI Generalist OS — 38-Day Builder Program (standalone, very top of page) ──
    NOTE: this is a different program from the 6-month "AI Generalist Program"
-   in the Featured category below. This one is the 38-day live cohort by
-   MetaBrix Labs. Both are intentionally listed. */
+   in the Featured category below — that one is recorded, this one is a 38-day
+   live cohort. Both are intentionally listed. */
 const AI_OS_COURSE = {
   id: "ai-generalist-os-01",
-  tag: "38-DAY LIVE COHORT · METABRIX LABS",
+  tag: "38-DAY LIVE COHORT",
   title: "AI Generalist OS — 38-Day Builder Program",
   subtitle: "Pratik Padamwar · Zeeshan Ahmad Khan",
   image: "/courses/ai-generalist-os.jpg",

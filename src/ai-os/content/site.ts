@@ -62,12 +62,22 @@ export const applyFlow = {
    * "no payment now" while linking to a checkout.
    */
   mode: "pay" as "apply" | "pay",
-  /** Live checkout — courses.store listing for this program. */
-  // url: "https://voujhg.courses.store",
-  url: null,
-  email: "info@metabrixlab.com",
+  /**
+   * Live checkout. While this is null every enrol CTA routes to the waitlist
+   * page instead — set it to the courses.store listing to switch the whole
+   * page over to selling.
+   */
+  url: null as string | null,
+  email: "gate2014.ravindra@gmail.com",
   /** TODO: your booking link for the consult call. null → consult link hidden. */
   consultUrl: null as string | null,
+};
+
+export const waitlist = {
+  path: "/ai-generalist-os/waitlist",
+  /** Google Apps Script Web App that appends each signup to the sheet. */
+  endpoint:
+    "https://script.google.com/macros/s/AKfycbzMFGfI7G_0iKzSupj799vNWa0PVhpdcE3A0_IaGMP6mSpag3-tCJI0eIha5Bsad4kv6g/exec",
 };
 
 export const leadMagnet = {
@@ -77,14 +87,20 @@ export const leadMagnet = {
   endpoint: null as string | null,
 };
 
+/** The name this programme is published under. */
+export const brand = {
+  name: "Ravindrababu Ravula",
+  short: "RBR",
+  site: "ravindrababuravula.in",
+};
+
 /**
- * MetaBrix's own track record — this is the credibility that replaces
- * testimonials for cohort 1.
+ * Track record shown as credibility while cohort 1 has no alumni.
  * TODO: add real, verifiable entries. Empty array → the section is hidden
  * rather than filled with vague claims.
  */
 export const trackRecord: { label: string; detail: string }[] = [
-  // { label: "Ultron AI", detail: "Shipped product — demoed at GDC 2024" },
+  // { label: "GATE AIR 2, AIR 3, AIR 5", detail: "Students taught by Prof. RBR" },
 ];
 
 /**
@@ -169,17 +185,21 @@ export const perSessionAnchor =
       ).toLocaleString("en-IN")} per live session`
     : null;
 
-/* "Enroll" (not "Enrol") to match the spelling used across the rest of the site. */
-export const ctaLabel =
-  applyFlow.mode === "apply" ? "Apply — no payment now" : "Enroll Now";
+/** True once a real checkout link exists; until then the page collects a waitlist. */
+export const hasCheckout = applyFlow.url !== null;
 
-export const applyHref =
-  applyFlow.url ??
-  `mailto:${applyFlow.email}?subject=${encodeURIComponent(
-    "AI Generalist OS — Application"
-  )}`;
+/* "Enroll" (not "Enrol") to match the spelling used across the rest of the site.
+   The label tells the truth about where the button goes — while there is no
+   checkout it says waitlist, so nobody clicks expecting a payment page. */
+export const ctaLabel = !hasCheckout
+  ? "Join the waitlist"
+  : applyFlow.mode === "apply"
+    ? "Apply — no payment now"
+    : "Enroll Now";
 
-/** The checkout lives on another domain, so those links open in a new tab. */
+export const applyHref = applyFlow.url ?? waitlist.path;
+
+/** Only an off-site checkout opens in a new tab; the waitlist is a route here. */
 export const applyIsExternal = /^https?:\/\//.test(applyHref);
 
 export const applyLinkProps = applyIsExternal

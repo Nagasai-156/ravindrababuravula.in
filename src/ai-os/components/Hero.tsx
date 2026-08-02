@@ -5,6 +5,7 @@ import { usePointerOffset, useMagnetic } from "./usePointer";
 import {
   pricing,
   cohort,
+  brand,
   startLabel,
   seatsLabel,
   priceLabel,
@@ -121,7 +122,7 @@ export const Hero = () => {
                 <span className="pulse-ring absolute inline-flex h-full w-full rounded-full bg-volt" />
                 <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-volt" />
               </span>
-              COHORT {String(cohort.number).padStart(2, "0")} · MetaBrix Labs
+              COHORT {String(cohort.number).padStart(2, "0")} · {brand.name}
             </span>
           </motion.div>
 
@@ -202,8 +203,14 @@ export const Hero = () => {
             transition={{ duration: 0.9, delay: 0.95 }}
             className="t-meta mt-7"
           >
-            Taught live by {instructors[0].name} ({instructors[0].role.split(" · ")[0]})
-            and {instructors[1].name} ({instructors[1].role.split(" · ")[0]}).
+            Taught live by{" "}
+            {instructors.map((m, i) => (
+              <span key={m.initials}>
+                {i > 0 && (i === instructors.length - 1 ? " and " : ", ")}
+                {m.name} ({m.role.split(" · ")[0]})
+              </span>
+            ))}
+            .
           </motion.p>
         </motion.div>
 

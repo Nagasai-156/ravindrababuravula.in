@@ -20,6 +20,7 @@ import CoursesPage from "./CoursesPage";
 /* Loaded on demand — this landing page carries its own component tree, so
    keeping it out of the main bundle spares every other route ~200 kB. */
 const AiGeneralistOsPage = lazy(() => import("./ai-os/AiGeneralistOsPage"));
+const AiGeneralistOsWaitlist = lazy(() => import("./ai-os/WaitlistPage"));
 import TeamPage from "./TeamPage";
 import ForumPage from "./ForumPage";
 import BlogListPage from "./BlogListPage";
@@ -156,9 +157,9 @@ const PAGE_SEO = {
     description: "Explore all GATE courses by Prof. Ravindrababu Ravula. GATE CS Core, CS Core Plus, DA Core, DA Core Plus Mentorship for 2027 & 2028. LIVE classes, structured preparation, use coupon rbr2000 for ₹2,000 off.",
   },
   "/ai-generalist-os": {
-    title: "AI Generalist OS — Build 6 Real AI Systems in 38 Days | MetaBrix Labs",
+    title: "AI Generalist OS — Build 6 Real AI Systems in 38 Days",
     description:
-      "A live 38-day cohort by MetaBrix Labs. Build six real AI systems — portfolio website, chatbot, document assistant, automation, content system and capstone. CTO-led build sprint. No coding background required. ₹35,000.",
+      "A live 38-day cohort. Build six real AI systems — portfolio website, chatbot, document assistant, automation, content system and capstone. CTO-led build sprint. No coding background required. ₹35,000 + 18% GST.",
     schema: {
       "@context": "https://schema.org",
       "@type": "Course",
@@ -167,13 +168,18 @@ const PAGE_SEO = {
         "A live 38-day cohort-based program. Build six real AI systems: portfolio website, AI chatbot, document assistant, automation workflow, content system and a capstone project.",
       provider: {
         "@type": "Organization",
-        name: "MetaBrix Labs",
-        email: "info@metabrixlab.com",
+        name: "Ravindrababu Ravula",
+        url: "https://ravindrababuravula.in",
+        email: "gate2014.ravindra@gmail.com",
       },
       hasCourseInstance: {
         "@type": "CourseInstance",
         courseMode: "online",
         courseWorkload: "P38D",
+        instructor: [
+          { "@type": "Person", name: "Pratik Padamwar" },
+          { "@type": "Person", name: "Zeeshan Ahmad Khan" },
+        ],
       },
       offers: {
         "@type": "Offer",
@@ -258,6 +264,16 @@ export default function App() {
           <PageWithSEO path="/ai-generalist-os">
             <Suspense fallback={<div style={{ minHeight: "100dvh", background: "#0b0c0a" }} />}>
               <AiGeneralistOsPage />
+            </Suspense>
+          </PageWithSEO>
+        }
+      />
+      <Route
+        path="/ai-generalist-os/waitlist"
+        element={
+          <PageWithSEO path="/ai-generalist-os/waitlist">
+            <Suspense fallback={<div style={{ minHeight: "100dvh", background: "#0e0e0e" }} />}>
+              <AiGeneralistOsWaitlist />
             </Suspense>
           </PageWithSEO>
         }

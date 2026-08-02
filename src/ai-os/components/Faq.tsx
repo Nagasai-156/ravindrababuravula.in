@@ -94,10 +94,10 @@ export const Faq = () => {
             <p className="t-lead mt-6">
               Anything not covered here — write to{" "}
               <a
-                href="mailto:info@metabrixlab.com"
+                href="mailto:gate2014.ravindra@gmail.com"
                 className="text-bone underline underline-offset-4"
               >
-                info@metabrixlab.com
+                gate2014.ravindra@gmail.com
               </a>{" "}
               and you'll get a straight answer.
             </p>

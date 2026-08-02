@@ -63,8 +63,13 @@ export const Mentors = () => (
       <div className="col-span-12 lg:col-span-5 lg:col-start-8">
         <Reveal delay={0.1}>
           <p className="t-lead">
-            Both are in the room for all 38 days. You're not handed to a
-            teaching assistant once the build sprint starts.
+            {instructors.length === 2
+              ? "Both are in the room for the full 38 days."
+              : instructors.length > 2
+                ? "All of them are in the room for the full 38 days."
+                : "In the room for the full 38 days."}{" "}
+            You're not handed to a teaching assistant once the build sprint
+            starts.
           </p>
         </Reveal>
       </div>
@@ -72,7 +77,13 @@ export const Mentors = () => (
 
     <div className="mt-14 grid grid-cols-12 gap-6">
       {instructors.map((m, i) => (
-        <Reveal key={m.initials} delay={i * 0.1} className="col-span-12 md:col-span-6">
+        <Reveal
+          key={m.initials}
+          delay={i * 0.1}
+          className={
+            instructors.length > 1 ? "col-span-12 md:col-span-6" : "col-span-12 lg:col-span-8"
+          }
+        >
           <div className="flex h-full flex-col rounded-3xl border border-hairline bg-surface p-7 md:p-9">
             <div className="flex items-center gap-5">
               <Avatar src={m.photo} initials={m.initials} name={m.name} />
@@ -110,7 +121,7 @@ export const Mentors = () => (
     {trackRecord.length > 0 && (
       <Reveal delay={0.15}>
         <div className="mt-6 rounded-3xl border border-hairline bg-surface p-7">
-          <p className="t-label text-muted">METABRIX LABS HAS SHIPPED</p>
+          <p className="t-label text-muted">TRACK RECORD</p>
           <ul className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
             {trackRecord.map((t) => (
               <li key={t.label} className="text-[15px] text-bone">

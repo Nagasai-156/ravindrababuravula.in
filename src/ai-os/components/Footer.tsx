@@ -1,4 +1,4 @@
-import { applyFlow } from "../content/site";
+import { applyFlow, brand } from "../content/site";
 
 const sections = [
   {
@@ -34,7 +34,7 @@ export const Footer = () => (
             AI GENERALIST OS
           </p>
           <p className="t-card mt-2 max-w-[40ch]">
-            A 38-day live builder program by MetaBrix Labs. Understand modern
+            A 38-day live builder programme from {brand.name}. Understand modern
             AI, build six real projects, graduate with a portfolio.
           </p>
           <a
@@ -77,7 +77,7 @@ export const Footer = () => (
           <p className="t-label text-muted">COMPANY</p>
           {/* TODO: replace with your registered entity name, address and GSTIN */}
           <p className="t-card mt-4">
-            MetaBrix Labs
+            {brand.name}
             <br />
             India
           </p>
@@ -90,7 +90,7 @@ export const Footer = () => (
 
       <div className="mt-14 flex flex-col gap-3 border-t border-hairline pt-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-mono text-xs text-muted">
-          © {new Date().getFullYear()} MetaBrix Labs. All rights reserved.
+          © {new Date().getFullYear()} {brand.name}. All rights reserved.
         </p>
         <p className="font-mono text-xs text-muted">
           No job guarantee is offered or implied.

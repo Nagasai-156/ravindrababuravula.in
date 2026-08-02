@@ -47,7 +47,7 @@ export default function AiGeneralistOsPage() {
         <Mentors />
         <Testimonials />
         {/* capture, then close */}
-        <LeadMagnet />
+        {/* <LeadMagnet /> */}
         <Pricing />
         <Faq />
         <FinalCta />
