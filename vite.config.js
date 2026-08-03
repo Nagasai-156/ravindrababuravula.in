@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 import { writeFileSync } from 'fs'
 import { resolve } from 'path'
 
@@ -27,5 +28,8 @@ function buildVersionPlugin() {
 }
 
 export default defineConfig({
-  plugins: [react(), buildVersionPlugin()],
+  // Tailwind is used only by the /ai-generalist-os route (src/ai-os). It is
+  // imported there without preflight and unlayered, so it adds utilities
+  // without touching the rest of the site's CSS — see src/ai-os/ai-os.css.
+  plugins: [react(), tailwindcss(), buildVersionPlugin()],
 })

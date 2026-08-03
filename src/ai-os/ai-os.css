@@ -1,0 +1,266 @@
+/* ===========================================================================
+ * AI Generalist OS — scoped styles for the /ai-generalist-os route.
+ *
+ * Tailwind is imported WITHOUT preflight, and UNLAYERED, on purpose:
+ *
+ *  - No preflight  → the main site's own reset in index.css stays the single
+ *                    global reset. Nothing outside this route changes.
+ *  - Unlayered     → utilities keep specificity (0,1,0), so they still beat
+ *                    index.css's element selectors like `h2 { font-size }`.
+ *                    (A layered import would lose to them regardless of
+ *                    specificity, which is the trap here.)
+ *
+ * The normalisation block below is written as `:where(.aios-root) :is(...)`
+ * so it lands at exactly (0,0,1) — the same weight as index.css's element
+ * rules, winning only on source order, and still losing to every Tailwind
+ * utility. That is what lets this page opt out of the site's typography
+ * without any `!important`.
+ * ======================================================================== */
+
+/* Unbounded / Inter are already loaded by src/index.css — no extra webfonts
+   here, so this route costs nothing beyond the site's existing font budget. */
+
+@import "tailwindcss/theme.css";
+@import "tailwindcss/utilities.css";
+
+/* Palette is the main site's, so this route reads as part of
+   ravindrababuravula.in rather than a separate brand. Values mirror the
+   tokens in src/index.css — keep them in sync if those change.
+   Token NAMES are kept (ink / bone / volt) so the components don't need to
+   churn; only the values moved. */
+@theme {
+  --color-ink: #0e0e0e;         /* --bg-primary */
+  --color-surface: #141414;     /* --bg-tertiary */
+  --color-raised: #1a1a1a;      /* --bg-elevated */
+  --color-bone: #ffffff;        /* --text-white */
+  --color-bone-70: rgba(255, 255, 255, 0.72);
+  --color-bone-50: rgba(255, 255, 255, 0.5);
+  --color-muted: #aaaaaa;       /* --text-secondary — 8.3:1 on #0e0e0e */
+  --color-volt: #ffb703;        /* --accent-gold — 10.9:1 on #0e0e0e */
+  --color-volt-dim: #c68f02;
+  /* Solid-gold surface for inverted panels, matching the courses page's
+     .cp-card-solid-gold treatment. */
+  --color-panel: #f2d271;
+  --color-hairline: rgba(255, 255, 255, 0.1);  /* --border-light */
+
+  /* The main site's type system: Unbounded for display, Inter for everything
+     else. `--font-mono` is deliberately mapped to Inter too — this page used
+     to set small labels in JetBrains Mono, which read as a different brand. */
+  --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Unbounded", sans-serif;
+  --font-mono: "Inter", system-ui, sans-serif;
+  --font-serif: "Unbounded", sans-serif;
+}
+
+/* ── Route root ─────────────────────────────────────────────────────────── */
+.aios-root {
+  background: var(--color-ink);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: normal;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+
+.aios-root ::selection {
+  background: var(--color-volt);
+  color: var(--color-ink);
+}
+
+/* Headings use the site's display face; size/weight/leading stay with the
+   Tailwind utilities, which outrank this (0,0,1) rule. */
+:where(.aios-root) :is(h1, h2, h3) {
+  font-family: var(--font-display);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-break: normal;
+  overflow-wrap: normal;
+  word-wrap: normal;
+  hyphens: none;
+  text-align: inherit;
+}
+:where(.aios-root) :is(h4, h5, h6) {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+  text-align: inherit;
+}
+
+/* ── Section eyebrow — mirrors .cp-sec-label ─────────────────────────────── */
+.aios-root .aios-sec-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-volt);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.aios-root .aios-sec-label::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--color-volt);
+  flex-shrink: 0;
+}
+
+/* ── Card + button behaviour — mirrors .cp-course-card / .cp-cta-primary ─── */
+.aios-root [class*="rounded-3xl"][class*="border-hairline"] {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.aios-root [class*="rounded-3xl"][class*="border-hairline"]:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 183, 3, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.aios-root :is(a, button)[class*="bg-volt"] {
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    gap 0.3s ease;
+}
+.aios-root :is(a, button)[class*="bg-volt"]:hover {
+  background-color: #ffc633;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 183, 3, 0.3);
+}
+
+/* index.css matches `[class*="-p"]`, which catches utilities like `gap-px`. */
+:where(.aios-root) :is(p, div, span, li, dd) {
+  text-align: inherit;
+  hyphens: none;
+}
+
+/* The site sets `transition: all .3s` on every button; that fights the
+   spring-driven motion on this page. */
+:where(.aios-root) button {
+  transition: none;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+/* ── Page furniture ─────────────────────────────────────────────────────── */
+
+/* Fine film grain — from the instrument world (sensor noise) */
+.aios-root .grain::after,
+.aios-root.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Type tiers ─────────────────────────────────────────────────────────
+ * The middle rungs between display type and mono labels. Nothing carrying a
+ * sentence goes below 15px.
+ * -------------------------------------------------------------------- */
+.aios-root .t-lead {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: var(--color-bone);
+  max-width: 62ch;
+}
+@media (min-width: 768px) {
+  .aios-root .t-lead {
+    font-size: 1.25rem;
+  }
+}
+
+.aios-root .t-body {
+  font-size: 1rem;
+  line-height: 1.85; /* matches .cp-panel-p */
+  color: var(--color-muted);
+  max-width: 68ch;
+}
+@media (min-width: 768px) {
+  .aios-root .t-body {
+    font-size: 1.0625rem;
+  }
+}
+
+.aios-root .t-card {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+@media (min-width: 768px) {
+  .aios-root .t-card {
+    font-size: 1rem;
+  }
+}
+
+/* Small caps label — same treatment as .cp-card-tag / .cp-sec-label */
+.aios-root .t-label {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.aios-root .t-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+/* ── Motion ─────────────────────────────────────────────────────────────── */
+@keyframes aiosMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.aios-root .animate-marquee {
+  animation: aiosMarquee 32s linear infinite;
+}
+
+@keyframes aiosBlink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.aios-root .cursor-blink {
+  animation: aiosBlink 1.1s steps(1) infinite;
+}
+
+@keyframes aiosPulseRing {
+  0% { transform: scale(1); opacity: 0.55; }
+  70%, 100% { transform: scale(2.8); opacity: 0; }
+}
+.aios-root .pulse-ring {
+  animation: aiosPulseRing 2.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aios-root .animate-marquee,
+  .aios-root .pulse-ring {
+    animation: none;
+  }
+  .aios-root .pulse-ring {
+    opacity: 0.55;
+  }
+}

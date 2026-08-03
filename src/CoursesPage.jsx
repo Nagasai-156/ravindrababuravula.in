@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import heroPerson from "./assets/hero-person.png";
 import "./CoursesPage.css";
 
@@ -241,6 +242,162 @@ const PNC_COURSE = {
   marqueeText: "UDEMY COURSE ★ PERMUTATION & COMBINATIONS ★ GATE EXAM ★ COLLEGE EXAMS ★ COMPETITIVE EXAMS ★ PROF RBR ★ ",
 };
 
+/* ── AI Generalist OS — 38-Day Builder Program (standalone, very top of page) ──
+   NOTE: this is a different program from the 6-month "AI Generalist Program"
+   in the Featured category below — that one is recorded, this one is a 38-day
+   live cohort. Both are intentionally listed. */
+const AI_OS_COURSE = {
+  id: "ai-generalist-os-01",
+  tag: "38-DAY LIVE COHORT",
+  title: "AI Generalist OS — 38-Day Builder Program",
+  subtitle: "Pratik Padamwar · Zeeshan Ahmad Khan",
+  image: "/courses/ai-generalist-os.jpg",
+  /* Full course landing page, served by this same app at /ai-generalist-os.
+     `internal` makes the CTAs use client-side routing instead of a new tab. */
+  link: "/ai-generalist-os",
+  internal: true,
+  description:
+    "A 38-day live builder program for students, engineers and operators. Understand modern AI, master the tools, and graduate with six real projects — a portfolio, not a certificate of attendance. No coding background required.",
+  highlights: [
+    "38 Live Days · ~75 Hours Live + Lab",
+    "8-Day CTO-Led Build Sprint",
+    "6 Portfolio-Ready Projects",
+    "Capstone, Demo Day & Certificate",
+  ],
+  tools: ["ChatGPT", "Claude", "Perplexity", "n8n", "Replit", "Webflow"],
+  price: "35,000",
+  originalPrice: null,
+  discount: null,
+  marqueeText:
+    "NEW ★ AI GENERALIST OS ★ 38-DAY LIVE COHORT ★ BUILD 6 REAL AI SYSTEMS ★ CTO-LED BUILD SPRINT ★ NO CODING BACKGROUND REQUIRED ★ CAPSTONE + DEMO DAY ★ ",
+  details: {
+    overview:
+      "AI Generalist OS is a 38-day live, cohort-based program that takes you from scattered AI exposure to demonstrable capability.\n\nMost people stuck on AI are stuck at the same place: enough exposure to feel behind, not enough structure to build anything. Tool demos create activity — they do not create capability. This program is built around the opposite idea: every phase ends with an artifact you keep.\n\nThe program deliberately occupies the practical middle ground. It is simple enough to enter without a coding background, and deep enough that you finish having built and published six working AI systems.\n\nTheory is taught by an AI research scientist and founder; implementation is led by a CTO. Both are present for all 38 days — you are not handed to a teaching assistant once the build sprint starts.",
+    format: [
+      "Fully LIVE online cohort sessions, every session recorded",
+      "Lab time after each session with instructors still online",
+      "8-day CTO-led implementation sprint",
+      "Project review — your own work looked at and corrected",
+      "Doubt support between sessions via the cohort channel",
+      "Capstone presentation on Demo Day",
+      "Limited seats so every project gets reviewed, not just submitted",
+    ],
+    whatYouLearn: [
+      "The AI ecosystem — AI vs ML vs deep learning vs generative AI",
+      "Prompt engineering: role, context, task, constraints, examples, verification",
+      "How LLMs actually work — tokens, embeddings, context windows",
+      "Agents, RAG and retrieval over your own documents",
+      "APIs, databases and the architecture of a real AI application",
+      "Workflow automation and multi-step AI agents",
+      "Evaluating AI output — accuracy, hallucination, bias, safety, cost and latency",
+      "Turning AI capability into career, freelance, startup or business direction",
+    ],
+    programLevels: [
+      {
+        title: "Phase 1 · Days 1–5 — Foundation",
+        desc: "AI vs ML vs GenAI, LLMs, agents and multimodal AI, then the Prompt Blueprint: role, context, task, constraints, examples, verify. You stop chatting randomly and start directing AI intentionally. Deliverable: your own AI opportunity map plus a prompt library you reuse all program.",
+        tools: ["ChatGPT", "Claude", "Gemini"],
+      },
+      {
+        title: "Phase 2 · Days 6–11 — Tools & Personal AI Stack",
+        desc: "Research, writing, design, voice, video and automation tools assembled into one stack instead of thirty tabs — chosen by job-to-be-done rather than hype. Deliverable: a working research workflow, a content workflow and a daily productivity system.",
+        tools: ["Perplexity", "NotebookLM", "Canva", "ElevenLabs"],
+      },
+      {
+        title: "Phase 3 · Days 12–17 — Model Thinking",
+        desc: "Tokens, embeddings, context windows, RAG, APIs, training vs inference, hallucination, cost and latency. The layer that lets you judge AI output instead of trusting it. Deliverable: an architecture map of a real AI application, drawn and explained by you.",
+        tools: ["OpenAI API", "Embeddings", "Vector stores"],
+      },
+      {
+        title: "Phase 4 · Days 18–25 — CTO-Led Build Sprint",
+        desc: "Eight consecutive days of implementation. Portfolio website, AI chatbot, document assistant, automation workflow, content system and marketing funnel — built on the call, tested, then published. Deliverable: six shipped artifacts. This is the portfolio.",
+        tools: ["Replit", "Webflow", "n8n", "Make"],
+      },
+      {
+        title: "Phase 5 · Days 26–35 — Business & Evaluation",
+        desc: "Sales, support, operations and reporting with AI. Accuracy, hallucination, bias, safety, speed and cost evaluation. Then career, freelance and startup positioning. Deliverable: a career or freelance roadmap, client-ready proposals and an evaluation checklist.",
+        tools: ["CRM workflows", "Funnel templates", "Evaluation rubrics"],
+      },
+      {
+        title: "Phase 6 · Days 36–38 — Capstone & Demo Day",
+        desc: "Finalise, test, tell the story, present live to the cohort and answer questions. Attendance creates exposure; a capstone creates evidence. Deliverable: a presented capstone and a project-linked certificate.",
+        tools: ["Your own stack", "Demo Day", "Certificate"],
+      },
+    ],
+    customSections: [
+      {
+        title: "The Six Things You Build",
+        items: [
+          "Live portfolio website — bio, skills, projects and contact, published at a real URL",
+          "AI chatbot — an assistant answering from your own material, with sources attached",
+          "Document AI assistant — upload PDFs, ask questions, get summaries and extracted fields",
+          "Automation workflow — lead capture, email replies, form-to-sheet, running on its own",
+          "Content + marketing system — calendar, posts, scripts, landing page and follow-up",
+          "Capstone project — one major build, presented live and certified",
+        ],
+      },
+      {
+        title: "How a Week Actually Runs",
+        items: [
+          "LIVE — concept, then a demo built in front of you. Questions answered on the call.",
+          "LAB — you build the same thing on your own screen while instructors are still online.",
+          "ASYNC — doubt support in the cohort channel so you are not stuck for a week.",
+          "REVIEW — your work gets looked at and corrected, which free content structurally cannot do.",
+        ],
+      },
+      {
+        title: "Four Directions After Day 38",
+        items: [
+          "Career — AI generalist, AI workflow operator, AI product analyst, AI QA evaluator",
+          "Freelance — websites, chatbots, automations and content systems you can charge for",
+          "Startup — problem selection, MVP workflow, pricing, distribution, demo and one-pager",
+          "Business — sales, marketing, support and operations automation inside your own company",
+        ],
+      },
+      {
+        title: "What Makes This Different",
+        items: [
+          "Not a workshop — 38 live days with two instructors present throughout",
+          "Not an ML course — no maths prerequisites and no long coding runway before you build",
+          "Artifact-first — if a phase does not produce something you keep, it is not in the program",
+          "Taught at three levels — plain explanation, real workflow, and builder depth if you want it",
+          "Honest positioning — no job guarantee, and no invented placement statistics",
+        ],
+      },
+    ],
+    whatYouGet: [
+      "38 live learning days (~75 hours of live + lab learning)",
+      "8-day CTO-led build sprint",
+      "Six portfolio artifacts, built on the call",
+      "Every session recorded",
+      "100+ prompt library and an AI tools directory",
+      "Proposal, résumé, funnel and content-calendar templates",
+      "AI safety and evaluation checklists",
+      "Project review and doubt support throughout",
+      "Private cohort community and peer network",
+      "Capstone, Demo Day and a project-linked certificate",
+    ],
+    whoIsFor: [
+      "Students who want a portfolio and a demo-day recording before they graduate",
+      "Engineers who want agentic workflows, RAG and evaluation they can defend in a review",
+      "Working professionals wanting productivity, research and workplace automation",
+      "Marketers and creators who want a content engine that runs weekly",
+      "Business owners looking to automate real processes and cut recurring costs",
+      "Freelancers adding a new service line they can quote for",
+      "Aspiring founders who want problem selection, an MVP and a demo",
+    ],
+    outcome: [
+      "A working understanding of the AI ecosystem, end to end",
+      "A personal AI stack that saves you time every week",
+      "Six public, working projects you can show an employer or a client",
+      "The ability to evaluate AI output critically instead of trusting it",
+      "Fluency to talk to technical teams without bluffing",
+      "A clear direction: career, freelance, startup or business",
+    ],
+    note: "No job guarantee is offered — be suspicious of anyone selling one. What this program guarantees is capability you can demonstrate: six public artifacts, an evaluation framework, and positioning for career, freelance, startup or business paths.",
+  },
+};
+
 /* ── Course Categories with proper grouping ── */
 const CATEGORIES = [
   {
@@ -259,7 +416,7 @@ const CATEGORIES = [
         link: "https://voujhg.courses.store/842454?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
         description: "A comprehensive program designed to help learners build practical AI skills across multiple domains — from AI fundamentals to building real-world AI applications using modern tools and workflows.",
         highlights: ["6 Structured Levels", "Hands-on Tool-Based Learning", "Capstone Project & Demo Day", "Real-World AI Applications"],
-        price: "29,999",
+        price: "35,000",
         originalPrice: "0",
         discount: "0",
         color: "solid-gold",
@@ -410,7 +567,7 @@ const CATEGORIES = [
             { title: "Mentorship & Personal Guidance (Key Feature)", items: ["Regular mentor meetings on Google Meet", "Frequent live sessions with Ravindrababu Ravula", "Personalized study schedule and planning", "Continuous performance tracking and feedback", "Exclusive WhatsApp groups for peer learning and discussion"] },
             { title: "These curated peer groups ensure", items: ["Daily discussions and doubt solving", "Coding + GATE preparation support", "Healthy competition and consistency", "Real-time updates and guidance"] },
           ],
-          whatYouGet: ["1200+ hours of LIVE + recorded CS & DA classes", "200+ hours of DSA + Java + LeetCode training", "Complete syllabus coverage (GATE + Coding)", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Personalized schedule plan", "Regular mentorship sessions", "Exclusive peer learning groups", "Access to student discussion forum"],
+          whatYouGet: ["1200+ hours of LIVE + recorded CS & DA classes", "200+ hours of DSA + Java + LeetCode training", "Complete syllabus coverage (GATE + Coding)", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Personalized schedule plan", "Regular mentorship sessions", "Exclusive peer learning groups", "Access to student discussion forum"],
           whoIsFor: ["Serious GATE CS/DA 2027 aspirants", "Students aiming for both top ranks and placements", "College students balancing academics with preparation", "Beginners who want both theory + coding clarity", "Working professionals seeking structured and guided learning"],
           outcome: ["Strong conceptual clarity across CS and Data Science", "Ability to solve GATE-level and coding interview problems", "Confidence in writing clean Java code", "Familiarity with LeetCode-style problem solving", "A disciplined and structured preparation approach", "Improved chances of achieving both high GATE rank and placement readiness"],
           note: "Join this program to prepare with a complete ecosystem — concepts, coding, mentorship, and strategy — designed for aspirants who aim to excel in both GATE and placements.",
@@ -489,7 +646,7 @@ const CATEGORIES = [
     key: "gatecs",
     label: "GATE CS",
     heading: "GATE CS",
-    description: "Comprehensive LIVE programs for GATE Computer Science aspirants. Classes held daily between 6 AM–8 AM and 6 PM–10 PM.",
+    description: "Comprehensive recorded, self-paced programs for GATE Computer Science aspirants. Structured video lectures you can start anytime and revisit as often as you need.",
     count: 9,
     courses: [
       {
@@ -497,12 +654,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs 2027 core.jpg",
         link: "https://voujhg.courses.store/834718?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Structured Learning Path"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete GATE CS Syllabus", "Recorded · Self-Paced", "Structured Learning Path"],
         price: "9,999", originalPrice: "15,000", discount: "34", color: "dark",
         details: {
-          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured LIVE classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured recorded classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -518,7 +675,7 @@ const CATEGORIES = [
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2027", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
 
@@ -529,12 +686,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2027 core.jpg",
         link: "https://voujhg.courses.store/834704?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "16,999", originalPrice: "25,000", discount: "33", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -559,7 +716,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2027", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -574,8 +731,8 @@ const CATEGORIES = [
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "accent",
         details: {
-          overview: "Gate CS Core Plus for GATE CS 2027 is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core Plus for GATE CS 2027 is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of core Computer Science subjects", "Practical knowledge of Data Structures and Algorithms", "Java programming skills for problem-solving", "Experience in solving problems on LeetCode", "Improved accuracy and speed for GATE-level questions", "A structured and consistent preparation approach"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -592,7 +749,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode recorded sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2027", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
           outcome: ["Strong conceptual clarity across all GATE CS subjects", "Solid foundation in Data Structures and Algorithms", "Practical coding experience using Java", "Confidence in solving problems on LeetCode", "A structured and consistent preparation approach"],
         },
@@ -602,12 +759,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs 2028 core.jpg",
         link: "https://voujhg.courses.store/834717?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Early Bird Advantage"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete GATE CS Syllabus", "Recorded · Self-Paced", "Early Bird Advantage"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "dark",
         details: {
-          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured LIVE classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured recorded classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -623,7 +780,7 @@ const CATEGORIES = [
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2028", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
 
@@ -634,12 +791,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2028 core.jpg",
         link: "https://voujhg.courses.store/courses/834703",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "22,999", originalPrice: "35,000", discount: "35", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -664,7 +821,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2028", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -679,8 +836,8 @@ const CATEGORIES = [
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "19,999", originalPrice: "30,000", discount: "34", color: "accent",
         details: {
-          overview: "Gate CS Core Plus for GATE CS 2028 is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core Plus for GATE CS 2028 is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of core Computer Science subjects", "Practical knowledge of Data Structures and Algorithms", "Java programming skills for problem-solving", "Experience in solving problems on LeetCode", "Improved accuracy and speed for GATE-level questions", "A structured and consistent preparation approach"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -697,7 +854,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode recorded sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2028", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
           outcome: ["Strong conceptual clarity across all GATE CS subjects", "Solid foundation in Data Structures and Algorithms", "Practical coding experience using Java", "Confidence in solving problems on LeetCode", "A structured and consistent preparation approach"],
         },
@@ -707,12 +864,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs 2029 core.jpg",
         link: "https://voujhg.courses.store/834716?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete GATE CS Syllabus", "LIVE Classes Daily", "Maximum Prep Time"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete GATE CS Syllabus", "Recorded · Self-Paced", "Maximum Prep Time"],
         price: "19,999", originalPrice: "35,000", discount: "43", color: "dark",
         details: {
-          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured LIVE classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core is built to provide complete syllabus coverage through well-structured recorded classes, supported by regular practice and evaluation. The focus is on building strong conceptual understanding, problem-solving ability, and familiarity with GATE-level questions. The course follows a clear and organized flow, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -728,7 +885,7 @@ const CATEGORIES = [
             { subject: "Computer Networks", topics: "Concept of layering: OSI and TCP/IP Protocol Stacks; basics of packet, circuit and virtual circuit-switching; Data link layer: framing, error detection, Medium Access Control, Ethernet bridging; Routing protocols: shortest path, flooding, distance vector and link state routing; Fragmentation and IP addressing, IPv4, CIDR notation, basics of IP support protocols (ARP, DHCP, ICMP), NAT; Transport layer: flow control and congestion control, UDP, TCP, sockets; Application layer protocols: DNS, SMTP, HTTP, FTP, Email." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2029", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation", "Aspirants who want a clear and organized study plan"],
           outcome: ["Strong conceptual clarity across all subjects", "Improved problem-solving ability", "Familiarity with GATE exam patterns", "A structured approach to preparation"],
 
@@ -739,12 +896,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2029 core.jpg",
         link: "https://voujhg.courses.store/834702?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "28,999", originalPrice: "45,000", discount: "36", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -769,7 +926,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2029", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -784,8 +941,8 @@ const CATEGORIES = [
         highlights: ["Complete GATE CS Prep", "DSA with Java", "LeetCode Problems"],
         price: "24,999", originalPrice: "35,000", discount: "29", color: "accent",
         details: {
-          overview: "Gate CS Core Plus for GATE CS 2029 is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS Core Plus for GATE CS 2029 is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with practical programming skills and structured preparation. Along with GATE preparation, this program also builds strong foundations in Algorithms, Data Structures, Java programming, and problem-solving through LeetCode, ensuring that your learning is both exam-focused and application-oriented.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for brainstorming of sessions", "Integrated learning of GATE subjects, DSA, Java, and LeetCode", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of core Computer Science subjects", "Practical knowledge of Data Structures and Algorithms", "Java programming skills for problem-solving", "Experience in solving problems on LeetCode", "Improved accuracy and speed for GATE-level questions", "A structured and consistent preparation approach"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -802,7 +959,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper approach", "Coding Practice & Problem Solving — Regular sessions to strengthen DSA and coding", "High-Quality Practice Sets — Curated questions for GATE and concept strengthening", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode LIVE sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes", "Complete GATE CS syllabus coverage", "100+ hours of DSA + Java + LeetCode recorded sessions", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for GATE CS 2029", "Those who want both GATE preparation and coding skills", "College students balancing academics, placements, and GATE", "Aspirants looking for a structured and practical approach", "People preparing for interviews of product based companies"],
           outcome: ["Strong conceptual clarity across all GATE CS subjects", "Solid foundation in Data Structures and Algorithms", "Practical coding experience using Java", "Confidence in solving problems on LeetCode", "A structured and consistent preparation approach"],
         },
@@ -813,7 +970,7 @@ const CATEGORIES = [
     key: "gateda",
     label: "GATE DA",
     heading: "GATE DA",
-    description: "Comprehensive LIVE programs for GATE Data Analytics aspirants. Classes held daily between 6 AM–8 AM and 6 PM–10 PM.",
+    description: "Comprehensive recorded, self-paced programs for GATE Data Analytics aspirants. Structured video lectures you can start anytime and revisit as often as you need.",
     count: 9,
     courses: [
       {
@@ -821,12 +978,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate da 2027 core.jpg",
         link: "https://voujhg.courses.store/834712?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation experience.",
-        highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Structured Approach"],
+        description: "A comprehensive recorded, self-paced program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation experience.",
+        highlights: ["Complete GATE DA Syllabus", "Recorded · Self-Paced", "Structured Approach"],
         price: "9,999", originalPrice: "15,000", discount: "34", color: "dark",
         details: {
-          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured live learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Interactive doubt-solving sessions", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
+          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured self-paced learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
           whatYouLearn: ["Clear understanding of core Data Science and AI concepts", "Ability to approach and solve GATE-level problems confidently", "Improved accuracy, speed, and exam temperament", "A well-defined preparation flow from start to finish"],
           syllabus: [
             { subject: "Probability and Statistics", topics: "Counting (permutation and combinations), probability axioms, sample space, events, independent events, mutually exclusive events, marginal, conditional and joint probability, Bayes Theorem, conditional expectation and variance, mean, median, mode and standard deviation, correlation and covariance, random variables, discrete random variables and probability mass functions, uniform, Bernoulli, binomial distribution, continuous random variables and probability distribution function, uniform, exponential, Poisson, normal, standard normal, t-distribution, chi-squared distributions, cumulative distribution function, conditional PDF, Central limit theorem, confidence interval, z-test, t-test, chi-squared test." },
@@ -837,8 +994,8 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Live sessions and ongoing discussion support", "Revision Support — Compact and focused revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
+          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Discussion forum and ongoing support", "Revision Support — Compact and focused revision modules"],
+          whatYouGet: ["600+ hours of recorded classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
           whoIsFor: ["Students preparing seriously for GATE DA 2027", "College students balancing academics with GATE preparation", "Working professionals looking for a structured and guided approach"],
           outcome: ["Strong conceptual clarity across all subjects", "Confidence in solving a wide range of GATE-level problems", "Familiarity with exam patterns and question types", "A disciplined and structured preparation approach"],
         },
@@ -848,12 +1005,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2027 core.jpg",
         link: "https://voujhg.courses.store/834704?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "16,999", originalPrice: "25,000", discount: "33", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -878,7 +1035,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2027", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -893,8 +1050,8 @@ const CATEGORIES = [
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "14,999", originalPrice: "25,000", discount: "40", color: "dark",
         details: {
-          overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate DA Core Plus is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of all GATE DA subjects", "Personalized preparation strategy", "Improved problem-solving ability with continuous feedback", "Disciplined and consistent preparation approach"],
 
           syllabus: [
@@ -908,7 +1065,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
           outcome: ["Strong conceptual clarity across all subjects", "A personalized and structured preparation approach", "Improved problem-solving ability and accuracy", "Consistent and measurable progress"],
         },
@@ -918,12 +1075,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate da 2028 core.jpg",
         link: "https://voujhg.courses.store/834711?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
-        highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Early Bird Advantage"],
+        description: "A comprehensive recorded, self-paced program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
+        highlights: ["Complete GATE DA Syllabus", "Recorded · Self-Paced", "Early Bird Advantage"],
         price: "14,999", originalPrice: "25,000", discount: "41", color: "dark",
         details: {
-          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured live learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Interactive doubt-solving sessions", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
+          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured self-paced learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
           whatYouLearn: ["Clear understanding of core Data Science and AI concepts", "Ability to approach and solve GATE-level problems confidently", "Improved accuracy, speed, and exam temperament", "A well-defined preparation flow from start to finish"],
           syllabus: [
             { subject: "Probability and Statistics", topics: "Counting (permutation and combinations), probability axioms, sample space, events, independent events, mutually exclusive events, marginal, conditional and joint probability, Bayes Theorem, conditional expectation and variance, mean, median, mode and standard deviation, correlation and covariance, random variables, discrete random variables and probability mass functions, uniform, Bernoulli, binomial distribution, continuous random variables and probability distribution function, uniform, exponential, Poisson, normal, standard normal, t-distribution, chi-squared distributions, cumulative distribution function, conditional PDF, Central limit theorem, confidence interval, z-test, t-test, chi-squared test." },
@@ -934,8 +1091,8 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Live sessions and ongoing discussion support", "Revision Support — Compact and focused revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
+          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Discussion forum and ongoing support", "Revision Support — Compact and focused revision modules"],
+          whatYouGet: ["600+ hours of recorded classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
           whoIsFor: ["Students preparing seriously for GATE DA 2028", "College students balancing academics with GATE preparation", "Working professionals looking for a structured and guided approach"],
           outcome: ["Strong conceptual clarity across all subjects", "Confidence in solving a wide range of GATE-level problems", "Familiarity with exam patterns and question types", "A disciplined and structured preparation approach"],
         },
@@ -945,12 +1102,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2028 core.jpg",
         link: "https://voujhg.courses.store/courses/834703",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "22,999", originalPrice: "35,000", discount: "35", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -975,7 +1132,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2028", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -990,8 +1147,8 @@ const CATEGORIES = [
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "19,999", originalPrice: "35,000", discount: "43", color: "dark",
         details: {
-          overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate DA Core Plus is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of all GATE DA subjects", "Personalized preparation strategy", "Improved problem-solving ability with continuous feedback", "Disciplined and consistent preparation approach"],
 
           syllabus: [
@@ -1005,7 +1162,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
           outcome: ["Strong conceptual clarity across all subjects", "A personalized and structured preparation approach", "Improved problem-solving ability and accuracy", "Consistent and measurable progress"],
         },
@@ -1015,12 +1172,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate da 2029 core.jpg",
         link: "https://voujhg.courses.store/834710?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
-        highlights: ["Complete GATE DA Syllabus", "LIVE Classes Daily", "Maximum Prep Time"],
+        description: "A comprehensive recorded, self-paced program designed for serious GATE DA aspirants who want a structured, consistent, and well-guided preparation.",
+        highlights: ["Complete GATE DA Syllabus", "Recorded · Self-Paced", "Maximum Prep Time"],
         price: "19,999", originalPrice: "35,000", discount: "43", color: "dark",
         details: {
-          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured live learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Interactive doubt-solving sessions", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
+          overview: "This course is built to cover the entire GATE Data Science & AI syllabus through a carefully structured self-paced learning process. Each subject is taught with emphasis on strong conceptual understanding, clarity in problem-solving, and alignment with GATE exam patterns. The goal is not just coverage, but meaningful learning and steady progress throughout the preparation cycle.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Continuous academic support via discussion forum", "Lecture notes of every class will be provided after every class"],
           whatYouLearn: ["Clear understanding of core Data Science and AI concepts", "Ability to approach and solve GATE-level problems confidently", "Improved accuracy, speed, and exam temperament", "A well-defined preparation flow from start to finish"],
           syllabus: [
             { subject: "Probability and Statistics", topics: "Counting (permutation and combinations), probability axioms, sample space, events, independent events, mutually exclusive events, marginal, conditional and joint probability, Bayes Theorem, conditional expectation and variance, mean, median, mode and standard deviation, correlation and covariance, random variables, discrete random variables and probability mass functions, uniform, Bernoulli, binomial distribution, continuous random variables and probability distribution function, uniform, exponential, Poisson, normal, standard normal, t-distribution, chi-squared distributions, cumulative distribution function, conditional PDF, Central limit theorem, confidence interval, z-test, t-test, chi-squared test." },
@@ -1031,8 +1188,8 @@ const CATEGORIES = [
             { subject: "Machine Learning", topics: "Supervised Learning: regression and classification problems, simple linear regression, multiple linear regression, ridge regression, logistic regression, k-nearest neighbour, naive Bayes classifier, linear discriminant analysis, support vector machine, decision trees, bias-variance trade-off, cross-validation methods (LOO, k-folds), multi-layer perceptron, feed-forward neural network. Unsupervised Learning: clustering algorithms, k-means/k-medoid, hierarchical clustering, top-down, bottom-up: single-linkage, multiple-linkage, dimensionality reduction, principal component analysis." },
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
-          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Live sessions and ongoing discussion support", "Revision Support — Compact and focused revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
+          features: ["Structured Concept Delivery — Topics taught in a logical sequence ensuring continuity and depth", "Complete Syllabus Coverage — All subjects covered with focus on GATE relevance", "Practice After Every Lecture — Assignments to reinforce concepts and improve application", "GATE PYQs with Detailed Solutions — Previous Year Questions with complete explanation", "High-Quality Practice Sets — Curated questions for additional exposure", "Dedicated Doubt Resolution — Discussion forum and ongoing support", "Revision Support — Compact and focused revision modules"],
+          whatYouGet: ["600+ hours of recorded classes covering the complete syllabus", "Weekly tests and DPPs for continuous practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Comprehensive practice material and PYQ coverage", "Revision modules for quick and effective review"],
           whoIsFor: ["Students preparing seriously for GATE DA 2029", "College students balancing academics with GATE preparation", "Working professionals looking for a structured and guided approach"],
           outcome: ["Strong conceptual clarity across all subjects", "Confidence in solving a wide range of GATE-level problems", "Familiarity with exam patterns and question types", "A disciplined and structured preparation approach"],
         },
@@ -1042,12 +1199,12 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/gate cs+da 2029 core.jpg",
         link: "https://voujhg.courses.store/834702?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
-        highlights: ["Complete CS + DA Syllabus", "LIVE Classes Daily", "Best Value Combo"],
+        description: "A comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach to learning and practice.",
+        highlights: ["Complete CS + DA Syllabus", "Recorded · Self-Paced", "Best Value Combo"],
         price: "28,999", originalPrice: "45,000", discount: "36", color: "accent",
         details: {
-          overview: "Gate CS & DA Core is a comprehensive LIVE program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate CS & DA Core is a comprehensive recorded, self-paced program designed to cover the complete GATE Computer Science and Data Analytics syllabus with a structured and consistent approach. The course provides strong conceptual understanding across both CS and DA subjects, supported by regular practice and evaluation, helping you progress steadily throughout your preparation.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum group for continuous discussion and support", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Core Computer Science subjects required for GATE", "Core Data Science and AI concepts required for GATE DA", "Application of concepts through problem-solving", "Approach to solving exam-level questions", "Techniques to improve accuracy and speed"],
           subjects: ["Engineering Mathematics", "Digital Logic", "Computer Organization & Architecture", "Programming & Data Structures", "Algorithms", "Theory of Computation", "Compiler Design", "Operating Systems", "Databases", "Computer Networks", "General Aptitude"],
           csSyllabus: [
@@ -1072,7 +1229,7 @@ const CATEGORIES = [
             { subject: "AI", topics: "Search: informed, uninformed, adversarial; logic: propositional, predicate; reasoning under uncertainty — conditional independence representation, exact inference through variable elimination, and approximate inference through sampling." },
           ],
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete CS & DA Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Explanation — Previous Year Questions with complete analysis", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, weekly tests and DPPs", "Full-length test series", "Compact revision modules"],
-          whatYouGet: ["600+ hours of LIVE classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
+          whatYouGet: ["600+ hours of recorded classes covering both CS and DA syllabi", "Weekly tests and structured practice", "Full-length test series", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Access to student discussion forum"],
           whoIsFor: ["Students preparing for both GATE CS and DA 2029", "Aspirants who want maximum flexibility across both papers", "College students balancing academics and GATE preparation", "Working professionals looking for structured preparation"],
           outcome: ["Strong conceptual clarity across all CS and DA subjects", "Improved problem-solving ability for both papers", "Familiarity with GATE exam patterns for CS and DA", "A structured approach to preparation"],
 
@@ -1087,8 +1244,8 @@ const CATEGORIES = [
         highlights: ["Everything in DA Core", "1:1 Personalized Mentorship", "Performance Tracking"],
         price: "24,999", originalPrice: "45,000", discount: "44", color: "dark",
         details: {
-          overview: "Gate DA Core Plus is a comprehensive LIVE program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
-          format: ["Fully LIVE classes with structured, topic-wise delivery", "Live doubt-solving sessions", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
+          overview: "Gate DA Core Plus is a comprehensive recorded, self-paced program designed to combine complete GATE syllabus coverage with industry oriented courses, personalized mentorship and guided preparation. Along with structured classes, this program provides individual support, planning, and continuous feedback, ensuring that your preparation remains consistent, focused, and aligned with your goals throughout the journey.",
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion forum for continuous interaction", "Dedicated 1:1 mentorship with regular check-ins", "Lecture notes will be provided after every lecture for revision"],
           whatYouLearn: ["Strong understanding of all GATE DA subjects", "Personalized preparation strategy", "Improved problem-solving ability with continuous feedback", "Disciplined and consistent preparation approach"],
 
           syllabus: [
@@ -1102,7 +1259,7 @@ const CATEGORIES = [
           ],
           ...CRACK_FAANG_TRACK,
           features: ["Structured Concept Delivery — Topics taught in a clear and logical sequence", "Complete Syllabus Coverage — All subjects covered with exam-focused approach", "Practice After Every Lecture — Assignments with detailed solutions", "GATE PYQs with Analysis — Previous Year Questions with proper explanation", "High-Quality Practice Sets — Curated questions to strengthen problem-solving", "Weekly quizzes, tests and DPPs", "Full-length test series", "Compact revision modules for efficient revision"],
-          whatYouGet: ["600+ hours of LIVE classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly live problem-solving sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
+          whatYouGet: ["600+ hours of recorded classes", "Weekly tests and structured practice", "Full-length test series for exam-level preparation", "Weekly problem-solving video sessions", "Complete PYQ and practice coverage", "Compact revision modules", "Personalized mentorship and performance guidance"],
           whoIsFor: ["Students who want structured preparation along with personal guidance", "Aspirants looking for continuous feedback and improvement tracking", "Those who prefer a planned and disciplined approach", "Students aiming for consistent progress throughout preparation", "Students and Professionals who are looking for job in AIML domain"],
           outcome: ["Strong conceptual clarity across all subjects", "A personalized and structured preparation approach", "Improved problem-solving ability and accuracy", "Consistent and measurable progress"],
         },
@@ -1113,7 +1270,7 @@ const CATEGORIES = [
     key: "ugcnet",
     label: "UGC NET",
     heading: "UGC NET Courses",
-    description: "Structured LIVE programs for UGC NET Computer Science & Applications with concept clarity and answer writing focus.",
+    description: "Structured recorded, self-paced programs for UGC NET Computer Science & Applications with concept clarity and answer writing focus.",
     count: 3,
     courses: [
       {
@@ -1121,16 +1278,16 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc net dec 2026.jpg",
         link: "https://voujhg.courses.store/834706?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
-        highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
+        description: "A structured recorded, self-paced program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
+        highlights: ["Complete UGC NET Syllabus", "Recorded · Self-Paced", "Concept Clarity Focus"],
         price: "15,999", originalPrice: "25,000", discount: "34", color: "dark",
         details: {
           overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for continuous discussion and support"],
           whatYouLearn: ["Core concepts required for UGC NET", "Understanding of important topics and exam patterns", "Techniques for solving objective questions", "Approach to improve accuracy and time management"],
           subjects: ["Paper 1 (General Aptitude)", "Paper 2 (Subject-specific topics)"],
           features: ["Complete Syllabus Coverage — All topics covered in structured, exam-focused manner", "Concept-Based Teaching — Topics explained clearly for proper understanding and retention", "Practice After Every Lecture — Assignments with detailed solutions", "Previous Year Questions (PYQs) — Discussed with explanation and pattern analysis", "Practice Sets — Additional questions to strengthen preparation", "Weekly quizzes and practice tests", "Full-length mock tests", "Compact revision modules for quick review"],
-          whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
+          whatYouGet: ["Complete recorded syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for UGC NET", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
 
@@ -1141,16 +1298,16 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc net dec 2027.jpg",
         link: "https://voujhg.courses.store/842452?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
-        highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
+        description: "A structured recorded, self-paced program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
+        highlights: ["Complete UGC NET Syllabus", "Recorded · Self-Paced", "Concept Clarity Focus"],
         price: "26,999", originalPrice: "35,000", discount: "23", color: "dark",
         details: {
           overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for continuous discussion and support"],
           whatYouLearn: ["Core concepts required for UGC NET", "Understanding of important topics and exam patterns", "Techniques for solving objective questions", "Approach to improve accuracy and time management"],
           subjects: ["Paper 1 (General Aptitude)", "Paper 2 (Subject-specific topics)"],
           features: ["Complete Syllabus Coverage — All topics covered in structured, exam-focused manner", "Concept-Based Teaching — Topics explained clearly for proper understanding and retention", "Practice After Every Lecture — Assignments with detailed solutions", "Previous Year Questions (PYQs) — Discussed with explanation and pattern analysis", "Practice Sets — Additional questions to strengthen preparation", "Weekly quizzes and practice tests", "Full-length mock tests", "Compact revision modules for quick review"],
-          whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
+          whatYouGet: ["Complete recorded syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for UGC NET Dec 2027", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
         },
@@ -1160,16 +1317,16 @@ const CATEGORIES = [
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/ugc net june 2027.jpg",
         link: "https://voujhg.courses.store/834705?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
-        description: "A structured LIVE program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
-        highlights: ["Complete UGC NET Syllabus", "LIVE Classes Daily", "Concept Clarity Focus"],
+        description: "A structured recorded, self-paced program designed to cover the complete UGC NET syllabus with a focus on concept clarity, answer writing, and exam-oriented preparation.",
+        highlights: ["Complete UGC NET Syllabus", "Recorded · Self-Paced", "Concept Clarity Focus"],
         price: "20,999", originalPrice: "35,000", discount: "40", color: "dark",
         details: {
           overview: "This course is designed to provide comprehensive coverage of the UGC NET syllabus through a structured and consistent learning approach. The focus is on building strong conceptual understanding, clarity in theoretical topics, and ability to approach exam-level questions with confidence. The preparation is guided in a way that ensures steady progress and effective revision throughout the course.",
-          format: ["Fully LIVE classes with topic-wise structured delivery", "Live doubt-solving sessions", "Discussion Forum for continuous discussion and support"],
+          format: ["Structured recorded video lectures, topic-wise", "Doubt-solving support via the discussion forum", "Discussion Forum for continuous discussion and support"],
           whatYouLearn: ["Core concepts required for UGC NET", "Understanding of important topics and exam patterns", "Techniques for solving objective questions", "Approach to improve accuracy and time management"],
           subjects: ["Paper 1 (General Aptitude)", "Paper 2 (Subject-specific topics)"],
           features: ["Complete Syllabus Coverage — All topics covered in structured, exam-focused manner", "Concept-Based Teaching — Topics explained clearly for proper understanding and retention", "Practice After Every Lecture — Assignments with detailed solutions", "Previous Year Questions (PYQs) — Discussed with explanation and pattern analysis", "Practice Sets — Additional questions to strengthen preparation", "Weekly quizzes and practice tests", "Full-length mock tests", "Compact revision modules for quick review"],
-          whatYouGet: ["Complete LIVE syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
+          whatYouGet: ["Complete recorded syllabus coverage", "Weekly tests and practice material", "Full-length mock tests", "PYQ discussion and analysis", "Practice sets with solutions", "Revision modules", "Access to discussion forum"],
           whoIsFor: ["Students preparing for UGC NET", "Aspirants aiming for structured and consistent preparation", "Those looking for concept clarity and exam-focused learning", "Students who want guided preparation with regular evaluation"],
           outcome: ["Clear understanding of all major topics", "Strong conceptual foundation", "Improved accuracy in solving questions", "Familiarity with exam pattern and question types"],
 
@@ -1185,7 +1342,7 @@ const CATEGORIES = [
     count: 2,
     courses: [
       {
-        id: 401, tag: "GATE CS · SUBJECT", title: "Theory of Computation (Live + Recorded)",
+        id: 401, tag: "GATE CS · SUBJECT", title: "Theory of Computation (Recorded)",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/TOC.jpg",
         link: "https://voujhg.courses.store/842453?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
@@ -1218,10 +1375,10 @@ const CATEGORIES = [
             "Concept-First Approach — strong intuition before formalism",
             "PYQ Discussion — every important previous year question explained",
             "Exam-Oriented Practice — problems designed to match GATE difficulty",
-            "Live + Recorded access — learn at your own pace",
+            "Recorded access — learn at your own pace",
           ],
           whatYouGet: [
-            "Complete TOC lecture series (Live + Recorded)",
+            "Complete TOC lecture series (Recorded)",
             "Previous Year Questions with detailed solutions",
             "Practice problems topic-wise",
             "1 Year validity",
@@ -1241,7 +1398,7 @@ const CATEGORIES = [
         },
       },
       {
-        id: 402, tag: "GATE CS · SUBJECT", title: "Database Management System (Live + Recorded)",
+        id: 402, tag: "GATE CS · SUBJECT", title: "Database Management System (Recorded)",
         subtitle: "Prof Ravindrababu Ravula",
         image: "/courses/dbms.jpg",
         link: "https://voujhg.courses.store/842601?utm_source=other&utm_medium=tutor-course-referral&utm_campaign=course-overview-webapp",
@@ -1273,10 +1430,10 @@ const CATEGORIES = [
             "Concept-First Approach — intuition and understanding before problem solving",
             "PYQ Discussion — all important previous year questions explained",
             "Exam-Oriented Practice — questions at GATE difficulty level",
-            "Live + Recorded access — learn at your own pace",
+            "Recorded access — learn at your own pace",
           ],
           whatYouGet: [
-            "Complete DBMS lecture series (Live + Recorded)",
+            "Complete DBMS lecture series (Recorded)",
             "Previous Year Questions with detailed solutions",
             "Practice questions for conceptual clarity",
             "1 Year validity",
@@ -1306,7 +1463,7 @@ const TOTAL_COURSES = CATEGORIES.reduce((n, c) => n + c.courses.length, 0);
 
 const COURSE_STATS = [
   { value: String(TOTAL_COURSES), label: "Courses Offered", icon: "📚" },
-  { value: "LIVE", label: "Daily Classes", icon: "⏱️" },
+  { value: "24/7", label: "Self-Paced Access", icon: "⏱️" },
   { value: "50K+", label: "Students Enrolled", icon: "🎓" },
   { value: "4.9", label: "Average Rating", icon: "⭐" },
 ];
@@ -1397,15 +1554,22 @@ function CourseModal({ course, onClose }) {
             {!course.isFree && <div className="cp-modal-gst">+ 18% GST</div>}
           </div>
 
-          {/* CTA — at top */}
-          <a
-            href={course.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cp-modal-enroll"
-          >
-            Enroll Now <ArrowIcon />
-          </a>
+          {/* CTA — at top. Internal courses route within this app; everything
+              else still opens its external store page in a new tab. */}
+          {course.internal ? (
+            <Link to={course.link} className="cp-modal-enroll" onClick={onClose}>
+              View the full program <ArrowIcon />
+            </Link>
+          ) : (
+            <a
+              href={course.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cp-modal-enroll"
+            >
+              Enroll Now <ArrowIcon />
+            </a>
+          )}
 
           {/* Description */}
           <p className="cp-modal-desc">{course.description}</p>
@@ -1758,6 +1922,72 @@ export default function CoursesPage() {
                     {f}
                   </button>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ══════════════════════════════════════════
+              AI GENERALIST OS — 38-DAY BUILDER PROGRAM (full-width, top)
+          ══════════════════════════════════════════ */}
+          <div className="cp-faang-section cp-aios-section">
+            {/* Marquee */}
+            <div className="cp-faang-marquee">
+              <div className="cp-faang-marquee-track">
+                {[...Array(3)].map((_, i) => (
+                  <span key={i}>{AI_OS_COURSE.marqueeText}</span>
+                ))}
+              </div>
+            </div>
+
+            <div className="cp-faang-inner">
+              {/* Badge row */}
+              <div className="cp-faang-badges">
+                <span className="cp-faang-badge-new">🔥 NEW</span>
+                <span className="cp-aios-badge-live">● LIVE COHORT</span>
+                <span className="cp-faang-badge-tag">{AI_OS_COURSE.tag}</span>
+              </div>
+
+              <div className="cp-faang-card">
+                {/* Left — Image */}
+                <div className="cp-faang-img-wrap">
+                  <img src={`${AI_OS_COURSE.image}?v=1`} alt={AI_OS_COURSE.title} />
+                  <div className="cp-faang-img-glow" />
+                </div>
+
+                {/* Right — Content */}
+                <div className="cp-faang-content">
+                  <h2 className="cp-faang-title">{AI_OS_COURSE.title}</h2>
+                  <p className="cp-faang-subtitle">{AI_OS_COURSE.subtitle}</p>
+                  <p className="cp-faang-desc">{AI_OS_COURSE.description}</p>
+
+                  <div className="cp-faang-highlights">
+                    {AI_OS_COURSE.highlights.map((h, i) => (
+                      <div className="cp-faang-highlight" key={i}>
+                        <CheckIcon /> <span>{h}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="cp-faang-companies">
+                    {AI_OS_COURSE.tools.map((t) => (
+                      <span key={t} className="cp-faang-company-chip">{t}</span>
+                    ))}
+                  </div>
+
+                  <div className="cp-faang-pricing">
+                    <span className="cp-faang-current-price">₹{AI_OS_COURSE.price}</span>
+                    <span className="cp-faang-gst">+ 18% GST</span>
+                  </div>
+
+                  <div className="cp-faang-actions">
+                    <Link to={AI_OS_COURSE.link} className="cp-faang-enroll-btn">
+                      <PlayIcon /> Enroll Now
+                    </Link>
+                    <button className="cp-faang-details-btn" onClick={() => setSelectedCourse(AI_OS_COURSE)}>
+                      View Details <ArrowIcon />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

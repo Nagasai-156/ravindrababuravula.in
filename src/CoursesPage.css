@@ -1290,6 +1290,24 @@
   to   { transform: translateX(-33.333%); }
 }
 
+/* ── AI Generalist OS variant ──
+   Same structure and the same gold accent as the rest of the page; the only
+   distinction is a slightly warmer field and the LIVE COHORT badge, so it
+   reads as the newest listing without introducing a second brand colour. */
+.cp-aios-section {
+  background: linear-gradient(135deg, #0c0a04 0%, #14100a 50%, #0c0a04 100%);
+}
+.cp-aios-badge-live {
+  background: rgba(255, 183, 3, 0.14);
+  color: #ffb703;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 183, 3, 0.4);
+  letter-spacing: 0.1em;
+}
+
 /* Inner */
 .cp-faang-inner {
   max-width: 1280px;
